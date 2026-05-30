@@ -4,7 +4,9 @@
 시그널을 만들고, **공개 데이터만으로 point-in-time·팩터조정** 기준으로 정직하게 검증한
 오픈소스 연구 프로젝트입니다.
 
-![Dashboard](docs/dashboard.png)
+![US Funds Alpha 대시보드](docs/hero.png)
+
+<sub>밝은 톤 일일 모니터 — [전체 대시보드 스크린샷 보기](docs/dashboard.png)</sub>
 
 > ⚠️ **투자 조언이 아닙니다.** 모든 결과는 짧은 구간(2022–2026, 약 15분기)의 in-sample
 > 백테스트이며, long-only(시장베타 ≈ 1)·점추정치입니다. 과거 성과는 미래를 보장하지 않습니다.
