@@ -54,27 +54,38 @@
 
 ---
 
-## 시그널 정의
+## 시그널이란? (처음 오셨나요?)
+
+평이하게 — 미국 액티브 펀드들이 공시한 보유 종목에서, **매니저들이 어떤 주식을 사 모으는지**를
+서로 다른 각도로 잡아낸 신호입니다.
+
+- **Mean Holding Weight** — 많은 펀드가 *크게* 담고 있는 종목 (폭넓은 고확신)
+- **Large New Positions** — 여러 펀드가 *새로* 비중 있게 산 종목 (신규 매수 합의)
+- **Best-Ideas** — 펀드들이 평균보다 *훨씬 더* 담은 종목 (컨센서스 대비 베팅; Cohen–Polk–Silli)
+- **Reallocation** — 가격 상승분을 빼고 매니저가 *실제로 사들인* 종목 (능동적 매매)
+- **앙상블** — 상호보완적인 셋(MHW·LNP·BI)을 z-score로 합쳐 *가장 견고*하게
 
 각 시그널은 펀드 단위 보유 변화를 종목 단위 점수로 집계하며, **공시일(filing date) 기준
 point-in-time** 이라 ~56일 공시 지연이 반영됩니다.
 
 | 키 | 시그널 | 정의 |
 |---|---|---|
-| `mhw` | **Mean Holding Weight** | 해당 종목을 보유한 펀드들의 평균 비중 |
-| `lnp` | **Large New Positions** | 여러 펀드의 신규 고확신 진입(≥0.5%) 비중 합 |
-| `bi`  | **Best-Ideas** (active overweight) | Σ max(0, 펀드비중 − 전펀드평균) = 컨센서스 대비 초과보유 |
-| `ens` | **앙상블** | z(mhw) + z(lnp) + z(bi) 평균 → 랭크가중 top-N |
+| `mhw` | Mean Holding Weight | 해당 종목을 보유한 펀드들의 평균 비중 |
+| `lnp` | Large New Positions | 여러 펀드의 신규 고확신 진입(≥0.5%) 비중 합 |
+| `bi`  | Best-Ideas (active overweight) | Σ max(0, 펀드비중 − 전펀드평균) = 컨센서스 대비 초과보유 |
+| `rlc` | Reallocation | Σ (능동 Δw / 펀드 turnover); 능동 Δw = 비중변화에서 가격 drift 제거 |
+| `ens` | 앙상블 | z(mhw) + z(lnp) + z(bi) 평균 → 랭크가중 top-N |
 
-## 핵심 결과 (정제된 300펀드 유니버스, FF5+Mom 알파, Newey-West)
+## 핵심 결과 (정제된 300펀드 유니버스, 랭크가중 top30, FF5+Mom 알파, Newey-West)
 
-| 전략 | top-N | 알파 | t | Sharpe | 2022-24 | 2024-26 |
-|---|---|---|---|---|---|---|
-| **앙상블 (랭크가중)** | 30 | +6.5% | **3.81** | 1.65 | t2.4 | t4.1 |
-| Mean Holding Weight | 30 | +4.0% | 2.11 | 2.00 | t0.2 | t2.4 |
-| Large New Positions | 30 | +6.1% | 2.54 | 1.56 | t3.8 | t0.7 |
-| Best-Ideas (active OW) | 30 | +4.5% | 2.12 | 1.94 | t3.4 | t1.1 |
-| S&P 500 (SPY) | – | −0.1% | – | 1.41 | | |
+| 전략 | 알파 | t | Sharpe | 2022-24 | 2024-26 |
+|---|---|---|---|---|---|
+| **앙상블 (MHW·LNP·BI)** | +6.5% | **3.81** | 1.65 | t2.4 | t4.1 |
+| Best-Ideas (active OW) | +6.8% | 3.36 | 1.94 | t3.4 | t1.1 |
+| Reallocation (능동 매매) | +7.0% | 2.01 | 1.50 | t3.0 | t1.6 |
+| Mean Holding Weight | +6.0% | 2.92 | 2.00 | – | – |
+| Large New Positions | +4.9% | 1.46 | 1.56 | t3.8 | t0.7 |
+| S&P 500 (SPY) | −0.1% | – | 1.41 | | |
 
 거래비용은 낮습니다(분기 편도 회전율 ~16–19%). 25bp 차감 후에도 알파는 거의 변하지 않습니다.
 비중 방식도 영향을 줍니다 — 랭크가중이 알파/견고성 최고, 역변동성이 Sharpe 최고, 동일가중이 가장
@@ -84,10 +95,11 @@ point-in-time** 이라 ~56일 공시 지연이 반영됩니다.
 
 ## 라이브 대시보드
 
-자체 완결형 일일 모니터(`dashboard/index.html`)는 3개 구역으로 구성됩니다 —
-**구역 1** 앙상블(Top10·Top30), **구역 2** 3개 시그널 Top10(집중), **구역 3** 3개 시그널
-Top30(분산). 각 카드에 현재 포트폴리오·종목별 비중·리밸런싱 이후 SPY 대비 성과·검증 통계·
-공시지연 분포·리밸런싱 교체 알림을 표시합니다.
+자체 완결형 일일 모니터(`dashboard/index.html`, 밝은 톤 UI)는 세 묶음으로 구성됩니다 —
+**앙상블**(Top10·Top30), **개별 시그널 · 집중**(Top10), **개별 시그널 · 분산**(Top30).
+각 카드에 2022–2026 누적수익 vs S&P 500 차트, 검증 통계(알파·t·Sharpe), 리밸런싱 이후 실시간
+성과, 공시지연 분포, 종목별 **비중**·이후수익, 리밸런싱 교체 알림을 표시하고, 상단에 시그널
+설명을 담았습니다.
 
 ```bash
 cd dashboard && python3 -m http.server 8769   # → http://localhost:8769/
@@ -136,7 +148,7 @@ scripts/
   build_master_universe.py, stage2_ecpct.py, expand_validate.py   유니버스 구축
   bulk_collect_300.py, fetch_prices_300.py, update_filings.py      데이터 수집
   signals_family.py, revalidate_clean.py, ensemble_test.py,
-  weighting_test.py, mhw_cost.py                                   검증
+  weighting_test.py, reallocation_validate.py, mhw_cost.py            검증
   compute_card_stats.py, dashboard_data.py, daily_update.sh        대시보드 파이프라인
 dashboard/             자체 완결형 HTML 모니터 + JSON 데이터
 notes/                 단계별 연구 기록 (한글)

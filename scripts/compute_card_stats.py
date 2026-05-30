@@ -7,14 +7,19 @@ import numpy as np, pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import falib as fa
 
-CARDS = {"ens": ("ens", 3, "rank"), "mhw": ("mhw", 15, "equal"),
-         "lnp": ("lnp", 3, "equal"), "bi": ("bi", 5, "equal")}
+CARDS = {"ens": ("ens", 3, "rank"), "mhw": ("mhw", 15, "rank"),
+         "lnp": ("lnp", 3, "rank"), "bi": ("bi", 5, "rank"), "rlc": ("rlc", 3, "rank")}
 
 def main():
     h = fa.load_panel(); figi = fa.figi_map(); fw = fa.fund_timelines(h)
     pivot = fa.price_pivot(); rets = pivot.pct_change(fill_method=None)
     fac = fa.load_factors(); rebs = fa.rebalance_dates()
-    PER = {R: fa.score_stocks(fw, R, figi) for R in rebs}
+    PER = {}
+    for R in rebs:
+        d = fa.score_stocks(fw, R, figi)
+        rc = fa.score_reallocation(fw, R, figi, pivot)
+        d["rlc"] = pd.to_numeric(d["cusip"].map(lambda c: rc.get(c, 0.0)), errors="coerce")
+        PER[R] = d
 
     def picks(col, mh, topn):
         return {R: PER[R][PER[R].hold >= mh].nlargest(topn, col)["ticker"].tolist() for R in rebs}

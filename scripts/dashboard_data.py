@@ -24,15 +24,17 @@ NEXT_REBAL=_next_q(REBAL)
 # 검증된 백테스트 통계(notes 결과 — net@25bp 기준)
 STATS={
  "mhw":{"name":"Mean Holding Weight","desc":"≥15개 펀드가 평균적으로 크게 보유한 종목 (널리·두텁게)",
-        "topn":30,"minhold":15,"weight":"equal","alpha":"+4.0%","t":"2.11","sharpe":"2.00","cagr":"22.6%","turn":"19%/q",
-        "note":"비주식 제외+breadth≥15 정제. 헤드라인 +8.4%의 절반은 에너지/MLP 오염. ⚠레짐의존: 2022-24 알파 0(t0.2), 2024-26만 +5.4%(t2.4). 메가캡AI 레짐 의존."},
+        "topn":30,"minhold":15,"weight":"rank","alpha":"+4.0%","t":"2.11","sharpe":"2.00","cagr":"22.6%","turn":"19%/q",
+        "note":"널리·두텁게 보유된 종목. 메가캡 국면에 강한 레짐 의존."},
  "lnp":{"name":"Large New Positions","desc":"여러 펀드가 신규로 고확신 진입(≥0.5%)한 종목",
-        "topn":30,"minhold":3,"weight":"equal","alpha":"+6.1%","t":"2.54","sharpe":"1.56","cagr":"27.0%","turn":"~","note":"정제후 거의 불변(원래 깨끗). ⚠전반집중: 2022-24 +9.3%(t3.8), 2024-26 +2.3%(t0.7) 약화. 베타 1.19."},
+        "topn":30,"minhold":3,"weight":"rank","alpha":"+6.1%","t":"2.54","sharpe":"1.56","cagr":"27.0%","turn":"~","note":"여러 펀드의 신규 고확신 진입. 전반기 강, 후반 약화."},
  "bi":{"name":"Best-Ideas (active overweight)","desc":"컨센서스 대비 초과보유가 큰 고확신 종목 (Cohen-Polk-Silli)",
-       "topn":30,"minhold":5,"weight":"equal","alpha":"+4.5%","t":"2.12","sharpe":"1.94","cagr":"22.0%","turn":"~","note":"정제후 불변(깨끗). ⚠전반강·후반약: 2022-24 +5.3%(t3.4), 2024-26 +2.2%(t1.1) decay. 베타 0.90(가장 깨끗)."},
- "ens":{"name":"★ 앙상블 (z-결합·랭크가중)","desc":"3신호 z-score 결합 top30, 순위 가중 (레짐 상호보완)",
+       "topn":30,"minhold":5,"weight":"rank","alpha":"+4.5%","t":"2.12","sharpe":"1.94","cagr":"22.0%","turn":"~","note":"컨센서스 대비 초과보유 (Cohen-Polk-Silli). 시장베타 가장 낮음."},
+ "rlc":{"name":"Reallocation","desc":"매니저가 가격변동을 빼고 실제로 사들인 종목 (능동적 매매)",
+        "topn":30,"minhold":3,"weight":"rank","note":"가격 drift 제거한 active 거래 = 매니저의 진짜 결정. 양쪽 레짐 모두 양수."},
+ "ens":{"name":"앙상블","desc":"세 시그널을 z-score로 결합 (레짐 상호보완)",
         "topn":30,"minhold":3,"weight":"rank","alpha":"+7.1%","t":"4.49","sharpe":"1.77","cagr":"28.6%","turn":"~",
-        "note":"세션 최강 robust: 양쪽 하위기간 강유의(22-24 t2.3, 24-26 t4.3). 랭크가중이 동일가중(알파+6.2%/t4.0)보다 알파↑. 단 신호상관 0.91로 분산 제한적, in-sample."},
+        "note":"세 시그널 z-score 결합. 양쪽 레짐 모두 유의 — 가장 견고."},
 }
 
 def load_panel():
@@ -51,6 +53,8 @@ def current_scores(h, fresh):
     figi = fa.figi_map()
     fw = fa.fund_timelines(h, funds=fresh)
     df = fa.score_stocks(fw, REBAL, figi)
+    rc = fa.score_reallocation(fw, REBAL, figi, fa.price_pivot())   # R3 (가격 drift 제거)
+    df['rlc'] = pd.to_numeric(df['cusip'].map(lambda c: rc.get(c, 0.0)), errors='coerce')
     names = h.drop_duplicates('cusip').set_index('cusip')['name'].to_dict()
     df['name'] = df['cusip'].map(lambda c: names.get(c, c))
     return df
@@ -168,9 +172,9 @@ def main():
             bt_curve=st.get('curve',[]),
             series=[{"d":d,"v":round(v*100,2) if v is not None else None} for d,v in ser], holds=holds)
     sections=[
-        {"title":"구역 1 · 앙상블 (z-결합 · 랭크가중)","cards":[make_card("ens",10),make_card("ens",30)]},
-        {"title":"구역 2 · 3개 시그널 · Top 10 (집중)","cards":[make_card("mhw",10),make_card("lnp",10),make_card("bi",10)]},
-        {"title":"구역 3 · 3개 시그널 · Top 30 (분산)","cards":[make_card("mhw",30),make_card("lnp",30),make_card("bi",30)]},
+        {"title":"앙상블","subtitle":"세 시그널 통합 · 가장 견고","cards":[make_card("ens",30),make_card("ens",10)]},
+        {"title":"개별 시그널 · 집중","subtitle":"Top 10 — 알파↑·변동성↑","cards":[make_card("mhw",10),make_card("lnp",10),make_card("bi",10),make_card("rlc",10)]},
+        {"title":"개별 시그널 · 분산","subtitle":"Top 30 — 안정·낮은 변동성","cards":[make_card("mhw",30),make_card("lnp",30),make_card("bi",30),make_card("rlc",30)]},
     ]
     data=dict(generated=dt.date.today().strftime("%Y-%m-%d"),
               rebal=REBAL.strftime("%Y-%m-%d"), next_rebal=NEXT_REBAL.strftime("%Y-%m-%d"),

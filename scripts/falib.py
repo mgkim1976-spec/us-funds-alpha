@@ -103,6 +103,34 @@ def score_stocks(fw, R, figi):
     d["ens"] = d[["z_mhw", "z_lnp", "z_bi"]].mean(axis=1)
     return d
 
+def score_reallocation(fw, R, figi, pivot):
+    """R3 Reallocation: Σ_funds (능동 Δw / 펀드 turnover). cusip→점수 dict.
+    능동 Δw = 현재비중 − 직전비중×(1+종목수익)/(1+펀드수익) → 가격 drift 제거(실제 매매)."""
+    from collections import defaultdict
+    pc = {}
+    def poa(d):
+        k = d.strftime("%Y%m%d")
+        if k not in pc:
+            w = pivot.loc[d:d+pd.Timedelta(days=8)]; pc[k] = w.bfill().iloc[0] if len(w) else pd.Series(dtype=float)
+        return pc[k]
+    acc = defaultdict(float)
+    for f, series in fw.items():
+        fds = [d for d in series if d <= R]
+        if len(fds) < 2:
+            continue
+        cur, prev = series[fds[-1]], series[fds[-2]]
+        p0, p1 = poa(pd.Timestamp(fds[-2])), poa(pd.Timestamp(fds[-1]))
+        def rstk(c):
+            t = figi.get(c)
+            return (p1[t]/p0[t]-1) if (t and t in p0 and t in p1 and not np.isnan(p0[t]) and not np.isnan(p1[t]) and p0[t] > 0) else 0.0
+        rfund = sum(prev[c]*rstk(c) for c in prev.index)/(sum(prev.values) or 1)
+        idx = cur.index.union(prev.index)
+        dcur = cur.reindex(idx).fillna(0); dprev = prev.reindex(idx).fillna(0)
+        turn = float((dcur-dprev).abs().sum()) or 1e-9
+        for c in idx:
+            acc[c] += (dcur[c] - dprev[c]*(1+rstk(c))/(1+rfund))/turn
+    return acc
+
 # ── 가격 ──────────────────────────────────────────────────────────────
 def price_pivot(name="prices_full.parquet"):
     px = pd.read_parquet(DATA/name); px["date"] = pd.to_datetime(px["date"])
