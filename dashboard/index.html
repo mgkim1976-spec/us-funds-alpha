@@ -95,14 +95,26 @@ details.holds>summary::-webkit-details-marker{display:none}
 .hhead{color:var(--mut2);font-size:9.5px;font-weight:600;border-bottom:1px solid var(--line)}
 .note{color:var(--mut2);font-size:10.5px;line-height:1.55;margin:10px 0 0}
 .foot{color:var(--mut2);font-size:11px;text-align:center;margin-top:44px;line-height:1.7}
+@media(max-width:520px){
+  .wrap{padding:22px 13px 64px}
+  .brand{flex-direction:column;gap:3px} .brand h1{font-size:23px}
+  .hero .num{font-size:29px}
+  .hl{overflow-x:auto} .hrow{min-width:300px}
+  .intro{padding:16px 16px}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="brand"><h1>US Funds Alpha</h1><span class="tag">미국 뮤추얼펀드 보유 시그널 · 일일 모니터</span></div>
 
+  <div class="meta" id="meta"></div>
+  <div class="disc" id="disc"></div>
+  <div class="alert" id="alert"></div>
+  <div id="sections"></div>
+
   <div class="intro">
-    <h3>이 대시보드는?</h3>
+    <h3>시그널 설명 · 읽는 법</h3>
     <p>미국 액티브 뮤추얼펀드가 SEC에 분기마다 공시하는 <b>보유 종목(Form&nbsp;N-PORT)</b>에서, 매니저들이
        어떤 주식을 사 모으는지를 신호로 뽑아 만든 포트폴리오입니다. 매니저의 포지션 변화에는 시장이 아직
        반영하지 않은 정보가 담겨 있고, 그것이 수 주~수 개월에 걸쳐 가격에 점진적으로 반영됩니다.
@@ -119,10 +131,6 @@ details.holds>summary::-webkit-details-marker{display:none}
       보유종목을 펼치면 종목별 <b>비중</b>과 이후 수익. <b>Top 10</b>=집중(수익↑·변동성↑), <b>Top 30</b>=분산(안정).</div>
   </div>
 
-  <div class="meta" id="meta"></div>
-  <div class="disc" id="disc"></div>
-  <div class="alert" id="alert"></div>
-  <div id="sections"></div>
   <div class="foot">SEC EDGAR N-PORT 보유 시그널 · 분기 리밸런싱 · point-in-time · 매일 갱신<br>연구·교육 목적 — 투자 조언이 아닙니다</div>
 </div>
 <script>
