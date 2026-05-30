@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>US Funds Alpha — Daily Monitor</title>
+<style>
+:root{--bg:#0d1117;--card:#161b22;--bd:#30363d;--fg:#e6edf3;--mut:#8b949e;--grn:#3fb950;--red:#f85149;--acc:#58a6ff;--amb:#d29922}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 18px 60px}
+h1{font-size:20px;margin:0 0 4px;letter-spacing:.3px}
+.sub{color:var(--mut);font-size:12.5px;margin-bottom:18px}
+.bar{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.chip{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:8px 13px;font-size:12.5px}
+.chip b{color:var(--acc)}
+.caveat{background:#21262d;border:1px solid var(--amb);border-radius:8px;padding:9px 13px;color:#e3b341;font-size:12px;margin-bottom:22px}
+.alert{background:#1f2d1f;border:1px solid var(--grn);border-radius:8px;padding:10px 14px;color:#7ee787;font-size:13px;margin-bottom:14px}
+.alert .add{color:var(--grn)}.alert .drop{color:var(--red)}
+.section-title{font-size:14px;font-weight:600;color:var(--acc);margin:24px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--bd);letter-spacing:.3px}
+.cards{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:980px){.cards{grid-template-columns:1fr 1fr 1fr}}
+.cards.two{grid-template-columns:1fr}
+@media(min-width:980px){.cards.two{grid-template-columns:1fr 1fr}}
+.sub2{color:var(--mut);font-size:11px;margin:-4px 0 8px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px;display:flex;flex-direction:column}
+.cname{font-size:15.5px;font-weight:600;margin-bottom:2px}
+.cdesc{color:var(--mut);font-size:12px;margin-bottom:12px;min-height:32px}
+.live{display:flex;align-items:baseline;gap:8px;margin-bottom:2px}
+.live .big{font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}
+.live .lbl{color:var(--mut);font-size:11px}
+.vsspy{font-size:12.5px;margin-bottom:10px}
+.spark{width:100%;height:46px;margin-bottom:12px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;font-size:12px;margin-bottom:10px}
+.stats div span{color:var(--mut)}
+.note{color:var(--mut);font-size:11px;border-top:1px solid var(--bd);padding-top:8px;margin-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:11.5px;font-variant-numeric:tabular-nums}
+th{text-align:left;color:var(--mut);font-weight:500;padding:3px 4px;border-bottom:1px solid var(--bd)}
+td{padding:3px 4px;border-bottom:1px solid #20262e}
+td.r,th.r{text-align:right}
+.tk{font-weight:600}
+.pos{color:var(--grn)}.neg{color:var(--red)}
+.tbl-wrap{max-height:300px;overflow:auto}
+.foot{color:var(--mut);font-size:11px;margin-top:24px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>US Funds Alpha — Daily Monitor</h1>
+  <div class="sub" id="sub">로딩…</div>
+  <div class="bar" id="bar"></div>
+  <div class="alert" id="alert" style="display:none"></div>
+  <div class="caveat" id="caveat"></div>
+  <div id="sections"></div>
+  <div class="foot">N-PORT(SEC EDGAR) 보유 시그널 · 분기 리밸런싱 · 매일 가격 갱신 · long-only top-30 동일가중</div>
+</div>
+<script>
+const fmt=(v,d=1)=>v==null?"–":(v>=0?"+":"")+v.toFixed(d);
+const cls=v=>v==null?"":v>=0?"pos":"neg";
+function spark(series, color){
+  const pts=series.filter(p=>p.v!=null);
+  if(pts.length<2) return "";
+  const xs=pts.map((_,i)=>i), ys=pts.map(p=>p.v);
+  const mn=Math.min(...ys,0), mx=Math.max(...ys,0), W=300,H=46,pad=2;
+  const X=i=>pad+i*(W-2*pad)/(xs.length-1), Y=v=>H-pad-(v-mn)/((mx-mn)||1)*(H-2*pad);
+  const d=pts.map((p,i)=>(i?"L":"M")+X(i).toFixed(1)+","+Y(p.v).toFixed(1)).join(" ");
+  const zero=Y(0).toFixed(1);
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+    <line x1="0" y1="${zero}" x2="${W}" y2="${zero}" stroke="#30363d" stroke-width="1" stroke-dasharray="3 3"/>
+    <path d="${d}" fill="none" stroke="${color}" stroke-width="1.8"/></svg>`;
+}
+function render(D){
+  const now=new Date().toLocaleTimeString('ko-KR');
+  document.getElementById('sub').textContent=`생성 ${D.generated} · 리밸런싱 ${D.rebal} → 다음 ${D.next_rebal} · 자동 새로고침 10분 (마지막 ${now})`;
+  document.getElementById('bar').innerHTML=
+    `<div class="chip">데이터 기준 <b>${D.generated}</b></div>
+     <div class="chip">포트폴리오 형성 <b>${D.rebal}</b></div>
+     <div class="chip">보유 기준일(as-of) <b>${D.asof.report_min}~${D.asof.report_max}</b> (중앙값 ${D.asof.report_med})</div>
+     <div class="chip">공시지연 <b>${D.asof.lag_min}~${D.asof.lag_max}일</b></div>
+     <div class="chip">신호 사용 펀드 <b>${D.asof.used_funds}</b> · stale 제외 <b>${D.asof.excluded_stale}</b></div>
+     <div class="chip">다음 리밸런싱 <b>${D.next_rebal}</b></div>
+     <div class="chip">SPY (형성 이후) <b class="${cls(D.spy_since_rebal)}">${fmt(D.spy_since_rebal)}%</b></div>`;
+  // 리밸런싱 교체 알림
+  const al=document.getElementById('alert'); const rc=D.rebal_changes;
+  if(rc&&rc.is_new_rebal){
+    let html=`🔔 <b>리밸런싱 ${rc.rebal}</b> (직전 ${rc.prev_rebal}) — 종목 교체:`;
+    for(const k in rc.per_strategy){const c=rc.per_strategy[k]; const nm={mhw:"Mean Holding Wt",lnp:"Large New Pos",bi:"Best-Ideas"}[k]||k;
+      html+=`<br>&nbsp;&nbsp;<b>${nm}</b> `+
+        (c.added.length?`<span class="add">+${c.added.join(" +")}</span> `:"")+
+        (c.dropped.length?`<span class="drop">−${c.dropped.join(" −")}</span>`:"")+
+        (!c.added.length&&!c.dropped.length?"변동 없음":"");}
+    al.innerHTML=html; al.style.display="block";
+  } else { al.style.display="none"; }
+  document.getElementById('caveat').innerHTML="⏱ <b>"+(D.lag_note||"")+"</b><br>⚠ "+D.caveat;
+  const grn=getComputedStyle(document.documentElement).getPropertyValue('--grn').trim();
+  const red=getComputedStyle(document.documentElement).getPropertyValue('--red').trim();
+  function cardHTML(s){
+    const col=s.since_rebal>=0?grn:red;
+    const rows=s.holds.map(h=>`<tr><td class="tk">${h.ticker}</td><td>${h.name}</td>
+      <td class="r">${h.funds}</td><td class="r">${h.weight}%</td><td class="r ${cls(h.ret)}">${fmt(h.ret)}%</td></tr>`).join("");
+    return `<div class="card">
+      <div class="cname">${s.name}</div>
+      <div class="cdesc">${s.desc} · ${s.weight==='rank'?'랭크가중':'동일가중'}</div>
+      <div class="live"><span class="big ${cls(s.since_rebal)}">${fmt(s.since_rebal)}%</span><span class="lbl">리밸런싱 이후</span></div>
+      <div class="vsspy">vs SPY <b class="${cls(s.vs_spy)}">${fmt(s.vs_spy)}%p</b></div>
+      ${spark(s.series, col)}
+      <div class="stats">
+        <div><span>검증 알파</span> ${s.alpha} (t=${s.t})</div>
+        <div><span>Sharpe</span> ${s.sharpe}</div>
+        <div><span>CAGR</span> ${s.cagr}</div>
+        <div><span>종목수</span> ${s.holds.length}</div>
+      </div>
+      <div class="sub2">하위기간: ${s.sub||'–'}</div>
+      <div class="note">${s.note}</div>
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>티커</th><th>종목</th><th class="r">보유펀드</th><th class="r">비중</th><th class="r">이후수익</th></tr></thead>
+        <tbody>${rows}</tbody></table></div>
+    </div>`;
+  }
+  document.getElementById('sections').innerHTML=D.sections.map(sec=>
+    `<div class="section-title">${sec.title}</div>
+     <div class="cards${sec.cards.length===2?' two':''}">${sec.cards.map(cardHTML).join("")}</div>`
+  ).join("");
+}
+function load(){
+  fetch('data.json?'+Date.now()).then(r=>r.json()).then(render)
+    .catch(e=>{document.getElementById('sub').textContent="data.json 로드 실패 — scripts/dashboard_data.py 먼저 실행하세요. "+e;});
+}
+load();
+setInterval(load, 600000);  // 10분마다 자동 새로고침
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Large / regenerable data (parquets, SEC bulk caches, raw filings)
+data/*.parquet
+data/raw/nport/
+data/raw/nport_bulk/
+data/raw/ncen/
+data/raw/*.zip
+data/raw/*.xml
+
+# Logs & caches
+logs/
+**/__pycache__/
+*.pyc
+.DS_Store
+
+# Kept (small, for reproducibility): data/raw/*.json, data/raw/*.csv, data/universe_300.json

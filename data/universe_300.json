@@ -1,0 +1,2102 @@
+{
+ "WVALX": {
+  "cik": 1257927,
+  "seriesId": "S000003479",
+  "name": "Large Cap Equity Fund",
+  "style": "Value",
+  "aum": 1.0
+ },
+ "DSCPX": {
+  "cik": 842512,
+  "seriesId": "S000047867",
+  "name": "Davenport Small Cap Focus Fund",
+  "style": "Value",
+  "aum": 0.97
+ },
+ "PFFA": {
+  "cik": 1559109,
+  "seriesId": "S000059080",
+  "name": "Virtus InfraCap U.S. Preferred Stock ETF",
+  "style": "Value",
+  "aum": 0.96
+ },
+ "ROFCX": {
+  "cik": 709364,
+  "seriesId": "S000009512",
+  "name": "Royce Opportunity Fund",
+  "style": "Value",
+  "aum": 0.93
+ },
+ "GSPIX": {
+  "cik": 822977,
+  "seriesId": "S000009315",
+  "name": "Goldman Sachs Capital Growth Fund",
+  "style": "Value",
+  "aum": 0.91
+ },
+ "GSRAX": {
+  "cik": 822977,
+  "seriesId": "S000036119",
+  "name": "Goldman Sachs Rising Dividend Growth Fund",
+  "style": "Value",
+  "aum": 0.89
+ },
+ "DEOPX": {
+  "cik": 842512,
+  "seriesId": "S000030555",
+  "name": "Davenport Equity Opportunities Fund",
+  "style": "Value",
+  "aum": 0.88
+ },
+ "DVIPX": {
+  "cik": 842512,
+  "seriesId": "S000030554",
+  "name": "Davenport Value and Income Fund",
+  "style": "Value",
+  "aum": 0.88
+ },
+ "EVTMX": {
+  "cik": 31266,
+  "seriesId": "S000005215",
+  "name": "Eaton Vance Dividend Builder Fund",
+  "style": "Value",
+  "aum": 0.88
+ },
+ "SVYAX": {
+  "cik": 939934,
+  "seriesId": "S000013605",
+  "name": "SIIT U.S. MANAGED VOLATILITY FUND",
+  "style": "Value",
+  "aum": 0.84
+ },
+ "SSMAX": {
+  "cik": 939934,
+  "seriesId": "S000006770",
+  "name": "SIIT SMALL/MID CAP FUND",
+  "style": "Value",
+  "aum": 0.84
+ },
+ "FIDSX": {
+  "cik": 320351,
+  "seriesId": "S000007462",
+  "name": "Select Financials Portfolio",
+  "style": "Value",
+  "aum": 0.83
+ },
+ "FSLVX": {
+  "cik": 35341,
+  "seriesId": "S000006066",
+  "name": "Fidelity Stock Selector Large Cap Value Fund",
+  "style": "Value",
+  "aum": 0.82
+ },
+ "FSHOX": {
+  "cik": 320351,
+  "seriesId": "S000007494",
+  "name": "Select Construction and Housing Portfolio",
+  "style": "Value",
+  "aum": 0.82
+ },
+ "FSPCX": {
+  "cik": 320351,
+  "seriesId": "S000007470",
+  "name": "Select Insurance Portfolio",
+  "style": "Value",
+  "aum": 0.81
+ },
+ "FOSCX": {
+  "cik": 932381,
+  "seriesId": "S000022139",
+  "name": "TRIBUTARY SMALL COMPANY FUND",
+  "style": "Value",
+  "aum": 0.8
+ },
+ "OASGX": {
+  "cik": 1227523,
+  "seriesId": "S000002424",
+  "name": "Optimum Small-Mid Cap Growth Fund",
+  "style": "Value",
+  "aum": 0.78
+ },
+ "OASVX": {
+  "cik": 1227523,
+  "seriesId": "S000002425",
+  "name": "Optimum Small-Mid Cap Value Fund",
+  "style": "Value",
+  "aum": 0.77
+ },
+ "HRTVX": {
+  "cik": 809586,
+  "seriesId": "S000003523",
+  "name": "Heartland Value Fund",
+  "style": "Value",
+  "aum": 0.74
+ },
+ "SLCAX": {
+  "cik": 939934,
+  "seriesId": "S000006767",
+  "name": "SIIT LARGE CAP FUND",
+  "style": "Value",
+  "aum": 0.72
+ },
+ "IYSYX": {
+  "cik": 883622,
+  "seriesId": "S000024831",
+  "name": "Macquarie Smid Cap Core Fund",
+  "style": "Value",
+  "aum": 0.72
+ },
+ "FDLSX": {
+  "cik": 320351,
+  "seriesId": "S000007471",
+  "name": "Select Leisure Portfolio",
+  "style": "Value",
+  "aum": 0.71
+ },
+ "MMGEX": {
+  "cik": 916053,
+  "seriesId": "S000003668",
+  "name": "MassMutual Small Cap Growth Equity Fund",
+  "style": "Value",
+  "aum": 0.7
+ },
+ "GMUEX": {
+  "cik": 772129,
+  "seriesId": "S000004081",
+  "name": "GMO U.S. Equity Fund",
+  "style": "Value",
+  "aum": 0.68
+ },
+ "WPOPX": {
+  "cik": 1257927,
+  "seriesId": "S000008514",
+  "name": "Partners III Opportunity Fund",
+  "style": "Value",
+  "aum": 0.66
+ },
+ "FSRBX": {
+  "cik": 320351,
+  "seriesId": "S000007475",
+  "name": "Select Banking Portfolio",
+  "style": "Value",
+  "aum": 0.65
+ },
+ "GARIX": {
+  "cik": 1388485,
+  "seriesId": "S000038174",
+  "name": "Gotham Absolute Return Fund",
+  "style": "Value",
+  "aum": 0.65
+ },
+ "DGEFX": {
+  "cik": 1688680,
+  "seriesId": "S000056104",
+  "name": "Destinations Equity Income Fund",
+  "style": "Value",
+  "aum": 0.64
+ },
+ "HNMDX": {
+  "cik": 809586,
+  "seriesId": "S000047207",
+  "name": "Heartland Mid Cap Value Fund",
+  "style": "Value",
+  "aum": 0.64
+ },
+ "GCSIX": {
+  "cik": 822977,
+  "seriesId": "S000009329",
+  "name": "Goldman Sachs Small Cap Equity Insights Fund",
+  "style": "Value",
+  "aum": 0.62
+ },
+ "FCYIX": {
+  "cik": 320351,
+  "seriesId": "S000007455",
+  "name": "Select Industrials Portfolio",
+  "style": "Value",
+  "aum": 0.62
+ },
+ "MFVAX": {
+  "cik": 916053,
+  "seriesId": "S000003681",
+  "name": "MassMutual Equity Opportunities Fund",
+  "style": "Value",
+  "aum": 0.61
+ },
+ "FSRFX": {
+  "cik": 320351,
+  "seriesId": "S000007487",
+  "name": "Select Transportation Portfolio",
+  "style": "Value",
+  "aum": 0.61
+ },
+ "WPVLX": {
+  "cik": 1257927,
+  "seriesId": "S000003481",
+  "name": "Multi Cap Equity Fund",
+  "style": "Value",
+  "aum": 0.58
+ },
+ "WCEAX": {
+  "cik": 883622,
+  "seriesId": "S000006288",
+  "name": "Macquarie Core Equity Fund",
+  "style": "Value",
+  "aum": 4.94
+ },
+ "NICSX": {
+  "cik": 71958,
+  "seriesId": "S000011768",
+  "name": "Nicholas Fund, Inc.",
+  "style": "Value",
+  "aum": 4.2
+ },
+ "NDVAX": {
+  "cik": 356349,
+  "seriesId": "S000032712",
+  "name": "MFS New Discovery Value Fund",
+  "style": "Value",
+  "aum": 4.11
+ },
+ "FBSOX": {
+  "cik": 320351,
+  "seriesId": "S000007491",
+  "name": "Select Enterprise Technology Services Portfolio",
+  "style": "Value",
+  "aum": 3.98
+ },
+ "FSAEX": {
+  "cik": 35341,
+  "seriesId": "S000023603",
+  "name": "Fidelity Series All-Sector Equity Fund",
+  "style": "Value",
+  "aum": 3.9
+ },
+ "GARTX": {
+  "cik": 822977,
+  "seriesId": "S000020314",
+  "name": "Goldman Sachs Absolute Return Tracker Fund",
+  "style": "Value",
+  "aum": 3.62
+ },
+ "ALVIX": {
+  "cik": 908186,
+  "seriesId": "S000005778",
+  "name": "Focused Large Cap Value Fund",
+  "style": "Value",
+  "aum": 3.29
+ },
+ "MLPEX": {
+  "cik": 826644,
+  "seriesId": "S000064698",
+  "name": "Invesco Oppenheimer SteelPath MLP Select 40 Fund",
+  "style": "Value",
+  "aum": 3.27
+ },
+ "MLPRX": {
+  "cik": 826644,
+  "seriesId": "S000064700",
+  "name": "Invesco Oppenheimer SteelPath MLP Income Fund",
+  "style": "Value",
+  "aum": 2.99
+ },
+ "NOSGX": {
+  "cik": 916620,
+  "seriesId": "S000001246",
+  "name": "Small Cap Value Fund",
+  "style": "Value",
+  "aum": 2.95
+ },
+ "FSDAX": {
+  "cik": 320351,
+  "seriesId": "S000007456",
+  "name": "Select Defense and Aerospace Portfolio",
+  "style": "Value",
+  "aum": 2.94
+ },
+ "GSPKX": {
+  "cik": 822977,
+  "seriesId": "S000009324",
+  "name": "Goldman Sachs U.S. Equity Dividend and Premium Fund",
+  "style": "Value",
+  "aum": 2.93
+ },
+ "FSENX": {
+  "cik": 320351,
+  "seriesId": "S000007459",
+  "name": "Select Energy Portfolio",
+  "style": "Value",
+  "aum": 2.91
+ },
+ "WSGRX": {
+  "cik": 883622,
+  "seriesId": "S000006286",
+  "name": "Macquarie Small Cap Growth Fund",
+  "style": "Value",
+  "aum": 2.87
+ },
+ "FMUEX": {
+  "cik": 831114,
+  "seriesId": "S000018555",
+  "name": "Free Market U.S. Equity Fund",
+  "style": "Value",
+  "aum": 2.81
+ },
+ "USISX": {
+  "cik": 908695,
+  "seriesId": "S000012900",
+  "name": "Income Stock Fund",
+  "style": "Value",
+  "aum": 2.78
+ },
+ "CMUAX": {
+  "cik": 1097519,
+  "seriesId": "S000010792",
+  "name": "Columbia Select Mid Cap Value Fund",
+  "style": "Value",
+  "aum": 2.62
+ },
+ "TWVLX": {
+  "cik": 908186,
+  "seriesId": "S000005782",
+  "name": "Value Fund",
+  "style": "Value",
+  "aum": 2.61
+ },
+ "ELGAX": {
+  "cik": 773757,
+  "seriesId": "S000021575",
+  "name": "Columbia Select Large Cap Growth Fund",
+  "style": "Value",
+  "aum": 2.29
+ },
+ "IARAX": {
+  "cik": 842790,
+  "seriesId": "S000000255",
+  "name": "Invesco Real Estate Fund",
+  "style": "Value",
+  "aum": 2.06
+ },
+ "GCGIX": {
+  "cik": 822977,
+  "seriesId": "S000009328",
+  "name": "Goldman Sachs Large Cap Growth Insights Fund",
+  "style": "Value",
+  "aum": 2.05
+ },
+ "GLPAX": {
+  "cik": 822977,
+  "seriesId": "S000040184",
+  "name": "Goldman Sachs MLP Energy Infrastructure Fund",
+  "style": "Value",
+  "aum": 2.04
+ },
+ "OALVX": {
+  "cik": 1227523,
+  "seriesId": "S000002423",
+  "name": "Optimum Large Cap Value Fund",
+  "style": "Value",
+  "aum": 1.98
+ },
+ "NFEAX": {
+  "cik": 1097519,
+  "seriesId": "S000010797",
+  "name": "Columbia Large Cap Growth Opportunity Fund",
+  "style": "Value",
+  "aum": 1.9
+ },
+ "FSMVX": {
+  "cik": 35341,
+  "seriesId": "S000006068",
+  "name": "Fidelity Mid Cap Value Fund",
+  "style": "Value",
+  "aum": 1.87
+ },
+ "USGRX": {
+  "cik": 908695,
+  "seriesId": "S000012896",
+  "name": "Growth & Income Fund",
+  "style": "Value",
+  "aum": 1.84
+ },
+ "RYPRX": {
+  "cik": 709364,
+  "seriesId": "S000009505",
+  "name": "Royce Premier Fund",
+  "style": "Value",
+  "aum": 1.83
+ },
+ "PENNX": {
+  "cik": 709364,
+  "seriesId": "S000009507",
+  "name": "Royce Pennsylvania Mutual Fund",
+  "style": "Value",
+  "aum": 1.83
+ },
+ "SPMHX": {
+  "cik": 826644,
+  "seriesId": "S000064699",
+  "name": "Invesco Oppenheimer SteelPath MLP Alpha Fund",
+  "style": "Value",
+  "aum": 1.67
+ },
+ "USCAX": {
+  "cik": 908695,
+  "seriesId": "S000012914",
+  "name": "Small Cap Stock Fund",
+  "style": "Value",
+  "aum": 1.6
+ },
+ "FSHCX": {
+  "cik": 320351,
+  "seriesId": "S000007472",
+  "name": "Select Health Care Services Portfolio",
+  "style": "Value",
+  "aum": 1.6
+ },
+ "FSUTX": {
+  "cik": 320351,
+  "seriesId": "S000007488",
+  "name": "Select Utilities Portfolio",
+  "style": "Value",
+  "aum": 1.59
+ },
+ "RYTRX": {
+  "cik": 709364,
+  "seriesId": "S000009510",
+  "name": "Royce Total Return Fund",
+  "style": "Value",
+  "aum": 1.58
+ },
+ "BPAIX": {
+  "cik": 831114,
+  "seriesId": "S000001106",
+  "name": "Boston Partners All-Cap Value Fund",
+  "style": "Value",
+  "aum": 1.56
+ },
+ "VDIGX": {
+  "cik": 734383,
+  "seriesId": "S000002920",
+  "name": "VANGUARD DIVIDEND GROWTH FUND",
+  "style": "Value",
+  "aum": 52.67
+ },
+ "JVMAX": {
+  "cik": 1329954,
+  "seriesId": "S000028882",
+  "name": "John Hancock Disciplined Value Mid Cap Fund",
+  "style": "Value",
+  "aum": 22.74
+ },
+ "JVLAX": {
+  "cik": 1329954,
+  "seriesId": "S000023715",
+  "name": "John Hancock Disciplined Value Fund",
+  "style": "Value",
+  "aum": 15.27
+ },
+ "TWEIX": {
+  "cik": 908186,
+  "seriesId": "S000005776",
+  "name": "Equity Income Fund",
+  "style": "Value",
+  "aum": 12.0
+ },
+ "FBLEX": {
+  "cik": 35341,
+  "seriesId": "S000039218",
+  "name": "Fidelity Series Stock Selector Large Cap Value Fund",
+  "style": "Value",
+  "aum": 11.86
+ },
+ "FNKLX": {
+  "cik": 35341,
+  "seriesId": "S000039216",
+  "name": "Fidelity Series Value Discovery Fund",
+  "style": "Value",
+  "aum": 11.67
+ },
+ "WSTRX": {
+  "cik": 883622,
+  "seriesId": "S000006285",
+  "name": "Macquarie Science and Technology Fund",
+  "style": "Value",
+  "aum": 9.74
+ },
+ "ACMVX": {
+  "cik": 908186,
+  "seriesId": "S000005779",
+  "name": "Mid Cap Value Fund",
+  "style": "Value",
+  "aum": 9.4
+ },
+ "FEQIX": {
+  "cik": 35341,
+  "seriesId": "S000006064",
+  "name": "Fidelity Equity-Income Fund",
+  "style": "Value",
+  "aum": 8.42
+ },
+ "VGENX": {
+  "cik": 734383,
+  "seriesId": "S000002921",
+  "name": "VANGUARD ENERGY FUND",
+  "style": "Value",
+  "aum": 7.16
+ },
+ "GSSIX": {
+  "cik": 822977,
+  "seriesId": "S000009323",
+  "name": "Goldman Sachs Small Cap Value Fund",
+  "style": "Value",
+  "aum": 6.06
+ },
+ "ESPAX": {
+  "cik": 1081400,
+  "seriesId": "S000029108",
+  "name": "Allspring Special Small Cap Value Fund",
+  "style": "Value",
+  "aum": 6.01
+ },
+ "ASVIX": {
+  "cik": 908186,
+  "seriesId": "S000005781",
+  "name": "Small Cap Value Fund",
+  "style": "Value",
+  "aum": 5.78
+ },
+ "DLCFX": {
+  "cik": 1688680,
+  "seriesId": "S000056100",
+  "name": "Destinations Large Cap Equity Fund",
+  "style": "Value",
+  "aum": 5.21
+ },
+ "MEFAX": {
+  "cik": 916053,
+  "seriesId": "S000003665",
+  "name": "MassMutual Mid Cap Growth Fund",
+  "style": "Value",
+  "aum": 5.2
+ },
+ "TGCEX": {
+  "cik": 892071,
+  "seriesId": "S000006325",
+  "name": "TCW Select Equities Fund",
+  "style": "Blend",
+  "aum": 0.9
+ },
+ "ETAHX": {
+  "cik": 1355064,
+  "seriesId": "S000039514",
+  "name": "Eventide Healthcare & Life Sciences Fund",
+  "style": "Blend",
+  "aum": 0.85
+ },
+ "GMLGX": {
+  "cik": 1131042,
+  "seriesId": "S000006182",
+  "name": "GuideMark Large Cap Core Fund",
+  "style": "Blend",
+  "aum": 0.75
+ },
+ "WFSTX": {
+  "cik": 1081400,
+  "seriesId": "S000007340",
+  "name": "Allspring Innovation Fund",
+  "style": "Blend",
+  "aum": 0.71
+ },
+ "FSCPX": {
+  "cik": 320351,
+  "seriesId": "S000007454",
+  "name": "Select Consumer Discretionary Portfolio",
+  "style": "Blend",
+  "aum": 0.63
+ },
+ "FSLEX": {
+  "cik": 320351,
+  "seriesId": "S000007461",
+  "name": "Fidelity Environment and Alternative Energy Fund",
+  "style": "Blend",
+  "aum": 0.62
+ },
+ "PMVAX": {
+  "cik": 932101,
+  "seriesId": "S000003851",
+  "name": "Putnam Sustainable Future Fund",
+  "style": "Blend",
+  "aum": 0.52
+ },
+ "VLEOX": {
+  "cik": 895429,
+  "seriesId": "S000007569",
+  "name": "Value Line Small Cap Opportunities Fund, Inc.",
+  "style": "Blend",
+  "aum": 0.5
+ },
+ "DVSMX": {
+  "cik": 1016073,
+  "seriesId": "S000058261",
+  "name": "Driehaus Small Cap Growth Fund",
+  "style": "Blend",
+  "aum": 0.49
+ },
+ "FWRLX": {
+  "cik": 320351,
+  "seriesId": "S000007489",
+  "name": "Select Wireless Portfolio",
+  "style": "Blend",
+  "aum": 0.46
+ },
+ "OSTGX": {
+  "cik": 811030,
+  "seriesId": "S000055531",
+  "name": "Osterweis Opportunity Fund",
+  "style": "Blend",
+  "aum": 0.37
+ },
+ "EALCX": {
+  "cik": 31266,
+  "seriesId": "S000005220",
+  "name": "Eaton Vance Growth Fund",
+  "style": "Blend",
+  "aum": 0.34
+ },
+ "FMKFX": {
+  "cik": 61397,
+  "seriesId": "S000065695",
+  "name": "Fidelity Magellan K6 Fund",
+  "style": "Blend",
+  "aum": 0.31
+ },
+ "EAFGX": {
+  "cik": 102816,
+  "seriesId": "S000031537",
+  "name": "Eaton Vance Focused Growth Opportunities Fund",
+  "style": "Blend",
+  "aum": 0.31
+ },
+ "RGRYX": {
+  "cik": 802716,
+  "seriesId": "S000053577",
+  "name": "Victory RS Growth Fund",
+  "style": "Blend",
+  "aum": 0.26
+ },
+ "TACK": {
+  "cik": 1587551,
+  "seriesId": "S000075505",
+  "name": "Fairlead Tactical Sector ETF",
+  "style": "Blend",
+  "aum": 0.22
+ },
+ "RSMOX": {
+  "cik": 802716,
+  "seriesId": "S000053578",
+  "name": "Victory RS Mid Cap Growth Fund",
+  "style": "Blend",
+  "aum": 0.22
+ },
+ "DTLGX": {
+  "cik": 890453,
+  "seriesId": "S000001045",
+  "name": "Large Company Growth Portfolio",
+  "style": "Blend",
+  "aum": 0.21
+ },
+ "BUFGX": {
+  "cik": 1135300,
+  "seriesId": "S000022454",
+  "name": "Buffalo Growth Fund",
+  "style": "Blend",
+  "aum": 0.21
+ },
+ "STSEX": {
+  "cik": 844779,
+  "seriesId": "S000001878",
+  "name": "BlackRock Exchange Portfolio",
+  "style": "Blend",
+  "aum": 0.2
+ },
+ "BUFMX": {
+  "cik": 1135300,
+  "seriesId": "S000006556",
+  "name": "Buffalo Mid Cap Growth Fund",
+  "style": "Blend",
+  "aum": 0.19
+ },
+ "TGVFX": {
+  "cik": 711080,
+  "seriesId": "S000003125",
+  "name": "Touchstone Growth Opportunities Fund",
+  "style": "Blend",
+  "aum": 0.17
+ },
+ "EGWAX": {
+  "cik": 1081400,
+  "seriesId": "S000029105",
+  "name": "Allspring Discovery Small Cap Growth Fund",
+  "style": "Blend",
+  "aum": 0.17
+ },
+ "RCMCX": {
+  "cik": 1006387,
+  "seriesId": "S000009496",
+  "name": "Royce Capital Fund - Micro-Cap Portfolio",
+  "style": "Blend",
+  "aum": 0.15
+ },
+ "RSDGX": {
+  "cik": 802716,
+  "seriesId": "S000053579",
+  "name": "Victory RS Select Growth Fund",
+  "style": "Blend",
+  "aum": 0.14
+ },
+ "BUFOX": {
+  "cik": 1135300,
+  "seriesId": "S000006555",
+  "name": "Buffalo Early Stage Growth Fund",
+  "style": "Blend",
+  "aum": 0.14
+ },
+ "ICTTX": {
+  "cik": 836267,
+  "seriesId": "S000067903",
+  "name": "ICON Health and Information Technology Fund",
+  "style": "Blend",
+  "aum": 0.13
+ },
+ "RYPMX": {
+  "cik": 899148,
+  "seriesId": "S000003798",
+  "name": "Precious Metals Fund",
+  "style": "Blend",
+  "aum": 0.11
+ },
+ "DSHFX": {
+  "cik": 1688680,
+  "seriesId": "S000071226",
+  "name": "Destinations Shelter Fund",
+  "style": "Blend",
+  "aum": 0.11
+ },
+ "BQMGX": {
+  "cik": 1141819,
+  "seriesId": "S000029035",
+  "name": "Bright Rock Mid Cap Growth Fund",
+  "style": "Blend",
+  "aum": 0.09
+ },
+ "APITX": {
+  "cik": 764859,
+  "seriesId": "S000008424",
+  "name": "Yorktown Growth Fund",
+  "style": "Blend",
+  "aum": 0.09
+ },
+ "RYTIX": {
+  "cik": 899148,
+  "seriesId": "S000003809",
+  "name": "Technology Fund",
+  "style": "Blend",
+  "aum": 0.08
+ },
+ "XVOL": {
+  "cik": 1742912,
+  "seriesId": "S000071415",
+  "name": "Acruence Active Hedge U.S. Equity ETF",
+  "style": "Blend",
+  "aum": 0.08
+ },
+ "GONIX": {
+  "cik": 1388485,
+  "seriesId": "S000041944",
+  "name": "Gotham Neutral Fund",
+  "style": "Blend",
+  "aum": 0.08
+ },
+ "CZMGX": {
+  "cik": 773757,
+  "seriesId": "S000036204",
+  "name": "Multi-Manager Growth Strategies Fund",
+  "style": "Blend",
+  "aum": 4.47
+ },
+ "FSRPX": {
+  "cik": 320351,
+  "seriesId": "S000007482",
+  "name": "Select Retailing Portfolio",
+  "style": "Blend",
+  "aum": 4.4
+ },
+ "TIREX": {
+  "cik": 1084380,
+  "seriesId": "S000005369",
+  "name": "Nuveen Real Estate Securities Select Fund",
+  "style": "Blend",
+  "aum": 4.18
+ },
+ "GQERX": {
+  "cik": 1593547,
+  "seriesId": "S000063192",
+  "name": "GQG PARTNERS US SELECT QUALITY EQUITY FUND",
+  "style": "Blend",
+  "aum": 3.33
+ },
+ "LGILX": {
+  "cik": 832545,
+  "seriesId": "S000025589",
+  "name": "Schwab Select Large Cap Growth Fund",
+  "style": "Blend",
+  "aum": 3.21
+ },
+ "CIPSX": {
+  "cik": 890540,
+  "seriesId": "S000005803",
+  "name": "Champlain Small Company Fund",
+  "style": "Blend",
+  "aum": 2.89
+ },
+ "USAAX": {
+  "cik": 908695,
+  "seriesId": "S000012895",
+  "name": "Growth Fund",
+  "style": "Blend",
+  "aum": 2.75
+ },
+ "MBCGX": {
+  "cik": 916053,
+  "seriesId": "S000003658",
+  "name": "MassMutual Blue Chip Growth Fund",
+  "style": "Blend",
+  "aum": 2.42
+ },
+ "GCTIX": {
+  "cik": 822977,
+  "seriesId": "S000009340",
+  "name": "Goldman Sachs U.S. Tax-Managed Equity Fund",
+  "style": "Blend",
+  "aum": 2.25
+ },
+ "DREQX": {
+  "cik": 30162,
+  "seriesId": "S000000071",
+  "name": "BNY Mellon Research Growth Fund, Inc.",
+  "style": "Blend",
+  "aum": 2.23
+ },
+ "GSMYX": {
+  "cik": 822977,
+  "seriesId": "S000009322",
+  "name": "Goldman Sachs Small/Mid Cap Growth Fund",
+  "style": "Blend",
+  "aum": 2.11
+ },
+ "OALGX": {
+  "cik": 1227523,
+  "seriesId": "S000002422",
+  "name": "Optimum Large Cap Growth Fund",
+  "style": "Blend",
+  "aum": 2.1
+ },
+ "BUFTX": {
+  "cik": 1135300,
+  "seriesId": "S000006557",
+  "name": "Buffalo Mid Cap Discovery Fund",
+  "style": "Blend",
+  "aum": 1.75
+ },
+ "FBMPX": {
+  "cik": 320351,
+  "seriesId": "S000007476",
+  "name": "Select Communication Services Portfolio",
+  "style": "Blend",
+  "aum": 1.65
+ },
+ "FDFAX": {
+  "cik": 320351,
+  "seriesId": "S000007463",
+  "name": "Select Consumer Staples Portfolio",
+  "style": "Blend",
+  "aum": 1.6
+ },
+ "GGOIX": {
+  "cik": 822977,
+  "seriesId": "S000009321",
+  "name": "Goldman Sachs Growth Opportunities Fund",
+  "style": "Blend",
+  "aum": 1.56
+ },
+ "JSGAX": {
+  "cik": 1329954,
+  "seriesId": "S000035055",
+  "name": "John Hancock U.S. Growth Fund",
+  "style": "Blend",
+  "aum": 1.56
+ },
+ "TFOAX": {
+  "cik": 711080,
+  "seriesId": "S000035683",
+  "name": "Touchstone Focused Fund",
+  "style": "Blend",
+  "aum": 1.29
+ },
+ "RSEGX": {
+  "cik": 802716,
+  "seriesId": "S000053581",
+  "name": "Victory RS Small Cap Growth Fund",
+  "style": "Blend",
+  "aum": 1.28
+ },
+ "BUFSX": {
+  "cik": 1135300,
+  "seriesId": "S000022453",
+  "name": "Buffalo Small Cap Growth Fund",
+  "style": "Blend",
+  "aum": 1.15
+ },
+ "AMCPX": {
+  "cik": 4405,
+  "seriesId": "S000008817",
+  "name": "AMCAP FUND",
+  "style": "Blend",
+  "aum": 87.71
+ },
+ "VGHCX": {
+  "cik": 734383,
+  "seriesId": "S000002922",
+  "name": "VANGUARD HEALTH CARE FUND",
+  "style": "Blend",
+  "aum": 50.01
+ },
+ "AMANX": {
+  "cik": 766285,
+  "seriesId": "S000004772",
+  "name": "Amana Income Fund",
+  "style": "Blend",
+  "aum": 39.79
+ },
+ "EGFIX": {
+  "cik": 878719,
+  "seriesId": "S000011838",
+  "name": "Edgewood Growth Fund",
+  "style": "Blend",
+  "aum": 18.97
+ },
+ "FSCSX": {
+  "cik": 320351,
+  "seriesId": "S000007483",
+  "name": "Select Software and IT Services Portfolio",
+  "style": "Blend",
+  "aum": 12.77
+ },
+ "PBCKX": {
+  "cik": 898745,
+  "seriesId": "S000037378",
+  "name": "Blue Chip Fund",
+  "style": "Blend",
+  "aum": 10.53
+ },
+ "FSPHX": {
+  "cik": 320351,
+  "seriesId": "S000007466",
+  "name": "Select Health Care Portfolio",
+  "style": "Blend",
+  "aum": 10.45
+ },
+ "GQETX": {
+  "cik": 772129,
+  "seriesId": "S000004084",
+  "name": "GMO Quality Fund",
+  "style": "Blend",
+  "aum": 10.4
+ },
+ "FSMEX": {
+  "cik": 320351,
+  "seriesId": "S000007473",
+  "name": "Select Medical Technology and Devices Portfolio",
+  "style": "Blend",
+  "aum": 9.77
+ },
+ "WLGRX": {
+  "cik": 883622,
+  "seriesId": "S000006291",
+  "name": "Macquarie Large Cap Growth Fund",
+  "style": "Blend",
+  "aum": 8.0
+ },
+ "WMGRX": {
+  "cik": 883622,
+  "seriesId": "S000006293",
+  "name": "Macquarie Mid Cap Growth Fund",
+  "style": "Blend",
+  "aum": 7.92
+ },
+ "BCSIX": {
+  "cik": 869351,
+  "seriesId": "S000010418",
+  "name": "Brown Capital Management Small Company Fund",
+  "style": "Blend",
+  "aum": 6.53
+ },
+ "CIPMX": {
+  "cik": 890540,
+  "seriesId": "S000022606",
+  "name": "Champlain MidCap Fund",
+  "style": "Blend",
+  "aum": 5.88
+ },
+ "MFOCX": {
+  "cik": 1047112,
+  "seriesId": "S000007710",
+  "name": "Marsico Focus Fund",
+  "style": "Growth",
+  "aum": 0.79
+ },
+ "GITIX": {
+  "cik": 822977,
+  "seriesId": "S000009339",
+  "name": "Goldman Sachs Technology Opportunities Fund",
+  "style": "Growth",
+  "aum": 0.48
+ },
+ "LRGE": {
+  "cik": 1645194,
+  "seriesId": "S000057700",
+  "name": "ClearBridge Large Cap Growth ESG ETF",
+  "style": "Growth",
+  "aum": 0.35
+ },
+ "MGRIX": {
+  "cik": 1047112,
+  "seriesId": "S000007711",
+  "name": "Marsico Growth Fund",
+  "style": "Growth",
+  "aum": 0.34
+ },
+ "MXXIX": {
+  "cik": 1047112,
+  "seriesId": "S000007712",
+  "name": "Marsico Midcap Growth Focus Fund",
+  "style": "Growth",
+  "aum": 0.3
+ },
+ "RSIFX": {
+  "cik": 802716,
+  "seriesId": "S000053582",
+  "name": "Victory RS Science & Technology Fund",
+  "style": "Growth",
+  "aum": 0.22
+ },
+ "RYCIX": {
+  "cik": 899148,
+  "seriesId": "S000003811",
+  "name": "Consumer Products Fund",
+  "style": "Growth",
+  "aum": 0.15
+ },
+ "RYSIX": {
+  "cik": 899148,
+  "seriesId": "S000003803",
+  "name": "Electronics Fund",
+  "style": "Growth",
+  "aum": 0.11
+ },
+ "ESGEX": {
+  "cik": 1587551,
+  "seriesId": "S000063664",
+  "name": "Reynders, McVeigh Core Equity Fund",
+  "style": "Growth",
+  "aum": 0.08
+ },
+ "TMFS": {
+  "cik": 831114,
+  "seriesId": "S000063392",
+  "name": "MFAM Small-Cap Growth ETF",
+  "style": "Growth",
+  "aum": 0.08
+ },
+ "BUYZ": {
+  "cik": 1655589,
+  "seriesId": "S000067392",
+  "name": "Franklin Disruptive Commerce ETF",
+  "style": "Growth",
+  "aum": 0.03
+ },
+ "WUGI": {
+  "cik": 1587982,
+  "seriesId": "S000079287",
+  "name": "AXS Esoterica NextG Economy ETF",
+  "style": "Growth",
+  "aum": 0.03
+ },
+ "IQM": {
+  "cik": 1655589,
+  "seriesId": "S000067394",
+  "name": "Franklin Intelligent Machines ETF",
+  "style": "Growth",
+  "aum": 0.03
+ },
+ "HELX": {
+  "cik": 1655589,
+  "seriesId": "S000067393",
+  "name": "Franklin Genomic Advancements ETF",
+  "style": "Growth",
+  "aum": 0.02
+ },
+ "CLPAX": {
+  "cik": 1355064,
+  "seriesId": "S000036625",
+  "name": "Catalyst/Exceed Defined Risk Fund",
+  "style": "Growth",
+  "aum": 0.01
+ },
+ "WIREX": {
+  "cik": 1103243,
+  "seriesId": "S000004816",
+  "name": "WIRELESS FUND",
+  "style": "Growth",
+  "aum": 0.01
+ },
+ "XDAT": {
+  "cik": 1655589,
+  "seriesId": "S000070439",
+  "name": "Franklin Exponential Data ETF",
+  "style": "Growth",
+  "aum": 0.01
+ },
+ "ETGLX": {
+  "cik": 1355064,
+  "seriesId": "S000022598",
+  "name": "Eventide Gilead Fund",
+  "style": "Growth",
+  "aum": 2.14
+ },
+ "JACFX": {
+  "cik": 22370,
+  "seriesId": "S000072133",
+  "name": "John Hancock Mid Cap Growth Fund",
+  "style": "Growth",
+  "aum": 1.89
+ },
+ "SPFAX": {
+  "cik": 1104631,
+  "seriesId": "S000004751",
+  "name": "PGIM Jennison Focused Growth Fund",
+  "style": "Growth",
+  "aum": 1.62
+ },
+ "USAUX": {
+  "cik": 908695,
+  "seriesId": "S000012894",
+  "name": "Aggressive Growth Fund",
+  "style": "Growth",
+  "aum": 1.6
+ },
+ "USSCX": {
+  "cik": 908695,
+  "seriesId": "S000012911",
+  "name": "Science & Technology Fund",
+  "style": "Growth",
+  "aum": 1.4
+ },
+ "PREFX": {
+  "cik": 1038490,
+  "seriesId": "S000002160",
+  "name": "T. Rowe Price Tax-Efficient Equity Fund",
+  "style": "Growth",
+  "aum": 1.14
+ },
+ "AMAGX": {
+  "cik": 766285,
+  "seriesId": "S000022508",
+  "name": "Amana Growth Fund",
+  "style": "Growth",
+  "aum": 64.43
+ },
+ "FMAGX": {
+  "cik": 61397,
+  "seriesId": "S000007112",
+  "name": "Fidelity Magellan Fund",
+  "style": "Growth",
+  "aum": 35.47
+ },
+ "FSELX": {
+  "cik": 320351,
+  "seriesId": "S000007458",
+  "name": "Select Semiconductors Portfolio",
+  "style": "Growth",
+  "aum": 19.48
+ },
+ "FSPTX": {
+  "cik": 320351,
+  "seriesId": "S000007484",
+  "name": "Select Technology Portfolio",
+  "style": "Growth",
+  "aum": 15.87
+ },
+ "FBIOX": {
+  "cik": 320351,
+  "seriesId": "S000007486",
+  "name": "Select Biotechnology Portfolio",
+  "style": "Growth",
+  "aum": 7.65
+ },
+ "NSGAX": {
+  "cik": 1097519,
+  "seriesId": "S000010795",
+  "name": "Columbia Select Large Cap Equity Fund",
+  "style": "Value",
+  "aum": 1.5
+ },
+ "COVAX": {
+  "cik": 1097519,
+  "seriesId": "S000010793",
+  "name": "Columbia Small Cap Value Fund II",
+  "style": "Value",
+  "aum": 1.48
+ },
+ "EHSTX": {
+  "cik": 31266,
+  "seriesId": "S000005221",
+  "name": "Eaton Vance Large-Cap Value Fund",
+  "style": "Value",
+  "aum": 1.44
+ },
+ "TEGAX": {
+  "cik": 711080,
+  "seriesId": "S000003124",
+  "name": "Touchstone Mid Cap Growth Fund",
+  "style": "Value",
+  "aum": 1.41
+ },
+ "GSELX": {
+  "cik": 822977,
+  "seriesId": "S000009327",
+  "name": "Goldman Sachs U.S. Equity Insights Fund",
+  "style": "Value",
+  "aum": 1.4
+ },
+ "UVALX": {
+  "cik": 908695,
+  "seriesId": "S000012920",
+  "name": "Value Fund",
+  "style": "Value",
+  "aum": 1.37
+ },
+ "DSMFX": {
+  "cik": 1688680,
+  "seriesId": "S000056102",
+  "name": "Destinations Small-Mid Cap Equity Fund",
+  "style": "Value",
+  "aum": 1.34
+ },
+ "GSMCX": {
+  "cik": 822977,
+  "seriesId": "S000009320",
+  "name": "Goldman Sachs Mid Cap Value Fund",
+  "style": "Value",
+  "aum": 1.33
+ },
+ "SCPAX": {
+  "cik": 939934,
+  "seriesId": "S000006769",
+  "name": "SIIT LARGE CAP DISCIPLINED EQUITY FUND",
+  "style": "Value",
+  "aum": 1.28
+ },
+ "PMDAX": {
+  "cik": 898745,
+  "seriesId": "S000032942",
+  "name": "Small-MidCap Dividend Income Fund",
+  "style": "Value",
+  "aum": 1.24
+ },
+ "DLHAX": {
+  "cik": 778108,
+  "seriesId": "S000018873",
+  "name": "Macquarie Healthcare Fund",
+  "style": "Value",
+  "aum": 1.16
+ },
+ "FIUIX": {
+  "cik": 320351,
+  "seriesId": "S000039312",
+  "name": "Fidelity Telecom and Utilities Fund",
+  "style": "Value",
+  "aum": 1.13
+ },
+ "DAVPX": {
+  "cik": 842512,
+  "seriesId": "S000001559",
+  "name": "Davenport Core Leaders Fund",
+  "style": "Value",
+  "aum": 1.06
+ },
+ "FSLBX": {
+  "cik": 320351,
+  "seriesId": "S000007490",
+  "name": "Select Brokerage and Investment Management Portfolio",
+  "style": "Value",
+  "aum": 1.04
+ },
+ "BPSIX": {
+  "cik": 831114,
+  "seriesId": "S000001094",
+  "name": "Boston Partners Small Cap Value Fund II",
+  "style": "Value",
+  "aum": 0.55
+ },
+ "SILVX": {
+  "cik": 831114,
+  "seriesId": "S000036223",
+  "name": "SGI U.S. Large Cap Equity Fund",
+  "style": "Value",
+  "aum": 0.55
+ },
+ "NMIAX": {
+  "cik": 1097519,
+  "seriesId": "S000010818",
+  "name": "Columbia Large Cap Enhanced Core Fund",
+  "style": "Value",
+  "aum": 0.53
+ },
+ "GCVIX": {
+  "cik": 822977,
+  "seriesId": "S000009326",
+  "name": "Goldman Sachs Large Cap Value Insights Fund",
+  "style": "Value",
+  "aum": 0.5
+ },
+ "GSLIX": {
+  "cik": 822977,
+  "seriesId": "S000009317",
+  "name": "Goldman Sachs Large Cap Value Fund",
+  "style": "Value",
+  "aum": 0.5
+ },
+ "GPAFX": {
+  "cik": 802716,
+  "seriesId": "S000053560",
+  "name": "Victory RS Large Cap Alpha Fund",
+  "style": "Value",
+  "aum": 0.5
+ },
+ "NSEIX": {
+  "cik": 913131,
+  "seriesId": "S000009137",
+  "name": "Nicholas Equity Income Fund, Inc.",
+  "style": "Value",
+  "aum": 0.49
+ },
+ "EVUAX": {
+  "cik": 1081400,
+  "seriesId": "S000029100",
+  "name": "Allspring Utility and Telecommunications Fund",
+  "style": "Value",
+  "aum": 0.45
+ },
+ "WTV": {
+  "cik": 1350487,
+  "seriesId": "S000015479",
+  "name": "WisdomTree U.S. Value Fund",
+  "style": "Value",
+  "aum": 0.45
+ },
+ "IRSYX": {
+  "cik": 883622,
+  "seriesId": "S000024830",
+  "name": "Macquarie Real Estate Securities Fund",
+  "style": "Value",
+  "aum": 0.42
+ },
+ "GSATX": {
+  "cik": 822977,
+  "seriesId": "S000014929",
+  "name": "Goldman Sachs Small Cap Value Insights Fund",
+  "style": "Value",
+  "aum": 0.42
+ },
+ "GCAVX": {
+  "cik": 772129,
+  "seriesId": "S000065871",
+  "name": "GMO U.S. Small Cap Value Fund",
+  "style": "Value",
+  "aum": 0.42
+ },
+ "JEQIX": {
+  "cik": 892657,
+  "seriesId": "S000005714",
+  "name": "Johnson Equity Income Fund",
+  "style": "Value",
+  "aum": 0.4
+ },
+ "BQLCX": {
+  "cik": 1141819,
+  "seriesId": "S000029036",
+  "name": "Bright Rock Quality Large Cap Fund",
+  "style": "Value",
+  "aum": 0.4
+ },
+ "CPEAX": {
+  "cik": 1355064,
+  "seriesId": "S000035242",
+  "name": "Catalyst Dynamic Alpha Fund",
+  "style": "Value",
+  "aum": 0.39
+ },
+ "CNRWX": {
+  "cik": 1026977,
+  "seriesId": "S000039066",
+  "name": "CITY NATIONAL ROCHDALE U.S. CORE EQUITY FUND",
+  "style": "Value",
+  "aum": 0.39
+ },
+ "DMCRX": {
+  "cik": 1016073,
+  "seriesId": "S000042829",
+  "name": "Driehaus Micro Cap Growth Fund",
+  "style": "Value",
+  "aum": 0.38
+ },
+ "CAVAX": {
+  "cik": 1627853,
+  "seriesId": "S000048320",
+  "name": "Catholic Values Equity Fund",
+  "style": "Value",
+  "aum": 0.37
+ },
+ "AMZA": {
+  "cik": 1559109,
+  "seriesId": "S000045418",
+  "name": "InfraCap MLP ETF",
+  "style": "Value",
+  "aum": 0.37
+ },
+ "SSSFX": {
+  "cik": 1593547,
+  "seriesId": "S000070198",
+  "name": "SouthernSun Small Cap Fund",
+  "style": "Value",
+  "aum": 0.37
+ },
+ "RSPFX": {
+  "cik": 802716,
+  "seriesId": "S000053561",
+  "name": "Victory RS Partners Fund",
+  "style": "Value",
+  "aum": 0.37
+ },
+ "SUVAX": {
+  "cik": 1104631,
+  "seriesId": "S000004753",
+  "name": "PGIM Quant Solutions Large-Cap Value Fund",
+  "style": "Value",
+  "aum": 0.36
+ },
+ "GSIIX": {
+  "cik": 822977,
+  "seriesId": "S000009316",
+  "name": "Goldman Sachs Equity Income Fund",
+  "style": "Value",
+  "aum": 0.36
+ },
+ "USBOX": {
+  "cik": 722885,
+  "seriesId": "S000009492",
+  "name": "Pear Tree Quality Fund",
+  "style": "Value",
+  "aum": 0.34
+ },
+ "FSTCX": {
+  "cik": 320351,
+  "seriesId": "S000007485",
+  "name": "Select Telecommunications Portfolio",
+  "style": "Value",
+  "aum": 0.33
+ },
+ "WMKGX": {
+  "cik": 1007226,
+  "seriesId": "S000005479",
+  "name": "WesMark Growth Fund",
+  "style": "Value",
+  "aum": 0.33
+ },
+ "RCPFX": {
+  "cik": 1006387,
+  "seriesId": "S000009497",
+  "name": "Royce Capital Fund - Small-Cap Portfolio",
+  "style": "Value",
+  "aum": 0.32
+ },
+ "DLBMX": {
+  "cik": 927972,
+  "seriesId": "S000003788",
+  "name": "MassMutual Small Cap Opportunities Fund",
+  "style": "Value",
+  "aum": 0.32
+ },
+ "HRVIX": {
+  "cik": 809586,
+  "seriesId": "S000003524",
+  "name": "Heartland Value Plus Fund",
+  "style": "Value",
+  "aum": 0.32
+ },
+ "RSVAX": {
+  "cik": 802716,
+  "seriesId": "S000053562",
+  "name": "Victory RS Value Fund",
+  "style": "Value",
+  "aum": 0.31
+ },
+ "DASCX": {
+  "cik": 1199046,
+  "seriesId": "S000016035",
+  "name": "Dean Small Cap Value Fund",
+  "style": "Value",
+  "aum": 0.31
+ },
+ "MDDAX": {
+  "cik": 916053,
+  "seriesId": "S000003679",
+  "name": "MassMutual Diversified Value Fund",
+  "style": "Value",
+  "aum": 0.3
+ },
+ "PSLAX": {
+  "cik": 932101,
+  "seriesId": "S000003854",
+  "name": "Putnam Small Cap Value Fund",
+  "style": "Value",
+  "aum": 0.3
+ },
+ "EAFVX": {
+  "cik": 102816,
+  "seriesId": "S000031538",
+  "name": "Eaton Vance Focused Value Opportunities Fund",
+  "style": "Value",
+  "aum": 0.29
+ },
+ "NOLCX": {
+  "cik": 916620,
+  "seriesId": "S000001243",
+  "name": "Large Cap Core Fund",
+  "style": "Value",
+  "aum": 0.29
+ },
+ "RYOTX": {
+  "cik": 709364,
+  "seriesId": "S000009506",
+  "name": "Royce Micro-Cap Fund",
+  "style": "Value",
+  "aum": 0.29
+ },
+ "PBFDX": {
+  "cik": 315774,
+  "seriesId": "S000004544",
+  "name": "PAYSON TOTAL RETURN FUND",
+  "style": "Value",
+  "aum": 0.29
+ },
+ "SECAX": {
+  "cik": 939934,
+  "seriesId": "S000036633",
+  "name": "SIIT SMALL CAP II FUND",
+  "style": "Value",
+  "aum": 0.28
+ },
+ "RVPIX": {
+  "cik": 709364,
+  "seriesId": "S000009517",
+  "name": "Royce Smaller-Companies Growth Fund",
+  "style": "Value",
+  "aum": 0.27
+ },
+ "CREAX": {
+  "cik": 773757,
+  "seriesId": "S000012072",
+  "name": "Columbia Real Estate Equity Fund",
+  "style": "Value",
+  "aum": 0.26
+ },
+ "TGDIX": {
+  "cik": 892071,
+  "seriesId": "S000006335",
+  "name": "TCW Relative Value Large Cap Fund",
+  "style": "Value",
+  "aum": 0.26
+ },
+ "FSVLX": {
+  "cik": 320351,
+  "seriesId": "S000007467",
+  "name": "Select FinTech Portfolio",
+  "style": "Value",
+  "aum": 0.25
+ },
+ "RIMHX": {
+  "cik": 1026977,
+  "seriesId": "S000039721",
+  "name": "CITY NATIONAL ROCHDALE DIVIDEND & INCOME FUND",
+  "style": "Value",
+  "aum": 0.24
+ },
+ "YCGEX": {
+  "cik": 1558372,
+  "seriesId": "S000039146",
+  "name": "YCG Enhanced Fund",
+  "style": "Value",
+  "aum": 0.24
+ },
+ "SLPAX": {
+  "cik": 939934,
+  "seriesId": "S000006772",
+  "name": "SIIT SMALL CAP FUND",
+  "style": "Value",
+  "aum": 0.22
+ },
+ "RYOIX": {
+  "cik": 899148,
+  "seriesId": "S000003802",
+  "name": "Biotechnology Fund",
+  "style": "Value",
+  "aum": 0.22
+ },
+ "MMYAX": {
+  "cik": 916053,
+  "seriesId": "S000003671",
+  "name": "MassMutual Small Company Value Fund",
+  "style": "Value",
+  "aum": 0.21
+ },
+ "NOIEX": {
+  "cik": 916620,
+  "seriesId": "S000001269",
+  "name": "Income Equity Fund",
+  "style": "Value",
+  "aum": 0.2
+ },
+ "FUNL": {
+  "cik": 1970751,
+  "seriesId": "S000082979",
+  "name": "CornerCap Fundametrics Large-Cap ETF",
+  "style": "Value",
+  "aum": 0.2
+ },
+ "FEKFX": {
+  "cik": 35341,
+  "seriesId": "S000065694",
+  "name": "Fidelity Equity-Income K6 Fund",
+  "style": "Value",
+  "aum": 0.2
+ },
+ "DTLVX": {
+  "cik": 890453,
+  "seriesId": "S000001046",
+  "name": "Large Company Value Portfolio",
+  "style": "Value",
+  "aum": 0.19
+ },
+ "MLXAX": {
+  "cik": 1355064,
+  "seriesId": "S000045781",
+  "name": "Catalyst MLP & Infrastructure Fund",
+  "style": "Value",
+  "aum": 0.19
+ },
+ "RYVFX": {
+  "cik": 709364,
+  "seriesId": "S000009516",
+  "name": "Royce Small-Cap Value Fund",
+  "style": "Value",
+  "aum": 0.18
+ },
+ "OSTFX": {
+  "cik": 811030,
+  "seriesId": "S000004931",
+  "name": "Osterweis Fund",
+  "style": "Value",
+  "aum": 0.18
+ },
+ "GQHPX": {
+  "cik": 1593547,
+  "seriesId": "S000072429",
+  "name": "GQG Partners US Quality Value Fund",
+  "style": "Value",
+  "aum": 0.18
+ },
+ "GSTIX": {
+  "cik": 822977,
+  "seriesId": "S000009318",
+  "name": "Goldman Sachs Strategic Growth Fund",
+  "style": "Value",
+  "aum": 0.18
+ },
+ "GREIX": {
+  "cik": 822977,
+  "seriesId": "S000009341",
+  "name": "Goldman Sachs Real Estate Securities Fund",
+  "style": "Value",
+  "aum": 0.17
+ },
+ "BUFDX": {
+  "cik": 1135300,
+  "seriesId": "S000039149",
+  "name": "Buffalo Growth & Income Fund",
+  "style": "Value",
+  "aum": 0.16
+ },
+ "MPGAX": {
+  "cik": 927972,
+  "seriesId": "S000003795",
+  "name": "MassMutual Disciplined Growth Fund",
+  "style": "Value",
+  "aum": 0.16
+ },
+ "DALCX": {
+  "cik": 1199046,
+  "seriesId": "S000016034",
+  "name": "Dean Mid Cap Value Fund",
+  "style": "Value",
+  "aum": 0.16
+ },
+ "OSPPX": {
+  "cik": 826644,
+  "seriesId": "S000064701",
+  "name": "Invesco Oppenheimer Steelpath MLP Alpha Plus Fund",
+  "style": "Value",
+  "aum": 0.16
+ },
+ "BUFEX": {
+  "cik": 1135300,
+  "seriesId": "S000022452",
+  "name": "Buffalo Blue Chip Growth Fund",
+  "style": "Value",
+  "aum": 0.15
+ },
+ "PZVMX": {
+  "cik": 1027596,
+  "seriesId": "S000044707",
+  "name": "Pzena Mid Cap Value Fund",
+  "style": "Value",
+  "aum": 0.15
+ },
+ "ICBAX": {
+  "cik": 836267,
+  "seriesId": "S000067904",
+  "name": "ICON Natural Resources & Infrastructure Fund",
+  "style": "Value",
+  "aum": 0.14
+ },
+ "CSCVX": {
+  "cik": 1511699,
+  "seriesId": "S000077752",
+  "name": "CornerCap Small-Cap Value Fund",
+  "style": "Value",
+  "aum": 0.12
+ },
+ "PJEAX": {
+  "cik": 1051562,
+  "seriesId": "S000030621",
+  "name": "PGIM US Real Estate Fund",
+  "style": "Value",
+  "aum": 0.12
+ },
+ "MXEBX": {
+  "cik": 356476,
+  "seriesId": "S000061893",
+  "name": "Great-West Core Strategies: U.S. Equity Fund",
+  "style": "Value",
+  "aum": 0.12
+ },
+ "GMVAX": {
+  "cik": 822977,
+  "seriesId": "S000044015",
+  "name": "Goldman Sachs Small/Mid Cap Value Fund",
+  "style": "Value",
+  "aum": 0.12
+ },
+ "RYDVX": {
+  "cik": 709364,
+  "seriesId": "S000009522",
+  "name": "Royce Dividend Value Fund",
+  "style": "Value",
+  "aum": 0.11
+ },
+ "USBNX": {
+  "cik": 722885,
+  "seriesId": "S000009493",
+  "name": "Pear Tree Polaris Small Cap Fund",
+  "style": "Value",
+  "aum": 0.11
+ },
+ "ADKSX": {
+  "cik": 1311981,
+  "seriesId": "S000004764",
+  "name": "The Adirondack Small Cap Fund",
+  "style": "Value",
+  "aum": 0.11
+ },
+ "GMSMX": {
+  "cik": 1131042,
+  "seriesId": "S000006185",
+  "name": "GuideMark Small/Mid Cap Core Fund",
+  "style": "Value",
+  "aum": 0.11
+ },
+ "PZVSX": {
+  "cik": 1027596,
+  "seriesId": "S000053713",
+  "name": "Pzena Small Cap Value Fund",
+  "style": "Value",
+  "aum": 0.1
+ },
+ "DRIPX": {
+  "cik": 1071873,
+  "seriesId": "S000004907",
+  "name": "The MP63 Fund, Inc.",
+  "style": "Value",
+  "aum": 0.1
+ },
+ "TNVAX": {
+  "cik": 1605941,
+  "seriesId": "S000045910",
+  "name": "1290 GAMCO Small/Mid Cap Value Fund",
+  "style": "Value",
+  "aum": 0.1
+ },
+ "WMKSX": {
+  "cik": 1007226,
+  "seriesId": "S000005480",
+  "name": "WesMark Small Company Growth Fund",
+  "style": "Value",
+  "aum": 0.1
+ },
+ "RYEIX": {
+  "cik": 899148,
+  "seriesId": "S000003806",
+  "name": "Energy Fund",
+  "style": "Value",
+  "aum": 0.1
+ },
+ "RYUIX": {
+  "cik": 899148,
+  "seriesId": "S000003805",
+  "name": "Utilities Fund",
+  "style": "Value",
+  "aum": 0.09
+ },
+ "BSCAX": {
+  "cik": 1806095,
+  "seriesId": "S000084888",
+  "name": "Brandes Small Cap Value Fund",
+  "style": "Value",
+  "aum": 0.09
+ },
+ "EAPDX": {
+  "cik": 745463,
+  "seriesId": "S000044370",
+  "name": "Parametric Dividend Income Fund",
+  "style": "Value",
+  "aum": 0.09
+ },
+ "ETEGX": {
+  "cik": 31266,
+  "seriesId": "S000005222",
+  "name": "Eaton Vance Small-Cap Fund",
+  "style": "Value",
+  "aum": 0.09
+ },
+ "TGVOX": {
+  "cik": 892071,
+  "seriesId": "S000006332",
+  "name": "TCW Relative Value Mid Cap Fund",
+  "style": "Value",
+  "aum": 0.08
+ },
+ "IOLZX": {
+  "cik": 836267,
+  "seriesId": "S000067900",
+  "name": "ICON Equity Fund",
+  "style": "Value",
+  "aum": 0.08
+ },
+ "PEDGX": {
+  "cik": 898745,
+  "seriesId": "S000049582",
+  "name": "Edge MidCap Fund",
+  "style": "Value",
+  "aum": 0.08
+ },
+ "JOPPX": {
+  "cik": 892657,
+  "seriesId": "S000005718",
+  "name": "Johnson Opportunity Fund",
+  "style": "Value",
+  "aum": 0.08
+ },
+ "MCTOX": {
+  "cik": 1815608,
+  "seriesId": "S000069477",
+  "name": "Modern Capital Tactical Income Fund",
+  "style": "Value",
+  "aum": 0.07
+ },
+ "GGEFX": {
+  "cik": 1437249,
+  "seriesId": "S000025018",
+  "name": "Summitry Equity Fund",
+  "style": "Value",
+  "aum": 0.07
+ },
+ "TPLC": {
+  "cik": 916490,
+  "seriesId": "S000063763",
+  "name": "Timothy Plan US Large Cap Core ETF",
+  "style": "Blend",
+  "aum": 0.07
+ },
+ "BMPEX": {
+  "cik": 315774,
+  "seriesId": "S000026940",
+  "name": "BECK, MACK & OLIVER PARTNERS FUND",
+  "style": "Value",
+  "aum": 0.07
+ },
+ "GEOSX": {
+  "cik": 722885,
+  "seriesId": "S000072022",
+  "name": "Pear Tree Essex Environmental Opportunities Fund",
+  "style": "Blend",
+  "aum": 0.07
+ },
+ "NOLVX": {
+  "cik": 916620,
+  "seriesId": "S000001271",
+  "name": "Large Cap Value Fund",
+  "style": "Value",
+  "aum": 0.07
+ },
+ "DYNF": {
+  "cik": 1761055,
+  "seriesId": "S000064945",
+  "name": "BlackRock U.S. Equity Factor Rotation ETF",
+  "style": "Blend",
+  "aum": 0.07
+ },
+ "TPHD": {
+  "cik": 916490,
+  "seriesId": "S000063766",
+  "name": "Timothy Plan High Dividend Stock ETF",
+  "style": "Value",
+  "aum": 0.06
+ },
+ "RYBIX": {
+  "cik": 899148,
+  "seriesId": "S000003810",
+  "name": "Basic Materials Fund",
+  "style": "Value",
+  "aum": 0.06
+ },
+ "HVEIX": {
+  "cik": 1545440,
+  "seriesId": "S000054831",
+  "name": "HVIA Equity Fund",
+  "style": "Blend",
+  "aum": 0.06
+ },
+ "DTSGX": {
+  "cik": 890453,
+  "seriesId": "S000001047",
+  "name": "Small Company Growth Portfolio",
+  "style": "Value",
+  "aum": 0.06
+ },
+ "ICFAX": {
+  "cik": 836267,
+  "seriesId": "S000067899",
+  "name": "ICON Consumer Select Fund",
+  "style": "Value",
+  "aum": 0.06
+ },
+ "BOGIX": {
+  "cik": 831114,
+  "seriesId": "S000001101",
+  "name": "Bogle Investment Management Small Cap Growth Fund",
+  "style": "Value",
+  "aum": 0.06
+ },
+ "NVSOX": {
+  "cik": 1081400,
+  "seriesId": "S000007342",
+  "name": "Allspring Disciplined Small Cap Fund",
+  "style": "Value",
+  "aum": 0.06
+ },
+ "DTSVX": {
+  "cik": 890453,
+  "seriesId": "S000001048",
+  "name": "Small Company Value Portfolio",
+  "style": "Value",
+  "aum": 0.06
+ },
+ "JAMEX": {
+  "cik": 842512,
+  "seriesId": "S000001564",
+  "name": "The Jamestown Equity Fund",
+  "style": "Value",
+  "aum": 0.06
+ },
+ "ZECP": {
+  "cik": 1760588,
+  "seriesId": "S000066608",
+  "name": "Zacks Earnings Consistent Portfolio ETF",
+  "style": "Blend",
+  "aum": 0.06
+ },
+ "WAYFX": {
+  "cik": 1815558,
+  "seriesId": "S000069480",
+  "name": "Waycross Focused Core Equity Fund",
+  "style": "Blend",
+  "aum": 0.05
+ },
+ "RYHIX": {
+  "cik": 899148,
+  "seriesId": "S000003808",
+  "name": "Health Care Fund",
+  "style": "Blend",
+  "aum": 0.05
+ },
+ "YOVAX": {
+  "cik": 764859,
+  "seriesId": "S000053763",
+  "name": "Yorktown Small Cap Fund",
+  "style": "Blend",
+  "aum": 0.05
+ },
+ "INSAX": {
+  "cik": 1355064,
+  "seriesId": "S000033417",
+  "name": "Catalyst Insider Buying Fund",
+  "style": "Blend",
+  "aum": 0.05
+ },
+ "YLDE": {
+  "cik": 1645194,
+  "seriesId": "S000057702",
+  "name": "Franklin ClearBridge Enhanced Income ETF",
+  "style": "Value",
+  "aum": 0.05
+ },
+ "FCMVX": {
+  "cik": 35341,
+  "seriesId": "S000057281",
+  "name": "Fidelity Mid Cap Value K6 Fund",
+  "style": "Value",
+  "aum": 0.05
+ }
+}

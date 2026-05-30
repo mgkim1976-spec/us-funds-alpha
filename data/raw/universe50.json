@@ -1,0 +1,326 @@
+{
+  "AGTHX": {
+    "name": "Growth Fund of America",
+    "cik": 44201,
+    "seriesId": "S000009228",
+    "classId": "C000025064"
+  },
+  "AIVSX": {
+    "name": "Investment Company of America",
+    "cik": 51931,
+    "seriesId": "S000009597",
+    "classId": "C000026214"
+  },
+  "AWSHX": {
+    "name": "Washington Mutual",
+    "cik": 104865,
+    "seriesId": "S000009388",
+    "classId": "C000025719"
+  },
+  "ANCFX": {
+    "name": "Fundamental Investors",
+    "cik": 39473,
+    "seriesId": "S000009227",
+    "classId": "C000025050"
+  },
+  "AMCPX": {
+    "name": "AMCAP",
+    "cik": 4405,
+    "seriesId": "S000008817",
+    "classId": "C000024003"
+  },
+  "ANEFX": {
+    "name": "New Economy",
+    "cik": 719608,
+    "seriesId": "S000009598",
+    "classId": "C000026235"
+  },
+  "AMRMX": {
+    "name": "American Mutual",
+    "cik": 5506,
+    "seriesId": "S000008999",
+    "classId": "C000024449"
+  },
+  "FCNTX": {
+    "name": "Contrafund",
+    "cik": 24238,
+    "seriesId": "S000006037",
+    "classId": "C000016601"
+  },
+  "FLPSX": {
+    "name": "Low-Priced Stock",
+    "cik": 81205,
+    "seriesId": "S000007152",
+    "classId": "C000019556"
+  },
+  "FMAGX": {
+    "name": "Magellan",
+    "cik": 61397,
+    "seriesId": "S000007112",
+    "classId": "C000019441"
+  },
+  "FBGRX": {
+    "name": "Blue Chip Growth",
+    "cik": 754510,
+    "seriesId": "S000007195",
+    "classId": "C000019693"
+  },
+  "FDGRX": {
+    "name": "Growth Company",
+    "cik": 707823,
+    "seriesId": "S000007119",
+    "classId": "C000019448"
+  },
+  "FOCPX": {
+    "name": "OTC Portfolio",
+    "cik": 754510,
+    "seriesId": "S000007191",
+    "classId": "C000019679"
+  },
+  "FDCAX": {
+    "name": "Capital Appreciation",
+    "cik": 275309,
+    "seriesId": "S000005450",
+    "classId": "C000014851"
+  },
+  "FLCSX": {
+    "name": "Large Cap Stock",
+    "cik": 819118,
+    "seriesId": "S000055364",
+    "classId": "C000174182"
+  },
+  "FDVLX": {
+    "name": "Value",
+    "cik": 275309,
+    "seriesId": "S000005455",
+    "classId": "C000014856"
+  },
+  "FDSVX": {
+    "name": "Growth Discovery",
+    "cik": 35348,
+    "seriesId": "S000007019",
+    "classId": "C000019191"
+  },
+  "FEQIX": {
+    "name": "Equity Income",
+    "cik": 35341,
+    "seriesId": "S000006064",
+    "classId": "C000016682"
+  },
+  "FDGFX": {
+    "name": "Dividend Growth",
+    "cik": 754510,
+    "seriesId": "S000007197",
+    "classId": "C000019695"
+  },
+  "TRBCX": {
+    "name": "Blue Chip Growth",
+    "cik": 902259,
+    "seriesId": "S000002069",
+    "classId": "C000005424"
+  },
+  "PRGFX": {
+    "name": "Growth Stock",
+    "cik": 80257,
+    "seriesId": "S000002087",
+    "classId": "C000005453"
+  },
+  "TRVLX": {
+    "name": "Value",
+    "cik": 927845,
+    "seriesId": "S000002125",
+    "classId": "C000005515"
+  },
+  "PRNHX": {
+    "name": "New Horizons",
+    "cik": 80248,
+    "seriesId": "S000002106",
+    "classId": "C000005478"
+  },
+  "RPMGX": {
+    "name": "Mid-Cap Growth",
+    "cik": 887147,
+    "seriesId": "S000002102",
+    "classId": "C000005470"
+  },
+  "TRMCX": {
+    "name": "Mid-Cap Value",
+    "cik": 1012678,
+    "seriesId": "S000002103",
+    "classId": "C000005473"
+  },
+  "PRFDX": {
+    "name": "Equity Income",
+    "cik": 775688,
+    "seriesId": "S000002076",
+    "classId": "C000005436"
+  },
+  "PRDGX": {
+    "name": "Dividend Growth",
+    "cik": 894024,
+    "seriesId": "S000002075",
+    "classId": "C000005435"
+  },
+  "TRLGX": {
+    "name": "Instl Large Cap Growth",
+    "cik": 1012968,
+    "seriesId": "S000002095",
+    "classId": "C000005463"
+  },
+  "DODGX": {
+    "name": "Stock",
+    "cik": 29440,
+    "seriesId": "S000011202",
+    "classId": "C000030875"
+  },
+  "VPMCX": {
+    "name": "PRIMECAP",
+    "cik": 752177,
+    "seriesId": "S000002568",
+    "classId": "C000007070"
+  },
+  "VWUSX": {
+    "name": "US Growth",
+    "cik": 52848,
+    "seriesId": "S000004444",
+    "classId": "C000012210"
+  },
+  "VWNDX": {
+    "name": "Windsor",
+    "cik": 107606,
+    "seriesId": "S000004417",
+    "classId": "C000012178"
+  },
+  "VWNFX": {
+    "name": "Windsor II",
+    "cik": 107606,
+    "seriesId": "S000004418",
+    "classId": "C000012180"
+  },
+  "VHCOX": {
+    "name": "Capital Opportunity",
+    "cik": 932471,
+    "seriesId": "S000002594",
+    "classId": "C000007113"
+  },
+  "VDIGX": {
+    "name": "Dividend Growth",
+    "cik": 734383,
+    "seriesId": "S000002920",
+    "classId": "C000008004"
+  },
+  "VEIPX": {
+    "name": "Equity Income",
+    "cik": 826473,
+    "seriesId": "S000002579",
+    "classId": "C000007083"
+  },
+  "POAGX": {
+    "name": "Odyssey Aggressive Growth",
+    "cik": 1293967,
+    "seriesId": "S000005541",
+    "classId": "C000015071"
+  },
+  "POGRX": {
+    "name": "Odyssey Growth",
+    "cik": 1293967,
+    "seriesId": "S000005540",
+    "classId": "C000015070"
+  },
+  "POSKX": {
+    "name": "Odyssey Stock",
+    "cik": 1293967,
+    "seriesId": "S000005539",
+    "classId": "C000015069"
+  },
+  "OAKMX": {
+    "name": "Oakmark",
+    "cik": 872323,
+    "seriesId": "S000002758",
+    "classId": "C000007554"
+  },
+  "OAKLX": {
+    "name": "Oakmark Select",
+    "cik": 872323,
+    "seriesId": "S000002759",
+    "classId": "C000007556"
+  },
+  "TWCUX": {
+    "name": "Ultra",
+    "cik": 100334,
+    "seriesId": "S000006195",
+    "classId": "C000017060"
+  },
+  "TWCGX": {
+    "name": "Growth",
+    "cik": 100334,
+    "seriesId": "S000006205",
+    "classId": "C000017101"
+  },
+  "JAENX": {
+    "name": "Enterprise",
+    "cik": 277751,
+    "seriesId": "S000010490",
+    "classId": "C000028952"
+  },
+  "SEQUX": {
+    "name": "Sequoia",
+    "cik": 89043,
+    "seriesId": "S000012155",
+    "classId": "C000033159"
+  },
+  "HACAX": {
+    "name": "Harbor Capital Appreciation",
+    "cik": 793769,
+    "seriesId": "S000000681",
+    "classId": "C000001973"
+  },
+  "PRBLX": {
+    "name": "Parnassus Core Equity",
+    "cik": 866256,
+    "seriesId": "S000000856",
+    "classId": "C000002471"
+  },
+  "JENSX": {
+    "name": "Jensen Quality Growth",
+    "cik": 887215,
+    "seriesId": "S000004905",
+    "classId": "C000013259"
+  },
+  "YACKX": {
+    "name": "Yacktman",
+    "cik": 1089951,
+    "seriesId": "S000037566",
+    "classId": "C000115981"
+  },
+  "AKREX": {
+    "name": "Akre Focus",
+    "cik": 811030,
+    "seriesId": "S000026760",
+    "classId": "C000080286"
+  },
+  "GQEPX": {
+    "name": "GQG US Quality",
+    "cik": 1593547,
+    "seriesId": "S000063192",
+    "classId": "C000204822"
+  },
+  "NBGNX": {
+    "name": "Neuberger Genesis",
+    "cik": 44402,
+    "seriesId": "S000007841",
+    "classId": "C000021336"
+  },
+  "MEGIX": {
+    "name": "MFS Growth",
+    "cik": 1011378,
+    "seriesId": "S000004177",
+    "classId": "C000011757"
+  },
+  "MIGFX": {
+    "name": "MFS Massachusetts Investors Growth",
+    "cik": 63090,
+    "seriesId": "S000000695",
+    "classId": "C000002023"
+  }
+}
