@@ -26,7 +26,10 @@ def dl(q):
     return tmp, True
 
 def main():
-    uni=json.load(open(ROOT/"data"/"universe_300.json"))
+    import sys
+    uni_name=sys.argv[1] if len(sys.argv)>1 else "universe_300.json"
+    out_name=sys.argv[2] if len(sys.argv)>2 else "holdings_panel_300.parquet"
+    uni=json.load(open(ROOT/"data"/uni_name))
     ser2tk={v["seriesId"]:k for k,v in uni.items()}
     want=set(ser2tk)
     print(f"대상 {len(want)} series, {len(QUARTERS)} 분기",flush=True)
@@ -73,7 +76,7 @@ def main():
                                   "cusip","name","pctVal","valUSD","country"])
     df["filingDate"]=pd.to_datetime(df["filingDate"],errors='coerce')
     df["reportDate"]=pd.to_datetime(df["reportDate"],errors='coerce')
-    df.to_parquet(ROOT/"data"/"holdings_panel_300.parquet",index=False)
+    df.to_parquet(ROOT/"data"/out_name,index=False)
     print(f"\n저장 {df.shape} | 펀드 {df['fund'].nunique()} | 분기 {df['reportDate'].nunique()} "
           f"| {df['reportDate'].min()}~{df['reportDate'].max()}",flush=True)
 

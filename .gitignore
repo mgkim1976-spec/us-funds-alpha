@@ -13,3 +13,4 @@ logs/
 .DS_Store
 
 # Kept (small, for reproducibility): data/raw/*.json, data/raw/*.csv, data/universe_300.json
+data/raw/f13/

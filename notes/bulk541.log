@@ -1,0 +1,21 @@
+대상 541 series, 14 분기
+  2022q4: 대상filing 495 보유행 67479
+  2023q1: 대상filing 503 보유행 67694
+  2023q2: 대상filing 503 보유행 67350
+  2023q3: 대상filing 511 보유행 67742
+  2023q4: 대상filing 526 보유행 70269
+  2024q1: 대상filing 529 보유행 71829
+  2024q2: 대상filing 566 보유행 72973
+  2024q3: 대상filing 544 보유행 72819
+  2024q4: 대상filing 541 보유행 73425
+  2025q1: 대상filing 544 보유행 75586
+  2025q2: 대상filing 535 보유행 75176
+  2025q3: 대상filing 522 보유행 73452
+  2025q4: 대상filing 518 보유행 70250
+  2026q1: 대상filing 497 보유행 69027
+/Users/mg_mac/MGPrj/us_funds_alpha/scripts/bulk_collect_300.py:77: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df["filingDate"]=pd.to_datetime(df["filingDate"],errors='coerce')
+/Users/mg_mac/MGPrj/us_funds_alpha/scripts/bulk_collect_300.py:78: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df["reportDate"]=pd.to_datetime(df["reportDate"],errors='coerce')
+
+저장 (995071, 10) | 펀드 541 | 분기 65 | 2020-05-31 00:00:00~2026-01-31 00:00:00

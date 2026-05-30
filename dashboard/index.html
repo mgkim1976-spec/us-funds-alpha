@@ -119,12 +119,15 @@ details.holds>summary::-webkit-details-marker{display:none}
        어떤 주식을 사 모으는지를 신호로 뽑아 만든 포트폴리오입니다. 매니저의 포지션 변화에는 시장이 아직
        반영하지 않은 정보가 담겨 있고, 그것이 수 주~수 개월에 걸쳐 가격에 점진적으로 반영됩니다.
        모든 성과는 <b>2022–2026 백테스트</b>(시장·스타일 요인 제거한 팩터조정)이며 투자 조언이 아닙니다.</p>
+    <p><b>두 데이터 소스</b> — <b>뮤추얼펀드(MF, N-PORT, ~540개)</b>와 <b>헤지펀드(HF, 13F 집중 매니저, ~3,100개)</b>.
+       비교해보면 <em>폭넓은 보유·신규매수는 뮤추얼펀드</em>가, <em>집중된 고확신(Best-Ideas)은 헤지펀드</em>가 강합니다.
+       <b>결합 앙상블</b>은 각 소스의 승자 신호만 합쳐(MF의 mhw·lnp + HF의 best-ideas) 가장 높은 알파(+13.8%)를 냅니다.</p>
     <div class="sigs">
       <div class="sigrow"><b>Mean Holding Wt</b><span>많은 펀드가 <em>크게</em> 담고 있는 종목 — 폭넓은 고확신.</span></div>
       <div class="sigrow"><b>Large New Pos</b><span>여러 펀드가 <em>새로</em> 비중 있게 산 종목 — 신규 매수 합의.</span></div>
       <div class="sigrow"><b>Best-Ideas</b><span>펀드들이 평균보다 <em>훨씬 더</em> 담은 종목 — 컨센서스 대비 베팅.</span></div>
       <div class="sigrow"><b>Reallocation</b><span>가격 상승분을 빼고 매니저가 <em>실제로 사들인</em> 종목 — 능동적 매매.</span></div>
-      <div class="sigrow"><b>앙상블</b><span>네 시그널 중 상호보완적인 셋을 z-score로 합쳐 <em>가장 견고</em>하게.</span></div>
+      <div class="sigrow"><b>앙상블</b><span>상호보완적 신호를 z-score로 합쳐 <em>가장 견고</em>하게.</span></div>
     </div>
     <div class="howto">📊 <b>카드 읽는 법</b> — 큰 숫자·초록 곡선 = 2022–2026 누적수익, 회색 점선 = S&P&nbsp;500 ·
       <b>알파</b> = 시장·스타일 제거 후 초과수익(t&gt;2면 통계적 유의) · <b>리밸런싱 이후</b> = 현재 포트폴리오 실시간 성과 ·
@@ -198,16 +201,14 @@ function cardHTML(s,D){
 }
 
 function render(D){
-  const a=D.asof, now=new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'});
+  const now=new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'});
   document.getElementById('meta').innerHTML=
     `<div class="chip">데이터 <b>${D.generated}</b></div>
-     <div class="chip">보유 기준일 <b>${a.report_min}~${a.report_max}</b></div>
-     <div class="chip">공시지연 <b>${a.lag_min}–${a.lag_max}일</b></div>
-     <div class="chip">신호 펀드 <b>${a.used_funds}</b> · stale 제외 ${a.excluded_stale}</div>
+     <div class="chip">포트폴리오 형성 <b>${D.rebal}</b></div>
      <div class="chip">다음 리밸런싱 <b>${D.next_rebal}</b></div>
      <div class="chip">S&P 500 (형성 이후) <b class="${cls(D.spy_since_rebal)}">${fmt(D.spy_since_rebal)}%</b></div>
      <div class="chip">자동 새로고침 · ${now}</div>`;
-  document.getElementById('disc').textContent="ⓘ "+(D.lag_note||"");
+  document.getElementById('disc').textContent="ⓘ "+(D.note||"");
   const al=document.getElementById('alert'),rc=D.rebal_changes;
   if(rc&&rc.is_new_rebal){let html=`🔔 <b>리밸런싱 ${rc.rebal}</b> (직전 ${rc.prev_rebal}) 종목 교체`;
     for(const k in rc.per_strategy){const c=rc.per_strategy[k];

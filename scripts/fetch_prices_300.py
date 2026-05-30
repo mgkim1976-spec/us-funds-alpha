@@ -44,7 +44,9 @@ def yahoo(tickers):
     return pd.DataFrame(rows,columns=["ticker","date","adjclose"])
 
 def main():
-    d=pd.read_parquet(ROOT/"data"/"holdings_panel_300.parquet")
+    import sys
+    panel=sys.argv[1] if len(sys.argv)>1 else "holdings_panel_300.parquet"
+    d=pd.read_parquet(ROOT/"data"/panel)
     cus=sorted(d[d.cusip.str.len()==9]["cusip"].unique())
     figi=openfigi(cus)
     want=set(figi[c] for c in cus if figi.get(c))
