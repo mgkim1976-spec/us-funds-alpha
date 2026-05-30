@@ -1,143 +1,161 @@
-# US Funds Alpha — Systematic Equity Signals from US Mutual-Fund Holdings
+# US Funds Alpha — 미국 뮤추얼펀드 보유 공시 기반 주식 시그널 연구
 
-An **open replication and honest stress-test** of the idea behind Morgan Stanley's
-*"Mutual Fund Footprints — Systematic Equity Signals from US Active Manager Disclosures"*
-(Quantitative Equity Research, May 2026).
+미국 액티브 뮤추얼펀드의 **보유 종목 공시(SEC Form N-PORT)** 에서 체계적 주식 선택
+시그널을 만들고, **공개 데이터만으로 point-in-time·팩터조정** 기준으로 정직하게 검증한
+오픈소스 연구 프로젝트입니다.
 
-Everything here is built from **free public data** — SEC EDGAR (Form N-PORT / N-CEN),
-Yahoo Finance, OpenFIGI, and the Ken French data library — with strict point-in-time
-discipline and full factor-adjusted (FF5 + Momentum) validation.
+![Dashboard](docs/dashboard.png)
 
-> ⚠️ **Not investment advice.** All results are in-sample backtests over a short window
-> (2022–2026, ~15 quarters), long-only with market beta ≈ 1, and point estimates only.
-> Past performance does not predict future results.
+> ⚠️ **투자 조언이 아닙니다.** 모든 결과는 짧은 구간(2022–2026, 약 15분기)의 in-sample
+> 백테스트이며, long-only(시장베타 ≈ 1)·점추정치입니다. 과거 성과는 미래를 보장하지 않습니다.
 
 ---
 
-## TL;DR — honest findings
+## 배경 — 왜 펀드 보유 공시인가
 
-1. **Universe construction decides everything.** The same signal that looks like pure
-   market beta on a hand-picked set of 54 famous mega-cap growth funds becomes a
-   significant factor-adjusted alpha on a *systematically built, style-diverse* universe
-   of ~300 active US equity funds. The earlier "it doesn't replicate" conclusion was an
-   artifact of a narrow universe.
-2. **Clean your holdings.** A naive *mean holding weight* signal is polluted by ETFs,
-   money-market funds, and niche MLPs that a handful of specialist funds hold at huge
-   weight. Excluding non-equity and requiring breadth roughly **halves** the headline
-   alpha (+8.4% → +4.0%) and reveals it is **regime-dependent** (works in the 2023–26
-   mega-cap regime, ~zero in 2022–24 — that early "alpha" was an energy/MLP tilt).
-3. **Individual signals are regime-concentrated; an ensemble is the most robust thing
-   here.** A z-score ensemble of three complementary signals is the only construct that
-   is statistically significant in **both** sub-periods (t ≈ 4 full-period, both halves
-   t > 2), and it beats random selection from the same universe at the 99–100th percentile.
-4. **Manager *selection* does not work.** Picking funds by trailing NAV alpha or by
-   trailing "signal-source skill" failed out-of-sample — skill does not persist (alpha
-   decay). The edge, where it exists, is at the **stock** level, not the manager level.
+**1. 액티브 매니저의 포지션에는 아직 가격에 반영되지 않은 정보가 있다.**
+액티브 펀드 매니저가 어떤 종목을 — 얼마나 적극적으로 — 비중확대(overweight)하는지는,
+시장이 아직 충분히 흡수하지 못한 견해를 담고 있는 경우가 많습니다. 이런 정보는 수 주~수 개월에
+걸쳐 가격에 *점진적으로* 반영되며, 그 사이에 체계적 전략이 작동할 여지(window)가 생깁니다.
 
-See [`notes/`](notes/) for the full step-by-step research record.
+**2. 그 정보는 공개된다.** 미국 등록 펀드(뮤추얼펀드·ETF)는 SEC에 **Form N-PORT** 로 보유
+종목을 공시합니다. 분기말 기준 보유가 약 **55~60일의 지연** 후 일반에 공개됩니다. 즉 우리는
+매니저들이 *과거에* 무엇을 담고 줄였는지를, 지연을 두고 볼 수 있습니다.
+
+**3. 학술적 근거.**
+- **Best Ideas** (Cohen·Polk·Silli, 2010): 매니저의 *최고 확신* 종목(시장가중 대비 최대
+  초과보유)이 연 2.8~4.5% 초과수익을 내며 되돌림이 없었다.
+- **Active Share** (Cremers·Petajisto, 2009): 벤치마크에서 많이 벗어난(active share 높은)
+  펀드가 순수익 기준 연 +1.4% 초과.
+
+이 프로젝트는 이 아이디어를, **공개 데이터·엄격한 point-in-time·팩터조정(FF5+Momentum)**
+기준으로 — 마케팅 톤 없이, 깨지면 깨지는 대로 — 검증합니다.
 
 ---
 
-## The signals
+## 핵심 발견 (정직하게)
 
-Each aggregates fund-level holding changes into a stock-level score, point-in-time
-(by SEC filing date, so the ~56-day disclosure lag is respected).
+1. **유니버스 구성이 모든 것을 가른다.** 손으로 고른 대형 그로쓰 펀드 54개에서는 시그널이
+   사실상 시장 베타였는데, **체계적으로 구축한 스타일 다양 액티브 미국 주식형 ~300개**
+   유니버스에서는 유의한 팩터조정 알파가 됩니다. "재현 안 된다"던 초기 결론은 좁은 유니버스의
+   산물이었습니다.
+2. **보유 데이터를 정제해야 한다.** 단순 *평균 보유 비중* 시그널은 소수 특화 펀드가 초고비중으로
+   담은 ETF·머니마켓펀드·niche MLP에 오염됩니다. 비주식 제외 + breadth(보유 펀드 수) 요건을
+   걸면 헤드라인 알파가 거의 **절반(+8.4%→+4.0%)** 으로 줄고, 그 알파가 **레짐 의존적**
+   (2023–26 메가캡 국면엔 작동, 2022–24엔 ≈0 — 초기 "알파"는 에너지/MLP 틸트였음)임이 드러납니다.
+3. **개별 시그널은 레짐 편중, 앙상블이 가장 견고하다.** 상호보완적인 세 시그널의 z-score
+   앙상블만이 **양쪽 하위기간 모두 유의**(전체 t≈4, 두 반기 모두 t>2)하며, 같은 유니버스에서
+   무작위로 뽑은 포트폴리오 대비 **99~100 백분위**로 우월합니다.
+4. **매니저 *선별* 은 통하지 않는다.** 직전 NAV 알파나 "신호 원천 스킬"로 펀드를 고르는 방식은
+   out-of-sample에서 실패했습니다 — 스킬이 지속되지 않습니다(alpha decay). 우위가 있다면
+   **종목 단위**이지 매니저 단위가 아닙니다.
 
-| Key | Signal | Definition (this repo) |
+단계별 연구 기록은 [`notes/`](notes/) 폴더(한글)에 있습니다.
+
+---
+
+## 시그널 정의
+
+각 시그널은 펀드 단위 보유 변화를 종목 단위 점수로 집계하며, **공시일(filing date) 기준
+point-in-time** 이라 ~56일 공시 지연이 반영됩니다.
+
+| 키 | 시그널 | 정의 |
 |---|---|---|
-| `mhw` | **Mean Holding Weight** | mean position weight across funds that hold the stock |
-| `lnp` | **Large New Positions** | sum of new high-conviction initiations (≥0.5%) across funds |
-| `bi`  | **Best-Ideas** (Cohen–Polk–Silli) | Σ max(0, fund weight − cross-fund mean) = active overweight |
-| `ens` | **Ensemble** | z-score(mhw) + z(lnp) + z(bi), averaged |
+| `mhw` | **Mean Holding Weight** | 해당 종목을 보유한 펀드들의 평균 비중 |
+| `lnp` | **Large New Positions** | 여러 펀드의 신규 고확신 진입(≥0.5%) 비중 합 |
+| `bi`  | **Best-Ideas** (active overweight) | Σ max(0, 펀드비중 − 전펀드평균) = 컨센서스 대비 초과보유 |
+| `ens` | **앙상블** | z(mhw) + z(lnp) + z(bi) 평균 → 랭크가중 top-N |
 
-(The MS report names nine signals; only six are public, and the dollar-flow ones —
-Churn-Weighted / Concentration-Weighted Flow / Reallocation Intensity — are
-*reconstructions* here since their exact definitions are not disclosed.)
+## 핵심 결과 (정제된 300펀드 유니버스, FF5+Mom 알파, Newey-West)
 
-## Key results (cleaned 300-fund universe, FF5+Mom alpha, Newey-West)
-
-| Strategy | top-N | Alpha | t | Sharpe | 2022-24 | 2024-26 |
+| 전략 | top-N | 알파 | t | Sharpe | 2022-24 | 2024-26 |
 |---|---|---|---|---|---|---|
-| **Ensemble (rank-weighted)** | 30 | +6.5% | **3.81** | 1.65 | t2.4 | t4.1 |
+| **앙상블 (랭크가중)** | 30 | +6.5% | **3.81** | 1.65 | t2.4 | t4.1 |
 | Mean Holding Weight | 30 | +4.0% | 2.11 | 2.00 | t0.2 | t2.4 |
 | Large New Positions | 30 | +6.1% | 2.54 | 1.56 | t3.8 | t0.7 |
 | Best-Ideas (active OW) | 30 | +4.5% | 2.12 | 1.94 | t3.4 | t1.1 |
 | S&P 500 (SPY) | – | −0.1% | – | 1.41 | | |
 
-Transaction costs are low (~16–19% one-way quarterly turnover); net-of-cost alpha at
-25 bps barely moves. Weighting matters: rank-weighting gives the best alpha/robustness,
-inverse-vol the best Sharpe, equal-weight the simplest (see [`notes/weighting.md`](notes/weighting.md)).
+거래비용은 낮습니다(분기 편도 회전율 ~16–19%). 25bp 차감 후에도 알파는 거의 변하지 않습니다.
+비중 방식도 영향을 줍니다 — 랭크가중이 알파/견고성 최고, 역변동성이 Sharpe 최고, 동일가중이 가장
+단순합니다([`notes/weighting.md`](notes/weighting.md)).
 
 ---
 
-## Live dashboard
+## 라이브 대시보드
 
-A self-contained daily monitor (`dashboard/index.html`) shows, for each strategy and for
-both Top-10 and Top-30, the current portfolio, weights, live performance vs SPY since the
-last quarterly rebalance, the disclosure-lag distribution, and rebalance-change alerts.
+자체 완결형 일일 모니터(`dashboard/index.html`)는 3개 구역으로 구성됩니다 —
+**구역 1** 앙상블(Top10·Top30), **구역 2** 3개 시그널 Top10(집중), **구역 3** 3개 시그널
+Top30(분산). 각 카드에 현재 포트폴리오·종목별 비중·리밸런싱 이후 SPY 대비 성과·검증 통계·
+공시지연 분포·리밸런싱 교체 알림을 표시합니다.
 
 ```bash
-cd dashboard && python3 -m http.server 8769   # then open http://localhost:8769/
+cd dashboard && python3 -m http.server 8769   # → http://localhost:8769/
 ```
 
-A `launchd` agent (`scripts/daily_update.sh`) refreshes it every weekday morning:
-it pulls newly-filed N-PORT incrementally (`update_filings.py`) and re-prices the live
-portfolios (`dashboard_data.py`). Validation stats are precomputed by `compute_card_stats.py`.
+`launchd` 에이전트(`scripts/daily_update.sh`)가 매 영업일 아침 자동 갱신합니다 —
+신규 공시 N-PORT를 증분 수집(`update_filings.py`)하고 라이브 포트폴리오를 재가격
+(`dashboard_data.py`)합니다. 검증 통계는 `compute_card_stats.py`가 미리 산출합니다.
 
 ---
 
-## Reproduce
+## 재현 방법
 
 ```bash
 pip install -r requirements.txt
 
-# 1. Build the universe (N-CEN flags + N-PORT EC% confirmation)
+# 1. 유니버스 구축 (N-CEN 플래그 + N-PORT EC% 확정)
 python3 scripts/build_master_universe.py     # → data/universe_master.parquet
 python3 scripts/stage2_ecpct.py              # → data/universe_confirmed.parquet
-python3 scripts/expand_validate.py           # NAV/style → data/universe_300.json + §PCA
+python3 scripts/expand_validate.py           # NAV/스타일 → data/universe_300.json + PCA
 
-# 2. Collect holdings & prices
-python3 scripts/bulk_collect_300.py          # N-PORT bulk → data/holdings_panel_300.parquet
+# 2. 보유·가격 수집
+python3 scripts/bulk_collect_300.py          # N-PORT 벌크 → data/holdings_panel_300.parquet
 python3 scripts/fetch_prices_300.py          # OpenFIGI + Yahoo → data/prices_full.parquet
 
-# 3. Validate
-python3 scripts/signals_family.py            # all signals, one universe
-python3 scripts/revalidate_clean.py          # cleaned signals + sub-periods + placebo
-python3 scripts/ensemble_test.py             # 3-signal ensemble
-python3 scripts/weighting_test.py            # weighting schemes
-python3 scripts/mhw_cost.py                  # transaction-cost sensitivity
+# 3. 검증
+python3 scripts/signals_family.py            # 전 신호군, 동일 유니버스
+python3 scripts/revalidate_clean.py          # 정제 신호 + 하위기간 + 플라시보
+python3 scripts/ensemble_test.py             # 3-신호 앙상블
+python3 scripts/weighting_test.py            # 비중 방식
+python3 scripts/mhw_cost.py                  # 거래비용 민감도
 
-# 4. Dashboard
+# 4. 대시보드
 python3 scripts/compute_card_stats.py        # → dashboard/card_stats.json
 python3 scripts/dashboard_data.py            # → dashboard/data.json
 ```
 
-The large data files (parquets, SEC/price caches) are git-ignored and regenerated by the
-above; small reference inputs (`data/raw/*.json`, factor CSVs, `data/universe_300.json`)
-are committed.
+대용량 데이터(parquet, SEC·가격 캐시)는 git에서 제외되며 위 스크립트로 재생성됩니다. 소형
+reference 입력(`data/raw/*.json`, 팩터 CSV, `data/universe_300.json`)은 커밋되어 있습니다.
 
-## Repo structure
+## 저장소 구조
 
 ```
 scripts/
-  falib.py             shared library (factors, panel, signals, FF alpha) — used by all
-  build_master_universe.py, stage2_ecpct.py, expand_validate.py   universe construction
-  bulk_collect_300.py, fetch_prices_300.py, update_filings.py      data collection
+  falib.py             공유 라이브러리 (팩터·패널·시그널·FF알파) — 모든 스크립트가 사용
+  build_master_universe.py, stage2_ecpct.py, expand_validate.py   유니버스 구축
+  bulk_collect_300.py, fetch_prices_300.py, update_filings.py      데이터 수집
   signals_family.py, revalidate_clean.py, ensemble_test.py,
-  weighting_test.py, mhw_cost.py                                   validation
-  compute_card_stats.py, dashboard_data.py, daily_update.sh        dashboard pipeline
-dashboard/             self-contained HTML monitor + JSON data
-notes/                 step-by-step research record (Korean)
+  weighting_test.py, mhw_cost.py                                   검증
+  compute_card_stats.py, dashboard_data.py, daily_update.sh        대시보드 파이프라인
+dashboard/             자체 완결형 HTML 모니터 + JSON 데이터
+notes/                 단계별 연구 기록 (한글)
 ```
 
-## Data sources (all free)
+## 데이터 소스 (모두 무료)
 
-- **SEC EDGAR** — Form N-PORT (monthly portfolio holdings) & N-CEN (fund metadata / index-fund flag),
-  including the DERA structured bulk datasets.
-- **Yahoo Finance** — daily adjusted prices and fund NAVs.
-- **OpenFIGI** — CUSIP → ticker mapping.
-- **Ken French Data Library** — Fama-French 5 factors + Momentum.
+- **SEC EDGAR** — Form N-PORT(월별 포트폴리오 보유) & N-CEN(펀드 메타데이터·인덱스펀드 플래그),
+  DERA 구조화 벌크 데이터셋 포함.
+- **Yahoo Finance** — 일별 수정주가 및 펀드 NAV.
+- **OpenFIGI** — CUSIP → 티커 매핑.
+- **Ken French Data Library** — Fama-French 5팩터 + 모멘텀.
 
-## License
+## 한계 / 면책
 
-[MIT](LICENSE). Research / educational use. Not investment advice.
+- in-sample(2022–2026, ~15분기)·단일 가격 레짐·long-only(시장베타 ≈ 1)·점추정치.
+- 공시 지연(~56일) 및 알파 감쇠(decay)는 라이브로 계속 모니터링해야 합니다.
+- 본 저장소는 연구·교육 목적이며 **투자 조언이 아닙니다.**
+
+## 라이선스
+
+[MIT](LICENSE).

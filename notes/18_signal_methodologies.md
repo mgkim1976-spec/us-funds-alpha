@@ -28,7 +28,7 @@
 
 ## F. 구성 방법론
 14. **횡단면 ML 멀티피처** — 단일신호 아닌 피처셋(mean weight·Δweight·breadth·conviction·신규·소형펀드매집·crowding) → walk-forward 랭킹, 56일 지연 내장.
-15. **저상관 시그널 앙상블** (MS max-diversification) — 직교적인 소수 신호 결합.
+15. **저상관 시그널 앙상블** (선행 연구 max-diversification) — 직교적인 소수 신호 결합.
 
 ## 추천 shortlist (증거 기반 우선순위)
 1. **A1 Best-Ideas active-overweight** (미검증·학계 근거 최강) + **B4/B5 시장중립** 결합

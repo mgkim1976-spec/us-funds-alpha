@@ -57,17 +57,27 @@ td.r,th.r{text-align:right}
 <script>
 const fmt=(v,d=1)=>v==null?"–":(v>=0?"+":"")+v.toFixed(d);
 const cls=v=>v==null?"":v>=0?"pos":"neg";
-function spark(series, color){
-  const pts=series.filter(p=>p.v!=null);
-  if(pts.length<2) return "";
-  const xs=pts.map((_,i)=>i), ys=pts.map(p=>p.v);
-  const mn=Math.min(...ys,0), mx=Math.max(...ys,0), W=300,H=46,pad=2;
-  const X=i=>pad+i*(W-2*pad)/(xs.length-1), Y=v=>H-pad-(v-mn)/((mx-mn)||1)*(H-2*pad);
-  const d=pts.map((p,i)=>(i?"L":"M")+X(i).toFixed(1)+","+Y(p.v).toFixed(1)).join(" ");
+// 장기(2022-2026) 누적수익 차트: 전략 vs S&P500
+function btChart(strat, spy, months, color){
+  if(!strat||strat.length<2) return "";
+  const n=strat.length, W=300,H=80,pad=3, lab=14;
+  const all=strat.concat(spy||[]), mn=Math.min(...all,0), mx=Math.max(...all,0);
+  const X=i=>pad+i*(W-2*pad)/(n-1), Y=v=>(H-lab)-pad-(v-mn)/((mx-mn)||1)*((H-lab)-2*pad);
+  const path=a=>a.map((v,i)=>(i?"L":"M")+X(i).toFixed(1)+","+Y(v).toFixed(1)).join(" ");
   const zero=Y(0).toFixed(1);
-  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+  // 연도 눈금
+  let ticks="";
+  if(months) months.forEach((m,i)=>{ if(m.endsWith("-01")||i===0){const x=X(i).toFixed(0);
+    ticks+=`<line x1="${x}" y1="0" x2="${x}" y2="${H-lab}" stroke="#1c2128" stroke-width="1"/><text x="${x}" y="${H-3}" fill="#6e7681" font-size="8">${m.slice(0,4)}</text>`;}});
+  const sf=strat[n-1], pf=(spy&&spy.length)?spy[spy.length-1]:null;
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="height:80px">
+    ${ticks}
     <line x1="0" y1="${zero}" x2="${W}" y2="${zero}" stroke="#30363d" stroke-width="1" stroke-dasharray="3 3"/>
-    <path d="${d}" fill="none" stroke="${color}" stroke-width="1.8"/></svg>`;
+    ${spy&&spy.length?`<path d="${path(spy)}" fill="none" stroke="#6e7681" stroke-width="1.4"/>`:""}
+    <path d="${path(strat)}" fill="none" stroke="${color}" stroke-width="2"/>
+    <text x="${W-1}" y="${(Y(sf)-3).toFixed(0)}" fill="${color}" font-size="9" text-anchor="end">전략 +${sf.toFixed(0)}%</text>
+    ${pf!=null?`<text x="${W-1}" y="${(Y(pf)+9).toFixed(0)}" fill="#8b949e" font-size="9" text-anchor="end">SPY +${pf.toFixed(0)}%</text>`:""}
+    </svg>`;
 }
 function render(D){
   const now=new Date().toLocaleTimeString('ko-KR');
@@ -101,9 +111,9 @@ function render(D){
     return `<div class="card">
       <div class="cname">${s.name}</div>
       <div class="cdesc">${s.desc} · ${s.weight==='rank'?'랭크가중':'동일가중'}</div>
-      <div class="live"><span class="big ${cls(s.since_rebal)}">${fmt(s.since_rebal)}%</span><span class="lbl">리밸런싱 이후</span></div>
-      <div class="vsspy">vs SPY <b class="${cls(s.vs_spy)}">${fmt(s.vs_spy)}%p</b></div>
-      ${spark(s.series, col)}
+      <div class="live"><span class="big ${cls(s.since_rebal)}">${fmt(s.since_rebal)}%</span><span class="lbl">리밸런싱 이후 (vs SPY ${fmt(s.vs_spy)}%p)</span></div>
+      <div class="sub2">📈 2022–2026 백테스트 누적수익 vs S&P500</div>
+      ${btChart(s.bt_curve, D.bt_spy, D.bt_months, col)}
       <div class="stats">
         <div><span>검증 알파</span> ${s.alpha} (t=${s.t})</div>
         <div><span>Sharpe</span> ${s.sharpe}</div>

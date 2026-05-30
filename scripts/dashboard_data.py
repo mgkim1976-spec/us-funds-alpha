@@ -165,6 +165,7 @@ def main():
             alpha=st.get('alpha','–'), t=st.get('t','–'), sharpe=st.get('sharpe','–'),
             cagr=st.get('cagr','–'), sub=st.get('sub',''), note=base['note'],
             since_rebal=round(ret,2), vs_spy=round(ret-spy_ret,2),
+            bt_curve=st.get('curve',[]),
             series=[{"d":d,"v":round(v*100,2) if v is not None else None} for d,v in ser], holds=holds)
     sections=[
         {"title":"구역 1 · 앙상블 (z-결합 · 랭크가중)","cards":[make_card("ens",10),make_card("ens",30)]},
@@ -174,6 +175,7 @@ def main():
     data=dict(generated=dt.date.today().strftime("%Y-%m-%d"),
               rebal=REBAL.strftime("%Y-%m-%d"), next_rebal=NEXT_REBAL.strftime("%Y-%m-%d"),
               asof=ad,
+              bt_months=cs.get("_months",[]), bt_spy=cs.get("_spy",[]),
               lag_note=f"펀드마다 회계연도가 달라 공시일 상이(point-in-time, 각 펀드 최신 공개분 사용). "
                        f"보유 기준일(report) 범위 {ad['report_min']}~{ad['report_max']}(중앙값 {ad['report_med']}), "
                        f"공시 {ad['public_min']}~{ad['public_max']}, 지연 {ad['lag_min']}~{ad['lag_max']}일(중앙값 {ad['lag_med']}). "

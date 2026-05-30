@@ -1,6 +1,6 @@
 # 01. 데이터 정찰 — US Active Fund Holdings (N-PORT)
 
-날짜: 2026-05-29 · 출처 전략: Morgan Stanley 리포트(일부 발췌) · 데이터: SEC EDGAR Form NPORT-P (무료)
+날짜: 2026-05-29 · 출처 전략: 선행 연구 리포트(일부 발췌) · 데이터: SEC EDGAR Form NPORT-P (무료)
 
 ## 검증된 팩트 (실제 EDGAR 데이터로 확인)
 
@@ -13,13 +13,13 @@
 ### 2. ⚠️ 공시 지연 55~57일, **분기말 스냅샷만** (월별 아님)
 - Contrafund 119건 NPORT-P 전수 확인: reportDate가 전부 3/31·6/30·9/30·12/31, filingDate는 +55~57일
 - N-PORT 규칙상 분기 중 처음 2개월치는 **비공개**, 분기 3번째 달(분기말)만 +60일 뒤 공개
-- **함의**: MS 리포트의 "monthly holding changes"는 공개 데이터로 **재현 불가**. 공개분으로는 분기 Δ밖에 못 만든다.
+- **함의**: 선행 연구의 "monthly holding changes"는 공개 데이터로 **재현 불가**. 공개분으로는 분기 Δ밖에 못 만든다.
 - **함의**: "45-day lookback, quarterly rebalance"의 실전 리밸런싱은 분기말+56일 이후에만 가능 → look-ahead 방지하려면 filingDate 기준 point-in-time 필수
 
 ### 3. ⚠️ 공개 N-PORT 이력 시작 = 약 2019 Q3
 - Contrafund 최古 공개 NPORT-P: filingDate 2019-11-26 / reportDate 2019-09-30 (older-files 청크 없음=전수)
 - N-PORT 규칙 단계 시행 결과로 **구조적**. 펀드 불문 ~2019 이전 공개분 없음
-- **함의**: MS의 2016–2019 sub-period 백테스트는 공개 N-PORT가 **아님**. N-Q(분기·비구조화 HTML, 2004–2019 폐지) 또는 상용 point-in-time DB(Morningstar/LSEG/FactSet) 사용 추정. **재현 최대 갭.**
+- **함의**: 선행 연구의 2016–2019 sub-period 백테스트는 공개 N-PORT가 **아님**. N-Q(분기·비구조화 HTML, 2004–2019 폐지) 또는 상용 point-in-time DB(Morningstar/LSEG/FactSet) 사용 추정. **재현 최대 갭.**
 
 ### 4. CUSIP→ticker 매핑 필요
 - `identifiers`에 ISIN은 있으나 ticker는 공란 → CUSIP/ISIN→ticker→가격 매핑 레이어 필요 + 기업행위 보정
