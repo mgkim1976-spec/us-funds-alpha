@@ -10,19 +10,10 @@ import falib as fa
 REBS = [pd.Timestamp(y, m, 1) for y in (2024, 2025, 2026) for m in (3, 6, 9, 12)
         if pd.Timestamp(2024, 9, 1) <= pd.Timestamp(y, m, 1) <= pd.Timestamp("2026-03-01")]
 
-def hf_concentrated():
-    d = pd.read_parquet(fa.DATA/"f13_panel.parquet")
-    d = d[d["cusip"].str.len() == 9].copy().rename(columns={"manager": "fund"})
-    d["w"] = d["pctVal"]/100.0; d["filingDate"] = pd.to_datetime(d["filingDate"])
-    g = d.groupby(["fund", "reportDate"])
-    st = g["w"].agg(n="count", top10=lambda x: x.nlargest(10).sum()).reset_index()
-    keep = st[(st.n >= 15) & (st.n <= 80) & (st.top10 >= 0.40)][["fund", "reportDate"]]
-    return d.merge(keep, on=["fund", "reportDate"])
-
 def main():
     figi = fa.figi_map(); pivot = fa.price_pivot(); rets = pivot.pct_change(fill_method=None); fac = fa.load_factors()
     mf = fa.load_panel("holdings_panel_541.parquet"); mf = mf[mf["reportDate"] >= "2024-01-01"]
-    hf = hf_concentrated()
+    hf = fa.load_13f(drop_cusips=fa.noneq_cusips(figi))
     mf_fw = fa.fund_timelines(mf); hf_fw = fa.fund_timelines(hf)
     MF = {R: fa.score_stocks(mf_fw, R, figi) for R in REBS}
     rc_all = {R: fa.score_reallocation(mf_fw, R, figi, pivot) for R in REBS}
@@ -42,15 +33,13 @@ def main():
             out[R] = d[d.ticker.notna()].nlargest(30, "c")["ticker"].tolist()
         return out
 
-    def monthly_cum(s):
-        m = (1+s).resample("ME").prod()-1; c = (1+m).cumprod()-1; c.index = c.index.strftime("%Y-%m"); return c
-    spy = rets["SPY"]; spy = spy[spy.index >= REBS[0]]; spy_cum = monthly_cum(spy); months = list(spy_cum.index)
+    spy = rets["SPY"]; spy = spy[spy.index >= REBS[0]]; spy_cum = fa.monthly_cum(spy); months = list(spy_cum.index)
     out = {"_months": months, "_spy": [round(v*100, 1) for v in spy_cum.values]}
 
     def card(picks_by_R):
         s = fa.basket_daily(rets, picks_by_R, REBS, "rank")
         cg, sh = fa.perf(s); a, t = fa.ff_alpha(s, fac)
-        cum = monthly_cum(s).reindex(months).ffill().fillna(0)
+        cum = fa.monthly_cum(s).reindex(months).ffill().fillna(0)
         return dict(cagr=f"{cg*100:.1f}%", sharpe=f"{sh:.2f}", alpha=f"{a*100:+.1f}%", t=f"{t:.2f}",
                     curve=[round(v*100, 1) for v in cum.values])
 
@@ -58,7 +47,11 @@ def main():
     for k in ["ens", "mhw", "lnp", "bi", "rlc"]: cards[f"mf_{k}"] = {R: top(MF[R], k) for R in REBS}
     for k in ["ens", "mhw", "lnp", "bi"]: cards[f"hf_{k}"] = {R: top(HF[R], k) for R in REBS}
     for key, pk in cards.items():
-        out[key] = card(pk); print(f"{key}: α{out[key]['alpha']} t{out[key]['t']} | 누적 {out[key]['curve'][-1]:.0f}% vs SPY {out['_spy'][-1]:.0f}%", flush=True)
+        pk10 = {R: pk[R][:10] for R in REBS}                 # 랭크순이므로 상위10 = Top30[:10]
+        out[key] = card(pk)
+        out[key].update({f"{k}10": v for k, v in card(pk10).items()})
+        print(f"{key}: Top30 α{out[key]['alpha']} t{out[key]['t']} 누적{out[key]['curve'][-1]:.0f}% | "
+              f"Top10 α{out[key]['alpha10']} t{out[key]['t10']} 누적{out[key]['curve10'][-1]:.0f}% (SPY {out['_spy'][-1]:.0f}%)", flush=True)
 
     json.dump(out, open(fa.ROOT/"dashboard"/"card_stats.json", "w"), ensure_ascii=False, indent=1)
     print("\n저장: dashboard/card_stats.json")

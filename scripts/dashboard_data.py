@@ -33,15 +33,6 @@ SECTIONS = [
  ("헤지펀드 유니버스 · 개별 시그널", "~3,100 집중 13F 매니저 · 기존 방식", ["hf_mhw", "hf_lnp", "hf_bi"]),
 ]
 
-def hf_concentrated():
-    d = pd.read_parquet(fa.DATA/"f13_panel.parquet")
-    d = d[d["cusip"].str.len() == 9].copy().rename(columns={"manager": "fund"})
-    d["w"] = d["pctVal"]/100.0; d["filingDate"] = pd.to_datetime(d["filingDate"])
-    g = d.groupby(["fund", "reportDate"])
-    st = g["w"].agg(n="count", top10=lambda x: x.nlargest(10).sum()).reset_index()
-    keep = st[(st.n >= 15) & (st.n <= 80) & (st.top10 >= 0.40)][["fund", "reportDate"]]
-    return d.merge(keep, on=["fund", "reportDate"])
-
 def fetch_prices(tickers):
     s = int(pd.Timestamp("2026-01-15").timestamp()); e = int((TODAY+pd.Timedelta(days=1)).timestamp())
     out = {}
@@ -60,7 +51,7 @@ def fetch_prices(tickers):
 def main():
     figi = fa.figi_map()
     mf = fa.load_panel("holdings_panel_541.parquet")
-    hf = hf_concentrated()
+    hf = fa.load_13f(drop_cusips=fa.noneq_cusips(figi))
     names = mf.drop_duplicates('cusip').set_index('cusip')['name'].to_dict()
     pivot = fa.price_pivot()
     MFn = fa.score_stocks(fa.fund_timelines(mf), REBAL, figi)
@@ -102,22 +93,29 @@ def main():
         return (ser[-1]*100 if ser and ser[-1] is not None else 0.0)
     spy_ret = port(["SPY"], {"SPY": 1.0})
 
+    def rankw(n):
+        w = np.arange(n, 0, -1).astype(float); return w/w.sum()
+
     def make(key):
         nm, desc, note = CARDS[key]; pdf = picks[key].copy()
         tks = pdf['ticker'].tolist(); n = len(tks)
-        w = np.arange(n, 0, -1).astype(float); w = w/w.sum(); wm = dict(zip(tks, w))
-        ret = port(tks, wm)
+        w30 = rankw(n); ret30 = port(tks, dict(zip(tks, w30)))
+        tk10 = tks[:10]; w10 = rankw(len(tk10)); ret10 = port(tk10, dict(zip(tk10, w10)))
         holds = []
         for i, (_, r) in enumerate(pdf.iterrows()):
             b, last = firstlast(px.get(r['ticker'], {})); pr = (last/b-1)*100 if (b and last) else None
             holds.append(dict(ticker=r['ticker'], name=str(names.get(r['cusip'], r['ticker']))[:30],
                               funds=int(r.get('hold', 0)) if pd.notna(r.get('hold', 0)) else 0,
-                              weight=round(w[i]*100, 1), ret=round(pr, 1) if pr is not None else None))
+                              weight=round(w30[i]*100, 1), weight10=round(w10[i]*100, 1) if i < 10 else 0,
+                              ret=round(pr, 1) if pr is not None else None))
         st = cs.get(key, {})
-        return dict(key=key, name=nm, desc=desc, note=note, weight="rank",
+        return dict(key=key, name=nm, desc=desc, note=note, weight="rank", sub="2024–2026 백테스트",
                     alpha=st.get('alpha', '–'), t=st.get('t', '–'), sharpe=st.get('sharpe', '–'),
-                    cagr=st.get('cagr', '–'), sub="2024–2026 백테스트", bt_curve=st.get('curve', []),
-                    since_rebal=round(ret, 2), vs_spy=round(ret-spy_ret, 2), holds=holds)
+                    cagr=st.get('cagr', '–'), bt_curve=st.get('curve', []),
+                    alpha10=st.get('alpha10', '–'), t10=st.get('t10', '–'), sharpe10=st.get('sharpe10', '–'),
+                    cagr10=st.get('cagr10', '–'), bt_curve10=st.get('curve10', []),
+                    since_rebal=round(ret30, 2), vs_spy=round(ret30-spy_ret, 2),
+                    since_rebal10=round(ret10, 2), vs_spy10=round(ret10-spy_ret, 2), holds=holds)
 
     sections = [{"title": t, "subtitle": sub, "cards": [make(k) for k in ks]} for t, sub, ks in SECTIONS]
     data = dict(generated=dt.date.today().strftime("%Y-%m-%d"), rebal=REBAL.strftime("%Y-%m-%d"),

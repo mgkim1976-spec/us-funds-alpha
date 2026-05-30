@@ -112,7 +112,8 @@ cd dashboard && python3 -m http.server 8769   # → http://localhost:8769/
 ```
 
 `launchd` 에이전트(`scripts/daily_update.sh`)가 매 영업일 아침 자동 갱신합니다 —
-신규 공시 N-PORT를 증분 수집(`update_filings.py`)하고 라이브 포트폴리오를 재가격
+두 소스의 신규 공시를 증분 수집(`update_filings.py all`: 펀드별 새 N-PORT + 매니저별 새
+13F-HR을 패널의 마지막 공시일 이후만 다운로드)하고 라이브 포트폴리오를 재가격
 (`dashboard_data.py`)합니다. 검증 통계는 `compute_card_stats.py`가 미리 산출합니다.
 
 ---
@@ -127,8 +128,9 @@ python3 scripts/build_master_universe.py     # → data/universe_master.parquet
 python3 scripts/stage2_ecpct.py              # → data/universe_confirmed.parquet
 python3 scripts/expand_validate.py           # NAV/스타일 → data/universe_300.json + PCA
 
-# 2. 보유·가격 수집
-python3 scripts/bulk_collect_300.py          # N-PORT 벌크 → data/holdings_panel_300.parquet
+# 2. 보유·가격 수집 (두 소스)
+python3 scripts/bulk_collect_300.py universe_541.json holdings_panel_541.parquet  # MF N-PORT 벌크
+python3 scripts/f13_collect.py               # HF 13F 벌크 → data/f13_panel.parquet
 python3 scripts/fetch_prices_300.py          # OpenFIGI + Yahoo → data/prices_full.parquet
 
 # 3. 검증
@@ -151,8 +153,10 @@ reference 입력(`data/raw/*.json`, 팩터 CSV, `data/universe_300.json`)은 커
 ```
 scripts/
   falib.py             공유 라이브러리 (팩터·패널·시그널·FF알파) — 모든 스크립트가 사용
-  build_master_universe.py, stage2_ecpct.py, expand_validate.py   유니버스 구축
-  bulk_collect_300.py, fetch_prices_300.py, update_filings.py      데이터 수집
+  build_master_universe.py, stage2_ecpct.py, expand_validate.py   MF 유니버스 구축
+  bulk_collect_300.py, fetch_prices_300.py                        MF N-PORT·가격 수집
+  f13_collect.py, f13_refine.py, f13_vs_mf.py, f13_combine.py      HF 13F 수집·분석
+  update_filings.py                                               일일 증분 (MF 541 + HF 13F)
   signals_family.py, revalidate_clean.py, ensemble_test.py,
   weighting_test.py, reallocation_validate.py, mhw_cost.py            검증
   compute_card_stats.py, dashboard_data.py, daily_update.sh        대시보드 파이프라인
@@ -162,8 +166,8 @@ notes/                 단계별 연구 기록 (한글)
 
 ## 데이터 소스 (모두 무료)
 
-- **SEC EDGAR** — Form N-PORT(월별 포트폴리오 보유) & N-CEN(펀드 메타데이터·인덱스펀드 플래그),
-  DERA 구조화 벌크 데이터셋 포함.
+- **SEC EDGAR** — Form N-PORT(뮤추얼펀드 보유) · N-CEN(펀드 메타데이터·인덱스펀드 플래그) ·
+  Form 13F-HR(헤지펀드/기관 보유), DERA 구조화 벌크 데이터셋 + 일일 증분(submissions API) 포함.
 - **Yahoo Finance** — 일별 수정주가 및 펀드 NAV.
 - **OpenFIGI** — CUSIP → 티커 매핑.
 - **Ken French Data Library** — Fama-French 5팩터 + 모멘텀.

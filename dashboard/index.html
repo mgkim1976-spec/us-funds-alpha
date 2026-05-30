@@ -41,6 +41,12 @@ html,body{margin:0;background:var(--bg);color:var(--fg);
 .chip b{color:var(--fg);font-weight:600}
 .chip .up{color:var(--up)} .chip .down{color:var(--down)}
 .disc{color:var(--mut2);font-size:11.5px;line-height:1.6;margin:10px 2px 0}
+.toggle{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;
+  padding:3px;margin:14px 0 0;gap:2px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.toggle button{border:0;background:transparent;color:var(--mut);font-size:12px;font-weight:600;
+  padding:7px 15px;border-radius:999px;cursor:pointer;transition:all .18s;font-family:inherit}
+.toggle button.on{background:var(--accent);color:#fff}
+.toggle .sub{font-weight:500;opacity:.8;font-size:10.5px}
 .alert{background:#e8f9ef;border:1px solid #aee5c4;border-radius:14px;padding:12px 16px;
   color:#0a7d3e;font-size:13px;margin:14px 0 0;display:none}
 .alert .add{color:var(--up);font-weight:600} .alert .drop{color:var(--down);font-weight:600}
@@ -106,10 +112,14 @@ details.holds>summary::-webkit-details-marker{display:none}
 </head>
 <body>
 <div class="wrap">
-  <div class="brand"><h1>US Funds Alpha</h1><span class="tag">미국 뮤추얼펀드 보유 시그널 · 일일 모니터</span></div>
+  <div class="brand"><h1>US Funds Alpha</h1><span class="tag">미국 뮤추얼펀드·헤지펀드 보유 시그널 · 일일 모니터</span></div>
 
   <div class="meta" id="meta"></div>
   <div class="disc" id="disc"></div>
+  <div class="toggle" id="toggle">
+    <button data-n="30" class="on">Top 30 <span class="sub">분산</span></button>
+    <button data-n="10">Top 10 <span class="sub">집중</span></button>
+  </div>
   <div class="alert" id="alert"></div>
   <div id="sections"></div>
 
@@ -118,7 +128,7 @@ details.holds>summary::-webkit-details-marker{display:none}
     <p>미국 액티브 뮤추얼펀드가 SEC에 분기마다 공시하는 <b>보유 종목(Form&nbsp;N-PORT)</b>에서, 매니저들이
        어떤 주식을 사 모으는지를 신호로 뽑아 만든 포트폴리오입니다. 매니저의 포지션 변화에는 시장이 아직
        반영하지 않은 정보가 담겨 있고, 그것이 수 주~수 개월에 걸쳐 가격에 점진적으로 반영됩니다.
-       모든 성과는 <b>2022–2026 백테스트</b>(시장·스타일 요인 제거한 팩터조정)이며 투자 조언이 아닙니다.</p>
+       모든 성과는 <b>2024–2026 백테스트</b>(시장·스타일 요인 제거한 팩터조정)이며 투자 조언이 아닙니다.</p>
     <p><b>두 데이터 소스</b> — <b>뮤추얼펀드(MF, N-PORT, ~540개)</b>와 <b>헤지펀드(HF, 13F 집중 매니저, ~3,100개)</b>.
        비교해보면 <em>폭넓은 보유·신규매수는 뮤추얼펀드</em>가, <em>집중된 고확신(Best-Ideas)은 헤지펀드</em>가 강합니다.
        <b>결합 앙상블</b>은 각 소스의 승자 신호만 합쳐(MF의 mhw·lnp + HF의 best-ideas) 가장 높은 알파(+13.8%)를 냅니다.</p>
@@ -129,9 +139,9 @@ details.holds>summary::-webkit-details-marker{display:none}
       <div class="sigrow"><b>Reallocation</b><span>가격 상승분을 빼고 매니저가 <em>실제로 사들인</em> 종목 — 능동적 매매.</span></div>
       <div class="sigrow"><b>앙상블</b><span>상호보완적 신호를 z-score로 합쳐 <em>가장 견고</em>하게.</span></div>
     </div>
-    <div class="howto">📊 <b>카드 읽는 법</b> — 큰 숫자·초록 곡선 = 2022–2026 누적수익, 회색 점선 = S&P&nbsp;500 ·
+    <div class="howto">📊 <b>카드 읽는 법</b> — 큰 숫자·초록 곡선 = 2024–2026 누적수익, 회색 점선 = S&P&nbsp;500 ·
       <b>알파</b> = 시장·스타일 제거 후 초과수익(t&gt;2면 통계적 유의) · <b>리밸런싱 이후</b> = 현재 포트폴리오 실시간 성과 ·
-      보유종목을 펼치면 종목별 <b>비중</b>과 이후 수익. <b>Top 10</b>=집중(수익↑·변동성↑), <b>Top 30</b>=분산(안정).</div>
+      보유종목을 펼치면 종목별 <b>비중</b>과 이후 수익. 상단 토글로 <b>Top 10</b>=집중(수익↑·변동성↑) ↔ <b>Top 30</b>=분산(안정) 전환.</div>
   </div>
 
   <div class="foot">SEC EDGAR N-PORT 보유 시그널 · 분기 리밸런싱 · point-in-time · 매일 갱신<br>연구·교육 목적 — 투자 조언이 아닙니다</div>
@@ -169,38 +179,56 @@ function chart(strat,spy,months){
 }
 
 function cardHTML(s,D){
-  const bt=s.bt_curve&&s.bt_curve.length?s.bt_curve[s.bt_curve.length-1]:null;
+  // Top10/Top30 토글에 따라 통계·곡선·보유를 선택
+  const ten=TOPN===10;
+  const curve=ten?(s.bt_curve10||s.bt_curve):s.bt_curve;
+  const alpha=ten?(s.alpha10??s.alpha):s.alpha, tval=ten?(s.t10??s.t):s.t, sharpe=ten?(s.sharpe10??s.sharpe):s.sharpe;
+  const since=ten?(s.since_rebal10??s.since_rebal):s.since_rebal;
+  const bt=curve&&curve.length?curve[curve.length-1]:null;
   const spyF=D.bt_spy&&D.bt_spy.length?D.bt_spy[D.bt_spy.length-1]:null;
-  const maxw=Math.max(...s.holds.map(h=>h.weight||0),1);
+  const holds=s.holds.slice(0,TOPN);
+  const wkey=ten?'weight10':'weight';
+  const maxw=Math.max(...holds.map(h=>h[wkey]||0),1);
   const hrows=`<div class="hrow hhead"><span>티커</span><span>종목</span><span>비중바</span><span class="wt">비중</span><span class="rt">이후</span></div>`+
-    s.holds.map(h=>`<div class="hrow">
+    holds.map(h=>`<div class="hrow">
       <span class="tk">${h.ticker}</span>
       <span class="nm">${h.name}</span>
-      <span class="wb"><i style="width:${((h.weight||0)/maxw*100).toFixed(0)}%;background:${cls(h.ret)==='down'?css('--down'):css('--accent')}"></i></span>
-      <span class="wt tnum">${(h.weight||0).toFixed(1)}%</span>
+      <span class="wb"><i style="width:${((h[wkey]||0)/maxw*100).toFixed(0)}%;background:${cls(h.ret)==='down'?css('--down'):css('--accent')}"></i></span>
+      <span class="wt tnum">${(h[wkey]||0).toFixed(1)}%</span>
       <span class="rt ${cls(h.ret)} tnum">${fmt(h.ret)}%</span>
     </div>`).join("");
   return `<article class="card">
     <div class="c-top"><div><div class="c-name">${s.name}</div><div class="c-desc">${s.desc}</div></div>
-      <span class="badge">${s.weight==='rank'?'랭크가중':'동일가중'}</span></div>
+      <span class="badge">Top ${TOPN} · 랭크가중</span></div>
     <div class="hero">
       <div class="num tnum ${bt>=0?'up':'down'}">${fmt(bt,0)}%</div>
-      <div class="cap">2022–2026 누적수익 · S&P 500 ${fmt(spyF,0)}%</div>
+      <div class="cap">2024–2026 누적수익 · S&P 500 ${fmt(spyF,0)}%</div>
     </div>
-    ${chart(s.bt_curve,D.bt_spy,D.bt_months)}
+    ${chart(curve,D.bt_spy,D.bt_months)}
     <div class="metrics">
-      <div class="m"><div class="v ${cls((s.alpha||'').replace('%',''))}">${s.alpha}</div><div class="l">알파 · t ${s.t}</div></div>
-      <div class="m"><div class="v">${s.sharpe}</div><div class="l">Sharpe</div></div>
-      <div class="m"><div class="v ${cls(s.since_rebal)}">${fmt(s.since_rebal)}%</div><div class="l">리밸런싱 이후</div></div>
+      <div class="m"><div class="v ${cls((alpha||'').replace('%',''))}">${alpha}</div><div class="l">알파 · t ${tval}</div></div>
+      <div class="m"><div class="v">${sharpe}</div><div class="l">Sharpe</div></div>
+      <div class="m"><div class="v ${cls(since)}">${fmt(since)}%</div><div class="l">리밸런싱 이후</div></div>
     </div>
-    <div class="subnote">하위기간 ${s.sub||'–'}</div>
-    <details class="holds"><summary><span>보유 ${s.holds.length}종목 · 비중·이후수익</span><span class="chev">›</span></summary>
+    <div class="subnote">${s.sub||'2024–2026 백테스트'}</div>
+    <details class="holds"><summary><span>보유 ${holds.length}종목 · 비중·이후수익</span><span class="chev">›</span></summary>
       <div class="hl">${hrows}</div></details>
     <div class="note">${s.note||''}</div>
   </article>`;
 }
 
+let DATA=null, TOPN=30;
+function renderSections(){
+  if(!DATA) return;
+  document.getElementById('sections').innerHTML=DATA.sections.map(sec=>{
+    const cn=sec.cards.length>=4?' four':(sec.cards.length===3?' three':'');
+    return `<section class="section"><div class="section-head">
+        <span class="lab">${sec.subtitle||''}</span><h2>${sec.title}</h2></div>
+      <div class="grid${cn}">${sec.cards.map(c=>cardHTML(c,DATA)).join("")}</div>
+    </section>`;}).join("");
+}
 function render(D){
+  DATA=D;
   const now=new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'});
   document.getElementById('meta').innerHTML=
     `<div class="chip">데이터 <b>${D.generated}</b></div>
@@ -214,13 +242,14 @@ function render(D){
     for(const k in rc.per_strategy){const c=rc.per_strategy[k];
       html+=`<br>&nbsp;<b>${k}</b> `+(c.added.length?`<span class="add">+${c.added.join(" +")}</span> `:"")+(c.dropped.length?`<span class="drop">−${c.dropped.join(" −")}</span>`:"");}
     al.innerHTML=html; al.style.display="block";} else al.style.display="none";
-  document.getElementById('sections').innerHTML=D.sections.map(sec=>{
-    const cn=sec.cards.length>=4?' four':(sec.cards.length===3?' three':'');
-    return `<section class="section"><div class="section-head">
-        <span class="lab">${sec.subtitle||''}</span><h2>${sec.title}</h2></div>
-      <div class="grid${cn}">${sec.cards.map(c=>cardHTML(c,D)).join("")}</div>
-    </section>`;}).join("");
+  renderSections();
 }
+document.getElementById('toggle').addEventListener('click',e=>{
+  const b=e.target.closest('button'); if(!b) return;
+  TOPN=+b.dataset.n;
+  [...document.querySelectorAll('#toggle button')].forEach(x=>x.classList.toggle('on',+x.dataset.n===TOPN));
+  renderSections();
+});
 function load(){fetch('data.json?'+Date.now()).then(r=>r.json()).then(render)
   .catch(e=>document.getElementById('disc').textContent="data.json 로드 실패 — scripts/dashboard_data.py 실행 필요. "+e);}
 load(); setInterval(load,600000);

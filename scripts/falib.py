@@ -11,11 +11,20 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA, RAW = ROOT/"data", ROOT/"data"/"raw"
 FACS = ["Mkt-RF", "SMB", "HML", "RMW", "CMA", "Mom"]
 
-# 비주식(ETF·머니마켓·펀드) 제외 패턴 — MLP/REIT/ADR 등 실제 주식은 유지
+# 비주식(ETF·머니마켓·뮤추얼펀드·CEF) 제외 패턴.
+#  - MLP/REIT/ADR·"…Trust"(REIT) 등 실제 주식은 유지
+#  - 오탐 보호: "Fund Management/Services", "American Vanguard Corp",
+#    "Duckhorn Portfolio", "Portfolio Recovery/Services"는 실제 회사라 제외하지 않음
 NONEQ = (r"select sector|spdr|ishares|invesco qqq|\betf\b|exchange.traded|powershares|"
          r"financial square|money market|liquid(?:ity)? (?:fund|assets|portfolio)|government portfolio|"
          r"treasury obligation|cash management|institutional (?:liquid|govt|government)|prime obligation|"
-         r"govt fund|treasury fund|reserves fund|sweep")
+         r"govt fund|treasury fund|reserves fund|sweep|"
+         # 일반 펀드/ETF 명명 규칙 (오탐 lookahead 포함)
+         r"\bfund\b(?! management| services| administration)|"
+         r"\bvanguard\b(?! corp)|\bdfa\b|series trust|short-term investments trust|"
+         r"(?:company|cap|series|alpha|tactical|equity index) portfolio|"
+         # N-PORT 약어형 펀드/ETF (FDS=Funds, Fd, INS SER=Insurance Series, FedFund, EXCH TRADED, SSGA 섹터)
+         r"american fds|ins ser|fedfund|\bfd\b|exch traded|state street(?! corp)")
 
 # 검증 백테스트의 분기 리밸런싱 그리드
 def rebalance_dates(start="2022-06-01", end="2026-03-01"):
@@ -42,16 +51,66 @@ def load_factors():
 
 # ── 보유 패널 ─────────────────────────────────────────────────────────
 def load_panel(name="holdings_panel_300.parquet", exclude_noneq=True):
-    """US 보통주 보유 패널. exclude_noneq=True면 ETF/MMF/펀드 제외."""
+    """US 보통주 보유 패널. exclude_noneq=True면 ETF/MMF/펀드 제외.
+    cusip 단위 제외 — 같은 종목이 펀드마다 다른 이름 문자열(약어 등)로 적혀도,
+    어느 한 행이라도 NONEQ에 걸리면 그 cusip 전체를 떨군다(이름 변형 누수 방지)."""
     h = pd.read_parquet(DATA/name)
     h = h[h["cusip"].str.len() == 9].copy()
     if exclude_noneq:
-        h = h[~h["name"].str.lower().str.contains(NONEQ, regex=True, na=False)]
+        bad = set(h.loc[h["name"].str.lower().str.contains(NONEQ, regex=True, na=False), "cusip"])
+        h = h[~h["cusip"].isin(bad)]
     h["w"] = h["pctVal"]/100.0
     h["filingDate"] = pd.to_datetime(h["filingDate"])
     if "reportDate" in h.columns:
         h["reportDate"] = pd.to_datetime(h["reportDate"])
     return h
+
+# 13F 매니저가 흔히 담는 광범위 ETF — 13F는 이름 컬럼이 없어 티커로 제외
+NONEQ_TICKERS = {
+ "SPY","QQQ","IWM","DIA","VOO","IVV","VTI","VEA","VWO","EEM","EFA","EFV","IJR","IJH","IWD","IWF","IWB","IWN","IWO","RSP",
+ "GLD","SLV","IAU","GDX","GDXJ","USO","UNG","TLT","IEF","SHY","HYG","LQD","AGG","BND","JNK","EMB","TIP","MUB","BIL",
+ "XLF","XLE","XLK","XLV","XLI","XLY","XLP","XLU","XLB","XLRE","XLC","SMH","SOXX","XBI","IBB","KRE","KBE","ITB","XHB","XOP","OIH","XRT","XME",
+ "ARKK","ARKG","ARKW","VXX","UVXY","SVXY","SQQQ","TQQQ","SPXL","SPXS","TZA","TNA","FXI","KWEB","EWZ","EWJ","INDA",
+ "SCHD","DVY","VYM","VIG","MDY","SPLG","VUG","VTV","QUAL","MTUM","USMV","SPYG","SPYV"}
+
+def noneq_cusips(figi=None, mf_name="holdings_panel_541.parquet"):
+    """비주식 cusip 집합 = (MF 패널 이름이 NONEQ 매칭) ∪ (figi 티커가 ETF 블록리스트).
+    이름 컬럼이 없는 13F 패널 정제에 사용."""
+    s = set()
+    try:
+        mf = pd.read_parquet(DATA/mf_name)[["cusip", "name"]]
+        s |= set(mf.loc[mf["name"].str.lower().str.contains(NONEQ, regex=True, na=False), "cusip"])
+    except Exception:
+        pass
+    if figi:
+        s |= {c for c, t in figi.items() if t in NONEQ_TICKERS}
+    return s
+
+def load_13f(name="f13_panel.parquet", concentrated=True, n_lo=15, n_hi=80, top10_min=0.40,
+             since="2024-01-01", drop_cusips=None):
+    """13F 헤지펀드 보유 패널 (manager→fund 로 리네이밍, bulk·증분 동일 스키마).
+    drop_cusips: 비주식 cusip 집합(noneq_cusips) — 집중도 산출 전에 먼저 제외.
+    concentrated=True면 분기별 집중 매니저만 (보유 n∈[n_lo,n_hi], 상위10 비중≥top10_min)."""
+    d = pd.read_parquet(DATA/name)
+    d = d[d["cusip"].str.len() == 9].copy().rename(columns={"manager": "fund"})
+    if drop_cusips:
+        d = d[~d["cusip"].isin(drop_cusips)]
+    d["w"] = d["pctVal"]/100.0
+    d["filingDate"] = pd.to_datetime(d["filingDate"]); d["reportDate"] = pd.to_datetime(d["reportDate"])
+    if since:
+        d = d[d["filingDate"] >= since]
+    if not concentrated:
+        return d
+    g = d.groupby(["fund", "reportDate"])
+    st = g["w"].agg(n="count", top10=lambda x: x.nlargest(10).sum()).reset_index()
+    keep = st[(st.n >= n_lo) & (st.n <= n_hi) & (st.top10 >= top10_min)][["fund", "reportDate"]]
+    return d.merge(keep, on=["fund", "reportDate"])
+
+def monthly_cum(s, pct=False):
+    """일별 수익 시리즈 → 월말 누적수익(YYYY-MM 인덱스). pct=True면 ×100 반올림 리스트로."""
+    m = (1+s).resample("ME").prod()-1
+    c = (1+m).cumprod()-1; c.index = c.index.strftime("%Y-%m")
+    return [round(v*100, 1) for v in c.values] if pct else c
 
 def fund_timelines(h, funds=None):
     """fund -> {filingDate: cusip별 비중 Series} (필요시 funds 집합으로 제한)."""
