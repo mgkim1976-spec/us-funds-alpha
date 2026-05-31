@@ -56,11 +56,10 @@ html,body{margin:0;background:var(--bg);color:var(--fg);overflow-x:hidden;
 .section-head .lab{display:block;font-size:11px;font-weight:700;letter-spacing:1.3px;
   text-transform:uppercase;color:var(--accent)}
 .section-head h2{font-size:21px;font-weight:700;letter-spacing:-.4px;margin:3px 0 0}
-.grid{display:grid;grid-template-columns:1fr;gap:18px}
-@media(min-width:740px){.grid{grid-template-columns:1fr 1fr}}
-@media(min-width:1080px){.grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}}
-/* 5카드(MF)는 한 줄에 욱여넣지 않고 넓은 3+2 배치 — 카드 폭 확보(metrics 넘침 방지) */
-@media(min-width:740px){.grid.five{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* 카드 그리드 — flexbox로 폭 일관 + 미완성 행 중앙정렬.
+   가득 찬 행=균일 폭(~290px), 단독/히어로 카드(앙상블·ΔBreadth·롱숏)=중앙 featured(≤380px). */
+.grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
+.grid>*{flex:1 1 262px;min-width:0;max-width:382px}
 @media(min-width:560px){.grid.one{grid-template-columns:minmax(0,440px);justify-content:center}}
 .card.mn{border-color:rgba(0,113,227,.28)}
 .sd{display:inline-block;font-size:9px;font-weight:700;width:13px;height:13px;line-height:13px;text-align:center;
