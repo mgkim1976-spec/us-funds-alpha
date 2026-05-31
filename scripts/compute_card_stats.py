@@ -7,8 +7,7 @@ import numpy as np, pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import falib as fa
 
-REBS = [pd.Timestamp(y, m, 1) for y in (2024, 2025, 2026) for m in (3, 6, 9, 12)
-        if pd.Timestamp(2024, 9, 1) <= pd.Timestamp(y, m, 1) <= pd.Timestamp("2026-03-01")]
+REBS = fa.rebalance_dates("2024-09-01", "2026-03-01")   # 13F 가용 공통창
 
 def main():
     figi = fa.figi_map(); pivot = fa.price_pivot(); rets = pivot.pct_change(fill_method=None); fac = fa.load_factors()

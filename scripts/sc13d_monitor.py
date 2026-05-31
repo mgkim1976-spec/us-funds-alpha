@@ -2,13 +2,12 @@
 """일별 13D 모니터 → dashboard/sc13d.json. 검증 액티비스트 CIK의 최근 13D(신규·수정) 공시를
 EDGAR submissions에서 받아, 대상 티커·공시일·공시이후 수익(시장조정)을 피드로. daily_update에서 호출.
 폼: SC 13D / SCHEDULE 13D (+/A). 2024 SEC 현대화로 코드가 SCHEDULE 13D 로 바뀜."""
-import sys, importlib.util, json, re, datetime as dt
+import sys, json, re, datetime as dt
 from pathlib import Path
 import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT/"scripts")); import falib as fa
-spec = importlib.util.spec_from_file_location("sc", str(ROOT/"scripts"/"sc13d_collect.py")); sc = importlib.util.module_from_spec(spec); spec.loader.exec_module(sc)
-spec2 = importlib.util.spec_from_file_location("fp", str(ROOT/"scripts"/"fetch_prices_300.py")); fp = importlib.util.module_from_spec(spec2); spec2.loader.exec_module(fp)
+sys.path.insert(0, str(ROOT/"scripts"))
+import falib as fa, sc13d_collect as sc, fetch_prices_300 as fp
 uf = sc.uf
 LOOKBACK_AMEND = 120   # 수정공시: 최근 120일
 LOOKBACK_INIT = 365    # 신규 13D(캠페인 개시)는 드물어 더 길게

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """대시보드 데이터 (매일). 3구역: ①앙상블 소스비교(결합·MF·HF) ②뮤추얼펀드 개별시그널 ③헤지펀드 개별시그널.
 검증통계·곡선은 card_stats.json(2024-2026). 라이브는 최신가격으로 리밸런싱 이후 추적. → dashboard/data.json"""
-import sys, json, time, urllib.request, datetime as dt
+import sys, json, time, datetime as dt
 from pathlib import Path
 import numpy as np, pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -38,18 +38,10 @@ SECTIONS = [
 ]
 
 def fetch_prices(tickers):
-    s = int(pd.Timestamp("2026-01-15").timestamp()); e = int((TODAY+pd.Timedelta(days=1)).timestamp())
-    out = {}
+    """리밸런싱 이후 라이브 가격 {ticker: {YYYY-MM-DD: adjclose}}. 원본 티커 키 유지."""
+    end = TODAY + pd.Timedelta(days=1); out = {}
     for tk in sorted(set(tickers)):
-        ytk = tk.replace("/", "-")  # OpenFIGI BRK/B → Yahoo BRK-B (저장은 원본 tk 키)
-        try:
-            j = json.load(urllib.request.urlopen(urllib.request.Request(
-                f"https://query1.finance.yahoo.com/v8/finance/chart/{ytk}?period1={s}&period2={e}&interval=1d",
-                headers={"User-Agent": "Mozilla/5.0"}), timeout=20))
-            r = j["chart"]["result"][0]; ts = r["timestamp"]
-            adj = r["indicators"].get("adjclose", [{}])[0].get("adjclose") or r["indicators"]["quote"][0]["close"]
-            out[tk] = {pd.Timestamp(t, unit='s').strftime('%Y-%m-%d'): p for t, p in zip(ts, adj) if p}
-        except Exception: pass
+        out[tk] = {d.strftime('%Y-%m-%d'): p for d, p in fa.yahoo_chart(tk, "2026-01-15", end, timeout=20)}
         time.sleep(0.12)
     return out
 

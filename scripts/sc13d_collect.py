@@ -2,12 +2,11 @@
 """SC 13D 직접 수집 → data/sc13d_events.parquet. 검증된 액티비스트 CIK의 13D/13D-A 제출에서
 제출헤더의 '대상회사(SUBJECT COMPANY) CIK'를 추출 → company_tickers로 티커 매핑.
 재현: python3 scripts/sc13d_collect.py"""
-import sys, importlib.util, json, re, time, urllib.request
+import sys, json, re, time, urllib.request
 from pathlib import Path
 import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
-spec = importlib.util.spec_from_file_location("uf", str(Path(__file__).resolve().parent/"update_filings.py"))
-uf = importlib.util.module_from_spec(spec); spec.loader.exec_module(uf)
+sys.path.insert(0, str(Path(__file__).resolve().parent)); import update_filings as uf
 UA = uf.UA
 
 # 액티비스트 13D 제출자 CIK (13F에서 검증한 엔티티)

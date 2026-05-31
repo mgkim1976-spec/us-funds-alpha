@@ -203,6 +203,20 @@ def price_pivot(name="prices_full.parquet"):
     px = pd.read_parquet(DATA/name); px["date"] = pd.to_datetime(px["date"])
     return px.pivot_table(index="date", columns="ticker", values="adjclose").sort_index()
 
+def yahoo_chart(ticker, start, end, timeout=25):
+    """Yahoo Finance 일별 [(Timestamp, adjclose)]. OpenFIGI '/'(클래스주) → Yahoo '-'. 실패 시 []."""
+    import urllib.request, json as _json
+    s, e = int(pd.Timestamp(start).timestamp()), int(pd.Timestamp(end).timestamp())
+    url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker.replace('/', '-')}"
+           f"?period1={s}&period2={e}&interval=1d")
+    try:
+        j = _json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=timeout))
+        r = j["chart"]["result"][0]; ts = r["timestamp"]
+        adj = r["indicators"].get("adjclose", [{}])[0].get("adjclose") or r["indicators"]["quote"][0]["close"]
+        return [(pd.Timestamp(t, unit="s"), float(p)) for t, p in zip(ts, adj) if p is not None]
+    except Exception:
+        return []
+
 def weights(n, scheme="equal"):
     """동일/랭크 가중 벡터(합 1). 입력은 점수 내림차순 가정."""
     w = np.arange(n, 0, -1).astype(float) if scheme == "rank" else np.ones(n)

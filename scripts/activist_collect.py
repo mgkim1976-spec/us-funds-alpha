@@ -2,12 +2,11 @@
 """액티비스트 13F 직접 수집 (집중도 필터 우회) → data/activist_panel.parquet.
 검증된 액티비스트 매니저 CIK의 13F-HR(2024+)을 EDGAR에서 받아 보유 파싱.
 update_filings 함수 재사용. 후보 CIK 중 실제 13F-HR 제출분만 채택."""
-import sys, importlib.util, json, time
+import sys, json, time
 from pathlib import Path
 import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
-spec = importlib.util.spec_from_file_location("uf", str(Path(__file__).resolve().parent/"update_filings.py"))
-uf = importlib.util.module_from_spec(spec); spec.loader.exec_module(uf)
+sys.path.insert(0, str(Path(__file__).resolve().parent)); import update_filings as uf
 
 # EDGAR 조회로 확보한 후보 CIK (애매한 건 복수 포함 — 실제 13F-HR 제출분만 남김)
 ACTIVISTS = {

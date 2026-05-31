@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """300펀드 보유의 미가격 cusip(소형주 꼬리) 매핑+수집 → prices_full.parquet에 append."""
-import json, time, urllib.request
+import sys, json, time, urllib.request
 from pathlib import Path
 import pandas as pd
 ROOT=Path(__file__).resolve().parent.parent; RAW=ROOT/"data"/"raw"; UA="us_funds_alpha research your-email@example.com"
+sys.path.insert(0, str(Path(__file__).resolve().parent)); import falib as fa
 
 def openfigi(cusips):
     cache=json.load(open(RAW/"figi_map.json"))
@@ -28,18 +29,10 @@ def openfigi(cusips):
     json.dump(cache,open(RAW/"figi_map.json","w")); return cache
 
 def yahoo(tickers):
-    s=int(pd.Timestamp("2019-12-01").timestamp()); e=int(pd.Timestamp("2026-05-29").timestamp())
-    rows=[]
+    end=pd.Timestamp.today().normalize()+pd.Timedelta(days=1); rows=[]
     for i,tk in enumerate(sorted(set(tickers)),1):
-        ytk=tk.replace("/","-")  # OpenFIGI BRK/B → Yahoo BRK-B (저장은 원본 tk 키 유지)
-        url=f"https://query1.finance.yahoo.com/v8/finance/chart/{ytk}?period1={s}&period2={e}&interval=1d"
-        try:
-            j=json.load(urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"}),timeout=25))
-            r=j["chart"]["result"][0]; ts=r["timestamp"]
-            adj=r["indicators"].get("adjclose",[{}])[0].get("adjclose") or r["indicators"]["quote"][0]["close"]
-            for t,p in zip(ts,adj):
-                if p is not None: rows.append((tk,pd.Timestamp(t,unit='s').normalize(),float(p)))
-        except Exception: pass
+        for d,p in fa.yahoo_chart(tk,"2019-12-01",end):   # '/'→'-' 변환은 fa 내부; 저장은 원본 tk
+            rows.append((tk,d.normalize(),p))
         if i%200==0: print(f"  px {i}/{len(set(tickers))}",flush=True)
         time.sleep(0.22)
     return pd.DataFrame(rows,columns=["ticker","date","adjclose"])
