@@ -60,6 +60,11 @@ html,body{margin:0;background:var(--bg);color:var(--fg);
 @media(min-width:740px){.grid{grid-template-columns:1fr 1fr}}
 @media(min-width:1080px){.grid.four{grid-template-columns:1fr 1fr 1fr 1fr}.grid.three{grid-template-columns:1fr 1fr 1fr}.grid.five{grid-template-columns:repeat(5,1fr)}}
 @media(min-width:740px) and (max-width:1079px){.grid.five{grid-template-columns:1fr 1fr 1fr}}
+@media(min-width:560px){.grid.one{grid-template-columns:minmax(0,440px);justify-content:center}}
+.card.mn{border-color:rgba(0,113,227,.28)}
+.sd{display:inline-block;font-size:9px;font-weight:700;width:13px;height:13px;line-height:13px;text-align:center;
+  border-radius:4px;margin-right:4px;color:#fff}
+.sd.sl{background:var(--up)} .sd.ss{background:var(--down)}
 
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
   padding:18px 18px 14px;box-shadow:0 1px 3px rgba(0,0,0,.05);
@@ -188,32 +193,40 @@ function cardHTML(s,D){
   const since=ten?(s.since_rebal10??s.since_rebal):s.since_rebal;
   const bt=curve&&curve.length?curve[curve.length-1]:null;
   const spyF=D.bt_spy&&D.bt_spy.length?D.bt_spy[D.bt_spy.length-1]:null;
-  const holds=s.holds.slice(0,TOPN);
+  const mn=s.marketneutral;
+  // 시장중립: 롱/숏 각각 상위 TOPN; 일반: 상위 TOPN
+  let holds;
+  if(mn){const L=s.holds.filter(h=>h.side==='L').slice(0,TOPN),Sh=s.holds.filter(h=>h.side==='S').slice(0,TOPN);holds=L.concat(Sh);}
+  else holds=s.holds.slice(0,TOPN);
   const wkey=ten?'weight10':'weight';
   const maxw=Math.max(...holds.map(h=>h[wkey]||0),1);
   const hrows=`<div class="hrow hhead"><span>티커</span><span>종목</span><span>비중바</span><span class="wt">비중</span><span class="rt">이후</span></div>`+
-    holds.map(h=>`<div class="hrow">
-      <span class="tk">${h.ticker}</span>
+    holds.map(h=>{const bar=mn?(h.side==='S'?css('--down'):css('--up')):(cls(h.ret)==='down'?css('--down'):css('--accent'));
+      const tag=mn?`<span class="sd ${h.side==='S'?'ss':'sl'}">${h.side==='S'?'S':'L'}</span>`:'';
+      return `<div class="hrow">
+      <span class="tk">${tag}${h.ticker}</span>
       <span class="nm">${h.name}</span>
-      <span class="wb"><i style="width:${((h[wkey]||0)/maxw*100).toFixed(0)}%;background:${cls(h.ret)==='down'?css('--down'):css('--accent')}"></i></span>
+      <span class="wb"><i style="width:${((h[wkey]||0)/maxw*100).toFixed(0)}%;background:${bar}"></i></span>
       <span class="wt tnum">${(h[wkey]||0).toFixed(1)}%</span>
       <span class="rt ${cls(h.ret)} tnum">${fmt(h.ret)}%</span>
-    </div>`).join("");
-  return `<article class="card">
+    </div>`;}).join("");
+  const cap=mn?`2024–2026 누적 · 롱−숏 시장중립(베타≈0)`:`2024–2026 누적수익 · S&P 500 ${fmt(spyF,0)}%`;
+  const sumtxt=mn?`롱 ${holds.filter(h=>h.side==='L').length} · 숏 ${holds.filter(h=>h.side==='S').length}종목 · 비중·이후`:`보유 ${holds.length}종목 · 비중·이후수익`;
+  return `<article class="card${mn?' mn':''}">
     <div class="c-top"><div><div class="c-name">${s.name}</div><div class="c-desc">${s.desc}</div></div>
-      <span class="badge">Top ${TOPN} · 랭크가중</span></div>
+      <span class="badge">${mn?'롱−숏':'Top '+TOPN} · 랭크가중</span></div>
     <div class="hero">
       <div class="num tnum ${bt>=0?'up':'down'}">${fmt(bt,0)}%</div>
-      <div class="cap">2024–2026 누적수익 · S&P 500 ${fmt(spyF,0)}%</div>
+      <div class="cap">${cap}</div>
     </div>
-    ${chart(curve,D.bt_spy,D.bt_months)}
+    ${chart(curve,mn?[]:D.bt_spy,D.bt_months)}
     <div class="metrics">
       <div class="m"><div class="v ${cls((alpha||'').replace('%',''))}">${alpha}</div><div class="l">알파 · t ${tval}</div></div>
       <div class="m"><div class="v">${sharpe}</div><div class="l">Sharpe</div></div>
-      <div class="m"><div class="v ${cls(since)}">${fmt(since)}%</div><div class="l">리밸런싱 이후</div></div>
+      <div class="m"><div class="v ${cls(since)}">${fmt(since)}%</div><div class="l">${mn?'롱−숏 이후':'리밸런싱 이후'}</div></div>
     </div>
     <div class="subnote">${s.sub||'2024–2026 백테스트'}</div>
-    <details class="holds"><summary><span>보유 ${holds.length}종목 · 비중·이후수익</span><span class="chev">›</span></summary>
+    <details class="holds"><summary><span>${sumtxt}</span><span class="chev">›</span></summary>
       <div class="hl">${hrows}</div></details>
     <div class="note">${s.note||''}</div>
   </article>`;
@@ -223,7 +236,7 @@ let DATA=null, TOPN=30;
 function renderSections(){
   if(!DATA) return;
   document.getElementById('sections').innerHTML=DATA.sections.map(sec=>{
-    const cn=sec.cards.length===5?' five':(sec.cards.length>=4?' four':(sec.cards.length===3?' three':''));
+    const cn=sec.cards.length===1?' one':(sec.cards.length===5?' five':(sec.cards.length>=4?' four':(sec.cards.length===3?' three':'')));
     return `<section class="section"><div class="section-head">
         <span class="lab">${sec.subtitle||''}</span><h2>${sec.title}</h2></div>
       <div class="grid${cn}">${sec.cards.map(c=>cardHTML(c,DATA)).join("")}</div>

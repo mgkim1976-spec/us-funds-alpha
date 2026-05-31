@@ -28,11 +28,13 @@ CARDS = {
  "hf_lnp": ("Large New Positions", "여러 헤지펀드 신규 고확신 진입", "안정적"),
  "hf_bi":  ("Best-Ideas", "컨센서스 대비 초과보유 (active overweight)", "헤지펀드 최강 — 집중 확신 압도"),
  "hf_rlc": ("Reallocation", "가격변동 빼고 실제로 사들인 종목", "분기·45일 지연이라 약함(음) — 능동 매매 노이즈"),
+ "dbr_ls": ("ΔBreadth Long-Short", "보유폭 ↑ 매수 / ↓ 공매도 — 시장중립(롱−숏)", "베타≈0 · 기존과 직교(증분 알파 최고) · Chen-Hong-Stein"),
 }
 SECTIONS = [
  ("앙상블 — 소스별 비교", "헤지펀드 최상위 · 결합은 소스 분산 · MF앙상블=4신호(+ΔBreadth)", ["comb", "mf_ens", "hf_ens"]),
  ("뮤추얼펀드 유니버스 · 개별 시그널", "~540 액티브 US 주식형 · ΔBreadth가 최강", ["mf_mhw", "mf_lnp", "mf_bi", "mf_rlc", "mf_dbr"]),
  ("헤지펀드 유니버스 · 개별 시그널", "~3,100 집중 13F 매니저 · 기존 방식", ["hf_mhw", "hf_lnp", "hf_bi", "hf_rlc"]),
+ ("시장중립 — ΔBreadth Long-Short", "보유폭 증가 롱 − 감소 숏 · 베타≈0 · 기존과 직교", ["dbr_ls"]),
 ]
 
 def fetch_prices(tickers):
@@ -64,6 +66,8 @@ def main():
     HFn = fa.score_stocks(hf_fw, REBAL, figi)
     hrc = fa.score_reallocation(hf_fw, REBAL, figi, pivot)
     HFn["rlc"] = pd.to_numeric(HFn["cusip"].map(lambda c: hrc.get(c, 0.0)), errors="coerce")
+    # ΔBreadth Long-Short 다리: 보유폭↑ 롱 / 보유폭↓(여전히 ≥5펀드 보유) 숏
+    ls_long = MFn[MFn.hold >= 3].nlargest(30, "dbr"); ls_short = MFn[MFn.hold >= 5].nsmallest(30, "dbr")
 
     def picks_df(key):
         if key == "comb":
@@ -78,8 +82,9 @@ def main():
         col = ("ens4" if src == "mf" else "ens") if sig == "ens" else sig  # MF 앙상블=4신호
         return df[df.hold >= 3].nlargest(30, col)
 
-    picks = {k: picks_df(k) for k in CARDS}
-    alltk = sorted(set(t for k in picks for t in picks[k]['ticker'].dropna()) | {"SPY"})
+    picks = {k: picks_df(k) for k in CARDS if k != "dbr_ls"}
+    alltk = sorted(set(t for k in picks for t in picks[k]['ticker'].dropna())
+                   | set(ls_long['ticker'].dropna()) | set(ls_short['ticker'].dropna()) | {"SPY"})
     px = fetch_prices(alltk)
     dates = sorted({d for t in px for d in px[t]}); dates = [d for d in dates if d >= REBAL.strftime('%Y-%m-%d')]
     cs = json.load(open(ROOT/"dashboard"/"card_stats.json")) if (ROOT/"dashboard"/"card_stats.json").exists() else {}
@@ -102,7 +107,31 @@ def main():
     def rankw(n):
         w = np.arange(n, 0, -1).astype(float); return w/w.sum()
 
+    def make_ls():
+        nm, desc, note = CARDS["dbr_ls"]
+        def legret(df, n):
+            t = df['ticker'].tolist()[:n]; w = rankw(len(t)); return port(t, dict(zip(t, w)))
+        ls30 = legret(ls_long, 30) - legret(ls_short, 30); ls10 = legret(ls_long, 10) - legret(ls_short, 10)
+        holds = []
+        for side, df in [("L", ls_long), ("S", ls_short)]:
+            tk = df['ticker'].tolist(); w30 = rankw(len(tk)); w10 = rankw(min(10, len(tk)))
+            for i, (_, r) in enumerate(df.iterrows()):
+                b, last = firstlast(px.get(r['ticker'], {})); pr = (last/b-1)*100 if (b and last) else None
+                holds.append(dict(ticker=r['ticker'], name=str(names.get(r['cusip'], r['ticker']))[:30],
+                                  funds=int(r.get('hold', 0)) if pd.notna(r.get('hold', 0)) else 0, side=side,
+                                  weight=round(w30[i]*100, 1), weight10=round(w10[i]*100, 1) if i < 10 else 0,
+                                  ret=round(pr, 1) if pr is not None else None))
+        st = cs.get("dbr_ls", {})
+        return dict(key="dbr_ls", name=nm, desc=desc, note=note, weight="rank", sub="2024–2026 시장중립(롱−숏)", marketneutral=True,
+                    alpha=st.get('alpha', '–'), t=st.get('t', '–'), sharpe=st.get('sharpe', '–'),
+                    cagr=st.get('cagr', '–'), bt_curve=st.get('curve', []),
+                    alpha10=st.get('alpha10', '–'), t10=st.get('t10', '–'), sharpe10=st.get('sharpe10', '–'),
+                    cagr10=st.get('cagr10', '–'), bt_curve10=st.get('curve10', []),
+                    since_rebal=round(ls30, 2), vs_spy=round(ls30, 2),
+                    since_rebal10=round(ls10, 2), vs_spy10=round(ls10, 2), holds=holds)
+
     def make(key):
+        if key == "dbr_ls": return make_ls()
         nm, desc, note = CARDS[key]; pdf = picks[key].copy()
         tks = pdf['ticker'].tolist(); n = len(tks)
         w30 = rankw(n); ret30 = port(tks, dict(zip(tks, w30)))

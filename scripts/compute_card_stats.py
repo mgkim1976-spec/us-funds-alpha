@@ -58,6 +58,21 @@ def main():
         print(f"{key}: Top30 α{out[key]['alpha']} t{out[key]['t']} 누적{out[key]['curve'][-1]:.0f}% | "
               f"Top10 α{out[key]['alpha10']} t{out[key]['t10']} 누적{out[key]['curve10'][-1]:.0f}% (SPY {out['_spy'][-1]:.0f}%)", flush=True)
 
+    # ΔBreadth Long-Short (시장중립): 보유폭↑ 롱 − 보유폭↓ 숏
+    def bot(df, col, n=30): return df[df.hold >= 5].nsmallest(n, col)["ticker"].tolist()
+    def ls_card(lng, sht):
+        sl = fa.basket_daily(rets, lng, REBS, "rank"); ss = fa.basket_daily(rets, sht, REBS, "rank")
+        s = sl.subtract(ss, fill_value=0).dropna()
+        cg, sh = fa.perf(s); a, t = fa.ff_alpha(s, fac)
+        cum = fa.monthly_cum(s).reindex(months).ffill().fillna(0)
+        return dict(cagr=f"{cg*100:.1f}%", sharpe=f"{sh:.2f}", alpha=f"{a*100:+.1f}%", t=f"{t:.2f}",
+                    curve=[round(v*100, 1) for v in cum.values])
+    L30 = {R: top(MF[R], "dbr") for R in REBS}; S30 = {R: bot(MF[R], "dbr") for R in REBS}
+    out["dbr_ls"] = ls_card(L30, S30)
+    out["dbr_ls"].update({f"{k}10": v for k, v in ls_card({R: L30[R][:10] for R in REBS}, {R: S30[R][:10] for R in REBS}).items()})
+    print(f"dbr_ls(L-S): Top30 α{out['dbr_ls']['alpha']} t{out['dbr_ls']['t']} 누적{out['dbr_ls']['curve'][-1]:.0f}% | "
+          f"Top10 α{out['dbr_ls']['alpha10']} t{out['dbr_ls']['t10']}", flush=True)
+
     json.dump(out, open(fa.ROOT/"dashboard"/"card_stats.json", "w"), ensure_ascii=False, indent=1)
     print("\n저장: dashboard/card_stats.json")
 

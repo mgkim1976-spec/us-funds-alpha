@@ -3764,6 +3764,621 @@
      ]
     }
    ]
+  },
+  {
+   "title": "시장중립 — ΔBreadth Long-Short",
+   "subtitle": "보유폭 증가 롱 − 감소 숏 · 베타≈0 · 기존과 직교",
+   "cards": [
+    {
+     "key": "dbr_ls",
+     "name": "ΔBreadth Long-Short",
+     "desc": "보유폭 ↑ 매수 / ↓ 공매도 — 시장중립(롱−숏)",
+     "note": "베타≈0 · 기존과 직교(증분 알파 최고) · Chen-Hong-Stein",
+     "weight": "rank",
+     "sub": "2024–2026 시장중립(롱−숏)",
+     "marketneutral": true,
+     "alpha": "+17.2%",
+     "t": "2.77",
+     "sharpe": "1.15",
+     "cagr": "38.5%",
+     "bt_curve": [
+      5.3,
+      8.1,
+      11.6,
+      6.5,
+      1.4,
+      0.9,
+      -3.4,
+      1.0,
+      13.0,
+      13.7,
+      11.5,
+      15.7,
+      17.7,
+      17.3,
+      15.6,
+      14.7,
+      25.0,
+      32.7,
+      33.5,
+      66.9,
+      91.8
+     ],
+     "alpha10": "+35.5%",
+     "t10": "2.92",
+     "sharpe10": "1.11",
+     "cagr10": "49.5%",
+     "bt_curve10": [
+      10.8,
+      13.1,
+      17.5,
+      11.0,
+      1.0,
+      -2.3,
+      -5.9,
+      -2.7,
+      13.8,
+      16.9,
+      20.0,
+      17.6,
+      19.9,
+      22.0,
+      18.3,
+      15.9,
+      26.0,
+      39.8,
+      42.2,
+      81.0,
+      123.5
+     ],
+     "since_rebal": 51.16,
+     "vs_spy": 51.16,
+     "since_rebal10": 64.37,
+     "vs_spy10": 64.37,
+     "holds": [
+      {
+       "ticker": "SOLS",
+       "name": "SOLSTICE ADVANCED MATERIALS IN",
+       "funds": 33,
+       "side": "L",
+       "weight": 6.5,
+       "weight10": 18.2,
+       "ret": 6.9
+      },
+      {
+       "ticker": "AMD",
+       "name": "ADVANCED MICRO DEVICES, INC.",
+       "funds": 91,
+       "side": "L",
+       "weight": 6.2,
+       "weight10": 16.4,
+       "ret": 159.8
+      },
+      {
+       "ticker": "Q",
+       "name": "QNITY ELECTRONICS INC",
+       "funds": 19,
+       "side": "L",
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": 25.8
+      },
+      {
+       "ticker": "GH",
+       "name": "Guardant Health Inc",
+       "funds": 62,
+       "side": "L",
+       "weight": 5.8,
+       "weight10": 12.7,
+       "ret": 40.6
+      },
+      {
+       "ticker": "LXP",
+       "name": "LXP Industrial Trust",
+       "funds": 17,
+       "side": "L",
+       "weight": 5.6,
+       "weight10": 10.9,
+       "ret": 6.8
+      },
+      {
+       "ticker": "BE",
+       "name": "BLOOM ENERGY CORP- A",
+       "funds": 50,
+       "side": "L",
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": 71.7
+      },
+      {
+       "ticker": "SNDK",
+       "name": "SANDISK CORP",
+       "funds": 34,
+       "side": "L",
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": 173.8
+      },
+      {
+       "ticker": "FG",
+       "name": "F&G Annuities & Life Inc",
+       "funds": 22,
+       "side": "L",
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": 25.1
+      },
+      {
+       "ticker": "LRCX",
+       "name": "LAM RESEARCH CORP",
+       "funds": 106,
+       "side": "L",
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": 37.9
+      },
+      {
+       "ticker": "MU",
+       "name": "MICRON TECHNOLOGY, INC.",
+       "funds": 87,
+       "side": "L",
+       "weight": 4.5,
+       "weight10": 1.8,
+       "ret": 135.4
+      },
+      {
+       "ticker": "FIX",
+       "name": "Comfort Systems USA Inc",
+       "funds": 74,
+       "side": "L",
+       "weight": 4.3,
+       "weight10": 0,
+       "ret": 27.2
+      },
+      {
+       "ticker": "WDC",
+       "name": "WESTERN DIGITAL CORP",
+       "funds": 65,
+       "side": "L",
+       "weight": 4.1,
+       "weight10": 0,
+       "ret": 96.8
+      },
+      {
+       "ticker": "COGT",
+       "name": "Cogent Biosciences Inc",
+       "funds": 26,
+       "side": "L",
+       "weight": 3.9,
+       "weight10": 0,
+       "ret": -10.1
+      },
+      {
+       "ticker": "SSB",
+       "name": "SOUTHSTATE BANK Corp.",
+       "funds": 38,
+       "side": "L",
+       "weight": 3.7,
+       "weight10": 0,
+       "ret": -4.4
+      },
+      {
+       "ticker": "INTC",
+       "name": "Intel",
+       "funds": 57,
+       "side": "L",
+       "weight": 3.4,
+       "weight10": 0,
+       "ret": 152.0
+      },
+      {
+       "ticker": "PRAX",
+       "name": "Praxis Precision Medicines Inc",
+       "funds": 26,
+       "side": "L",
+       "weight": 3.2,
+       "weight10": 0,
+       "ret": 5.9
+      },
+      {
+       "ticker": "VRT",
+       "name": "Vertiv Holdings Co.",
+       "funds": 59,
+       "side": "L",
+       "weight": 3.0,
+       "weight10": 0,
+       "ret": 22.5
+      },
+      {
+       "ticker": "KLAC",
+       "name": "KLA CORPORATION",
+       "funds": 78,
+       "side": "L",
+       "weight": 2.8,
+       "weight10": 0,
+       "ret": 25.4
+      },
+      {
+       "ticker": "MIR",
+       "name": "Mirion Technologies Inc",
+       "funds": 43,
+       "side": "L",
+       "weight": 2.6,
+       "weight10": 0,
+       "ret": -18.0
+      },
+      {
+       "ticker": "PLTR",
+       "name": "Palantir Technologies Inc",
+       "funds": 95,
+       "side": "L",
+       "weight": 2.4,
+       "weight10": 0,
+       "ret": 7.8
+      },
+      {
+       "ticker": "IOT",
+       "name": "Samsara, Inc.",
+       "funds": 41,
+       "side": "L",
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": 20.2
+      },
+      {
+       "ticker": "RVMD",
+       "name": "REVOLUTION Medicines Inc",
+       "funds": 47,
+       "side": "L",
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": 55.0
+      },
+      {
+       "ticker": "LLYVK",
+       "name": "Liberty Live Holdings Inc",
+       "funds": 11,
+       "side": "L",
+       "weight": 1.7,
+       "weight10": 0,
+       "ret": -0.7
+      },
+      {
+       "ticker": "SWKS",
+       "name": "SKYWORKS SOLUTIONS INC",
+       "funds": 55,
+       "side": "L",
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": 33.3
+      },
+      {
+       "ticker": "UL",
+       "name": "Unilever PLC",
+       "funds": 10,
+       "side": "L",
+       "weight": 1.3,
+       "weight10": 0,
+       "ret": -20.3
+      },
+      {
+       "ticker": "JNJ",
+       "name": "Johnson & Johnson",
+       "funds": 131,
+       "side": "L",
+       "weight": 1.1,
+       "weight10": 0,
+       "ret": -8.8
+      },
+      {
+       "ticker": "REGN",
+       "name": "Regeneron Pharmaceuticals Inc",
+       "funds": 87,
+       "side": "L",
+       "weight": 0.9,
+       "weight10": 0,
+       "ret": -22.1
+      },
+      {
+       "ticker": "COF",
+       "name": "CAPITAL ONE FINANCIAL CORP",
+       "funds": 73,
+       "side": "L",
+       "weight": 0.6,
+       "weight10": 0,
+       "ret": -2.9
+      },
+      {
+       "ticker": "KTOS",
+       "name": "KRATOS DEFENSE and SECURITY SO",
+       "funds": 47,
+       "side": "L",
+       "weight": 0.4,
+       "weight10": 0,
+       "ret": -29.3
+      },
+      {
+       "ticker": "LITE",
+       "name": "LUMENTUM HOLDINGS INC.",
+       "funds": 40,
+       "side": "L",
+       "weight": 0.2,
+       "weight10": 0,
+       "ret": 9.2
+      },
+      {
+       "ticker": "FISV",
+       "name": "FISERV INC",
+       "funds": 50,
+       "side": "S",
+       "weight": 6.5,
+       "weight10": 18.2,
+       "ret": -8.6
+      },
+      {
+       "ticker": "LRN",
+       "name": "Stride Inc",
+       "funds": 20,
+       "side": "S",
+       "weight": 6.2,
+       "weight10": 16.4,
+       "ret": 7.4
+      },
+      {
+       "ticker": "KMX",
+       "name": "CarMax, Inc.",
+       "funds": 15,
+       "side": "S",
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": 6.7
+      },
+      {
+       "ticker": "FOUR",
+       "name": "Shift4 Payments Inc",
+       "funds": 19,
+       "side": "S",
+       "weight": 5.8,
+       "weight10": 12.7,
+       "ret": -5.1
+      },
+      {
+       "ticker": "DHR",
+       "name": "DANAHER CORPORATION",
+       "funds": 72,
+       "side": "S",
+       "weight": 5.6,
+       "weight10": 10.9,
+       "ret": -11.1
+      },
+      {
+       "ticker": "RARE",
+       "name": "Ultragenyx Pharmaceutical Inc",
+       "funds": 27,
+       "side": "S",
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": 4.0
+      },
+      {
+       "ticker": "KVUE",
+       "name": "Kenvue Inc",
+       "funds": 51,
+       "side": "S",
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": -7.4
+      },
+      {
+       "ticker": "CHTR",
+       "name": "CHARTER COMMUNICATIONS, INC.",
+       "funds": 32,
+       "side": "S",
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": -38.1
+      },
+      {
+       "ticker": "BAH",
+       "name": "BOOZ ALLEN HAMILTON HOLDING CO",
+       "funds": 26,
+       "side": "S",
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": 1.8
+      },
+      {
+       "ticker": "HRB",
+       "name": "H&R Block Inc",
+       "funds": 27,
+       "side": "S",
+       "weight": 4.5,
+       "weight10": 1.8,
+       "ret": 26.1
+      },
+      {
+       "ticker": "DUOL",
+       "name": "Duolingo, Inc.",
+       "funds": 30,
+       "side": "S",
+       "weight": 4.3,
+       "weight10": 0,
+       "ret": 10.5
+      },
+      {
+       "ticker": "FICO",
+       "name": "FAIR ISAAC CORPORATION",
+       "funds": 56,
+       "side": "S",
+       "weight": 4.1,
+       "weight10": 0,
+       "ret": -11.2
+      },
+      {
+       "ticker": "CWAN",
+       "name": "Clearwater Analytics Holdings ",
+       "funds": 24,
+       "side": "S",
+       "weight": 3.9,
+       "weight10": 0,
+       "ret": 3.4
+      },
+      {
+       "ticker": "CMCSA",
+       "name": "COMCAST CORPORATION",
+       "funds": 86,
+       "side": "S",
+       "weight": 3.7,
+       "weight10": 0,
+       "ret": -18.4
+      },
+      {
+       "ticker": "TGT",
+       "name": "TARGET CORPORATION",
+       "funds": 42,
+       "side": "S",
+       "weight": 3.4,
+       "weight10": 0,
+       "ret": 13.3
+      },
+      {
+       "ticker": "ACIW",
+       "name": "ACI Worldwide Inc",
+       "funds": 29,
+       "side": "S",
+       "weight": 3.2,
+       "weight10": 0,
+       "ret": 8.2
+      },
+      {
+       "ticker": "IT",
+       "name": "GARTNER, INC.",
+       "funds": 36,
+       "side": "S",
+       "weight": 3.0,
+       "weight10": 0,
+       "ret": 1.8
+      },
+      {
+       "ticker": "LKQ",
+       "name": "LKQ Corp",
+       "funds": 33,
+       "side": "S",
+       "weight": 2.8,
+       "weight10": 0,
+       "ret": -15.5
+      },
+      {
+       "ticker": "SFM",
+       "name": "Sprouts Farmers Market Inc",
+       "funds": 31,
+       "side": "S",
+       "weight": 2.6,
+       "weight10": 0,
+       "ret": 11.7
+      },
+      {
+       "ticker": "HUBS",
+       "name": "HubSpot Inc",
+       "funds": 55,
+       "side": "S",
+       "weight": 2.4,
+       "weight10": 0,
+       "ret": -16.3
+      },
+      {
+       "ticker": "CRS",
+       "name": "Carpenter Technology Corp",
+       "funds": 46,
+       "side": "S",
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": 14.9
+      },
+      {
+       "ticker": "ALGN",
+       "name": "ALIGN TECHNOLOGY INC",
+       "funds": 39,
+       "side": "S",
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": -7.4
+      },
+      {
+       "ticker": "KMPR",
+       "name": "Kemper Corp",
+       "funds": 15,
+       "side": "S",
+       "weight": 1.7,
+       "weight10": 0,
+       "ret": -23.2
+      },
+      {
+       "ticker": "NSC",
+       "name": "NORFOLK SOUTHERN CORP",
+       "funds": 42,
+       "side": "S",
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": -3.5
+      },
+      {
+       "ticker": "ITRI",
+       "name": "Itron Inc",
+       "funds": 29,
+       "side": "S",
+       "weight": 1.3,
+       "weight10": 0,
+       "ret": -13.3
+      },
+      {
+       "ticker": "GTLS",
+       "name": "CHART INDUSTRIES INC",
+       "funds": 19,
+       "side": "S",
+       "weight": 1.1,
+       "weight10": 0,
+       "ret": 0.4
+      },
+      {
+       "ticker": "PCTY",
+       "name": "PAYLOCITY HOLDING CORPORATION",
+       "funds": 24,
+       "side": "S",
+       "weight": 0.9,
+       "weight10": 0,
+       "ret": 6.6
+      },
+      {
+       "ticker": "EAT",
+       "name": "Brinker International, Inc.",
+       "funds": 18,
+       "side": "S",
+       "weight": 0.6,
+       "weight10": 0,
+       "ret": -0.0
+      },
+      {
+       "ticker": "WAB",
+       "name": "Westinghouse Air Brake Technol",
+       "funds": 49,
+       "side": "S",
+       "weight": 0.4,
+       "weight10": 0,
+       "ret": -0.8
+      },
+      {
+       "ticker": "CMA",
+       "name": "COMERICA INC",
+       "funds": 20,
+       "side": "S",
+       "weight": 0.2,
+       "weight10": 0,
+       "ret": null
+      }
+     ]
+    }
+   ]
   }
  ]
 }
