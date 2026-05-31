@@ -31,7 +31,8 @@ def yahoo(tickers):
     s=int(pd.Timestamp("2019-12-01").timestamp()); e=int(pd.Timestamp("2026-05-29").timestamp())
     rows=[]
     for i,tk in enumerate(sorted(set(tickers)),1):
-        url=f"https://query1.finance.yahoo.com/v8/finance/chart/{tk}?period1={s}&period2={e}&interval=1d"
+        ytk=tk.replace("/","-")  # OpenFIGI BRK/B → Yahoo BRK-B (저장은 원본 tk 키 유지)
+        url=f"https://query1.finance.yahoo.com/v8/finance/chart/{ytk}?period1={s}&period2={e}&interval=1d"
         try:
             j=json.load(urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"}),timeout=25))
             r=j["chart"]["result"][0]; ts=r["timestamp"]

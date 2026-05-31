@@ -37,9 +37,10 @@ def fetch_prices(tickers):
     s = int(pd.Timestamp("2026-01-15").timestamp()); e = int((TODAY+pd.Timedelta(days=1)).timestamp())
     out = {}
     for tk in sorted(set(tickers)):
+        ytk = tk.replace("/", "-")  # OpenFIGI BRK/B → Yahoo BRK-B (저장은 원본 tk 키)
         try:
             j = json.load(urllib.request.urlopen(urllib.request.Request(
-                f"https://query1.finance.yahoo.com/v8/finance/chart/{tk}?period1={s}&period2={e}&interval=1d",
+                f"https://query1.finance.yahoo.com/v8/finance/chart/{ytk}?period1={s}&period2={e}&interval=1d",
                 headers={"User-Agent": "Mozilla/5.0"}), timeout=20))
             r = j["chart"]["result"][0]; ts = r["timestamp"]
             adj = r["indicators"].get("adjclose", [{}])[0].get("adjclose") or r["indicators"]["quote"][0]["close"]
