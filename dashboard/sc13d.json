@@ -1,9 +1,11 @@
 {
  "generated": "2026-05-31",
- "lookback_days": 120,
+ "lookback_amend": 120,
+ "lookback_init": 365,
  "announce_note": "발표 [0,+1] 평균 +5.5% (t4.34) · +1일 진입·21일 보유 +5.8% (t3.76) — sc13d.md",
- "n_total": 25,
- "n_new": 1,
+ "n_total": 30,
+ "n_new": 6,
+ "n_shown": 30,
  "events": [
   {
    "activist": "Trian",
@@ -291,6 +293,78 @@
    "ret": -21.2,
    "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426000646/",
    "purpose": "일반(13D)",
+   "letter": false
+  },
+  {
+   "activist": "Icahn",
+   "date": "2025-11-13",
+   "form": "SCHEDULE 13D",
+   "ticker": "CTRI",
+   "name": "Centuri Holdings, Inc.",
+   "new": true,
+   "ret": 33.5,
+   "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002948/",
+   "purpose": "이사회·이사",
+   "letter": true
+  },
+  {
+   "activist": "Icahn",
+   "date": "2025-11-05",
+   "form": "SCHEDULE 13D",
+   "ticker": "MNRO",
+   "name": "MONRO, INC.",
+   "new": true,
+   "ret": -14.8,
+   "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002847/",
+   "purpose": "이사회·이사",
+   "letter": false
+  },
+  {
+   "activist": "Starboard",
+   "date": "2025-09-04",
+   "form": "SCHEDULE 13D",
+   "ticker": "BILL",
+   "name": "BILL Holdings, Inc.",
+   "new": true,
+   "ret": -42.6,
+   "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002532/",
+   "purpose": "이사회·이사",
+   "letter": false
+  },
+  {
+   "activist": "Elliott",
+   "date": "2025-08-08",
+   "form": "SCHEDULE 13D",
+   "ticker": "UNIT",
+   "name": "Uniti Group Inc.",
+   "new": true,
+   "ret": 60.6,
+   "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425003448/",
+   "purpose": "이사회·이사",
+   "letter": false
+  },
+  {
+   "activist": "Starboard",
+   "date": "2025-08-06",
+   "form": "SCHEDULE 13D",
+   "ticker": "ROG",
+   "name": "ROGERS CORP",
+   "new": true,
+   "ret": 85.3,
+   "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002118/",
+   "purpose": "이사회·이사",
+   "letter": false
+  },
+  {
+   "activist": "Starboard",
+   "date": "2025-07-03",
+   "form": "SCHEDULE 13D",
+   "ticker": "TRIP",
+   "name": "TripAdvisor, Inc.",
+   "new": true,
+   "ret": -59.4,
+   "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380525000968/",
+   "purpose": "이사회·이사",
    "letter": false
   }
  ]

@@ -10,7 +10,8 @@ sys.path.insert(0, str(ROOT/"scripts")); import falib as fa
 spec = importlib.util.spec_from_file_location("sc", str(ROOT/"scripts"/"sc13d_collect.py")); sc = importlib.util.module_from_spec(spec); spec.loader.exec_module(sc)
 spec2 = importlib.util.spec_from_file_location("fp", str(ROOT/"scripts"/"fetch_prices_300.py")); fp = importlib.util.module_from_spec(spec2); spec2.loader.exec_module(fp)
 uf = sc.uf
-LOOKBACK = 120
+LOOKBACK_AMEND = 120   # 수정공시: 최근 120일
+LOOKBACK_INIT = 365    # 신규 13D(캠페인 개시)는 드물어 더 길게
 FORMS_INIT = {"SC 13D", "SCHEDULE 13D"}
 FORMS_AMEND = {"SC 13D/A", "SCHEDULE 13D/A"}
 # Item 4(Purpose of Transaction) 키워드 → 캠페인 목적 태그
@@ -37,7 +38,8 @@ def enrich(filer_cik, acc):
     return url, purpose, letter
 
 def main():
-    since = (dt.date.today() - dt.timedelta(days=LOOKBACK)).isoformat()
+    since_a = (dt.date.today() - dt.timedelta(days=LOOKBACK_AMEND)).isoformat()
+    since_i = (dt.date.today() - dt.timedelta(days=LOOKBACK_INIT)).isoformat()
     ct = json.loads(uf.get("https://www.sec.gov/files/company_tickers.json"))
     cik2tk = {str(v["cik_str"]).zfill(10): (v["ticker"], v["title"]) for v in ct.values()}
     evs = []
@@ -46,7 +48,13 @@ def main():
         if not data: continue
         rec = json.loads(data).get("filings", {}).get("recent", {})
         for form, fd, acc in zip(rec.get("form", []), rec.get("filingDate", []), rec.get("accessionNumber", [])):
-            if form not in FORMS_INIT | FORMS_AMEND or fd < since: continue
+            isinit = form in FORMS_INIT
+            if isinit:
+                if fd < since_i: continue          # 신규: 365일
+            elif form in FORMS_AMEND:
+                if fd < since_a: continue          # 수정: 120일
+            else:
+                continue
             scik = sc.subject_cik(cik, acc)
             tk, nm = cik2tk.get(scik, (None, None))
             evs.append(dict(activist=act, date=fd, form=form, ticker=tk, name=nm,
@@ -73,17 +81,20 @@ def main():
         sp0 = spy.loc[spon[0]]; sp1 = spy.iloc[-1]
         if p0 > 0 and sp0 > 0 and not pd.isna(p1) and not pd.isna(sp1):
             e["ret"] = round(((p1/p0-1) - (sp1/sp0-1))*100, 1)   # 시장조정 초과수익
-    evs.sort(key=lambda e: e["date"], reverse=True)
-    shown = [e for e in evs if e["ticker"]][:30]
+    # 신규(initial)는 모두 유지(필터용) + 수정은 최근분 채워 ~36건
+    withtk = [e for e in evs if e["ticker"]]
+    inits = sorted([e for e in withtk if e["new"]], key=lambda e: e["date"], reverse=True)
+    amends = sorted([e for e in withtk if not e["new"]], key=lambda e: e["date"], reverse=True)
+    shown = sorted(inits + amends[:max(18, 36 - len(inits))], key=lambda e: e["date"], reverse=True)
     for e in shown:                              # 표시분만 목적·레터·링크 보강
         e["url"], e["purpose"], e["letter"] = enrich(e["filerCIK"], e["acc"])
         e.pop("filerCIK", None); e.pop("acc", None)
-    out = dict(generated=dt.date.today().strftime("%Y-%m-%d"), lookback_days=LOOKBACK,
+    out = dict(generated=dt.date.today().strftime("%Y-%m-%d"), lookback_amend=LOOKBACK_AMEND, lookback_init=LOOKBACK_INIT,
                announce_note="발표 [0,+1] 평균 +5.5% (t4.34) · +1일 진입·21일 보유 +5.8% (t3.76) — sc13d.md",
-               n_total=len(evs), n_new=sum(1 for e in evs if e["new"]),
+               n_total=len(withtk), n_new=len(inits), n_shown=len(shown),
                events=shown)
     json.dump(out, open(ROOT/"dashboard"/"sc13d.json", "w"), ensure_ascii=False, indent=1)
-    print(f"sc13d.json: {out['n_total']}건(신규 {out['n_new']}) / 최근 {len(shown)} 표시")
+    print(f"sc13d.json: 총 {out['n_total']}건(신규 {out['n_new']}) / 표시 {len(shown)}")
     for e in shown[:8]:
         print(f"  {e['date']} {e['activist']:12} {'신규' if e['new'] else '수정'} {str(e['ticker']):6} "
               f"이후 {e['ret']}% | 목적 {e.get('purpose')} | 레터 {e.get('letter')}")

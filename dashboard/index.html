@@ -66,26 +66,33 @@ html,body{margin:0;background:var(--bg);color:var(--fg);overflow-x:hidden;
   border-radius:4px;margin-right:4px;color:#fff}
 .sd.sl{background:var(--up)} .sd.ss{background:var(--down)}
 /* 13D 피드 */
-.feed{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;margin-top:38px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.feed{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px 6px;margin-top:38px;box-shadow:0 1px 3px rgba(0,0,0,.04);overflow:hidden}
 .feed h2{font-size:21px;font-weight:700;letter-spacing:-.4px;margin:0}
 .feed .lab{display:block;font-size:11px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--accent)}
-.feed .fnote{color:var(--mut);font-size:12px;margin:8px 0 14px;line-height:1.6;overflow-wrap:anywhere}
-.feed{overflow:hidden}
-.frow{display:flex;align-items:center;gap:10px;padding:8px 4px;font-size:12.5px;border-bottom:1px solid var(--line2)}
-.frow.fh{color:var(--mut2);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--line)}
-.frow .fdate{flex:0 0 82px;color:var(--fg)}
-.frow .fr{flex:0 0 60px;text-align:right;font-weight:650} .frow .fr.up{color:var(--up)} .frow .fr.down{color:var(--down)}
-.fleft{flex:1 1 0;min-width:0;display:grid;grid-template-columns:96px minmax(0,1fr);gap:10px;align-items:center}
-.fleft .fc{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.fleft .fa{color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.frow .ft{font-weight:650} .frow .fn{color:var(--mut)}
-.nb{font-size:9.5px;font-weight:700;padding:2px 6px;border-radius:5px}
-.nb.new{background:#e8f1ff;color:#0058c7} .nb.amd{background:var(--soft);color:var(--mut)}
-a.frow{text-decoration:none;color:inherit;transition:background .15s}
+.feed .fnote{color:var(--mut);font-size:12px;margin:8px 0 8px;line-height:1.6;overflow-wrap:anywhere}
+.fhead{display:flex;align-items:center;gap:12px;padding:4px 10px;color:var(--mut2);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--line)}
+.frow{display:flex;align-items:center;gap:12px;padding:9px 10px;font-size:12.5px;border-bottom:1px solid var(--line2);position:relative;text-decoration:none;color:inherit;transition:background .15s}
 a.frow:hover{background:var(--soft)}
-.pt{font-size:10px;font-weight:600;color:var(--accent);background:#eef5ff;padding:1px 6px;border-radius:5px;white-space:nowrap}
-.lt{font-size:10px;color:var(--mut)} .arr{color:var(--mut2);font-size:10px}
-@media(max-width:520px){.frow{gap:8px;font-size:11px}.fleft{grid-template-columns:minmax(0,1fr);gap:0;max-width:calc(100vw - 170px)}.fleft .fa{display:none}.fleft .fc{max-width:100%}.frow .fdate{flex:0 0 70px}.frow .fr{flex:0 0 50px}.arr{display:none}}
+.frow.new{background:linear-gradient(90deg,rgba(0,113,227,.07),transparent 62%)}
+.frow.new::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:3px;border-radius:0 2px 2px 0;background:var(--accent)}
+.fret{flex:0 0 66px;font-weight:750;font-size:13px;font-variant-numeric:tabular-nums}
+.fret.up{color:var(--up)} .fret.down{color:var(--down)}
+.fmain{flex:1 1 0;min-width:0;display:flex;align-items:center;gap:8px;overflow:hidden}
+.ftk{flex:0 0 auto;font-weight:700}
+.fcomp{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
+.pt{flex:0 0 auto;font-size:10px;font-weight:600;color:var(--accent);background:#eef5ff;padding:1px 7px;border-radius:999px;white-space:nowrap}
+.lt{flex:0 0 auto;font-size:10.5px;color:var(--mut)}
+.nbnew{flex:0 0 auto;font-size:9px;font-weight:800;color:#fff;background:var(--accent);padding:2px 6px;border-radius:5px;letter-spacing:.3px}
+.nbamd{flex:0 0 auto;font-size:9px;font-weight:700;color:var(--mut);background:var(--soft);padding:2px 6px;border-radius:5px}
+.fact{flex:0 0 auto;font-size:11px;font-weight:600;color:#5a4ec2;background:#efeefb;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.fdt{flex:0 0 78px;text-align:right;color:var(--mut2);font-size:11px;font-variant-numeric:tabular-nums}
+.farr{flex:0 0 10px;color:var(--mut2);font-size:11px;text-align:right}
+.fh-main{flex:1 1 0} .fh-act{flex:0 0 auto} .fh-dt{flex:0 0 78px;text-align:right}
+.ftoggle{display:inline-flex;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;margin:2px 0 12px}
+.ftoggle button{border:0;background:transparent;color:var(--mut);font-size:11.5px;font-weight:600;padding:6px 14px;border-radius:999px;cursor:pointer;font-family:inherit;transition:all .15s}
+.ftoggle button.on{background:var(--accent);color:#fff}
+.fempty{padding:26px;text-align:center;color:var(--mut2);font-size:12.5px}
+@media(max-width:520px){.frow,.fhead{gap:9px;padding:9px 8px}.fact,.fdt,.farr,.fh-act,.fh-dt{display:none}}
 
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);min-width:0;
   padding:18px 18px 14px;box-shadow:0 1px 3px rgba(0,0,0,.05);
@@ -264,28 +271,44 @@ function renderSections(){
       <div class="grid${cn}">${sec.cards.map(c=>cardHTML(c,DATA)).join("")}</div>
     </section>`;}).join("");
 }
+let FEEDNEW=false;
+function feedRows(s){
+  const evs=FEEDNEW?s.events.filter(e=>e.new):s.events;
+  if(!evs.length) return `<div class="fempty">해당 공시 없음</div>`;
+  return evs.map(e=>{
+    const typ=e.new?'<span class="nbnew">신규</span>':'<span class="nbamd">수정</span>';
+    const pt=e.purpose?`<span class="pt">${e.purpose}</span>`:'';
+    const lt=e.letter?'<span class="lt" title="데먼드 레터 첨부">✉</span>':'';
+    const inner=`<span class="fret ${cls(e.ret)}">${fmt(e.ret)}%</span>
+      <span class="fmain">${typ}<b class="ftk">${e.ticker}</b><span class="fcomp">${e.name||''}</span>${pt}${lt}</span>
+      <span class="fact">${e.activist}</span>
+      <span class="fdt">${e.date}</span>
+      <span class="farr">↗</span>`;
+    return e.url?`<a class="frow${e.new?' new':''}" href="${e.url}" target="_blank" rel="noopener">${inner}</a>`
+                :`<div class="frow${e.new?' new':''}">${inner}</div>`;
+  }).join("");
+}
 function renderSc13d(D){
   const el=document.getElementById('sc13d'), s=D.sc13d;
   if(!s||!s.events||!s.events.length){el.innerHTML="";return;}
-  const rows=s.events.map(e=>{
-    const tag=e.purpose?`<span class="pt">${e.purpose}</span> `:'';
-    const lt=e.letter?`<span class="lt">✉레터</span> `:'';
-    const inner=`<span class="fdate tnum">${e.date}</span>
-      <span class="fr ${cls(e.ret)} tnum">${fmt(e.ret)}%</span>
-      <div class="fleft">
-        <span class="fa">${e.activist}</span>
-        <span class="fc"><span class="nb ${e.new?'new':'amd'}">${e.new?'신규':'수정'}</span> <b class="ft">${e.ticker}</b> ${tag}${lt}<span class="fn">${e.name||''}</span></span>
-      </div>${e.url?'<span class="arr">↗</span>':''}`;
-    return e.url?`<a class="frow" href="${e.url}" target="_blank" rel="noopener">${inner}</a>`:`<div class="frow">${inner}</div>`;
-  }).join("");
   el.innerHTML=`<div class="feed">
     <span class="lab">실시간 · EDGAR</span><h2>13D 알림 — 최근 액티비스트 공시</h2>
-    <div class="fnote">검증된 액티비스트 18곳의 최근 ${s.lookback_days}일 <b>Schedule 13D</b>(신규·수정).
-      발표효과 — 신규 13D [0,+1] 평균 <b>+5.5%</b>(t4.34), 발표 +1일 진입·21일 보유 <b>+5.8%</b>(t3.76).
-      <b>목적</b> 태그는 13D Item 4(Purpose), <b>✉레터</b>는 첨부 데먼드 레터 · <b>행 클릭 시 EDGAR 원문 ↗</b>.
-      이후수익 = 공시 후 시장조정(−S&P) 초과. 신규 ${s.n_new}·총 ${s.n_total}건 · 갱신 ${s.generated}.</div>
-    <div class="frow fh"><span class="fdate">공시일</span><span class="fr">이후</span><div class="fleft"><span class="fa">액티비스트</span><span class="fc">유형 · 대상 종목</span></div></div>
-    ${rows}</div>`;
+    <div class="fnote"><b>검증된 액티비스트 18곳</b>의 Schedule 13D. <b style="color:var(--accent)">신규</b>(캠페인 개시)는
+      최근 1년 · <b>수정</b>(업데이트)은 최근 120일. <b>알파는 신규에 있다</b> — 신규 13D 발표효과 [0,+1] 평균
+      <b>+5.5%</b>(t4.34)·발표 +1일 진입·21일 보유 <b>+5.8%</b>(t3.76)인 반면 수정공시는 +0.8%로 약함.
+      목적 태그=Item 4(Purpose), ✉=데먼드 레터, 행 클릭 시 EDGAR 원문 ↗. 이후수익=공시 후 시장조정(−S&P) 초과.</div>
+    <div class="ftoggle" id="ftoggle">
+      <button data-f="all" class="on">전체 ${s.n_shown||s.events.length}</button>
+      <button data-f="new">🎯 신규만 ${s.n_new}</button>
+    </div>
+    <div class="fhead"><span class="fret">이후</span><span class="fh-main">유형 · 대상 종목 · 목적</span><span class="fh-act">액티비스트</span><span class="fh-dt">공시일</span></div>
+    <div id="feedrows">${feedRows(s)}</div></div>`;
+  document.getElementById('ftoggle').addEventListener('click',ev=>{
+    const b=ev.target.closest('button'); if(!b)return;
+    FEEDNEW=b.dataset.f==='new';
+    [...document.querySelectorAll('#ftoggle button')].forEach(x=>x.classList.toggle('on',(x.dataset.f==='new')===FEEDNEW));
+    document.getElementById('feedrows').innerHTML=feedRows(s);
+  });
 }
 function render(D){
   DATA=D;
