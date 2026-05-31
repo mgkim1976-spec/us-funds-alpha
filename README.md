@@ -103,7 +103,7 @@ point-in-time** 이라 ~56일 공시 지연이 반영됩니다.
 
 거래비용은 낮습니다(분기 편도 회전율 ~16–19%). 25bp 차감 후에도 알파는 거의 변하지 않습니다.
 비중 방식도 영향을 줍니다 — 랭크가중이 알파/견고성 최고, 역변동성이 Sharpe 최고, 동일가중이 가장
-단순합니다([`notes/weighting.md`](notes/weighting.md)).
+단순합니다([`notes/validate.md`](notes/validate.md)).
 
 ---
 
@@ -216,11 +216,8 @@ python3 scripts/f13_collect.py               # HF 13F 벌크 → data/f13_panel.
 python3 scripts/fetch_prices_300.py          # OpenFIGI + Yahoo → data/prices_full.parquet
 
 # 3. 검증
-python3 scripts/signals_family.py            # 전 신호군, 동일 유니버스
-python3 scripts/revalidate_clean.py          # 정제 신호 + 하위기간 + 플라시보
-python3 scripts/ensemble_test.py             # 앙상블
-python3 scripts/weighting_test.py            # 비중 방식
-python3 scripts/mhw_cost.py                  # 거래비용 민감도
+python3 scripts/validate.py                  # 신호군·정제·앙상블·비중·MHW비용 (signals|revalid|ensemble|weighting|mhwcost)
+python3 scripts/universe_research.py         # 코호트·300vs541·breadth 포화곡선 (cohort|compare|breadth)
 python3 scripts/altsignals.py                # 문헌 기반 대안 시그널 10종 + 증분α
 python3 scripts/ls_analysis.py [costs|buffer]  # ΔBreadth L/S 비용 민감도 · 회전율 절감 시도
 python3 scripts/reallocation.py              # Reallocation 정의탐색 + R3 검증
@@ -244,8 +241,7 @@ scripts/
   bulk_collect_300.py, fetch_prices_300.py                        MF N-PORT·가격 수집
   f13_collect.py, f13_analysis.py                                 HF 13F 수집·분석(정밀선별·breadth·비교·결합)
   update_filings.py                                               일일 증분 (MF 541 + HF 13F)
-  signals_family.py, revalidate_clean.py, ensemble_test.py,
-  weighting_test.py, reallocation.py, mhw_cost.py                     검증
+  validate.py, universe_research.py, reallocation.py                 검증·유니버스·재배분 분석
   altsignals.py, ls_analysis.py                                   대안 시그널 · ΔBreadth L/S(비용·버퍼)
   sc13d_collect.py, sc13d_monitor.py, activist_research.py         13D 수집·일일모니터·이벤트연구
   compute_card_stats.py, dashboard_data.py, daily_update.sh        대시보드 파이프라인
