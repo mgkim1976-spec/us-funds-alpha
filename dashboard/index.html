@@ -13,7 +13,7 @@
   --r:18px;
 }
 *{box-sizing:border-box;-webkit-font-smoothing:antialiased}
-html,body{margin:0;background:var(--bg);color:var(--fg);
+html,body{margin:0;background:var(--bg);color:var(--fg);overflow-x:hidden;
   font-family:-apple-system,"SF Pro Display","SF Pro Text",system-ui,"Pretendard","Segoe UI",sans-serif}
 .wrap{max-width:1160px;margin:0 auto;padding:34px 20px 80px}
 .tnum{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
@@ -65,6 +65,23 @@ html,body{margin:0;background:var(--bg);color:var(--fg);
 .sd{display:inline-block;font-size:9px;font-weight:700;width:13px;height:13px;line-height:13px;text-align:center;
   border-radius:4px;margin-right:4px;color:#fff}
 .sd.sl{background:var(--up)} .sd.ss{background:var(--down)}
+/* 13D 피드 */
+.feed{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;margin-top:38px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.feed h2{font-size:21px;font-weight:700;letter-spacing:-.4px;margin:0}
+.feed .lab{display:block;font-size:11px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--accent)}
+.feed .fnote{color:var(--mut);font-size:12px;margin:8px 0 14px;line-height:1.6;overflow-wrap:anywhere}
+.feed{overflow:hidden}
+.frow{display:flex;align-items:center;gap:10px;padding:8px 4px;font-size:12.5px;border-bottom:1px solid var(--line2)}
+.frow.fh{color:var(--mut2);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--line)}
+.frow .fdate{flex:0 0 56px;color:var(--fg)}
+.frow .fr{flex:0 0 60px;text-align:right;font-weight:650} .frow .fr.up{color:var(--up)} .frow .fr.down{color:var(--down)}
+.fleft{flex:1 1 0;min-width:0;display:grid;grid-template-columns:96px minmax(0,1fr);gap:10px;align-items:center}
+.fleft .fc{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fleft .fa{color:var(--mut);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.frow .ft{font-weight:650} .frow .fn{color:var(--mut)}
+.nb{font-size:9.5px;font-weight:700;padding:2px 6px;border-radius:5px}
+.nb.new{background:#e8f1ff;color:#0058c7} .nb.amd{background:var(--soft);color:var(--mut)}
+@media(max-width:520px){.frow{gap:8px;font-size:11.5px}.fleft{grid-template-columns:1fr;gap:0}.fleft .fa{display:none}.frow .fdate{flex:0 0 46px}.frow .fr{flex:0 0 54px}}
 
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
   padding:18px 18px 14px;box-shadow:0 1px 3px rgba(0,0,0,.05);
@@ -128,6 +145,7 @@ details.holds>summary::-webkit-details-marker{display:none}
   </div>
   <div class="alert" id="alert"></div>
   <div id="sections"></div>
+  <div id="sc13d"></div>
 
   <div class="intro">
     <h3>시그널 설명 · 읽는 법</h3>
@@ -242,6 +260,25 @@ function renderSections(){
       <div class="grid${cn}">${sec.cards.map(c=>cardHTML(c,DATA)).join("")}</div>
     </section>`;}).join("");
 }
+function renderSc13d(D){
+  const el=document.getElementById('sc13d'), s=D.sc13d;
+  if(!s||!s.events||!s.events.length){el.innerHTML="";return;}
+  const rows=s.events.map(e=>`<div class="frow">
+    <span class="fdate tnum">${e.date.slice(5)}</span>
+    <span class="fr ${cls(e.ret)} tnum">${fmt(e.ret)}%</span>
+    <div class="fleft">
+      <span class="fa">${e.activist}</span>
+      <span class="fc"><span class="nb ${e.new?'new':'amd'}">${e.new?'신규':'수정'}</span> <b class="ft">${e.ticker}</b> <span class="fn">${e.name||''}</span></span>
+    </div>
+  </div>`).join("");
+  el.innerHTML=`<div class="feed">
+    <span class="lab">실시간 · EDGAR</span><h2>13D 알림 — 최근 액티비스트 공시</h2>
+    <div class="fnote">검증된 액티비스트 18곳의 최근 ${s.lookback_days}일 <b>Schedule 13D</b>(신규·수정).
+      발표효과 — 신규 13D 공시 [0,+1] 평균 <b>+5.5%</b>(t4.34), 발표 +1일 진입·21일 보유 <b>+5.8%</b>(t3.76).
+      이후수익 = 공시 후 시장조정(−S&P) 초과수익. 신규 ${s.n_new}·총 ${s.n_total}건 · 갱신 ${s.generated}.</div>
+    <div class="frow fh"><span class="fdate">공시일</span><span class="fr">이후</span><div class="fleft"><span class="fa">액티비스트</span><span class="fc">유형 · 대상 종목</span></div></div>
+    ${rows}</div>`;
+}
 function render(D){
   DATA=D;
   const now=new Date().toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'});
@@ -258,6 +295,7 @@ function render(D){
       html+=`<br>&nbsp;<b>${k}</b> `+(c.added.length?`<span class="add">+${c.added.join(" +")}</span> `:"")+(c.dropped.length?`<span class="drop">−${c.dropped.join(" −")}</span>`:"");}
     al.innerHTML=html; al.style.display="block";} else al.style.display="none";
   renderSections();
+  renderSc13d(D);
 }
 document.getElementById('toggle').addEventListener('click',e=>{
   const b=e.target.closest('button'); if(!b) return;

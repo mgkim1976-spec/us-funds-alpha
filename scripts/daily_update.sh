@@ -4,5 +4,6 @@ cd /Users/mg_mac/MGPrj/us_funds_alpha || exit 1
 PY=/Users/mg_mac/.pyenv/versions/3.13.12/bin/python3
 echo "=== $(date) daily_update 시작 ==="
 "$PY" scripts/update_filings.py all   # MF(541) + HF(13F)
+"$PY" scripts/sc13d_monitor.py        # 액티비스트 13D 알림 피드 → dashboard/sc13d.json
 "$PY" scripts/dashboard_data.py
 echo "=== $(date) 완료 ==="

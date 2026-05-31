@@ -153,7 +153,8 @@ def main():
                     since_rebal10=round(ret10, 2), vs_spy10=round(ret10-spy_ret, 2), holds=holds)
 
     sections = [{"title": t, "subtitle": sub, "cards": [make(k) for k in ks]} for t, sub, ks in SECTIONS]
-    data = dict(generated=dt.date.today().strftime("%Y-%m-%d"), rebal=REBAL.strftime("%Y-%m-%d"),
+    sc13d = json.load(open(ROOT/"dashboard"/"sc13d.json")) if (ROOT/"dashboard"/"sc13d.json").exists() else None
+    data = dict(generated=dt.date.today().strftime("%Y-%m-%d"), rebal=REBAL.strftime("%Y-%m-%d"), sc13d=sc13d,
                 next_rebal=NEXT_REBAL.strftime("%Y-%m-%d"), bt_months=cs.get("_months", []), bt_spy=cs.get("_spy", []),
                 spy_since_rebal=round(spy_ret, 2),
                 note="MF=뮤추얼펀드(N-PORT) · HF=헤지펀드(13F 집중). 검증·곡선은 2024-2026(13F 가용기간). "

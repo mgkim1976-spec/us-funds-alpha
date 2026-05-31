@@ -1,6 +1,231 @@
 {
  "generated": "2026-05-31",
  "rebal": "2026-03-01",
+ "sc13d": {
+  "generated": "2026-05-31",
+  "lookback_days": 120,
+  "announce_note": "발표 [0,+1] 평균 +5.5% (t4.34) · +1일 진입·21일 보유 +5.8% (t3.76) — sc13d.md",
+  "n_total": 25,
+  "n_new": 1,
+  "events": [
+   {
+    "activist": "Trian",
+    "date": "2026-05-14",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "JHG",
+    "name": "JANUS HENDERSON GROUP PLC",
+    "new": false,
+    "ret": -0.7
+   },
+   {
+    "activist": "Icahn",
+    "date": "2026-05-14",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "JBLU",
+    "name": "JETBLUE AIRWAYS CORP",
+    "new": false,
+    "ret": 9.4
+   },
+   {
+    "activist": "Starboard",
+    "date": "2026-05-08",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "BLMN",
+    "name": "Bloomin' Brands, Inc.",
+    "new": false,
+    "ret": 0.2
+   },
+   {
+    "activist": "PershingSquare",
+    "date": "2026-05-08",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "QSR",
+    "name": "Restaurant Brands International Inc.",
+    "new": false,
+    "ret": -9.1
+   },
+   {
+    "activist": "Corvex",
+    "date": "2026-05-08",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "SWX",
+    "name": "Southwest Gas Holdings, Inc.",
+    "new": false,
+    "ret": -5.2
+   },
+   {
+    "activist": "Starboard",
+    "date": "2026-05-06",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "MTCH",
+    "name": "Match Group, Inc.",
+    "new": false,
+    "ret": -7.1
+   },
+   {
+    "activist": "PershingSquare",
+    "date": "2026-04-29",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "HHH",
+    "name": "Howard Hughes Holdings Inc.",
+    "new": false,
+    "ret": -2.5
+   },
+   {
+    "activist": "PershingSquare",
+    "date": "2026-04-29",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "QSR",
+    "name": "Restaurant Brands International Inc.",
+    "new": false,
+    "ret": -11.6
+   },
+   {
+    "activist": "Icahn",
+    "date": "2026-04-17",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "IEP",
+    "name": "ICAHN ENTERPRISES L.P.",
+    "new": false,
+    "ret": -3.5
+   },
+   {
+    "activist": "Elliott",
+    "date": "2026-04-03",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "LUV",
+    "name": "SOUTHWEST AIRLINES CO",
+    "new": false,
+    "ret": -1.1
+   },
+   {
+    "activist": "Starboard",
+    "date": "2026-04-03",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "TRIP",
+    "name": "TripAdvisor, Inc.",
+    "new": false,
+    "ret": -14.1
+   },
+   {
+    "activist": "Starboard",
+    "date": "2026-04-01",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "AQNB",
+    "name": "ALGONQUIN POWER & UTILITIES CORP.",
+    "new": false,
+    "ret": -15.0
+   },
+   {
+    "activist": "Elliott",
+    "date": "2026-03-31",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "TFPM",
+    "name": "Triple Flag Precious Metals Corp.",
+    "new": false,
+    "ret": -27.8
+   },
+   {
+    "activist": "Icahn",
+    "date": "2026-03-27",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "ENZN",
+    "name": "Viskase Holdings, Inc.",
+    "new": false,
+    "ret": -23.2
+   },
+   {
+    "activist": "Trian",
+    "date": "2026-03-24",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "JHG",
+    "name": "JANUS HENDERSON GROUP PLC",
+    "new": false,
+    "ret": -16.2
+   },
+   {
+    "activist": "Starboard",
+    "date": "2026-03-23",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "TRIP",
+    "name": "TripAdvisor, Inc.",
+    "new": false,
+    "ret": -6.6
+   },
+   {
+    "activist": "Starboard",
+    "date": "2026-03-06",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "TRIP",
+    "name": "TripAdvisor, Inc.",
+    "new": false,
+    "ret": -7.9
+   },
+   {
+    "activist": "Icahn",
+    "date": "2026-02-24",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "CVI",
+    "name": "CVR ENERGY INC",
+    "new": false,
+    "ret": 45.2
+   },
+   {
+    "activist": "Elliott",
+    "date": "2026-02-23",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "LUV",
+    "name": "SOUTHWEST AIRLINES CO",
+    "new": false,
+    "ret": -25.4
+   },
+   {
+    "activist": "Trian",
+    "date": "2026-02-18",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "WEN",
+    "name": "Wendy's Co",
+    "new": false,
+    "ret": -16.9
+   },
+   {
+    "activist": "Starboard",
+    "date": "2026-02-17",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "TRIP",
+    "name": "TripAdvisor, Inc.",
+    "new": false,
+    "ret": -7.4
+   },
+   {
+    "activist": "Politan",
+    "date": "2026-02-17",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "MASI",
+    "name": "MASIMO CORP",
+    "new": false,
+    "ret": -8.7
+   },
+   {
+    "activist": "Legion",
+    "date": "2026-02-10",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "CCO",
+    "name": "Clear Channel Outdoor Holdings, Inc.",
+    "new": false,
+    "ret": -7.6
+   },
+   {
+    "activist": "Elliott",
+    "date": "2026-02-02",
+    "form": "SCHEDULE 13D/A",
+    "ticker": "LUV",
+    "name": "SOUTHWEST AIRLINES CO",
+    "new": false,
+    "ret": -21.2
+   }
+  ]
+ },
  "next_rebal": "2026-06-01",
  "bt_months": [
   "2024-09",
