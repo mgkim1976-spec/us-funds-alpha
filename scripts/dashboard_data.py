@@ -26,11 +26,12 @@ CARDS = {
  "hf_mhw": ("Mean Holding Weight", "많은 헤지펀드가 크게 보유", "집중 매니저라 보유자 적어 약함"),
  "hf_lnp": ("Large New Positions", "여러 헤지펀드 신규 고확신 진입", "안정적"),
  "hf_bi":  ("Best-Ideas", "컨센서스 대비 초과보유 (active overweight)", "헤지펀드 최강 — 집중 확신 압도"),
+ "hf_rlc": ("Reallocation", "가격변동 빼고 실제로 사들인 종목", "분기·45일 지연이라 약함(음) — 능동 매매 노이즈"),
 }
 SECTIONS = [
  ("앙상블 — 소스별 비교", "결합이 최고 (+13.8%, t3.92)", ["comb", "mf_ens", "hf_ens"]),
  ("뮤추얼펀드 유니버스 · 개별 시그널", "~540 액티브 US 주식형 · 기존 방식", ["mf_mhw", "mf_lnp", "mf_bi", "mf_rlc"]),
- ("헤지펀드 유니버스 · 개별 시그널", "~3,100 집중 13F 매니저 · 기존 방식", ["hf_mhw", "hf_lnp", "hf_bi"]),
+ ("헤지펀드 유니버스 · 개별 시그널", "~3,100 집중 13F 매니저 · 기존 방식", ["hf_mhw", "hf_lnp", "hf_bi", "hf_rlc"]),
 ]
 
 def fetch_prices(tickers):
@@ -55,10 +56,13 @@ def main():
     hf = fa.load_13f(drop_cusips=fa.noneq_cusips(figi))
     names = mf.drop_duplicates('cusip').set_index('cusip')['name'].to_dict()
     pivot = fa.price_pivot()
-    MFn = fa.score_stocks(fa.fund_timelines(mf), REBAL, figi)
-    rc = fa.score_reallocation(fa.fund_timelines(mf), REBAL, figi, pivot)
+    mf_fw = fa.fund_timelines(mf); hf_fw = fa.fund_timelines(hf)
+    MFn = fa.score_stocks(mf_fw, REBAL, figi)
+    rc = fa.score_reallocation(mf_fw, REBAL, figi, pivot)
     MFn["rlc"] = pd.to_numeric(MFn["cusip"].map(lambda c: rc.get(c, 0.0)), errors="coerce")
-    HFn = fa.score_stocks(fa.fund_timelines(hf), REBAL, figi)
+    HFn = fa.score_stocks(hf_fw, REBAL, figi)
+    hrc = fa.score_reallocation(hf_fw, REBAL, figi, pivot)
+    HFn["rlc"] = pd.to_numeric(HFn["cusip"].map(lambda c: hrc.get(c, 0.0)), errors="coerce")
 
     def picks_df(key):
         if key == "comb":

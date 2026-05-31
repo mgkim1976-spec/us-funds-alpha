@@ -20,6 +20,9 @@ def main():
     for R in REBS:
         MF[R]["rlc"] = pd.to_numeric(MF[R]["cusip"].map(lambda c, r=rc_all[R]: r.get(c, 0.0)), errors="coerce")
     HF = {R: fa.score_stocks(hf_fw, R, figi) for R in REBS}
+    hf_rc_all = {R: fa.score_reallocation(hf_fw, R, figi, pivot) for R in REBS}
+    for R in REBS:
+        HF[R]["rlc"] = pd.to_numeric(HF[R]["cusip"].map(lambda c, r=hf_rc_all[R]: r.get(c, 0.0)), errors="coerce")
 
     def top(df, col): return df[df.hold >= 3].nlargest(30, col)["ticker"].tolist()
     def combo_picks():
@@ -45,7 +48,7 @@ def main():
 
     cards = {"comb": combo_picks()}
     for k in ["ens", "mhw", "lnp", "bi", "rlc"]: cards[f"mf_{k}"] = {R: top(MF[R], k) for R in REBS}
-    for k in ["ens", "mhw", "lnp", "bi"]: cards[f"hf_{k}"] = {R: top(HF[R], k) for R in REBS}
+    for k in ["ens", "mhw", "lnp", "bi", "rlc"]: cards[f"hf_{k}"] = {R: top(HF[R], k) for R in REBS}
     for key, pk in cards.items():
         pk10 = {R: pk[R][:10] for R in REBS}                 # 랭크순이므로 상위10 = Top30[:10]
         out[key] = card(pk)
