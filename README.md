@@ -222,8 +222,10 @@ python3 scripts/ensemble_test.py             # 앙상블
 python3 scripts/weighting_test.py            # 비중 방식
 python3 scripts/mhw_cost.py                  # 거래비용 민감도
 python3 scripts/altsignals.py                # 문헌 기반 대안 시그널 10종 + 증분α
-python3 scripts/ls_costs.py                  # ΔBreadth L/S 거래·차입비용 민감도
-python3 scripts/ls_buffer.py                 # ΔBreadth L/S 회전율 절감 시도(버퍼·반기·평활)
+python3 scripts/ls_analysis.py [costs|buffer]  # ΔBreadth L/S 비용 민감도 · 회전율 절감 시도
+python3 scripts/reallocation.py              # Reallocation 정의탐색 + R3 검증
+python3 scripts/f13_analysis.py              # 13F 정밀선별·breadth·MF비교·결합
+python3 scripts/activist_research.py event   # SC 13D 이벤트 스터디 (collect|signal|event)
 
 # 4. 대시보드
 python3 scripts/compute_card_stats.py        # → dashboard/card_stats.json
@@ -240,11 +242,12 @@ scripts/
   falib.py             공유 라이브러리 (팩터·패널·시그널·FF알파) — 모든 스크립트가 사용
   build_master_universe.py, stage2_ecpct.py, expand_validate.py   MF 유니버스 구축
   bulk_collect_300.py, fetch_prices_300.py                        MF N-PORT·가격 수집
-  f13_collect.py, f13_refine.py, f13_vs_mf.py, f13_combine.py      HF 13F 수집·분석
+  f13_collect.py, f13_analysis.py                                 HF 13F 수집·분석(정밀선별·breadth·비교·결합)
   update_filings.py                                               일일 증분 (MF 541 + HF 13F)
   signals_family.py, revalidate_clean.py, ensemble_test.py,
-  weighting_test.py, reallocation_validate.py, mhw_cost.py            검증
-  altsignals.py, ls_costs.py, ls_buffer.py                        대안 시그널·ΔBreadth L/S 비용
+  weighting_test.py, reallocation.py, mhw_cost.py                     검증
+  altsignals.py, ls_analysis.py                                   대안 시그널 · ΔBreadth L/S(비용·버퍼)
+  sc13d_collect.py, sc13d_monitor.py, activist_research.py         13D 수집·일일모니터·이벤트연구
   compute_card_stats.py, dashboard_data.py, daily_update.sh        대시보드 파이프라인
 dashboard/             자체 완결형 HTML 모니터 + JSON 데이터
 notes/                 단계별 연구 기록 (한글)
