@@ -3773,7 +3773,7 @@
      "key": "dbr_ls",
      "name": "ΔBreadth Long-Short",
      "desc": "보유폭 ↑ 매수 / ↓ 공매도 — 시장중립(롱−숏)",
-     "note": "베타≈0 · 기존과 직교(증분 알파 최고) · Chen-Hong-Stein",
+     "note": "베타≈0 · 기존과 직교 · 헤드라인은 gross — 회전율 ~370%/년, 비용 차감(10bp+차입1%) 후 α+13.9%, 고비용(25bp+)이면 유의성 약화",
      "weight": "rank",
      "sub": "2024–2026 시장중립(롱−숏)",
      "marketneutral": true,

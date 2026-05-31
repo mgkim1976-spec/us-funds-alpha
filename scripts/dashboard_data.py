@@ -28,7 +28,7 @@ CARDS = {
  "hf_lnp": ("Large New Positions", "여러 헤지펀드 신규 고확신 진입", "안정적"),
  "hf_bi":  ("Best-Ideas", "컨센서스 대비 초과보유 (active overweight)", "헤지펀드 최강 — 집중 확신 압도"),
  "hf_rlc": ("Reallocation", "가격변동 빼고 실제로 사들인 종목", "분기·45일 지연이라 약함(음) — 능동 매매 노이즈"),
- "dbr_ls": ("ΔBreadth Long-Short", "보유폭 ↑ 매수 / ↓ 공매도 — 시장중립(롱−숏)", "베타≈0 · 기존과 직교(증분 알파 최고) · Chen-Hong-Stein"),
+ "dbr_ls": ("ΔBreadth Long-Short", "보유폭 ↑ 매수 / ↓ 공매도 — 시장중립(롱−숏)", "베타≈0 · 기존과 직교 · 헤드라인은 gross — 회전율 ~370%/년, 비용 차감(10bp+차입1%) 후 α+13.9%, 고비용(25bp+)이면 유의성 약화"),
 }
 SECTIONS = [
  ("앙상블 — 소스별 비교", "헤지펀드 최상위 · 결합은 소스 분산 · MF앙상블=4신호(+ΔBreadth)", ["comb", "mf_ens", "hf_ens"]),
