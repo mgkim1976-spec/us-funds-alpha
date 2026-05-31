@@ -12,7 +12,10 @@
    "ticker": "JHG",
    "name": "JANUS HENDERSON GROUP PLC",
    "new": false,
-   "ret": -0.7
+   "ret": -0.7,
+   "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526224634/",
+   "purpose": "매각·합병",
+   "letter": false
   },
   {
    "activist": "Icahn",
@@ -21,7 +24,10 @@
    "ticker": "JBLU",
    "name": "JETBLUE AIRWAYS CORP",
    "new": false,
-   "ret": 9.4
+   "ret": 9.4,
+   "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001436/",
+   "purpose": null,
+   "letter": false
   },
   {
    "activist": "Starboard",
@@ -30,7 +36,10 @@
    "ticker": "BLMN",
    "name": "Bloomin' Brands, Inc.",
    "new": false,
-   "ret": 0.2
+   "ret": 0.2,
+   "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526001206/",
+   "purpose": null,
+   "letter": false
   },
   {
    "activist": "PershingSquare",
@@ -39,7 +48,10 @@
    "ticker": "QSR",
    "name": "Restaurant Brands International Inc.",
    "new": false,
-   "ret": -9.1
+   "ret": -9.1,
+   "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126020328/",
+   "purpose": null,
+   "letter": false
   },
   {
    "activist": "Corvex",
@@ -48,7 +60,10 @@
    "ticker": "SWX",
    "name": "Southwest Gas Holdings, Inc.",
    "new": false,
-   "ret": -5.2
+   "ret": -5.2,
+   "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143826000266/",
+   "purpose": null,
+   "letter": false
   },
   {
    "activist": "Starboard",
@@ -57,7 +72,10 @@
    "ticker": "MTCH",
    "name": "Match Group, Inc.",
    "new": false,
-   "ret": -7.1
+   "ret": -7.1,
+   "url": "https://www.sec.gov/Archives/edgar/data/1517137/000090266426002298/",
+   "purpose": null,
+   "letter": false
   },
   {
    "activist": "PershingSquare",
@@ -66,7 +84,10 @@
    "ticker": "HHH",
    "name": "Howard Hughes Holdings Inc.",
    "new": false,
-   "ret": -2.5
+   "ret": -2.5,
+   "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017890/",
+   "purpose": null,
+   "letter": false
   },
   {
    "activist": "PershingSquare",
@@ -75,7 +96,10 @@
    "ticker": "QSR",
    "name": "Restaurant Brands International Inc.",
    "new": false,
-   "ret": -11.6
+   "ret": -11.6,
+   "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017888/",
+   "purpose": null,
+   "letter": false
   },
   {
    "activist": "Icahn",
@@ -84,7 +108,10 @@
    "ticker": "IEP",
    "name": "ICAHN ENTERPRISES L.P.",
    "new": false,
-   "ret": -3.5
+   "ret": -3.5,
+   "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001145/",
+   "purpose": null,
+   "letter": false
   },
   {
    "activist": "Elliott",
@@ -93,7 +120,10 @@
    "ticker": "LUV",
    "name": "SOUTHWEST AIRLINES CO",
    "new": false,
-   "ret": -1.1
+   "ret": -1.1,
+   "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001872/",
+   "purpose": "일반(13D)",
+   "letter": false
   },
   {
    "activist": "Starboard",
@@ -102,7 +132,10 @@
    "ticker": "TRIP",
    "name": "TripAdvisor, Inc.",
    "new": false,
-   "ret": -14.1
+   "ret": -14.1,
+   "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000409/",
+   "purpose": null,
+   "letter": false
   },
   {
    "activist": "Starboard",
@@ -111,7 +144,10 @@
    "ticker": "AQNB",
    "name": "ALGONQUIN POWER & UTILITIES CORP.",
    "new": false,
-   "ret": -15.0
+   "ret": -15.0,
+   "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000394/",
+   "purpose": null,
+   "letter": false
   },
   {
    "activist": "Elliott",
@@ -120,7 +156,10 @@
    "ticker": "TFPM",
    "name": "Triple Flag Precious Metals Corp.",
    "new": false,
-   "ret": -27.8
+   "ret": -27.8,
+   "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001815/",
+   "purpose": "일반(13D)",
+   "letter": false
   },
   {
    "activist": "Icahn",
@@ -129,7 +168,10 @@
    "ticker": "ENZN",
    "name": "Viskase Holdings, Inc.",
    "new": false,
-   "ret": -23.2
+   "ret": -23.2,
+   "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526129970/",
+   "purpose": "이사회·이사",
+   "letter": false
   },
   {
    "activist": "Trian",
@@ -138,7 +180,10 @@
    "ticker": "JHG",
    "name": "JANUS HENDERSON GROUP PLC",
    "new": false,
-   "ret": -16.2
+   "ret": -16.2,
+   "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041326000860/",
+   "purpose": "매각·합병",
+   "letter": true
   },
   {
    "activist": "Starboard",
@@ -147,7 +192,10 @@
    "ticker": "TRIP",
    "name": "TripAdvisor, Inc.",
    "new": false,
-   "ret": -6.6
+   "ret": -6.6,
+   "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526000781/",
+   "purpose": "이사회·이사",
+   "letter": false
   },
   {
    "activist": "Starboard",
@@ -156,7 +204,10 @@
    "ticker": "TRIP",
    "name": "TripAdvisor, Inc.",
    "new": false,
-   "ret": -7.9
+   "ret": -7.9,
+   "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000229/",
+   "purpose": null,
+   "letter": false
   },
   {
    "activist": "Icahn",
@@ -165,7 +216,10 @@
    "ticker": "CVI",
    "name": "CVR ENERGY INC",
    "new": false,
-   "ret": 45.2
+   "ret": 45.2,
+   "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526067602/",
+   "purpose": null,
+   "letter": false
   },
   {
    "activist": "Elliott",
@@ -174,7 +228,10 @@
    "ticker": "LUV",
    "name": "SOUTHWEST AIRLINES CO",
    "new": false,
-   "ret": -25.4
+   "ret": -25.4,
+   "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001249/",
+   "purpose": "일반(13D)",
+   "letter": false
   },
   {
    "activist": "Trian",
@@ -183,7 +240,10 @@
    "ticker": "WEN",
    "name": "Wendy's Co",
    "new": false,
-   "ret": -16.9
+   "ret": -16.9,
+   "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526056159/",
+   "purpose": "이사회·이사",
+   "letter": false
   },
   {
    "activist": "Starboard",
@@ -192,7 +252,10 @@
    "ticker": "TRIP",
    "name": "TripAdvisor, Inc.",
    "new": false,
-   "ret": -7.4
+   "ret": -7.4,
+   "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526000479/",
+   "purpose": "이사회·이사",
+   "letter": true
   },
   {
    "activist": "Politan",
@@ -201,7 +264,10 @@
    "ticker": "MASI",
    "name": "MASIMO CORP",
    "new": false,
-   "ret": -8.7
+   "ret": -8.7,
+   "url": "https://www.sec.gov/Archives/edgar/data/1885245/000090266426001168/",
+   "purpose": "매각·합병",
+   "letter": false
   },
   {
    "activist": "Legion",
@@ -210,7 +276,10 @@
    "ticker": "CCO",
    "name": "Clear Channel Outdoor Holdings, Inc.",
    "new": false,
-   "ret": -7.6
+   "ret": -7.6,
+   "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526000269/",
+   "purpose": "매각·합병",
+   "letter": false
   },
   {
    "activist": "Elliott",
@@ -219,7 +288,10 @@
    "ticker": "LUV",
    "name": "SOUTHWEST AIRLINES CO",
    "new": false,
-   "ret": -21.2
+   "ret": -21.2,
+   "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426000646/",
+   "purpose": "일반(13D)",
+   "letter": false
   }
  ]
 }
