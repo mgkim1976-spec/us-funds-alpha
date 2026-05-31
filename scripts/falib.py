@@ -128,13 +128,16 @@ def figi_map():
 # ── 시그널 점수 (point-in-time) ───────────────────────────────────────
 def score_stocks(fw, R, figi):
     """리밸런싱일 R에서 각 종목의 시그널 점수 DataFrame.
-    컬럼: cusip, ticker, hold, mhw, lnp, bi, z_*, ens.
+    컬럼: cusip, ticker, hold, mhw, lnp, bi, dbr, z_*, ens, ens4.
       mhw = 보유 펀드 평균 비중,  lnp = 신규진입(≥0.5%) 비중 합,
-      bi  = Σmax(0, 비중 − 전펀드평균),  ens = z(mhw)+z(lnp)+z(bi) 평균.
+      bi  = Σmax(0, 비중 − 전펀드평균),  dbr = Δ보유폭(신규−이탈 펀드 비율; Chen-Hong-Stein),
+      ens  = z(mhw)+z(lnp)+z(bi) 평균        (3-신호; HF는 dbr이 약해 이걸 사용),
+      ens4 = z(mhw)+z(lnp)+z(bi)+z(dbr) 평균 (4-신호; MF는 dbr이 강해 이걸 사용).
     """
     from collections import defaultdict
     sumw = defaultdict(float); hold = defaultdict(int); allw = defaultdict(float)
     newp = defaultdict(float); bi = defaultdict(float); nf = 0; snap = {}
+    addh = defaultdict(int); droph = defaultdict(int)
     for f, series in fw.items():
         fds = [d for d in series if d <= R]
         if not fds:
@@ -143,6 +146,9 @@ def score_stocks(fw, R, figi):
         cur = series[fds[-1]]
         prev = series[fds[-2]] if len(fds) >= 2 else pd.Series(dtype=float)
         snap[f] = (cur, prev)
+        cset, pset = set(cur.index), set(prev.index)
+        for c in cset - pset: addh[c] += 1      # 이 펀드가 신규로 보유
+        for c in pset - cset: droph[c] += 1      # 이 펀드가 이탈(매도)
         for c, wt in cur.items():
             sumw[c] += wt; hold[c] += 1; allw[c] += wt
             if (c not in prev.index) and wt >= 0.005:
@@ -150,16 +156,18 @@ def score_stocks(fw, R, figi):
     for f, (cur, prev) in snap.items():
         for c, wt in cur.items():
             bi[c] += max(0.0, wt - allw[c]/nf)
-    rows = [(c, figi.get(c), hold[c], sumw[c]/hold[c], newp.get(c, 0.0), bi.get(c, 0.0))
-            for c in hold if figi.get(c)]
-    d = pd.DataFrame(rows, columns=["cusip", "ticker", "hold", "mhw", "lnp", "bi"])
-    for c in ["hold", "mhw", "lnp", "bi"]:
+    nf = nf or 1
+    rows = [(c, figi.get(c), hold[c], sumw[c]/hold[c], newp.get(c, 0.0), bi.get(c, 0.0),
+             (addh.get(c, 0) - droph.get(c, 0))/nf) for c in hold if figi.get(c)]
+    d = pd.DataFrame(rows, columns=["cusip", "ticker", "hold", "mhw", "lnp", "bi", "dbr"])
+    for c in ["hold", "mhw", "lnp", "bi", "dbr"]:
         d[c] = pd.to_numeric(d[c], errors="coerce")
     d = d[d["ticker"].notna()].dropna(subset=["mhw"])
-    for s in ["mhw", "lnp", "bi"]:
+    for s in ["mhw", "lnp", "bi", "dbr"]:
         sd = d[s].std()
         d["z_"+s] = (d[s] - d[s].mean())/(sd if sd else 1)
-    d["ens"] = d[["z_mhw", "z_lnp", "z_bi"]].mean(axis=1)
+    d["ens"] = d[["z_mhw", "z_lnp", "z_bi"]].mean(axis=1)            # 3-신호 (HF)
+    d["ens4"] = d[["z_mhw", "z_lnp", "z_bi", "z_dbr"]].mean(axis=1)  # 4-신호 (MF, +dbr)
     return d
 
 def score_reallocation(fw, R, figi, pivot):

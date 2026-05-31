@@ -65,7 +65,8 @@
 - **Large New Positions** — 여러 펀드가 *새로* 비중 있게 산 종목 (신규 매수 합의)
 - **Best-Ideas** — 펀드들이 평균보다 *훨씬 더* 담은 종목 (컨센서스 대비 베팅; Cohen–Polk–Silli)
 - **Reallocation** — 가격 상승분을 빼고 매니저가 *실제로 사들인* 종목 (능동적 매매)
-- **앙상블** — 상호보완적인 셋(MHW·LNP·BI)을 z-score로 합쳐 *가장 견고*하게
+- **ΔBreadth** — 보유 펀드 수가 *늘어나는* 종목 (신규 매수 합의의 확산; Chen–Hong–Stein 2002) — **MF 최강 단일 신호(+16.6%)**, 기존과 직교
+- **앙상블** — 상호보완적 신호를 z-score로 합쳐 *가장 견고*하게 (MF는 4신호 +ΔBreadth, HF는 3신호)
 
 각 시그널은 펀드 단위 보유 변화를 종목 단위 점수로 집계하며, **공시일(filing date) 기준
 point-in-time** 이라 ~56일 공시 지연이 반영됩니다.
@@ -76,7 +77,8 @@ point-in-time** 이라 ~56일 공시 지연이 반영됩니다.
 | `lnp` | Large New Positions | 여러 펀드의 신규 고확신 진입(≥0.5%) 비중 합 |
 | `bi`  | Best-Ideas (active overweight) | Σ max(0, 펀드비중 − 전펀드평균) = 컨센서스 대비 초과보유 |
 | `rlc` | Reallocation | Σ (능동 Δw / 펀드 turnover); 능동 Δw = 비중변화에서 가격 drift 제거 |
-| `ens` | 앙상블 | z(mhw) + z(lnp) + z(bi) 평균 → 랭크가중 top-N |
+| `dbr` | ΔBreadth | (신규 보유 펀드 − 이탈 펀드) / 전체 펀드 = 분기간 보유폭 변화 (Chen–Hong–Stein) |
+| `ens` | 앙상블 | MF=z(mhw·lnp·bi·dbr), HF=z(mhw·lnp·bi) 평균 → 랭크가중 top-N |
 
 ## 두 데이터 소스 — 뮤추얼펀드 vs 헤지펀드
 

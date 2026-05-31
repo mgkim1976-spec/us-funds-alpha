@@ -47,7 +47,9 @@ def main():
                     curve=[round(v*100, 1) for v in cum.values])
 
     cards = {"comb": combo_picks()}
-    for k in ["ens", "mhw", "lnp", "bi", "rlc"]: cards[f"mf_{k}"] = {R: top(MF[R], k) for R in REBS}
+    # MF: ens는 4-신호(ens4, +dbr), dbr 카드 추가 / HF: ens는 3-신호(dbr이 약해 제외)
+    for k, col in [("ens", "ens4"), ("mhw", "mhw"), ("lnp", "lnp"), ("bi", "bi"), ("rlc", "rlc"), ("dbr", "dbr")]:
+        cards[f"mf_{k}"] = {R: top(MF[R], col) for R in REBS}
     for k in ["ens", "mhw", "lnp", "bi", "rlc"]: cards[f"hf_{k}"] = {R: top(HF[R], k) for R in REBS}
     for key, pk in cards.items():
         pk10 = {R: pk[R][:10] for R in REBS}                 # 랭크순이므로 상위10 = Top30[:10]

@@ -17,20 +17,21 @@ NEXT_REBAL = min([d for d in [pd.Timestamp(REBAL.year, m, 1) for m in (3, 6, 9, 
 # 카드 메타 (name·desc·note). 통계·곡선은 card_stats에서.
 CARDS = {
  "comb": ("결합 앙상블 (MF + HF)", "뮤추얼펀드의 보유·신규매수 + 헤지펀드의 집중 확신", "두 소스 승자 신호 결합 — 단일 소스 레짐 위험을 분산 (견고)"),
- "mf_ens": ("뮤추얼펀드 앙상블", "MF 세 신호(mhw·lnp·bi) z-결합", "폭넓은 보유·신규매수에 강함"),
+ "mf_ens": ("뮤추얼펀드 앙상블", "MF 네 신호(mhw·lnp·bi·ΔBreadth) z-결합", "폭넓은 보유·신규매수·보유폭 증가"),
  "hf_ens": ("헤지펀드 앙상블", "집중 헤지펀드 세 신호 z-결합", "집중 확신에 강함"),
  "mf_mhw": ("Mean Holding Weight", "많은 펀드가 크게 보유 (널리·두텁게)", "뮤추얼펀드가 우월(안정)"),
  "mf_lnp": ("Large New Positions", "여러 펀드의 신규 고확신 진입(≥0.5%)", "뮤추얼펀드 최강 신호"),
  "mf_bi":  ("Best-Ideas", "컨센서스 대비 초과보유 (active overweight)", "뮤추얼펀드는 분산적이라 약함"),
  "mf_rlc": ("Reallocation", "가격변동 빼고 실제로 사들인 종목", "최근(2024-26)엔 약화 — 레짐"),
+ "mf_dbr": ("ΔBreadth", "보유 펀드 수의 분기간 *증가* (신규−이탈)", "MF 최강 단일 신호 — 기존과 직교(Chen-Hong-Stein)"),
  "hf_mhw": ("Mean Holding Weight", "많은 헤지펀드가 크게 보유", "집중 매니저라 보유자 적어 약함"),
  "hf_lnp": ("Large New Positions", "여러 헤지펀드 신규 고확신 진입", "안정적"),
  "hf_bi":  ("Best-Ideas", "컨센서스 대비 초과보유 (active overweight)", "헤지펀드 최강 — 집중 확신 압도"),
  "hf_rlc": ("Reallocation", "가격변동 빼고 실제로 사들인 종목", "분기·45일 지연이라 약함(음) — 능동 매매 노이즈"),
 }
 SECTIONS = [
- ("앙상블 — 소스별 비교", "헤지펀드 최상위 · 결합은 소스 분산", ["comb", "mf_ens", "hf_ens"]),
- ("뮤추얼펀드 유니버스 · 개별 시그널", "~540 액티브 US 주식형 · 기존 방식", ["mf_mhw", "mf_lnp", "mf_bi", "mf_rlc"]),
+ ("앙상블 — 소스별 비교", "헤지펀드 최상위 · 결합은 소스 분산 · MF앙상블=4신호(+ΔBreadth)", ["comb", "mf_ens", "hf_ens"]),
+ ("뮤추얼펀드 유니버스 · 개별 시그널", "~540 액티브 US 주식형 · ΔBreadth가 최강", ["mf_mhw", "mf_lnp", "mf_bi", "mf_rlc", "mf_dbr"]),
  ("헤지펀드 유니버스 · 개별 시그널", "~3,100 집중 13F 매니저 · 기존 방식", ["hf_mhw", "hf_lnp", "hf_bi", "hf_rlc"]),
 ]
 
@@ -74,7 +75,7 @@ def main():
             d["hold"] = d.get("hold", 1)
             return d.nlargest(30, "sc")
         src, sig = key.split("_"); df = MFn if src == "mf" else HFn
-        col = "ens" if sig == "ens" else sig
+        col = ("ens4" if src == "mf" else "ens") if sig == "ens" else sig  # MF 앙상블=4신호
         return df[df.hold >= 3].nlargest(30, col)
 
     picks = {k: picks_df(k) for k in CARDS}

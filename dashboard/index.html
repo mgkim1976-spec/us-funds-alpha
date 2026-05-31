@@ -58,7 +58,8 @@ html,body{margin:0;background:var(--bg);color:var(--fg);
 .section-head h2{font-size:21px;font-weight:700;letter-spacing:-.4px;margin:3px 0 0}
 .grid{display:grid;grid-template-columns:1fr;gap:18px}
 @media(min-width:740px){.grid{grid-template-columns:1fr 1fr}}
-@media(min-width:1080px){.grid.four{grid-template-columns:1fr 1fr 1fr 1fr}.grid.three{grid-template-columns:1fr 1fr 1fr}}
+@media(min-width:1080px){.grid.four{grid-template-columns:1fr 1fr 1fr 1fr}.grid.three{grid-template-columns:1fr 1fr 1fr}.grid.five{grid-template-columns:repeat(5,1fr)}}
+@media(min-width:740px) and (max-width:1079px){.grid.five{grid-template-columns:1fr 1fr 1fr}}
 
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
   padding:18px 18px 14px;box-shadow:0 1px 3px rgba(0,0,0,.05);
@@ -137,6 +138,7 @@ details.holds>summary::-webkit-details-marker{display:none}
       <div class="sigrow"><b>Large New Pos</b><span>여러 펀드가 <em>새로</em> 비중 있게 산 종목 — 신규 매수 합의.</span></div>
       <div class="sigrow"><b>Best-Ideas</b><span>펀드들이 평균보다 <em>훨씬 더</em> 담은 종목 — 컨센서스 대비 베팅.</span></div>
       <div class="sigrow"><b>Reallocation</b><span>가격 상승분을 빼고 매니저가 <em>실제로 사들인</em> 종목 — 능동적 매매.</span></div>
+      <div class="sigrow"><b>ΔBreadth</b><span>보유 펀드 수가 <em>늘어나는</em> 종목 — 신규 매수 합의의 확산(Chen-Hong-Stein).</span></div>
       <div class="sigrow"><b>앙상블</b><span>상호보완적 신호를 z-score로 합쳐 <em>가장 견고</em>하게.</span></div>
     </div>
     <div class="howto">📊 <b>카드 읽는 법</b> — 큰 숫자·초록 곡선 = 2024–2026 누적수익, 회색 점선 = S&P&nbsp;500 ·
@@ -221,7 +223,7 @@ let DATA=null, TOPN=30;
 function renderSections(){
   if(!DATA) return;
   document.getElementById('sections').innerHTML=DATA.sections.map(sec=>{
-    const cn=sec.cards.length>=4?' four':(sec.cards.length===3?' three':'');
+    const cn=sec.cards.length===5?' five':(sec.cards.length>=4?' four':(sec.cards.length===3?' three':''));
     return `<section class="section"><div class="section-head">
         <span class="lab">${sec.subtitle||''}</span><h2>${sec.title}</h2></div>
       <div class="grid${cn}">${sec.cards.map(c=>cardHTML(c,DATA)).join("")}</div>
