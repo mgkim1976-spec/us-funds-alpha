@@ -6,7 +6,7 @@
  "n_total": 61,
  "n_new": 6,
  "n_campaigns": 28,
- "n_initial_campaigns": 6,
+ "n_initial_campaigns": 23,
  "campaigns": [
   {
    "activist": "Trian",
@@ -15,8 +15,8 @@
    "purpose": "매각·합병",
    "latest": "2026-05-14",
    "latest_ret": -0.7,
-   "n": 3,
-   "has_initial": false,
+   "n": 4,
+   "has_initial": true,
    "letter": true,
    "filings": [
     {
@@ -26,7 +26,8 @@
      "ret": -0.7,
      "purpose": "매각·합병",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526224634/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526224634/",
+     "backfilled": false
     },
     {
      "date": "2026-03-24",
@@ -35,7 +36,8 @@
      "ret": -16.2,
      "purpose": "매각·합병",
      "letter": true,
-     "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041326000860/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041326000860/",
+     "backfilled": false
     },
     {
      "date": "2025-12-22",
@@ -44,7 +46,18 @@
      "ret": -1.4,
      "purpose": "이사회·이사",
      "letter": true,
-     "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041325003750/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041325003750/",
+     "backfilled": false
+    },
+    {
+     "date": "2020-10-02",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1345471/000134547120000053/",
+     "backfilled": true
     }
    ]
   },
@@ -55,8 +68,8 @@
    "purpose": null,
    "latest": "2026-05-14",
    "latest_ret": 9.4,
-   "n": 1,
-   "has_initial": false,
+   "n": 2,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -66,7 +79,18 @@
      "ret": 9.4,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001436/"
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001436/",
+     "backfilled": false
+    },
+    {
+     "date": "2024-02-12",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949724000264/",
+     "backfilled": true
     }
    ]
   },
@@ -77,8 +101,8 @@
    "purpose": null,
    "latest": "2026-05-08",
    "latest_ret": 0.2,
-   "n": 1,
-   "has_initial": false,
+   "n": 2,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -88,7 +112,18 @@
      "ret": 0.2,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526001206/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526001206/",
+     "backfilled": false
+    },
+    {
+     "date": "2023-08-18",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380523001197/",
+     "backfilled": true
     }
    ]
   },
@@ -99,8 +134,8 @@
    "purpose": null,
    "latest": "2026-05-08",
    "latest_ret": -9.1,
-   "n": 2,
-   "has_initial": false,
+   "n": 3,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -110,7 +145,8 @@
      "ret": -9.1,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126020328/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126020328/",
+     "backfilled": false
     },
     {
      "date": "2026-04-29",
@@ -119,7 +155,18 @@
      "ret": -11.6,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017888/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017888/",
+     "backfilled": false
+    },
+    {
+     "date": "2020-05-04",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1336528/000119312520132495/",
+     "backfilled": true
     }
    ]
   },
@@ -130,8 +177,8 @@
    "purpose": null,
    "latest": "2026-05-08",
    "latest_ret": -5.2,
-   "n": 1,
-   "has_initial": false,
+   "n": 2,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -141,7 +188,18 @@
      "ret": -5.2,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143826000266/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143826000266/",
+     "backfilled": false
+    },
+    {
+     "date": "2023-10-23",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143823000570/",
+     "backfilled": true
     }
    ]
   },
@@ -152,8 +210,8 @@
    "purpose": null,
    "latest": "2026-05-06",
    "latest_ret": -7.1,
-   "n": 1,
-   "has_initial": false,
+   "n": 2,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -163,7 +221,18 @@
      "ret": -7.1,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000090266426002298/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000090266426002298/",
+     "backfilled": false
+    },
+    {
+     "date": "2024-07-15",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000090266424004719/",
+     "backfilled": true
     }
    ]
   },
@@ -185,7 +254,8 @@
      "ret": -2.5,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017890/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017890/",
+     "backfilled": false
     },
     {
      "date": "2025-12-19",
@@ -194,7 +264,8 @@
      "ret": -29.1,
      "purpose": "이사회·이사",
      "letter": true,
-     "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036125046218/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036125046218/",
+     "backfilled": false
     }
    ]
   },
@@ -216,7 +287,8 @@
      "ret": -3.5,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001145/"
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001145/",
+     "backfilled": false
     },
     {
      "date": "2025-12-29",
@@ -225,7 +297,8 @@
      "ret": 6.1,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725003355/"
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725003355/",
+     "backfilled": false
     }
    ]
   },
@@ -247,7 +320,8 @@
      "ret": -14.1,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000409/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000409/",
+     "backfilled": false
     },
     {
      "date": "2026-03-23",
@@ -256,7 +330,8 @@
      "ret": -6.6,
      "purpose": "이사회·이사",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526000781/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526000781/",
+     "backfilled": false
     },
     {
      "date": "2026-03-06",
@@ -265,7 +340,8 @@
      "ret": -7.9,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000229/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000229/",
+     "backfilled": false
     },
     {
      "date": "2026-02-17",
@@ -274,7 +350,8 @@
      "ret": -7.4,
      "purpose": "이사회·이사",
      "letter": true,
-     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526000479/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526000479/",
+     "backfilled": false
     },
     {
      "date": "2025-07-03",
@@ -283,7 +360,8 @@
      "ret": -59.4,
      "purpose": "이사회·이사",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380525000968/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380525000968/",
+     "backfilled": false
     }
    ]
   },
@@ -294,8 +372,8 @@
    "purpose": "일반(13D)",
    "latest": "2026-04-03",
    "latest_ret": -1.1,
-   "n": 3,
-   "has_initial": false,
+   "n": 4,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -305,7 +383,8 @@
      "ret": -1.1,
      "purpose": "일반(13D)",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001872/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001872/",
+     "backfilled": false
     },
     {
      "date": "2026-02-23",
@@ -314,7 +393,8 @@
      "ret": -25.4,
      "purpose": "일반(13D)",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001249/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001249/",
+     "backfilled": false
     },
     {
      "date": "2026-02-02",
@@ -323,7 +403,18 @@
      "ret": -21.2,
      "purpose": "일반(13D)",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426000646/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426000646/",
+     "backfilled": false
+    },
+    {
+     "date": "2024-08-05",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266424004970/",
+     "backfilled": true
     }
    ]
   },
@@ -334,8 +425,8 @@
    "purpose": null,
    "latest": "2026-04-01",
    "latest_ret": -15.0,
-   "n": 1,
-   "has_initial": false,
+   "n": 2,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -345,7 +436,18 @@
      "ret": -15.0,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000394/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000394/",
+     "backfilled": false
+    },
+    {
+     "date": "2023-06-30",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380523000930/",
+     "backfilled": true
     }
    ]
   },
@@ -356,8 +458,8 @@
    "purpose": "일반(13D)",
    "latest": "2026-03-31",
    "latest_ret": -27.8,
-   "n": 2,
-   "has_initial": false,
+   "n": 3,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -367,7 +469,8 @@
      "ret": -27.8,
      "purpose": "일반(13D)",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001815/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001815/",
+     "backfilled": false
     },
     {
      "date": "2025-12-31",
@@ -376,7 +479,18 @@
      "ret": -18.7,
      "purpose": "일반(13D)",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425005444/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425005444/",
+     "backfilled": false
+    },
+    {
+     "date": "2023-03-21",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266423002314/",
+     "backfilled": true
     }
    ]
   },
@@ -398,7 +512,8 @@
      "ret": -23.2,
      "purpose": "이사회·이사",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526129970/"
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526129970/",
+     "backfilled": false
     },
     {
      "date": "2026-01-30",
@@ -407,7 +522,8 @@
      "ret": 7078.2,
      "purpose": "일반(13D)",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526032170/"
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526032170/",
+     "backfilled": false
     }
    ]
   },
@@ -429,7 +545,8 @@
      "ret": 45.2,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526067602/"
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526067602/",
+     "backfilled": false
     }
    ]
   },
@@ -451,7 +568,8 @@
      "ret": -16.9,
      "purpose": "이사회·이사",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526056159/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526056159/",
+     "backfilled": false
     }
    ]
   },
@@ -462,8 +580,8 @@
    "purpose": "매각·합병",
    "latest": "2026-02-17",
    "latest_ret": -8.7,
-   "n": 1,
-   "has_initial": false,
+   "n": 2,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -473,7 +591,18 @@
      "ret": -8.7,
      "purpose": "매각·합병",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1885245/000090266426001168/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1885245/000090266426001168/",
+     "backfilled": false
+    },
+    {
+     "date": "2022-08-16",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1885245/000091412122004079/",
+     "backfilled": true
     }
    ]
   },
@@ -484,8 +613,8 @@
    "purpose": "매각·합병",
    "latest": "2026-02-10",
    "latest_ret": -7.6,
-   "n": 1,
-   "has_initial": false,
+   "n": 2,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -495,7 +624,18 @@
      "ret": -7.6,
      "purpose": "매각·합병",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526000269/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526000269/",
+     "backfilled": false
+    },
+    {
+     "date": "2023-05-16",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189523001235/",
+     "backfilled": true
     }
    ]
   },
@@ -506,8 +646,8 @@
    "purpose": "이사회·이사",
    "latest": "2026-01-29",
    "latest_ret": -2.6,
-   "n": 3,
-   "has_initial": false,
+   "n": 4,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -517,7 +657,8 @@
      "ret": -2.6,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726000218/"
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726000218/",
+     "backfilled": false
     },
     {
      "date": "2026-01-21",
@@ -526,7 +667,8 @@
      "ret": -6.4,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726000113/"
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726000113/",
+     "backfilled": false
     },
     {
      "date": "2026-01-02",
@@ -535,7 +677,18 @@
      "ret": -1.0,
      "purpose": "이사회·이사",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726000002/"
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726000002/",
+     "backfilled": false
+    },
+    {
+     "date": "2022-06-03",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312522167306/",
+     "backfilled": true
     }
    ]
   },
@@ -557,7 +710,8 @@
      "ret": 42.9,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000065/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000065/",
+     "backfilled": false
     },
     {
      "date": "2025-08-06",
@@ -566,7 +720,8 @@
      "ret": 85.3,
      "purpose": "이사회·이사",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002118/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002118/",
+     "backfilled": false
     }
    ]
   },
@@ -577,8 +732,8 @@
    "purpose": null,
    "latest": "2026-01-21",
    "latest_ret": 61.5,
-   "n": 1,
-   "has_initial": false,
+   "n": 2,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -588,7 +743,18 @@
      "ret": 61.5,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1559771/000092189526000125/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1559771/000092189526000125/",
+     "backfilled": false
+    },
+    {
+     "date": "2022-02-22",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1559771/000119380522000377/",
+     "backfilled": true
     }
    ]
   },
@@ -599,8 +765,8 @@
    "purpose": "이사회·이사",
    "latest": "2026-01-20",
    "latest_ret": 96.4,
-   "n": 1,
-   "has_initial": false,
+   "n": 2,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -610,7 +776,18 @@
      "ret": 96.4,
      "purpose": "이사회·이사",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526000110/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526000110/",
+     "backfilled": false
+    },
+    {
+     "date": "2019-01-18",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189519000116/",
+     "backfilled": true
     }
    ]
   },
@@ -621,8 +798,8 @@
    "purpose": "일반(13D)",
    "latest": "2026-01-13",
    "latest_ret": -9.1,
-   "n": 1,
-   "has_initial": false,
+   "n": 2,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -632,7 +809,18 @@
      "ret": -9.1,
      "purpose": "일반(13D)",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1040273/000089914026000044/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1040273/000089914026000044/",
+     "backfilled": false
+    },
+    {
+     "date": "2024-02-13",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1040273/000089914024000218/",
+     "backfilled": true
     }
    ]
   },
@@ -643,8 +831,8 @@
    "purpose": null,
    "latest": "2025-12-18",
    "latest_ret": 45.7,
-   "n": 1,
-   "has_initial": false,
+   "n": 2,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -654,7 +842,18 @@
      "ret": 45.7,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425005353/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425005353/",
+     "backfilled": false
+    },
+    {
+     "date": "2023-04-05",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266423002466/",
+     "backfilled": true
     }
    ]
   },
@@ -665,8 +864,8 @@
    "purpose": null,
    "latest": "2025-12-17",
    "latest_ret": 70.9,
-   "n": 1,
-   "has_initial": false,
+   "n": 2,
+   "has_initial": true,
    "letter": false,
    "filings": [
     {
@@ -676,7 +875,18 @@
      "ret": 70.9,
      "purpose": null,
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143825000596/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143825000596/",
+     "backfilled": false
+    },
+    {
+     "date": "2024-05-08",
+     "form": "SCHEDULE 13D",
+     "new": true,
+     "ret": null,
+     "purpose": null,
+     "letter": false,
+     "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143824000325/",
+     "backfilled": true
     }
    ]
   },
@@ -698,7 +908,8 @@
      "ret": 33.5,
      "purpose": "이사회·이사",
      "letter": true,
-     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002948/"
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002948/",
+     "backfilled": false
     }
    ]
   },
@@ -720,7 +931,8 @@
      "ret": -14.8,
      "purpose": "이사회·이사",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002847/"
+     "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002847/",
+     "backfilled": false
     }
    ]
   },
@@ -742,7 +954,8 @@
      "ret": -42.6,
      "purpose": "이사회·이사",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002532/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002532/",
+     "backfilled": false
     }
    ]
   },
@@ -764,7 +977,8 @@
      "ret": 60.6,
      "purpose": "이사회·이사",
      "letter": false,
-     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425003448/"
+     "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425003448/",
+     "backfilled": false
     }
    ]
   }

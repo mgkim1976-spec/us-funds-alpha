@@ -41,23 +41,24 @@ def main():
     since_i = (dt.date.today() - dt.timedelta(days=LOOKBACK_INIT)).isoformat()
     ct = json.loads(uf.get("https://www.sec.gov/files/company_tickers.json"))
     cik2tk = {str(v["cik_str"]).zfill(10): (v["ticker"], v["title"]) for v in ct.values()}
-    evs = []
+    evs = []; subs = {}                              # subs: act→(cik, recent) — 개시 역추적용
     for act, cik in sc.ACT_CIK.items():
         data = uf.get(f"https://data.sec.gov/submissions/CIK{uf.cik10(cik)}.json")
         if not data: continue
         rec = json.loads(data).get("filings", {}).get("recent", {})
+        subs[act] = (cik, rec)
         for form, fd, acc in zip(rec.get("form", []), rec.get("filingDate", []), rec.get("accessionNumber", [])):
             isinit = form in FORMS_INIT
             if isinit:
                 if fd < since_i: continue          # 신규: 365일
             elif form in FORMS_AMEND:
-                if fd < since_a: continue          # 수정: 120일
+                if fd < since_a: continue          # 수정: 270일
             else:
                 continue
             scik = sc.subject_cik(cik, acc)
             tk, nm = cik2tk.get(scik, (None, None))
             evs.append(dict(activist=act, date=fd, form=form, ticker=tk, name=nm,
-                            new=form in FORMS_INIT, filerCIK=cik, acc=acc))
+                            new=isinit, subject=scik, filerCIK=cik, acc=acc))
     # 가격: 대상 티커 공시이후 수익(시장조정 vs SPY)
     px = fa.price_pivot()  # date×ticker adjclose
     tks = sorted({e["ticker"] for e in evs if e["ticker"]})
@@ -69,17 +70,17 @@ def main():
             pd.concat([full, add]).drop_duplicates(["ticker", "date"]).to_parquet(fa.DATA/"prices_full.parquet", index=False)
             px = fa.price_pivot()
     spy = px["SPY"].dropna() if "SPY" in px.columns else None
-    for e in evs:
-        e["ret"] = None
-        t = e["ticker"]
-        if not t or t not in px.columns or spy is None: continue
-        s = px[t].dropna(); d0 = pd.Timestamp(e["date"])
+    def ret_since(t, date):                          # 공시일 이후 시장조정(−SPY) 초과수익
+        if not t or t not in px.columns or spy is None: return None
+        s = px[t].dropna(); d0 = pd.Timestamp(date)
         on = s.index[s.index >= d0]; spon = spy.index[spy.index >= d0]
-        if len(on) == 0 or len(spon) == 0: continue
-        p0 = s.loc[on[0]]; p1 = s.iloc[-1]
-        sp0 = spy.loc[spon[0]]; sp1 = spy.iloc[-1]
+        if len(on) == 0 or len(spon) == 0: return None
+        p0 = s.loc[on[0]]; p1 = s.iloc[-1]; sp0 = spy.loc[spon[0]]; sp1 = spy.iloc[-1]
         if p0 > 0 and sp0 > 0 and not pd.isna(p1) and not pd.isna(sp1):
-            e["ret"] = round(((p1/p0-1) - (sp1/sp0-1))*100, 1)   # 시장조정 초과수익
+            return round(((p1/p0-1) - (sp1/sp0-1))*100, 1)
+        return None
+    for e in evs:
+        e["ret"] = ret_since(e["ticker"], e["date"])
     # ── 캠페인 스레드: (액티비스트·종목)별로 신규 13D + 후속 13D/A 묶기 ──
     withtk = [e for e in evs if e["ticker"]]
     inits = [e for e in withtk if e["new"]]
@@ -90,6 +91,32 @@ def main():
     groups = {}
     for e in keep:
         groups.setdefault((e["activist"], e["ticker"]), []).append(e)
+    # ── 표적 매칭: 개시(신규) 없는 캠페인에 한해, 같은 대상 회사의 과거 개시 13D를 역추적해 머리로 ──
+    SCAN_CAP = 40                                      # 캠페인당 subject_cik 추가호출 상한
+    sc_cache = {}; backfilled = 0
+    for (act, tk), fl in groups.items():
+        if any(e["new"] for e in fl) or act not in subs: continue
+        subject = next((e["subject"] for e in fl if e.get("subject")), None)
+        if not subject: continue
+        cik, rec = subs[act]
+        cand = sorted([(acc, fd) for form, fd, acc in
+                       zip(rec.get("form", []), rec.get("filingDate", []), rec.get("accessionNumber", []))
+                       if form in FORMS_INIT], key=lambda x: x[1], reverse=True)
+        earliest = min(e["date"] for e in fl); opener = None; calls = 0
+        for acc, fd in cand:
+            if fd > earliest: continue                 # 개시는 후속(수정)보다 앞서야
+            s = sc_cache.get((act, acc))
+            if s is None:
+                if calls >= SCAN_CAP: break
+                s = sc.subject_cik(cik, acc); sc_cache[(act, acc)] = s; calls += 1
+            if s == subject: opener = (acc, fd); break # 후속 직전의 가장 최근 개시 = 현 캠페인 개시
+        if opener:
+            acc, fd = opener; url, purpose, letter = enrich(cik, acc)
+            # 역추적 개시의 ret는 비움 — 수년 누적 시장조정값이라 최근 공시(수개월)와 한 열에 섞으면 오해
+            fl.append(dict(activist=act, date=fd, form="SCHEDULE 13D", ticker=tk,
+                           name=fl[0].get("name"), new=True, subject=subject, ret=None,
+                           url=url, purpose=purpose, letter=letter, backfilled=True))
+            backfilled += 1
     def rep_purpose(fl):                               # 캠페인 대표 목적: 최신·구체 우선
         for e in fl:
             if e.get("purpose") and e["purpose"] != "일반(13D)": return e["purpose"]
@@ -104,7 +131,8 @@ def main():
             n=len(fl), has_initial=any(e["new"] for e in fl),
             letter=any(e.get("letter") for e in fl),
             filings=[dict(date=e["date"], form=e["form"], new=e["new"], ret=e["ret"],
-                          purpose=e.get("purpose"), letter=e.get("letter"), url=e["url"]) for e in fl]))
+                          purpose=e.get("purpose"), letter=e.get("letter"), url=e["url"],
+                          backfilled=e.get("backfilled", False)) for e in fl]))
     campaigns.sort(key=lambda c: c["latest"], reverse=True)
     n_init_camp = sum(c["has_initial"] for c in campaigns)
     out = dict(generated=dt.date.today().strftime("%Y-%m-%d"), lookback_amend=LOOKBACK_AMEND, lookback_init=LOOKBACK_INIT,
@@ -113,7 +141,7 @@ def main():
                n_campaigns=len(campaigns), n_initial_campaigns=n_init_camp,
                campaigns=campaigns)
     json.dump(out, open(ROOT/"dashboard"/"sc13d.json", "w"), ensure_ascii=False, indent=1)
-    print(f"sc13d.json: 필링 {out['n_total']}건(신규 {out['n_new']}) → 캠페인 {len(campaigns)}개(개시포착 {n_init_camp})")
+    print(f"sc13d.json: 필링 {out['n_total']}건(신규 {out['n_new']}) → 캠페인 {len(campaigns)}개(개시포착 {n_init_camp}, 그중 역추적 {backfilled})")
     for c in campaigns[:8]:
         print(f"  {c['latest']} {c['activist']:12} {str(c['ticker']):6} {'개시' if c['has_initial'] else '후속'} "
               f"{c['n']}건 이후{c['latest_ret']}% | 목적 {c.get('purpose')} | 레터 {c['letter']}")
