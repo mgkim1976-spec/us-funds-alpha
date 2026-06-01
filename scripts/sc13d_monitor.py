@@ -125,15 +125,19 @@ def main():
     for (act, tk), fl in groups.items():
         fl = sorted(fl, key=lambda e: e["date"], reverse=True)   # 최신순
         head = fl[0]
+        init_f = next((e for e in fl if e.get("new")), None)     # 캠페인 개시(최초) 13D
         campaigns.append(dict(
             activist=act, ticker=tk, name=next((e["name"] for e in fl if e["name"]), None),
             purpose=rep_purpose(fl), latest=head["date"], latest_ret=head["ret"],
-            n=len(fl), has_initial=any(e["new"] for e in fl),
+            initial_date=init_f["date"] if init_f else None,     # 투자 신호는 개시일 기준
+            initial_backfilled=bool(init_f and init_f.get("backfilled")),
+            n=len(fl), has_initial=bool(init_f),
             letter=any(e.get("letter") for e in fl),
             filings=[dict(date=e["date"], form=e["form"], new=e["new"], ret=e["ret"],
                           purpose=e.get("purpose"), letter=e.get("letter"), url=e["url"],
                           backfilled=e.get("backfilled", False)) for e in fl]))
-    campaigns.sort(key=lambda c: c["latest"], reverse=True)
+    # 개시(최초 공시) 최신순 — 투자 가능한 신선한 캠페인이 위로
+    campaigns.sort(key=lambda c: (c["initial_date"] or "0000", c["latest"]), reverse=True)
     n_init_camp = sum(c["has_initial"] for c in campaigns)
     out = dict(generated=dt.date.today().strftime("%Y-%m-%d"), lookback_amend=LOOKBACK_AMEND, lookback_init=LOOKBACK_INIT,
                announce_note="발표 [0,+1] 평균 +5.5% (t4.34) · +1일 진입·21일 보유 +5.8% (t3.76) — sc13d.md",

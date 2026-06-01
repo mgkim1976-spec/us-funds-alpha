@@ -12,295 +12,136 @@
   "n_initial_campaigns": 23,
   "campaigns": [
    {
-    "activist": "Trian",
-    "ticker": "JHG",
-    "name": "JANUS HENDERSON GROUP PLC",
-    "purpose": "매각·합병",
-    "latest": "2026-05-14",
-    "latest_ret": -0.7,
-    "n": 4,
-    "has_initial": true,
-    "letter": true,
-    "filings": [
-     {
-      "date": "2026-05-14",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -0.7,
-      "purpose": "매각·합병",
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526224634/",
-      "backfilled": false
-     },
-     {
-      "date": "2026-03-24",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -16.2,
-      "purpose": "매각·합병",
-      "letter": true,
-      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041326000860/",
-      "backfilled": false
-     },
-     {
-      "date": "2025-12-22",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -1.4,
-      "purpose": "이사회·이사",
-      "letter": true,
-      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041325003750/",
-      "backfilled": false
-     },
-     {
-      "date": "2020-10-02",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": null,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000134547120000053/",
-      "backfilled": true
-     }
-    ]
-   },
-   {
     "activist": "Icahn",
-    "ticker": "JBLU",
-    "name": "JETBLUE AIRWAYS CORP",
-    "purpose": null,
-    "latest": "2026-05-14",
-    "latest_ret": 9.4,
-    "n": 2,
-    "has_initial": true,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2026-05-14",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": 9.4,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001436/",
-      "backfilled": false
-     },
-     {
-      "date": "2024-02-12",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": null,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949724000264/",
-      "backfilled": true
-     }
-    ]
-   },
-   {
-    "activist": "Starboard",
-    "ticker": "BLMN",
-    "name": "Bloomin' Brands, Inc.",
-    "purpose": null,
-    "latest": "2026-05-08",
-    "latest_ret": 0.2,
-    "n": 2,
-    "has_initial": true,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2026-05-08",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": 0.2,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526001206/",
-      "backfilled": false
-     },
-     {
-      "date": "2023-08-18",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": null,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380523001197/",
-      "backfilled": true
-     }
-    ]
-   },
-   {
-    "activist": "PershingSquare",
-    "ticker": "QSR",
-    "name": "Restaurant Brands International Inc.",
-    "purpose": null,
-    "latest": "2026-05-08",
-    "latest_ret": -9.1,
-    "n": 3,
-    "has_initial": true,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2026-05-08",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -9.1,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126020328/",
-      "backfilled": false
-     },
-     {
-      "date": "2026-04-29",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -11.6,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017888/",
-      "backfilled": false
-     },
-     {
-      "date": "2020-05-04",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": null,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000119312520132495/",
-      "backfilled": true
-     }
-    ]
-   },
-   {
-    "activist": "Corvex",
-    "ticker": "SWX",
-    "name": "Southwest Gas Holdings, Inc.",
-    "purpose": null,
-    "latest": "2026-05-08",
-    "latest_ret": -5.2,
-    "n": 2,
-    "has_initial": true,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2026-05-08",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -5.2,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143826000266/",
-      "backfilled": false
-     },
-     {
-      "date": "2023-10-23",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": null,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143823000570/",
-      "backfilled": true
-     }
-    ]
-   },
-   {
-    "activist": "Starboard",
-    "ticker": "MTCH",
-    "name": "Match Group, Inc.",
-    "purpose": null,
-    "latest": "2026-05-06",
-    "latest_ret": -7.1,
-    "n": 2,
-    "has_initial": true,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2026-05-06",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -7.1,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000090266426002298/",
-      "backfilled": false
-     },
-     {
-      "date": "2024-07-15",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": null,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000090266424004719/",
-      "backfilled": true
-     }
-    ]
-   },
-   {
-    "activist": "PershingSquare",
-    "ticker": "HHH",
-    "name": "Howard Hughes Holdings Inc.",
+    "ticker": "CTRI",
+    "name": "Centuri Holdings, Inc.",
     "purpose": "이사회·이사",
-    "latest": "2026-04-29",
-    "latest_ret": -2.5,
-    "n": 2,
-    "has_initial": false,
+    "latest": "2025-11-13",
+    "latest_ret": 33.5,
+    "initial_date": "2025-11-13",
+    "initial_backfilled": false,
+    "n": 1,
+    "has_initial": true,
     "letter": true,
     "filings": [
      {
-      "date": "2026-04-29",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -2.5,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017890/",
-      "backfilled": false
-     },
-     {
-      "date": "2025-12-19",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -29.1,
+      "date": "2025-11-13",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": 33.5,
       "purpose": "이사회·이사",
       "letter": true,
-      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036125046218/",
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002948/",
       "backfilled": false
      }
     ]
    },
    {
     "activist": "Icahn",
-    "ticker": "IEP",
-    "name": "ICAHN ENTERPRISES L.P.",
-    "purpose": null,
-    "latest": "2026-04-17",
-    "latest_ret": -3.5,
-    "n": 2,
-    "has_initial": false,
+    "ticker": "MNRO",
+    "name": "MONRO, INC.",
+    "purpose": "이사회·이사",
+    "latest": "2025-11-05",
+    "latest_ret": -14.8,
+    "initial_date": "2025-11-05",
+    "initial_backfilled": false,
+    "n": 1,
+    "has_initial": true,
     "letter": false,
     "filings": [
      {
-      "date": "2026-04-17",
+      "date": "2025-11-05",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": -14.8,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002847/",
+      "backfilled": false
+     }
+    ]
+   },
+   {
+    "activist": "Starboard",
+    "ticker": "BILL",
+    "name": "BILL Holdings, Inc.",
+    "purpose": "이사회·이사",
+    "latest": "2025-09-04",
+    "latest_ret": -42.6,
+    "initial_date": "2025-09-04",
+    "initial_backfilled": false,
+    "n": 1,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2025-09-04",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": -42.6,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002532/",
+      "backfilled": false
+     }
+    ]
+   },
+   {
+    "activist": "Elliott",
+    "ticker": "UNIT",
+    "name": "Uniti Group Inc.",
+    "purpose": "이사회·이사",
+    "latest": "2025-08-08",
+    "latest_ret": 60.6,
+    "initial_date": "2025-08-08",
+    "initial_backfilled": false,
+    "n": 1,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2025-08-08",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": 60.6,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425003448/",
+      "backfilled": false
+     }
+    ]
+   },
+   {
+    "activist": "Starboard",
+    "ticker": "ROG",
+    "name": "ROGERS CORP",
+    "purpose": "이사회·이사",
+    "latest": "2026-01-23",
+    "latest_ret": 42.9,
+    "initial_date": "2025-08-06",
+    "initial_backfilled": false,
+    "n": 2,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-01-23",
       "form": "SCHEDULE 13D/A",
       "new": false,
-      "ret": -3.5,
+      "ret": 42.9,
       "purpose": null,
       "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001145/",
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000065/",
       "backfilled": false
      },
      {
-      "date": "2025-12-29",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": 6.1,
-      "purpose": null,
+      "date": "2025-08-06",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": 85.3,
+      "purpose": "이사회·이사",
       "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725003355/",
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002118/",
       "backfilled": false
      }
     ]
@@ -312,6 +153,8 @@
     "purpose": "이사회·이사",
     "latest": "2026-04-03",
     "latest_ret": -14.1,
+    "initial_date": "2025-07-03",
+    "initial_backfilled": false,
     "n": 5,
     "has_initial": true,
     "letter": true,
@@ -375,6 +218,8 @@
     "purpose": "일반(13D)",
     "latest": "2026-04-03",
     "latest_ret": -1.1,
+    "initial_date": "2024-08-05",
+    "initial_backfilled": true,
     "n": 4,
     "has_initial": true,
     "letter": false,
@@ -423,11 +268,223 @@
    },
    {
     "activist": "Starboard",
+    "ticker": "MTCH",
+    "name": "Match Group, Inc.",
+    "purpose": null,
+    "latest": "2026-05-06",
+    "latest_ret": -7.1,
+    "initial_date": "2024-07-15",
+    "initial_backfilled": true,
+    "n": 2,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-05-06",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -7.1,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000090266426002298/",
+      "backfilled": false
+     },
+     {
+      "date": "2024-07-15",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000090266424004719/",
+      "backfilled": true
+     }
+    ]
+   },
+   {
+    "activist": "Corvex",
+    "ticker": "VSTS",
+    "name": "Vestis Corp",
+    "purpose": null,
+    "latest": "2025-12-17",
+    "latest_ret": 70.9,
+    "initial_date": "2024-05-08",
+    "initial_backfilled": true,
+    "n": 2,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2025-12-17",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 70.9,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143825000596/",
+      "backfilled": false
+     },
+     {
+      "date": "2024-05-08",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143824000325/",
+      "backfilled": true
+     }
+    ]
+   },
+   {
+    "activist": "ThirdPoint",
+    "ticker": "FLYX-WT",
+    "name": "FLYEXCLUSIVE INC.",
+    "purpose": "일반(13D)",
+    "latest": "2026-01-13",
+    "latest_ret": -9.1,
+    "initial_date": "2024-02-13",
+    "initial_backfilled": true,
+    "n": 2,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-01-13",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -9.1,
+      "purpose": "일반(13D)",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1040273/000089914026000044/",
+      "backfilled": false
+     },
+     {
+      "date": "2024-02-13",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1040273/000089914024000218/",
+      "backfilled": true
+     }
+    ]
+   },
+   {
+    "activist": "Icahn",
+    "ticker": "JBLU",
+    "name": "JETBLUE AIRWAYS CORP",
+    "purpose": null,
+    "latest": "2026-05-14",
+    "latest_ret": 9.4,
+    "initial_date": "2024-02-12",
+    "initial_backfilled": true,
+    "n": 2,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-05-14",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 9.4,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001436/",
+      "backfilled": false
+     },
+     {
+      "date": "2024-02-12",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949724000264/",
+      "backfilled": true
+     }
+    ]
+   },
+   {
+    "activist": "Corvex",
+    "ticker": "SWX",
+    "name": "Southwest Gas Holdings, Inc.",
+    "purpose": null,
+    "latest": "2026-05-08",
+    "latest_ret": -5.2,
+    "initial_date": "2023-10-23",
+    "initial_backfilled": true,
+    "n": 2,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-05-08",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -5.2,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143826000266/",
+      "backfilled": false
+     },
+     {
+      "date": "2023-10-23",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143823000570/",
+      "backfilled": true
+     }
+    ]
+   },
+   {
+    "activist": "Starboard",
+    "ticker": "BLMN",
+    "name": "Bloomin' Brands, Inc.",
+    "purpose": null,
+    "latest": "2026-05-08",
+    "latest_ret": 0.2,
+    "initial_date": "2023-08-18",
+    "initial_backfilled": true,
+    "n": 2,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-05-08",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 0.2,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526001206/",
+      "backfilled": false
+     },
+     {
+      "date": "2023-08-18",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380523001197/",
+      "backfilled": true
+     }
+    ]
+   },
+   {
+    "activist": "Starboard",
     "ticker": "AQNB",
     "name": "ALGONQUIN POWER & UTILITIES CORP.",
     "purpose": null,
     "latest": "2026-04-01",
     "latest_ret": -15.0,
+    "initial_date": "2023-06-30",
+    "initial_backfilled": true,
     "n": 2,
     "has_initial": true,
     "letter": false,
@@ -455,12 +512,84 @@
     ]
    },
    {
+    "activist": "Legion",
+    "ticker": "CCO",
+    "name": "Clear Channel Outdoor Holdings, Inc.",
+    "purpose": "매각·합병",
+    "latest": "2026-02-10",
+    "latest_ret": -7.6,
+    "initial_date": "2023-05-16",
+    "initial_backfilled": true,
+    "n": 2,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-02-10",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -7.6,
+      "purpose": "매각·합병",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526000269/",
+      "backfilled": false
+     },
+     {
+      "date": "2023-05-16",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189523001235/",
+      "backfilled": true
+     }
+    ]
+   },
+   {
+    "activist": "Elliott",
+    "ticker": "SDRL",
+    "name": "Seadrill Ltd",
+    "purpose": null,
+    "latest": "2025-12-18",
+    "latest_ret": 45.7,
+    "initial_date": "2023-04-05",
+    "initial_backfilled": true,
+    "n": 2,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2025-12-18",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 45.7,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425005353/",
+      "backfilled": false
+     },
+     {
+      "date": "2023-04-05",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266423002466/",
+      "backfilled": true
+     }
+    ]
+   },
+   {
     "activist": "Elliott",
     "ticker": "TFPM",
     "name": "Triple Flag Precious Metals Corp.",
     "purpose": "일반(13D)",
     "latest": "2026-03-31",
     "latest_ret": -27.8,
+    "initial_date": "2023-03-21",
+    "initial_backfilled": true,
     "n": 3,
     "has_initial": true,
     "letter": false,
@@ -498,91 +627,14 @@
     ]
    },
    {
-    "activist": "Icahn",
-    "ticker": "ENZN",
-    "name": "Viskase Holdings, Inc.",
-    "purpose": "이사회·이사",
-    "latest": "2026-03-27",
-    "latest_ret": -23.2,
-    "n": 2,
-    "has_initial": false,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2026-03-27",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -23.2,
-      "purpose": "이사회·이사",
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526129970/",
-      "backfilled": false
-     },
-     {
-      "date": "2026-01-30",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": 7078.2,
-      "purpose": "일반(13D)",
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526032170/",
-      "backfilled": false
-     }
-    ]
-   },
-   {
-    "activist": "Icahn",
-    "ticker": "CVI",
-    "name": "CVR ENERGY INC",
-    "purpose": null,
-    "latest": "2026-02-24",
-    "latest_ret": 45.2,
-    "n": 1,
-    "has_initial": false,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2026-02-24",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": 45.2,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526067602/",
-      "backfilled": false
-     }
-    ]
-   },
-   {
-    "activist": "Trian",
-    "ticker": "WEN",
-    "name": "Wendy's Co",
-    "purpose": "이사회·이사",
-    "latest": "2026-02-18",
-    "latest_ret": -16.9,
-    "n": 1,
-    "has_initial": false,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2026-02-18",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -16.9,
-      "purpose": "이사회·이사",
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526056159/",
-      "backfilled": false
-     }
-    ]
-   },
-   {
     "activist": "Politan",
     "ticker": "MASI",
     "name": "MASIMO CORP",
     "purpose": "매각·합병",
     "latest": "2026-02-17",
     "latest_ret": -8.7,
+    "initial_date": "2022-08-16",
+    "initial_backfilled": true,
     "n": 2,
     "has_initial": true,
     "letter": false,
@@ -610,45 +662,14 @@
     ]
    },
    {
-    "activist": "Legion",
-    "ticker": "CCO",
-    "name": "Clear Channel Outdoor Holdings, Inc.",
-    "purpose": "매각·합병",
-    "latest": "2026-02-10",
-    "latest_ret": -7.6,
-    "n": 2,
-    "has_initial": true,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2026-02-10",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -7.6,
-      "purpose": "매각·합병",
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526000269/",
-      "backfilled": false
-     },
-     {
-      "date": "2023-05-16",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": null,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189523001235/",
-      "backfilled": true
-     }
-    ]
-   },
-   {
     "activist": "Icahn",
     "ticker": "SWX",
     "name": "Southwest Gas Holdings, Inc.",
     "purpose": "이사회·이사",
     "latest": "2026-01-29",
     "latest_ret": -2.6,
+    "initial_date": "2022-06-03",
+    "initial_backfilled": true,
     "n": 4,
     "has_initial": true,
     "letter": false,
@@ -696,45 +717,14 @@
     ]
    },
    {
-    "activist": "Starboard",
-    "ticker": "ROG",
-    "name": "ROGERS CORP",
-    "purpose": "이사회·이사",
-    "latest": "2026-01-23",
-    "latest_ret": 42.9,
-    "n": 2,
-    "has_initial": true,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2026-01-23",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": 42.9,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000065/",
-      "backfilled": false
-     },
-     {
-      "date": "2025-08-06",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": 85.3,
-      "purpose": "이사회·이사",
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002118/",
-      "backfilled": false
-     }
-    ]
-   },
-   {
     "activist": "Engaged",
     "ticker": "BRCC",
     "name": "BRC Inc.",
     "purpose": null,
     "latest": "2026-01-21",
     "latest_ret": 61.5,
+    "initial_date": "2022-02-22",
+    "initial_backfilled": true,
     "n": 2,
     "has_initial": true,
     "letter": false,
@@ -762,12 +752,114 @@
     ]
    },
    {
+    "activist": "Trian",
+    "ticker": "JHG",
+    "name": "JANUS HENDERSON GROUP PLC",
+    "purpose": "매각·합병",
+    "latest": "2026-05-14",
+    "latest_ret": -0.7,
+    "initial_date": "2020-10-02",
+    "initial_backfilled": true,
+    "n": 4,
+    "has_initial": true,
+    "letter": true,
+    "filings": [
+     {
+      "date": "2026-05-14",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -0.7,
+      "purpose": "매각·합병",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526224634/",
+      "backfilled": false
+     },
+     {
+      "date": "2026-03-24",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -16.2,
+      "purpose": "매각·합병",
+      "letter": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041326000860/",
+      "backfilled": false
+     },
+     {
+      "date": "2025-12-22",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -1.4,
+      "purpose": "이사회·이사",
+      "letter": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041325003750/",
+      "backfilled": false
+     },
+     {
+      "date": "2020-10-02",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000134547120000053/",
+      "backfilled": true
+     }
+    ]
+   },
+   {
+    "activist": "PershingSquare",
+    "ticker": "QSR",
+    "name": "Restaurant Brands International Inc.",
+    "purpose": null,
+    "latest": "2026-05-08",
+    "latest_ret": -9.1,
+    "initial_date": "2020-05-04",
+    "initial_backfilled": true,
+    "n": 3,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-05-08",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -9.1,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126020328/",
+      "backfilled": false
+     },
+     {
+      "date": "2026-04-29",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -11.6,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017888/",
+      "backfilled": false
+     },
+     {
+      "date": "2020-05-04",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000119312520132495/",
+      "backfilled": true
+     }
+    ]
+   },
+   {
     "activist": "Legion",
     "ticker": "NNBR",
     "name": "NN INC",
     "purpose": "이사회·이사",
     "latest": "2026-01-20",
     "latest_ret": 96.4,
+    "initial_date": "2019-01-18",
+    "initial_backfilled": true,
     "n": 2,
     "has_initial": true,
     "letter": false,
@@ -795,192 +887,156 @@
     ]
    },
    {
-    "activist": "ThirdPoint",
-    "ticker": "FLYX-WT",
-    "name": "FLYEXCLUSIVE INC.",
-    "purpose": "일반(13D)",
-    "latest": "2026-01-13",
-    "latest_ret": -9.1,
-    "n": 2,
-    "has_initial": true,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2026-01-13",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -9.1,
-      "purpose": "일반(13D)",
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1040273/000089914026000044/",
-      "backfilled": false
-     },
-     {
-      "date": "2024-02-13",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": null,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1040273/000089914024000218/",
-      "backfilled": true
-     }
-    ]
-   },
-   {
-    "activist": "Elliott",
-    "ticker": "SDRL",
-    "name": "Seadrill Ltd",
-    "purpose": null,
-    "latest": "2025-12-18",
-    "latest_ret": 45.7,
-    "n": 2,
-    "has_initial": true,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2025-12-18",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": 45.7,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425005353/",
-      "backfilled": false
-     },
-     {
-      "date": "2023-04-05",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": null,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266423002466/",
-      "backfilled": true
-     }
-    ]
-   },
-   {
-    "activist": "Corvex",
-    "ticker": "VSTS",
-    "name": "Vestis Corp",
-    "purpose": null,
-    "latest": "2025-12-17",
-    "latest_ret": 70.9,
-    "n": 2,
-    "has_initial": true,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2025-12-17",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": 70.9,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143825000596/",
-      "backfilled": false
-     },
-     {
-      "date": "2024-05-08",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": null,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143824000325/",
-      "backfilled": true
-     }
-    ]
-   },
-   {
-    "activist": "Icahn",
-    "ticker": "CTRI",
-    "name": "Centuri Holdings, Inc.",
+    "activist": "PershingSquare",
+    "ticker": "HHH",
+    "name": "Howard Hughes Holdings Inc.",
     "purpose": "이사회·이사",
-    "latest": "2025-11-13",
-    "latest_ret": 33.5,
-    "n": 1,
-    "has_initial": true,
+    "latest": "2026-04-29",
+    "latest_ret": -2.5,
+    "initial_date": null,
+    "initial_backfilled": false,
+    "n": 2,
+    "has_initial": false,
     "letter": true,
     "filings": [
      {
-      "date": "2025-11-13",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": 33.5,
+      "date": "2026-04-29",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -2.5,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017890/",
+      "backfilled": false
+     },
+     {
+      "date": "2025-12-19",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -29.1,
       "purpose": "이사회·이사",
       "letter": true,
-      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002948/",
+      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036125046218/",
       "backfilled": false
      }
     ]
    },
    {
     "activist": "Icahn",
-    "ticker": "MNRO",
-    "name": "MONRO, INC.",
-    "purpose": "이사회·이사",
-    "latest": "2025-11-05",
-    "latest_ret": -14.8,
-    "n": 1,
-    "has_initial": true,
+    "ticker": "IEP",
+    "name": "ICAHN ENTERPRISES L.P.",
+    "purpose": null,
+    "latest": "2026-04-17",
+    "latest_ret": -3.5,
+    "initial_date": null,
+    "initial_backfilled": false,
+    "n": 2,
+    "has_initial": false,
     "letter": false,
     "filings": [
      {
-      "date": "2025-11-05",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": -14.8,
-      "purpose": "이사회·이사",
+      "date": "2026-04-17",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -3.5,
+      "purpose": null,
       "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002847/",
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001145/",
+      "backfilled": false
+     },
+     {
+      "date": "2025-12-29",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 6.1,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725003355/",
       "backfilled": false
      }
     ]
    },
    {
-    "activist": "Starboard",
-    "ticker": "BILL",
-    "name": "BILL Holdings, Inc.",
+    "activist": "Icahn",
+    "ticker": "ENZN",
+    "name": "Viskase Holdings, Inc.",
     "purpose": "이사회·이사",
-    "latest": "2025-09-04",
-    "latest_ret": -42.6,
-    "n": 1,
-    "has_initial": true,
+    "latest": "2026-03-27",
+    "latest_ret": -23.2,
+    "initial_date": null,
+    "initial_backfilled": false,
+    "n": 2,
+    "has_initial": false,
     "letter": false,
     "filings": [
      {
-      "date": "2025-09-04",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": -42.6,
+      "date": "2026-03-27",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -23.2,
       "purpose": "이사회·이사",
       "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002532/",
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526129970/",
+      "backfilled": false
+     },
+     {
+      "date": "2026-01-30",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 7078.2,
+      "purpose": "일반(13D)",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526032170/",
       "backfilled": false
      }
     ]
    },
    {
-    "activist": "Elliott",
-    "ticker": "UNIT",
-    "name": "Uniti Group Inc.",
-    "purpose": "이사회·이사",
-    "latest": "2025-08-08",
-    "latest_ret": 60.6,
+    "activist": "Icahn",
+    "ticker": "CVI",
+    "name": "CVR ENERGY INC",
+    "purpose": null,
+    "latest": "2026-02-24",
+    "latest_ret": 45.2,
+    "initial_date": null,
+    "initial_backfilled": false,
     "n": 1,
-    "has_initial": true,
+    "has_initial": false,
     "letter": false,
     "filings": [
      {
-      "date": "2025-08-08",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": 60.6,
+      "date": "2026-02-24",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 45.2,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526067602/",
+      "backfilled": false
+     }
+    ]
+   },
+   {
+    "activist": "Trian",
+    "ticker": "WEN",
+    "name": "Wendy's Co",
+    "purpose": "이사회·이사",
+    "latest": "2026-02-18",
+    "latest_ret": -16.9,
+    "initial_date": null,
+    "initial_backfilled": false,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-02-18",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -16.9,
       "purpose": "이사회·이사",
       "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425003448/",
+      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526056159/",
       "backfilled": false
      }
     ]

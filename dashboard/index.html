@@ -72,8 +72,8 @@ html,body{margin:0;background:var(--bg);color:var(--fg);overflow-x:hidden;
 .camp{border-bottom:1px solid var(--line2);position:relative}
 .camphead{cursor:pointer}
 .camphead:hover{background:var(--soft)}
-.camp.new{background:linear-gradient(90deg,rgba(0,113,227,.06),transparent 62%)}
-.camp.new::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:3px;border-radius:0 2px 2px 0;background:var(--accent)}
+.camp.fresh{background:linear-gradient(90deg,rgba(0,113,227,.06),transparent 62%)}
+.camp.fresh::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:3px;border-radius:0 2px 2px 0;background:var(--accent)}
 .chev{flex:0 0 11px;color:var(--mut2);font-size:11px;text-align:center;transition:transform .18s}
 .camp.open .chev{transform:rotate(90deg)}
 .camp.n1 .chev{opacity:.25}
@@ -96,8 +96,13 @@ a.subrow:hover{background:var(--card)}
 .bf{flex:0 0 auto;font-size:8.5px;font-weight:700;color:#9a6a00;background:#fdf3df;border:1px solid #f0dca8;padding:1px 5px;border-radius:5px}
 .fact{flex:0 0 auto;font-size:11px;font-weight:600;color:#5a4ec2;background:#efeefb;padding:2px 9px;border-radius:999px;white-space:nowrap}
 .fdt{flex:0 0 78px;text-align:right;color:var(--mut2);font-size:11px;font-variant-numeric:tabular-nums}
+.fdates{flex:0 0 116px;display:flex;flex-direction:column;align-items:flex-end;gap:1px;font-variant-numeric:tabular-nums}
+.fd-init{font-size:11px;font-weight:600;color:var(--mut)}
+.fd-init.hot{color:var(--accent);font-weight:750}
+.fd-lat{font-size:9.5px;color:var(--mut2)}
+.nbnew.old{background:#aeb4c2}
 .farr{flex:0 0 10px;color:var(--mut2);font-size:11px;text-align:right}
-.fh-chev{flex:0 0 11px} .fh-main{flex:1 1 0} .fh-act{flex:0 0 auto} .fh-dt{flex:0 0 78px;text-align:right}
+.fh-chev{flex:0 0 11px} .fh-main{flex:1 1 0} .fh-act{flex:0 0 auto} .fh-dt{flex:0 0 116px;text-align:right}
 .ffilters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:2px 0 12px}
 .fsearch{flex:1 1 150px;min-width:110px;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12px;font-family:inherit;background:var(--card);color:inherit}
 .fsel{border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:12px;font-family:inherit;background:var(--card);color:inherit;cursor:pointer;max-width:46vw}
@@ -105,7 +110,7 @@ a.subrow:hover{background:var(--card)}
 .ftoggle button{border:0;background:transparent;color:var(--mut);font-size:11.5px;font-weight:600;padding:6px 14px;border-radius:999px;cursor:pointer;font-family:inherit;transition:all .15s}
 .ftoggle button.on{background:var(--accent);color:#fff}
 .fempty{padding:26px;text-align:center;color:var(--mut2);font-size:12.5px}
-@media(max-width:520px){.frow,.fhead,.subrow{gap:9px;padding-left:8px;padding-right:8px}.subrow{padding-left:28px}.fact,.fdt,.farr,.fh-act,.fh-dt{display:none}}
+@media(max-width:520px){.frow,.fhead,.subrow{gap:8px;padding-left:8px;padding-right:8px}.subrow{padding-left:26px}.fact,.farr,.fh-act{display:none}.fdates,.fh-dt{flex-basis:88px}.fdt{flex-basis:60px}}
 
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);min-width:0;
   padding:18px 18px 14px;box-shadow:0 1px 3px rgba(0,0,0,.05);
@@ -283,9 +288,12 @@ function renderSections(){
       <div class="grid${cn}">${sec.cards.map(c=>cardHTML(c,DATA)).join("")}</div>
     </section>`;}).join("");
 }
-let FF={q:'',act:'',purp:'',newonly:false};
+const FRESH_DAYS=120;                                   // 개시 13D 발표효과 매매창 ≈ 1분기 → 🆕·강조
+const daysSince=d=>d?(Date.now()-new Date(d+'T00:00:00'))/864e5:1e9;
+const recentOpen=c=>c.has_initial && !c.initial_backfilled;   // 모니터링 창(1년) 안에서 실제로 개시된 캠페인
+let FF={q:'',act:'',purp:'',recent:false,sort:'init'};
 function campMatch(c){
-  if(FF.newonly && !c.has_initial) return false;
+  if(FF.recent && !recentOpen(c)) return false;
   if(FF.act && c.activist!==FF.act) return false;
   if(FF.purp && (c.purpose||'')!==FF.purp) return false;
   if(FF.q){const q=FF.q.toLowerCase();
@@ -293,7 +301,9 @@ function campMatch(c){
   return true;
 }
 function campRow(c){
-  const head=c.has_initial?'<span class="nbnew">신규</span>':'<span class="nbamd">후속</span>';
+  const open=recentOpen(c), fresh=daysSince(c.initial_date)<=FRESH_DAYS;
+  const head=!c.has_initial?'<span class="nbamd">후속</span>'
+            :(fresh?'<span class="nbnew">🆕 신규</span>':`<span class="nbnew${open?'':' old'}">신규</span>`);
   const cnt=c.n>1?`<span class="cnt">${c.n}건</span>`:'';
   const pt=c.purpose?`<span class="pt">${c.purpose}</span>`:'';
   const lt=c.letter?'<span class="lt" title="데먼드 레터 첨부">✉</span>':'';
@@ -310,19 +320,23 @@ function campRow(c){
     return f.url?`<a class="subrow" href="${f.url}" target="_blank" rel="noopener">${inner}</a>`
                :`<div class="subrow">${inner}</div>`;
   }).join("");
-  return `<div class="camp${c.has_initial?' new':''}${c.n<2?' n1':''}">
+  const initd=c.initial_date?`개시 ${c.initial_date}${c.initial_backfilled?' <span class="bf">소급</span>':''}`:'개시 미상';
+  const dates=`<span class="fdates"><span class="fd-init${fresh?' hot':''}">${initd}</span><span class="fd-lat">최근 ${c.latest}</span></span>`;
+  return `<div class="camp${open?' fresh':''}${c.n<2?' n1':''}">
     <div class="frow camphead">
       <span class="fret ${cls(c.latest_ret)}">${fmt(c.latest_ret)}%</span>
       <span class="chev">▸</span>
       <span class="fmain">${head}<b class="ftk">${c.ticker}</b><span class="fcomp">${c.name||''}</span>${pt}${lt}${cnt}</span>
       <span class="fact">${c.activist}</span>
-      <span class="fdt">${c.latest}</span>
+      ${dates}
     </div>
     <div class="campsub">${sub}</div>
   </div>`;
 }
 function feedList(s){
-  const cs=s.campaigns.filter(campMatch);
+  let cs=s.campaigns.filter(campMatch);
+  const by=k=>(a,b)=>(b[k]||'').localeCompare(a[k]||'')||(b.latest||'').localeCompare(a.latest||'');
+  cs=cs.slice().sort(FF.sort==='init'?by('initial_date'):by('latest'));
   if(!cs.length) return `<div class="fempty">조건에 맞는 캠페인 없음</div>`;
   return cs.map(campRow).join("");
 }
@@ -331,34 +345,46 @@ function renderSc13d(D){
   if(!s||!s.campaigns||!s.campaigns.length){el.innerHTML="";return;}
   const acts=[...new Set(s.campaigns.map(c=>c.activist))].sort();
   const purps=[...new Set(s.campaigns.map(c=>c.purpose).filter(Boolean))].sort();
+  const recentN=s.campaigns.filter(recentOpen).length;
   const opt=(arr,sel,ph)=>`<option value="">${ph}</option>`+arr.map(a=>`<option${a===sel?' selected':''}>${a}</option>`).join("");
   el.innerHTML=`<div class="feed">
     <span class="lab">실시간 · EDGAR</span><h2>13D 알림 — 액티비스트 캠페인</h2>
     <div class="fnote"><b>검증된 액티비스트 18곳</b>의 Schedule 13D를 <b>대상 기업별 캠페인</b>으로 묶음 — <b style="color:var(--accent)">신규</b>(개시 공시)를
-      머리로, 이후 <b>수정</b>(후속 13D/A)을 그 아래로. 행을 펼치면 공시 타임라인이 나옵니다. 캠페인 개시가 모니터링 창(1년) 밖이면 <b>대상 회사 기준으로 과거 개시 13D를
-      소급 추적</b>해 머리로 붙입니다(<span class="bf">소급</span> 표식, 이후수익은 수년 누적이라 생략). <b>알파는 개시에 있다</b> — 신규 13D 발표효과 [0,+1] 평균
-      <b>+5.5%</b>(t4.34)·발표 +1일 진입·21일 보유 <b>+5.8%</b>(t3.76)인 반면 수정공시는 +0.8%로 약함.
-      목적 태그=Item 4(Purpose), ✉=데먼드 레터, 공시 클릭 시 EDGAR 원문 ↗. 이후수익=공시 후 시장조정(−S&P) 초과.</div>
+      머리로, 이후 <b>수정</b>(후속 13D/A)을 그 아래로. 행을 펼치면 공시 타임라인이 나옵니다. <b>알파는 개시에 있다</b> — 신규 13D 발표효과 [0,+1] 평균
+      <b>+5.5%</b>(t4.34)·발표 +1일 진입·21일 보유 <b>+5.8%</b>(t3.76)인 반면 수정공시는 +0.8%로 약하고 빠르게 감쇠. <b>매매 신호는 개시일 기준</b> —
+      개시(최초 공시)가 최근일수록 유효하므로 <b>개시일</b>을 함께 표시(기본 <b>개시순 정렬</b>)하고, <b>🆕 최근개시</b> 필터로 1년 내 실제 신규 개시만 추립니다
+      (${FRESH_DAYS}일 이내는 <span style="color:var(--accent)">🆕·파란 강조</span>). 개시가 1년 밖이면 대상 회사 기준으로 과거 개시 13D를 <span class="bf">소급</span> 추적
+      (이후수익은 수년 누적이라 생략). 목적 태그=Item 4(Purpose), ✉=데먼드 레터, 공시 클릭 시 EDGAR 원문 ↗.</div>
     <div class="ffilters">
       <input id="fq" class="fsearch" placeholder="🔍 종목·회사 검색" value="${FF.q}">
       <select id="fact" class="fsel">${opt(acts,FF.act,'전체 액티비스트')}</select>
       <select id="fpurp" class="fsel">${opt(purps,FF.purp,'전체 목적')}</select>
+      <div class="ftoggle" id="fsort">
+        <button data-s="init" class="${FF.sort==='init'?'on':''}">개시순</button>
+        <button data-s="activity" class="${FF.sort==='activity'?'on':''}">활동순</button>
+      </div>
       <div class="ftoggle" id="ftoggle">
-        <button data-f="all" class="${FF.newonly?'':'on'}">전체 ${s.n_campaigns}</button>
-        <button data-f="new" class="${FF.newonly?'on':''}">🎯 개시 ${s.n_initial_campaigns}</button>
+        <button data-f="all" class="${FF.recent?'':'on'}">전체 ${s.n_campaigns}</button>
+        <button data-f="recent" class="${FF.recent?'on':''}">🆕 최근개시 ${recentN}</button>
       </div>
     </div>
-    <div class="fhead"><span class="fret">이후</span><span class="fh-chev"></span><span class="fh-main">유형 · 대상 종목 · 목적</span><span class="fh-act">액티비스트</span><span class="fh-dt">최근 공시</span></div>
+    <div class="fhead"><span class="fret">이후</span><span class="fh-chev"></span><span class="fh-main">유형 · 대상 종목 · 목적</span><span class="fh-act">액티비스트</span><span class="fh-dt">개시 · 최근</span></div>
     <div id="feedrows">${feedList(s)}</div></div>`;
   const rows=document.getElementById('feedrows');
   const rerender=()=>rows.innerHTML=feedList(s);
   document.getElementById('fq').addEventListener('input',e=>{FF.q=e.target.value;rerender();});
   document.getElementById('fact').addEventListener('change',e=>{FF.act=e.target.value;rerender();});
   document.getElementById('fpurp').addEventListener('change',e=>{FF.purp=e.target.value;rerender();});
+  document.getElementById('fsort').addEventListener('click',ev=>{
+    const b=ev.target.closest('button'); if(!b)return;
+    FF.sort=b.dataset.s;
+    [...document.querySelectorAll('#fsort button')].forEach(x=>x.classList.toggle('on',x.dataset.s===FF.sort));
+    rerender();
+  });
   document.getElementById('ftoggle').addEventListener('click',ev=>{
     const b=ev.target.closest('button'); if(!b)return;
-    FF.newonly=b.dataset.f==='new';
-    [...document.querySelectorAll('#ftoggle button')].forEach(x=>x.classList.toggle('on',(x.dataset.f==='new')===FF.newonly));
+    FF.recent=b.dataset.f==='recent';
+    [...document.querySelectorAll('#ftoggle button')].forEach(x=>x.classList.toggle('on',(x.dataset.f==='recent')===FF.recent));
     rerender();
   });
   rows.addEventListener('click',ev=>{
