@@ -189,14 +189,35 @@ Money Smarter?*](https://mues.econ.muni.cz/media/3528254/13f_smart_money.pdf),
 이후수익을 표시하고(상단 Top 10/30 토글), 하단에 시그널·소스 설명을 담았습니다. ④ 시장중립
 카드는 gross 헤드라인과 함께 **비용 차감 후 순알파(~+14%)·회전율 한계**를 명시합니다.
 
+### 13D 알림 — 액티비스트 캠페인 피드
+
+카드 아래에는 **행동주의(activist) 13D 공시 피드**가 별도로 붙습니다. 검증된 액티비스트 18곳
+(Elliott·Starboard·Icahn·Trian·Pershing Square 등)의 **Schedule 13D**(상장사 지분 5% 초과 취득 시
+의무 공시)를 EDGAR에서 매일 받아, **대상 기업별 캠페인 스레드**로 묶어 보여줍니다 — 캠페인 개시
+공시인 **신규 13D**를 머리로 두고, 그 아래로 이후의 **수정 공시(13D/A)** 를 시간순으로 접어둡니다.
+행을 펼치면 한 캠페인의 공시 타임라인이 펼쳐집니다(예: Starboard–TripAdvisor 개시+후속 5건).
+
+각 공시에는 ⑴ Item 4(투자 목적)에서 추출한 **목적 태그**(이사회·이사 / 매각·합병 / 저평가·자본환원
+/ 운영·분사 / 지배구조), ⑵ **데먼드 레터 첨부 여부**(✉), ⑶ **공시 이후 시장조정 초과수익**(−S&P 500),
+⑷ EDGAR 원문 링크가 달립니다. 상단에서 **종목·회사 검색 · 액티비스트 · 목적 · 전체/개시 토글**로
+필터링할 수 있습니다.
+
+이 피드를 분리한 이유는 알파의 위치 때문입니다 — **초기 13D 발표효과**는 발표 [0,+1] 평균
+**+5.5%**(t=4.34), 발표 +1일 진입·21일 보유 **+5.8%**(t=3.76)로 강하지만(Brav·Jiang 행동주의
+이벤트 스터디 재현), **수정 공시는 +0.8%로 약합니다**. 즉 *알파는 캠페인 개시에 있고 후속 공시엔
+거의 없습니다.* 다만 표본이 작고(초기 13D 38건) 장기 드리프트는 레짐 의존적이라는 한계를
+피드 설명에 함께 적었습니다.
+
 ```bash
 cd dashboard && python3 -m http.server 8769   # → http://localhost:8769/
 ```
 
 `launchd` 에이전트(`scripts/daily_update.sh`)가 매 영업일 아침 자동 갱신합니다 —
 두 소스의 신규 공시를 증분 수집(`update_filings.py all`: 펀드별 새 N-PORT + 매니저별 새
-13F-HR을 패널의 마지막 공시일 이후만 다운로드)하고 라이브 포트폴리오를 재가격
-(`dashboard_data.py`)합니다. 검증 통계는 `compute_card_stats.py`가 미리 산출합니다.
+13F-HR을 패널의 마지막 공시일 이후만 다운로드)하고, **액티비스트 13D 피드를 갱신**
+(`sc13d_monitor.py`: 18개 액티비스트의 최근 Schedule 13D를 캠페인 스레드로 묶어
+`dashboard/sc13d.json` 생성)한 뒤, 라이브 포트폴리오를 재가격(`dashboard_data.py`)합니다.
+검증 통계는 `compute_card_stats.py`가 미리 산출합니다.
 
 ---
 
@@ -226,7 +247,8 @@ python3 scripts/activist_research.py event   # SC 13D 이벤트 스터디 (colle
 
 # 4. 대시보드
 python3 scripts/compute_card_stats.py        # → dashboard/card_stats.json
-python3 scripts/dashboard_data.py            # → dashboard/data.json
+python3 scripts/sc13d_monitor.py             # 액티비스트 13D 캠페인 피드 → dashboard/sc13d.json
+python3 scripts/dashboard_data.py            # → dashboard/data.json (sc13d.json 임베드)
 ```
 
 대용량 데이터(parquet, SEC·가격 캐시)는 git에서 제외되며 위 스크립트로 재생성됩니다. 소형
