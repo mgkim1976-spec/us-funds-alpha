@@ -1,378 +1,779 @@
 {
- "generated": "2026-05-31",
- "rebal": "2026-03-01",
+ "generated": "2026-06-01",
+ "rebal": "2026-06-01",
  "sc13d": {
-  "generated": "2026-05-31",
-  "lookback_amend": 120,
+  "generated": "2026-06-01",
+  "lookback_amend": 270,
   "lookback_init": 365,
   "announce_note": "발표 [0,+1] 평균 +5.5% (t4.34) · +1일 진입·21일 보유 +5.8% (t3.76) — sc13d.md",
-  "n_total": 30,
+  "n_total": 61,
   "n_new": 6,
-  "n_shown": 30,
-  "events": [
+  "n_campaigns": 28,
+  "n_initial_campaigns": 6,
+  "campaigns": [
    {
     "activist": "Trian",
-    "date": "2026-05-14",
-    "form": "SCHEDULE 13D/A",
     "ticker": "JHG",
     "name": "JANUS HENDERSON GROUP PLC",
-    "new": false,
-    "ret": -0.7,
-    "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526224634/",
     "purpose": "매각·합병",
-    "letter": false
+    "latest": "2026-05-14",
+    "latest_ret": -0.7,
+    "n": 3,
+    "has_initial": false,
+    "letter": true,
+    "filings": [
+     {
+      "date": "2026-05-14",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -0.7,
+      "purpose": "매각·합병",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526224634/"
+     },
+     {
+      "date": "2026-03-24",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -16.2,
+      "purpose": "매각·합병",
+      "letter": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041326000860/"
+     },
+     {
+      "date": "2025-12-22",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -1.4,
+      "purpose": "이사회·이사",
+      "letter": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041325003750/"
+     }
+    ]
    },
    {
     "activist": "Icahn",
-    "date": "2026-05-14",
-    "form": "SCHEDULE 13D/A",
     "ticker": "JBLU",
     "name": "JETBLUE AIRWAYS CORP",
-    "new": false,
-    "ret": 9.4,
-    "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001436/",
     "purpose": null,
-    "letter": false
+    "latest": "2026-05-14",
+    "latest_ret": 9.4,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-05-14",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 9.4,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001436/"
+     }
+    ]
    },
    {
     "activist": "Starboard",
-    "date": "2026-05-08",
-    "form": "SCHEDULE 13D/A",
     "ticker": "BLMN",
     "name": "Bloomin' Brands, Inc.",
-    "new": false,
-    "ret": 0.2,
-    "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526001206/",
     "purpose": null,
-    "letter": false
+    "latest": "2026-05-08",
+    "latest_ret": 0.2,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-05-08",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 0.2,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526001206/"
+     }
+    ]
    },
    {
     "activist": "PershingSquare",
-    "date": "2026-05-08",
-    "form": "SCHEDULE 13D/A",
     "ticker": "QSR",
     "name": "Restaurant Brands International Inc.",
-    "new": false,
-    "ret": -9.1,
-    "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126020328/",
     "purpose": null,
-    "letter": false
+    "latest": "2026-05-08",
+    "latest_ret": -9.1,
+    "n": 2,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-05-08",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -9.1,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126020328/"
+     },
+     {
+      "date": "2026-04-29",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -11.6,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017888/"
+     }
+    ]
    },
    {
     "activist": "Corvex",
-    "date": "2026-05-08",
-    "form": "SCHEDULE 13D/A",
     "ticker": "SWX",
     "name": "Southwest Gas Holdings, Inc.",
-    "new": false,
-    "ret": -5.2,
-    "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143826000266/",
     "purpose": null,
-    "letter": false
+    "latest": "2026-05-08",
+    "latest_ret": -5.2,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-05-08",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -5.2,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143826000266/"
+     }
+    ]
    },
    {
     "activist": "Starboard",
-    "date": "2026-05-06",
-    "form": "SCHEDULE 13D/A",
     "ticker": "MTCH",
     "name": "Match Group, Inc.",
-    "new": false,
-    "ret": -7.1,
-    "url": "https://www.sec.gov/Archives/edgar/data/1517137/000090266426002298/",
     "purpose": null,
-    "letter": false
+    "latest": "2026-05-06",
+    "latest_ret": -7.1,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-05-06",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -7.1,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000090266426002298/"
+     }
+    ]
    },
    {
     "activist": "PershingSquare",
-    "date": "2026-04-29",
-    "form": "SCHEDULE 13D/A",
     "ticker": "HHH",
     "name": "Howard Hughes Holdings Inc.",
-    "new": false,
-    "ret": -2.5,
-    "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017890/",
-    "purpose": null,
-    "letter": false
-   },
-   {
-    "activist": "PershingSquare",
-    "date": "2026-04-29",
-    "form": "SCHEDULE 13D/A",
-    "ticker": "QSR",
-    "name": "Restaurant Brands International Inc.",
-    "new": false,
-    "ret": -11.6,
-    "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017888/",
-    "purpose": null,
-    "letter": false
+    "purpose": "이사회·이사",
+    "latest": "2026-04-29",
+    "latest_ret": -2.5,
+    "n": 2,
+    "has_initial": false,
+    "letter": true,
+    "filings": [
+     {
+      "date": "2026-04-29",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -2.5,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036126017890/"
+     },
+     {
+      "date": "2025-12-19",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -29.1,
+      "purpose": "이사회·이사",
+      "letter": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1336528/000114036125046218/"
+     }
+    ]
    },
    {
     "activist": "Icahn",
-    "date": "2026-04-17",
-    "form": "SCHEDULE 13D/A",
     "ticker": "IEP",
     "name": "ICAHN ENTERPRISES L.P.",
-    "new": false,
-    "ret": -3.5,
-    "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001145/",
     "purpose": null,
-    "letter": false
+    "latest": "2026-04-17",
+    "latest_ret": -3.5,
+    "n": 2,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-04-17",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -3.5,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726001145/"
+     },
+     {
+      "date": "2025-12-29",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 6.1,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725003355/"
+     }
+    ]
+   },
+   {
+    "activist": "Starboard",
+    "ticker": "TRIP",
+    "name": "TripAdvisor, Inc.",
+    "purpose": "이사회·이사",
+    "latest": "2026-04-03",
+    "latest_ret": -14.1,
+    "n": 5,
+    "has_initial": true,
+    "letter": true,
+    "filings": [
+     {
+      "date": "2026-04-03",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -14.1,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000409/"
+     },
+     {
+      "date": "2026-03-23",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -6.6,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526000781/"
+     },
+     {
+      "date": "2026-03-06",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -7.9,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000229/"
+     },
+     {
+      "date": "2026-02-17",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -7.4,
+      "purpose": "이사회·이사",
+      "letter": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526000479/"
+     },
+     {
+      "date": "2025-07-03",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": -59.4,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380525000968/"
+     }
+    ]
    },
    {
     "activist": "Elliott",
-    "date": "2026-04-03",
-    "form": "SCHEDULE 13D/A",
     "ticker": "LUV",
     "name": "SOUTHWEST AIRLINES CO",
-    "new": false,
-    "ret": -1.1,
-    "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001872/",
     "purpose": "일반(13D)",
-    "letter": false
+    "latest": "2026-04-03",
+    "latest_ret": -1.1,
+    "n": 3,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-04-03",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -1.1,
+      "purpose": "일반(13D)",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001872/"
+     },
+     {
+      "date": "2026-02-23",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -25.4,
+      "purpose": "일반(13D)",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001249/"
+     },
+     {
+      "date": "2026-02-02",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -21.2,
+      "purpose": "일반(13D)",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426000646/"
+     }
+    ]
    },
    {
     "activist": "Starboard",
-    "date": "2026-04-03",
-    "form": "SCHEDULE 13D/A",
-    "ticker": "TRIP",
-    "name": "TripAdvisor, Inc.",
-    "new": false,
-    "ret": -14.1,
-    "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000409/",
-    "purpose": null,
-    "letter": false
-   },
-   {
-    "activist": "Starboard",
-    "date": "2026-04-01",
-    "form": "SCHEDULE 13D/A",
     "ticker": "AQNB",
     "name": "ALGONQUIN POWER & UTILITIES CORP.",
-    "new": false,
-    "ret": -15.0,
-    "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000394/",
     "purpose": null,
-    "letter": false
+    "latest": "2026-04-01",
+    "latest_ret": -15.0,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-04-01",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -15.0,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000394/"
+     }
+    ]
    },
    {
     "activist": "Elliott",
-    "date": "2026-03-31",
-    "form": "SCHEDULE 13D/A",
     "ticker": "TFPM",
     "name": "Triple Flag Precious Metals Corp.",
-    "new": false,
-    "ret": -27.8,
-    "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001815/",
     "purpose": "일반(13D)",
-    "letter": false
+    "latest": "2026-03-31",
+    "latest_ret": -27.8,
+    "n": 2,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-03-31",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -27.8,
+      "purpose": "일반(13D)",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001815/"
+     },
+     {
+      "date": "2025-12-31",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -18.7,
+      "purpose": "일반(13D)",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425005444/"
+     }
+    ]
    },
    {
     "activist": "Icahn",
-    "date": "2026-03-27",
-    "form": "SCHEDULE 13D/A",
     "ticker": "ENZN",
     "name": "Viskase Holdings, Inc.",
-    "new": false,
-    "ret": -23.2,
-    "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526129970/",
     "purpose": "이사회·이사",
-    "letter": false
-   },
-   {
-    "activist": "Trian",
-    "date": "2026-03-24",
-    "form": "SCHEDULE 13D/A",
-    "ticker": "JHG",
-    "name": "JANUS HENDERSON GROUP PLC",
-    "new": false,
-    "ret": -16.2,
-    "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041326000860/",
-    "purpose": "매각·합병",
-    "letter": true
-   },
-   {
-    "activist": "Starboard",
-    "date": "2026-03-23",
-    "form": "SCHEDULE 13D/A",
-    "ticker": "TRIP",
-    "name": "TripAdvisor, Inc.",
-    "new": false,
-    "ret": -6.6,
-    "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526000781/",
-    "purpose": "이사회·이사",
-    "letter": false
-   },
-   {
-    "activist": "Starboard",
-    "date": "2026-03-06",
-    "form": "SCHEDULE 13D/A",
-    "ticker": "TRIP",
-    "name": "TripAdvisor, Inc.",
-    "new": false,
-    "ret": -7.9,
-    "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000229/",
-    "purpose": null,
-    "letter": false
+    "latest": "2026-03-27",
+    "latest_ret": -23.2,
+    "n": 2,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-03-27",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -23.2,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526129970/"
+     },
+     {
+      "date": "2026-01-30",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 7078.2,
+      "purpose": "일반(13D)",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526032170/"
+     }
+    ]
    },
    {
     "activist": "Icahn",
-    "date": "2026-02-24",
-    "form": "SCHEDULE 13D/A",
     "ticker": "CVI",
     "name": "CVR ENERGY INC",
-    "new": false,
-    "ret": 45.2,
-    "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526067602/",
     "purpose": null,
-    "letter": false
-   },
-   {
-    "activist": "Elliott",
-    "date": "2026-02-23",
-    "form": "SCHEDULE 13D/A",
-    "ticker": "LUV",
-    "name": "SOUTHWEST AIRLINES CO",
-    "new": false,
-    "ret": -25.4,
-    "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426001249/",
-    "purpose": "일반(13D)",
-    "letter": false
+    "latest": "2026-02-24",
+    "latest_ret": 45.2,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-02-24",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 45.2,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526067602/"
+     }
+    ]
    },
    {
     "activist": "Trian",
-    "date": "2026-02-18",
-    "form": "SCHEDULE 13D/A",
     "ticker": "WEN",
     "name": "Wendy's Co",
-    "new": false,
-    "ret": -16.9,
-    "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526056159/",
     "purpose": "이사회·이사",
-    "letter": false
-   },
-   {
-    "activist": "Starboard",
-    "date": "2026-02-17",
-    "form": "SCHEDULE 13D/A",
-    "ticker": "TRIP",
-    "name": "TripAdvisor, Inc.",
-    "new": false,
-    "ret": -7.4,
-    "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526000479/",
-    "purpose": "이사회·이사",
-    "letter": true
+    "latest": "2026-02-18",
+    "latest_ret": -16.9,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-02-18",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -16.9,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526056159/"
+     }
+    ]
    },
    {
     "activist": "Politan",
-    "date": "2026-02-17",
-    "form": "SCHEDULE 13D/A",
     "ticker": "MASI",
     "name": "MASIMO CORP",
-    "new": false,
-    "ret": -8.7,
-    "url": "https://www.sec.gov/Archives/edgar/data/1885245/000090266426001168/",
     "purpose": "매각·합병",
-    "letter": false
+    "latest": "2026-02-17",
+    "latest_ret": -8.7,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-02-17",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -8.7,
+      "purpose": "매각·합병",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1885245/000090266426001168/"
+     }
+    ]
    },
    {
     "activist": "Legion",
-    "date": "2026-02-10",
-    "form": "SCHEDULE 13D/A",
     "ticker": "CCO",
     "name": "Clear Channel Outdoor Holdings, Inc.",
-    "new": false,
-    "ret": -7.6,
-    "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526000269/",
     "purpose": "매각·합병",
-    "letter": false
-   },
-   {
-    "activist": "Elliott",
-    "date": "2026-02-02",
-    "form": "SCHEDULE 13D/A",
-    "ticker": "LUV",
-    "name": "SOUTHWEST AIRLINES CO",
-    "new": false,
-    "ret": -21.2,
-    "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266426000646/",
-    "purpose": "일반(13D)",
-    "letter": false
-   },
-   {
-    "activist": "Icahn",
-    "date": "2025-11-13",
-    "form": "SCHEDULE 13D",
-    "ticker": "CTRI",
-    "name": "Centuri Holdings, Inc.",
-    "new": true,
-    "ret": 33.5,
-    "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002948/",
-    "purpose": "이사회·이사",
-    "letter": true
+    "latest": "2026-02-10",
+    "latest_ret": -7.6,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-02-10",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -7.6,
+      "purpose": "매각·합병",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526000269/"
+     }
+    ]
    },
    {
     "activist": "Icahn",
-    "date": "2025-11-05",
-    "form": "SCHEDULE 13D",
-    "ticker": "MNRO",
-    "name": "MONRO, INC.",
-    "new": true,
-    "ret": -14.8,
-    "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002847/",
+    "ticker": "SWX",
+    "name": "Southwest Gas Holdings, Inc.",
     "purpose": "이사회·이사",
-    "letter": false
+    "latest": "2026-01-29",
+    "latest_ret": -2.6,
+    "n": 3,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-01-29",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -2.6,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726000218/"
+     },
+     {
+      "date": "2026-01-21",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -6.4,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726000113/"
+     },
+     {
+      "date": "2026-01-02",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -1.0,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726000002/"
+     }
+    ]
    },
    {
     "activist": "Starboard",
-    "date": "2025-09-04",
-    "form": "SCHEDULE 13D",
-    "ticker": "BILL",
-    "name": "BILL Holdings, Inc.",
-    "new": true,
-    "ret": -42.6,
-    "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002532/",
-    "purpose": "이사회·이사",
-    "letter": false
-   },
-   {
-    "activist": "Elliott",
-    "date": "2025-08-08",
-    "form": "SCHEDULE 13D",
-    "ticker": "UNIT",
-    "name": "Uniti Group Inc.",
-    "new": true,
-    "ret": 60.6,
-    "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425003448/",
-    "purpose": "이사회·이사",
-    "letter": false
-   },
-   {
-    "activist": "Starboard",
-    "date": "2025-08-06",
-    "form": "SCHEDULE 13D",
     "ticker": "ROG",
     "name": "ROGERS CORP",
-    "new": true,
-    "ret": 85.3,
-    "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002118/",
     "purpose": "이사회·이사",
-    "letter": false
+    "latest": "2026-01-23",
+    "latest_ret": 42.9,
+    "n": 2,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-01-23",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 42.9,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380526000065/"
+     },
+     {
+      "date": "2025-08-06",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": 85.3,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002118/"
+     }
+    ]
+   },
+   {
+    "activist": "Engaged",
+    "ticker": "BRCC",
+    "name": "BRC Inc.",
+    "purpose": null,
+    "latest": "2026-01-21",
+    "latest_ret": 61.5,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-01-21",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 61.5,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1559771/000092189526000125/"
+     }
+    ]
+   },
+   {
+    "activist": "Legion",
+    "ticker": "NNBR",
+    "name": "NN INC",
+    "purpose": "이사회·이사",
+    "latest": "2026-01-20",
+    "latest_ret": 96.4,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-01-20",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 96.4,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526000110/"
+     }
+    ]
+   },
+   {
+    "activist": "ThirdPoint",
+    "ticker": "FLYX-WT",
+    "name": "FLYEXCLUSIVE INC.",
+    "purpose": "일반(13D)",
+    "latest": "2026-01-13",
+    "latest_ret": -9.1,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2026-01-13",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": -9.1,
+      "purpose": "일반(13D)",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1040273/000089914026000044/"
+     }
+    ]
+   },
+   {
+    "activist": "Elliott",
+    "ticker": "SDRL",
+    "name": "Seadrill Ltd",
+    "purpose": null,
+    "latest": "2025-12-18",
+    "latest_ret": 45.7,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2025-12-18",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 45.7,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425005353/"
+     }
+    ]
+   },
+   {
+    "activist": "Corvex",
+    "ticker": "VSTS",
+    "name": "Vestis Corp",
+    "purpose": null,
+    "latest": "2025-12-17",
+    "latest_ret": 70.9,
+    "n": 1,
+    "has_initial": false,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2025-12-17",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": 70.9,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1535472/000101143825000596/"
+     }
+    ]
+   },
+   {
+    "activist": "Icahn",
+    "ticker": "CTRI",
+    "name": "Centuri Holdings, Inc.",
+    "purpose": "이사회·이사",
+    "latest": "2025-11-13",
+    "latest_ret": 33.5,
+    "n": 1,
+    "has_initial": true,
+    "letter": true,
+    "filings": [
+     {
+      "date": "2025-11-13",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": 33.5,
+      "purpose": "이사회·이사",
+      "letter": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002948/"
+     }
+    ]
+   },
+   {
+    "activist": "Icahn",
+    "ticker": "MNRO",
+    "name": "MONRO, INC.",
+    "purpose": "이사회·이사",
+    "latest": "2025-11-05",
+    "latest_ret": -14.8,
+    "n": 1,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2025-11-05",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": -14.8,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949725002847/"
+     }
+    ]
    },
    {
     "activist": "Starboard",
-    "date": "2025-07-03",
-    "form": "SCHEDULE 13D",
-    "ticker": "TRIP",
-    "name": "TripAdvisor, Inc.",
-    "new": true,
-    "ret": -59.4,
-    "url": "https://www.sec.gov/Archives/edgar/data/1517137/000119380525000968/",
+    "ticker": "BILL",
+    "name": "BILL Holdings, Inc.",
     "purpose": "이사회·이사",
-    "letter": false
+    "latest": "2025-09-04",
+    "latest_ret": -42.6,
+    "n": 1,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2025-09-04",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": -42.6,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002532/"
+     }
+    ]
+   },
+   {
+    "activist": "Elliott",
+    "ticker": "UNIT",
+    "name": "Uniti Group Inc.",
+    "purpose": "이사회·이사",
+    "latest": "2025-08-08",
+    "latest_ret": 60.6,
+    "n": 1,
+    "has_initial": true,
+    "letter": false,
+    "filings": [
+     {
+      "date": "2025-08-08",
+      "form": "SCHEDULE 13D",
+      "new": true,
+      "ret": 60.6,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425003448/"
+     }
+    ]
    }
   ]
  },
- "next_rebal": "2026-06-01",
+ "next_rebal": "2026-09-01",
  "bt_months": [
   "2024-09",
   "2024-10",
@@ -419,7 +820,7 @@
   30.2,
   36.7
  ],
- "spy_since_rebal": 10.51,
+ "spy_since_rebal": 0.0,
  "note": "MF=뮤추얼펀드(N-PORT) · HF=헤지펀드(13F 집중). 검증·곡선은 2024-2026(13F 가용기간). 결합=MF의 mhw·lnp + HF의 best-ideas. point-in-time·공시지연 반영. 투자 조언 아님.",
  "sections": [
   {
@@ -487,250 +888,250 @@
       49.1,
       66.3
      ],
-     "since_rebal": 28.36,
-     "vs_spy": 17.85,
-     "since_rebal10": 32.15,
-     "vs_spy10": 21.64,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
-      {
-       "ticker": "GOOGL",
-       "name": "Alphabet Inc",
-       "funds": 190,
-       "weight": 6.5,
-       "weight10": 18.2,
-       "ret": 24.2
-      },
       {
        "ticker": "NVDA",
        "name": "NVIDIA CORP",
-       "funds": 183,
-       "weight": 6.2,
-       "weight10": 16.4,
-       "ret": 15.7
+       "funds": 185,
+       "weight": 6.5,
+       "weight10": 18.2,
+       "ret": null
       },
       {
        "ticker": "AAPL",
        "name": "APPLE INC.",
-       "funds": 167,
-       "weight": 6.0,
-       "weight10": 14.5,
-       "ret": 18.0
+       "funds": 168,
+       "weight": 6.2,
+       "weight10": 16.4,
+       "ret": null
       },
       {
-       "ticker": "MSFT",
-       "name": "Microsoft",
-       "funds": 218,
-       "weight": 5.8,
-       "weight10": 12.7,
-       "ret": 13.2
+       "ticker": "GOOGL",
+       "name": "Alphabet Inc",
+       "funds": 191,
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": null
       },
       {
        "ticker": "AMZN",
        "name": "Amazon.com Inc",
-       "funds": 199,
-       "weight": 5.6,
-       "weight10": 10.9,
-       "ret": 29.9
+       "funds": 202,
+       "weight": 5.8,
+       "weight10": 12.7,
+       "ret": null
       },
       {
-       "ticker": "HIMX",
-       "name": "HIMAX TECHNOLOGIES INC ADR",
-       "funds": 1,
-       "weight": 5.4,
-       "weight10": 9.1,
-       "ret": 181.4
+       "ticker": "MSFT",
+       "name": "Microsoft",
+       "funds": 220,
+       "weight": 5.6,
+       "weight10": 10.9,
+       "ret": null
       },
       {
        "ticker": "DFUVX",
        "name": "Dimensional US Large Cap Value",
        "funds": 2,
-       "weight": 5.2,
-       "weight10": 7.3,
-       "ret": 5.9
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": null
       },
       {
        "ticker": "META",
        "name": "META PLATFORMS, INC.",
-       "funds": 214,
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": -3.1
-      },
-      {
-       "ticker": "GOOG",
-       "name": "Alphabet Inc",
-       "funds": 124,
-       "weight": 4.7,
-       "weight10": 3.6,
-       "ret": 23.0
+       "funds": 217,
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": null
       },
       {
        "ticker": "GMSWX",
        "name": "GOLDMAN SACHS TR MGD FUT",
        "funds": 1,
-       "weight": 4.5,
-       "weight10": 1.8,
-       "ret": 2.4
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": null
+      },
+      {
+       "ticker": "TSM",
+       "name": "Taiwan Semiconductor ADS",
+       "funds": 67,
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": null
       },
       {
        "ticker": "BRK/B",
        "name": "Berkshire Hathaway Inc",
-       "funds": 81,
-       "weight": 4.3,
-       "weight10": 0,
-       "ret": -1.2
+       "funds": 84,
+       "weight": 4.5,
+       "weight10": 1.8,
+       "ret": null
       },
       {
        "ticker": "V",
        "name": "VISA INC.",
        "funds": 149,
-       "weight": 4.1,
+       "weight": 4.3,
        "weight10": 0,
-       "ret": 2.0
-      },
-      {
-       "ticker": "AVGO",
-       "name": "BROADCOM INC.",
-       "funds": 173,
-       "weight": 3.9,
-       "weight10": 0,
-       "ret": 40.4
-      },
-      {
-       "ticker": "AMD",
-       "name": "ADVANCED MICRO DEVICES, INC.",
-       "funds": 91,
-       "weight": 3.7,
-       "weight10": 0,
-       "ret": 159.8
+       "ret": null
       },
       {
        "ticker": "JPM",
        "name": "JPMorgan Chase & Co",
-       "funds": 144,
+       "funds": 146,
+       "weight": 4.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "GOOG",
+       "name": "Alphabet Inc",
+       "funds": 121,
+       "weight": 3.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "WMT",
+       "name": "Walmart Inc",
+       "funds": 107,
+       "weight": 3.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "AVGO",
+       "name": "BROADCOM INC.",
+       "funds": 178,
        "weight": 3.4,
        "weight10": 0,
-       "ret": 1.1
-      },
-      {
-       "ticker": "TSM",
-       "name": "Taiwan Semiconductor ADS",
-       "funds": 64,
-       "weight": 3.2,
-       "weight10": 0,
-       "ret": 13.7
-      },
-      {
-       "ticker": "JNJ",
-       "name": "Johnson & Johnson",
-       "funds": 131,
-       "weight": 3.0,
-       "weight10": 0,
-       "ret": -8.8
-      },
-      {
-       "ticker": "MA",
-       "name": "MASTERCARD INCORPORATED.",
-       "funds": 131,
-       "weight": 2.8,
-       "weight10": 0,
-       "ret": -5.0
+       "ret": null
       },
       {
        "ticker": "SGLC",
        "name": "SGI US Large Cap Core Equity F",
        "funds": 2,
-       "weight": 2.6,
+       "weight": 3.2,
        "weight10": 0,
-       "ret": 13.0
+       "ret": null
       },
       {
-       "ticker": "LLY",
-       "name": "Eli Lilly",
-       "funds": 137,
+       "ticker": "AMD",
+       "name": "ADVANCED MICRO DEVICES, INC.",
+       "funds": 96,
+       "weight": 3.0,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "LRCX",
+       "name": "LAM RESEARCH CORP",
+       "funds": 113,
+       "weight": 2.8,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MA",
+       "name": "MASTERCARD INCORPORATED.",
+       "funds": 134,
+       "weight": 2.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "NFLX",
+       "name": "NETFLIX, INC.",
+       "funds": 126,
        "weight": 2.4,
        "weight10": 0,
-       "ret": 8.7
+       "ret": null
+      },
+      {
+       "ticker": "MU",
+       "name": "MICRON TECHNOLOGY, INC.",
+       "funds": 98,
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "JNJ",
+       "name": "Johnson & Johnson",
+       "funds": 132,
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "MPLX",
        "name": "MPLX L.P.",
        "funds": 9,
-       "weight": 2.2,
-       "weight10": 0,
-       "ret": -5.8
-      },
-      {
-       "ticker": "MU",
-       "name": "MICRON TECHNOLOGY, INC.",
-       "funds": 87,
-       "weight": 1.9,
-       "weight10": 0,
-       "ret": 135.4
-      },
-      {
-       "ticker": "TSLA",
-       "name": "TESLA, INC.",
-       "funds": 113,
        "weight": 1.7,
        "weight10": 0,
-       "ret": 8.1
-      },
-      {
-       "ticker": "ET",
-       "name": "ENERGY TRANSFER LP",
-       "funds": 11,
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": 2.1
-      },
-      {
-       "ticker": "PLTR",
-       "name": "Palantir Technologies Inc",
-       "funds": 95,
-       "weight": 1.3,
-       "weight10": 0,
-       "ret": 7.8
-      },
-      {
-       "ticker": "LRCX",
-       "name": "LAM RESEARCH CORP",
-       "funds": 106,
-       "weight": 1.1,
-       "weight10": 0,
-       "ret": 37.9
-      },
-      {
-       "ticker": "COF",
-       "name": "CAPITAL ONE FINANCIAL CORP",
-       "funds": 73,
-       "weight": 0.9,
-       "weight10": 0,
-       "ret": -2.9
+       "ret": null
       },
       {
        "ticker": "CRM",
        "name": "Salesforce Inc",
-       "funds": 124,
+       "funds": 115,
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "KO",
+       "name": "COCA COLA CO",
+       "funds": 92,
+       "weight": 1.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "ET",
+       "name": "ENERGY TRANSFER LP",
+       "funds": 13,
+       "weight": 1.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "LLY",
+       "name": "Eli Lilly",
+       "funds": 139,
+       "weight": 0.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "SCHW",
+       "name": "THE CHARLES SCHWAB CORPORATION",
+       "funds": 91,
        "weight": 0.6,
        "weight10": 0,
-       "ret": -0.7
+       "ret": null
       },
       {
-       "ticker": "NFLX",
-       "name": "NETFLIX, INC.",
-       "funds": 132,
+       "ticker": "INTC",
+       "name": "Intel",
+       "funds": 57,
        "weight": 0.4,
        "weight10": 0,
-       "ret": -11.4
+       "ret": null
       },
       {
-       "ticker": "ANET",
-       "name": "Arista Networks Inc",
-       "funds": 90,
+       "ticker": "PLTR",
+       "name": "Palantir Technologies Inc",
+       "funds": 97,
        "weight": 0.2,
        "weight10": 0,
-       "ret": 23.3
+       "ret": null
       }
      ]
     },
@@ -795,122 +1196,122 @@
       61.6,
       73.7
      ],
-     "since_rebal": 27.4,
-     "vs_spy": 16.88,
-     "since_rebal10": 25.36,
-     "vs_spy10": 14.84,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
       {
        "ticker": "NVDA",
        "name": "NVIDIA CORP",
-       "funds": 183,
+       "funds": 185,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": 15.7
+       "ret": null
       },
       {
        "ticker": "GOOGL",
        "name": "Alphabet Inc",
-       "funds": 190,
+       "funds": 191,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": 24.2
-      },
-      {
-       "ticker": "MSFT",
-       "name": "Microsoft",
-       "funds": 218,
-       "weight": 6.0,
-       "weight10": 14.5,
-       "ret": 13.2
+       "ret": null
       },
       {
        "ticker": "AAPL",
        "name": "APPLE INC.",
-       "funds": 167,
+       "funds": 168,
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": null
+      },
+      {
+       "ticker": "MSFT",
+       "name": "Microsoft",
+       "funds": 220,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": 18.0
+       "ret": null
       },
       {
        "ticker": "AMZN",
        "name": "Amazon.com Inc",
-       "funds": 199,
+       "funds": 202,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": 29.9
+       "ret": null
       },
       {
        "ticker": "META",
        "name": "META PLATFORMS, INC.",
-       "funds": 214,
+       "funds": 217,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": -3.1
-      },
-      {
-       "ticker": "AVGO",
-       "name": "BROADCOM INC.",
-       "funds": 173,
-       "weight": 5.2,
-       "weight10": 7.3,
-       "ret": 40.4
-      },
-      {
-       "ticker": "AMD",
-       "name": "ADVANCED MICRO DEVICES, INC.",
-       "funds": 91,
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": 159.8
-      },
-      {
-       "ticker": "JNJ",
-       "name": "Johnson & Johnson",
-       "funds": 131,
-       "weight": 4.7,
-       "weight10": 3.6,
-       "ret": -8.8
-      },
-      {
-       "ticker": "JPM",
-       "name": "JPMorgan Chase & Co",
-       "funds": 144,
-       "weight": 4.5,
-       "weight10": 1.8,
-       "ret": 1.1
-      },
-      {
-       "ticker": "GOOG",
-       "name": "Alphabet Inc",
-       "funds": 124,
-       "weight": 4.3,
-       "weight10": 0,
-       "ret": 23.0
+       "ret": null
       },
       {
        "ticker": "LRCX",
        "name": "LAM RESEARCH CORP",
-       "funds": 106,
-       "weight": 4.1,
-       "weight10": 0,
-       "ret": 37.9
+       "funds": 113,
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": null
       },
       {
-       "ticker": "GH",
-       "name": "Guardant Health Inc",
-       "funds": 62,
-       "weight": 3.9,
+       "ticker": "AVGO",
+       "name": "BROADCOM INC.",
+       "funds": 178,
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": null
+      },
+      {
+       "ticker": "JPM",
+       "name": "JPMorgan Chase & Co",
+       "funds": 146,
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": null
+      },
+      {
+       "ticker": "AMD",
+       "name": "ADVANCED MICRO DEVICES, INC.",
+       "funds": 96,
+       "weight": 4.5,
+       "weight10": 1.8,
+       "ret": null
+      },
+      {
+       "ticker": "WMT",
+       "name": "Walmart Inc",
+       "funds": 107,
+       "weight": 4.3,
        "weight10": 0,
-       "ret": 40.6
+       "ret": null
+      },
+      {
+       "ticker": "KO",
+       "name": "COCA COLA CO",
+       "funds": 92,
+       "weight": 4.1,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "MU",
        "name": "MICRON TECHNOLOGY, INC.",
-       "funds": 87,
+       "funds": 98,
+       "weight": 3.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "JNJ",
+       "name": "Johnson & Johnson",
+       "funds": 132,
        "weight": 3.7,
        "weight10": 0,
-       "ret": 135.4
+       "ret": null
       },
       {
        "ticker": "MPLX",
@@ -918,127 +1319,127 @@
        "funds": 9,
        "weight": 3.4,
        "weight10": 0,
-       "ret": -5.8
+       "ret": null
+      },
+      {
+       "ticker": "MRK",
+       "name": "Merck & Co Inc",
+       "funds": 117,
+       "weight": 3.2,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "LLY",
        "name": "Eli Lilly",
-       "funds": 137,
-       "weight": 3.2,
-       "weight10": 0,
-       "ret": 8.7
-      },
-      {
-       "ticker": "COF",
-       "name": "CAPITAL ONE FINANCIAL CORP",
-       "funds": 73,
+       "funds": 139,
        "weight": 3.0,
        "weight10": 0,
-       "ret": -2.9
+       "ret": null
+      },
+      {
+       "ticker": "APH",
+       "name": "AMPHENOL CORPORATION",
+       "funds": 97,
+       "weight": 2.8,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "PLTR",
        "name": "Palantir Technologies Inc",
-       "funds": 95,
-       "weight": 2.8,
-       "weight10": 0,
-       "ret": 7.8
-      },
-      {
-       "ticker": "UL",
-       "name": "Unilever PLC",
-       "funds": 10,
+       "funds": 97,
        "weight": 2.6,
        "weight10": 0,
-       "ret": -20.3
+       "ret": null
       },
       {
-       "ticker": "SOLS",
-       "name": "SOLSTICE ADVANCED MATERIALS IN",
-       "funds": 33,
+       "ticker": "VRT",
+       "name": "Vertiv Holdings Co.",
+       "funds": 68,
        "weight": 2.4,
        "weight10": 0,
-       "ret": 6.9
+       "ret": null
       },
       {
        "ticker": "ET",
        "name": "ENERGY TRANSFER LP",
-       "funds": 11,
+       "funds": 13,
        "weight": 2.2,
        "weight10": 0,
-       "ret": 2.1
+       "ret": null
       },
       {
-       "ticker": "SSB",
-       "name": "SOUTHSTATE BANK Corp.",
-       "funds": 38,
+       "ticker": "BRK/B",
+       "name": "Berkshire Hathaway Inc",
+       "funds": 84,
        "weight": 1.9,
        "weight10": 0,
-       "ret": -4.4
+       "ret": null
       },
       {
-       "ticker": "ANET",
-       "name": "Arista Networks Inc",
-       "funds": 90,
+       "ticker": "TSM",
+       "name": "Taiwan Semiconductor ADS",
+       "funds": 67,
        "weight": 1.7,
        "weight10": 0,
-       "ret": 23.3
+       "ret": null
+      },
+      {
+       "ticker": "HON",
+       "name": "Honeywell International",
+       "funds": 82,
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "INTC",
        "name": "Intel",
        "funds": 57,
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": 152.0
-      },
-      {
-       "ticker": "C",
-       "name": "CITIGROUP INC.",
-       "funds": 100,
        "weight": 1.3,
        "weight10": 0,
-       "ret": 13.5
+       "ret": null
       },
       {
-       "ticker": "TJX",
-       "name": "THE TJX COMPANIES, INC.",
-       "funds": 100,
+       "ticker": "COF",
+       "name": "CAPITAL ONE FINANCIAL CORP",
+       "funds": 71,
        "weight": 1.1,
        "weight10": 0,
-       "ret": -2.9
+       "ret": null
       },
       {
-       "ticker": "WES",
-       "name": "Western Midstream Partners, L.",
-       "funds": 10,
+       "ticker": "TXN",
+       "name": "Texas Instruments",
+       "funds": 93,
        "weight": 0.9,
        "weight10": 0,
-       "ret": 4.1
+       "ret": null
       },
       {
-       "ticker": "VRT",
-       "name": "Vertiv Holdings Co.",
-       "funds": 59,
+       "ticker": "ANET",
+       "name": "Arista Networks Inc",
+       "funds": 89,
        "weight": 0.6,
        "weight10": 0,
-       "ret": 22.5
+       "ret": null
       },
       {
-       "ticker": "LXP",
-       "name": "LXP Industrial Trust",
-       "funds": 17,
+       "ticker": "SATS",
+       "name": "ECHOSTAR CORP",
+       "funds": 35,
        "weight": 0.4,
        "weight10": 0,
-       "ret": 6.8
+       "ret": null
       },
       {
-       "ticker": "WELL",
-       "name": "WELLTOWER OP LLC",
-       "funds": 64,
+       "ticker": "CSCO",
+       "name": "Cisco Systems",
+       "funds": 114,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -2.0
+       "ret": null
       }
      ]
     },
@@ -1103,250 +1504,250 @@
       43.8,
       52.1
      ],
-     "since_rebal": 13.84,
-     "vs_spy": 3.32,
-     "since_rebal10": 16.15,
-     "vs_spy10": 5.63,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
       {
        "ticker": "NVDA",
        "name": "NVIDIA CORP",
-       "funds": 1592,
+       "funds": 1668,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": 15.7
+       "ret": null
       },
       {
        "ticker": "AAPL",
        "name": "APPLE INC.",
-       "funds": 1787,
+       "funds": 1837,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": 18.0
+       "ret": null
       },
       {
        "ticker": "MSFT",
        "name": "Microsoft",
-       "funds": 1885,
+       "funds": 1893,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": 13.2
+       "ret": null
       },
       {
        "ticker": "AMZN",
        "name": "Amazon.com Inc",
-       "funds": 1793,
+       "funds": 1837,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": 29.9
+       "ret": null
       },
       {
        "ticker": "GOOGL",
        "name": "Alphabet Inc",
-       "funds": 1502,
+       "funds": 1536,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": 24.2
+       "ret": null
       },
       {
        "ticker": "DFAC",
        "name": "DFAC",
-       "funds": 321,
+       "funds": 329,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": 7.9
-      },
-      {
-       "ticker": "V",
-       "name": "VISA INC.",
-       "funds": 943,
-       "weight": 5.2,
-       "weight10": 7.3,
-       "ret": 2.0
-      },
-      {
-       "ticker": "GOOG",
-       "name": "Alphabet Inc",
-       "funds": 1212,
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": 23.0
+       "ret": null
       },
       {
        "ticker": "META",
        "name": "META PLATFORMS, INC.",
-       "funds": 1227,
+       "funds": 1225,
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": null
+      },
+      {
+       "ticker": "GOOG",
+       "name": "Alphabet Inc",
+       "funds": 1239,
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": null
+      },
+      {
+       "ticker": "V",
+       "name": "VISA INC.",
+       "funds": 935,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": -3.1
+       "ret": null
       },
       {
        "ticker": "BRK/B",
        "name": "Berkshire Hathaway Inc",
-       "funds": 1150,
+       "funds": 1186,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": -1.2
+       "ret": null
       },
       {
        "ticker": "TSM",
        "name": "Taiwan Semiconductor ADS",
-       "funds": 544,
+       "funds": 596,
        "weight": 4.3,
        "weight10": 0,
-       "ret": 13.7
-      },
-      {
-       "ticker": "MA",
-       "name": "MASTERCARD INCORPORATED.",
-       "funds": 608,
-       "weight": 4.1,
-       "weight10": 0,
-       "ret": -5.0
-      },
-      {
-       "ticker": "SCHW",
-       "name": "THE CHARLES SCHWAB CORPORATION",
-       "funds": 186,
-       "weight": 3.9,
-       "weight10": 0,
-       "ret": -8.2
-      },
-      {
-       "ticker": "TSLA",
-       "name": "TESLA, INC.",
-       "funds": 869,
-       "weight": 3.7,
-       "weight10": 0,
-       "ret": 8.1
+       "ret": null
       },
       {
        "ticker": "AVGO",
        "name": "BROADCOM INC.",
-       "funds": 870,
-       "weight": 3.4,
+       "funds": 886,
+       "weight": 4.1,
        "weight10": 0,
-       "ret": 40.4
+       "ret": null
       },
       {
-       "ticker": "PDD",
-       "name": "Pinduoduo Inc",
-       "funds": 90,
-       "weight": 3.2,
+       "ticker": "TSLA",
+       "name": "TESLA, INC.",
+       "funds": 860,
+       "weight": 3.9,
        "weight10": 0,
-       "ret": -17.9
+       "ret": null
       },
       {
        "ticker": "JPM",
        "name": "JPMorgan Chase & Co",
-       "funds": 1109,
-       "weight": 3.0,
+       "funds": 1131,
+       "weight": 3.7,
        "weight10": 0,
-       "ret": 1.1
+       "ret": null
+      },
+      {
+       "ticker": "MA",
+       "name": "MASTERCARD INCORPORATED.",
+       "funds": 607,
+       "weight": 3.4,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "IRDM",
        "name": "IRIDIUM COMMUNICATIONS INC.",
        "funds": 5,
+       "weight": 3.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MU",
+       "name": "MICRON TECHNOLOGY, INC.",
+       "funds": 340,
+       "weight": 3.0,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "PDD",
+       "name": "Pinduoduo Inc",
+       "funds": 89,
        "weight": 2.8,
        "weight10": 0,
-       "ret": 110.3
+       "ret": null
+      },
+      {
+       "ticker": "DFIC",
+       "name": "DFIC",
+       "funds": 188,
+       "weight": 2.6,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "LLY",
        "name": "Eli Lilly",
-       "funds": 791,
-       "weight": 2.6,
-       "weight10": 0,
-       "ret": 8.7
-      },
-      {
-       "ticker": "MCO",
-       "name": "MOODY'S CORPORATION",
-       "funds": 122,
+       "funds": 790,
        "weight": 2.4,
        "weight10": 0,
-       "ret": -2.5
+       "ret": null
+      },
+      {
+       "ticker": "AMD",
+       "name": "ADVANCED MICRO DEVICES, INC.",
+       "funds": 407,
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "NFLX",
+       "name": "NETFLIX, INC.",
+       "funds": 583,
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "CNA",
        "name": "CNA Financial Corp",
        "funds": 3,
-       "weight": 2.2,
-       "weight10": 0,
-       "ret": -14.2
-      },
-      {
-       "ticker": "NFLX",
-       "name": "NETFLIX, INC.",
-       "funds": 544,
-       "weight": 1.9,
-       "weight10": 0,
-       "ret": -11.4
-      },
-      {
-       "ticker": "DFAT",
-       "name": "DFAT",
-       "funds": 222,
        "weight": 1.7,
        "weight10": 0,
-       "ret": 3.1
-      },
-      {
-       "ticker": "MU",
-       "name": "MICRON TECHNOLOGY, INC.",
-       "funds": 259,
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": 135.4
-      },
-      {
-       "ticker": "DFAX",
-       "name": "DFAX",
-       "funds": 198,
-       "weight": 1.3,
-       "weight10": 0,
-       "ret": 3.7
-      },
-      {
-       "ticker": "SCHX",
-       "name": "SCHX",
-       "funds": 247,
-       "weight": 1.1,
-       "weight10": 0,
-       "ret": 10.2
-      },
-      {
-       "ticker": "SCHG",
-       "name": "SCHG",
-       "funds": 255,
-       "weight": 0.9,
-       "weight10": 0,
-       "ret": 14.1
-      },
-      {
-       "ticker": "DFIC",
-       "name": "DFIC",
-       "funds": 179,
-       "weight": 0.6,
-       "weight10": 0,
-       "ret": 1.1
+       "ret": null
       },
       {
        "ticker": "DFUS",
        "name": "DFUS",
+       "funds": 209,
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "SCHX",
+       "name": "SCHX",
+       "funds": 255,
+       "weight": 1.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "XOM",
+       "name": "Exxon Mobil Corp",
+       "funds": 993,
+       "weight": 1.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "DFAT",
+       "name": "DFAT",
+       "funds": 231,
+       "weight": 0.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "DFAX",
+       "name": "DFAX",
+       "funds": 205,
+       "weight": 0.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "BSV",
+       "name": "BSV",
        "funds": 203,
        "weight": 0.4,
        "weight10": 0,
-       "ret": 10.4
+       "ret": null
       },
       {
-       "ticker": "DFCF",
-       "name": "DFCF",
-       "funds": 141,
+       "ticker": "WMT",
+       "name": "Walmart Inc",
+       "funds": 777,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -0.7
+       "ret": null
       }
      ]
     }
@@ -1417,10 +1818,10 @@
       43.0,
       47.0
      ],
-     "since_rebal": 7.79,
-     "vs_spy": -2.72,
-     "since_rebal10": 6.69,
-     "vs_spy10": -3.82,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
       {
        "ticker": "MPLX",
@@ -1428,31 +1829,31 @@
        "funds": 9,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -5.8
-      },
-      {
-       "ticker": "ET",
-       "name": "ENERGY TRANSFER LP",
-       "funds": 11,
-       "weight": 6.2,
-       "weight10": 16.4,
-       "ret": 2.1
+       "ret": null
       },
       {
        "ticker": "NVDA",
        "name": "NVIDIA CORP",
-       "funds": 183,
-       "weight": 6.0,
-       "weight10": 14.5,
-       "ret": 15.7
+       "funds": 185,
+       "weight": 6.2,
+       "weight10": 16.4,
+       "ret": null
       },
       {
        "ticker": "PAA",
        "name": "Plains All American Pipeline, ",
        "funds": 7,
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": null
+      },
+      {
+       "ticker": "ET",
+       "name": "ENERGY TRANSFER LP",
+       "funds": 13,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": 7.0
+       "ret": null
       },
       {
        "ticker": "WES",
@@ -1460,23 +1861,23 @@
        "funds": 10,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": 4.1
-      },
-      {
-       "ticker": "MSFT",
-       "name": "Microsoft",
-       "funds": 218,
-       "weight": 5.4,
-       "weight10": 9.1,
-       "ret": 13.2
+       "ret": null
       },
       {
        "ticker": "AAPL",
        "name": "APPLE INC.",
-       "funds": 167,
+       "funds": 168,
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": null
+      },
+      {
+       "ticker": "MSFT",
+       "name": "Microsoft",
+       "funds": 220,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": 18.0
+       "ret": null
       },
       {
        "ticker": "SUN",
@@ -1484,15 +1885,15 @@
        "funds": 9,
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": 3.0
+       "ret": null
       },
       {
        "ticker": "AMZN",
        "name": "Amazon.com Inc",
-       "funds": 199,
+       "funds": 202,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": 29.9
+       "ret": null
       },
       {
        "ticker": "EPD",
@@ -1500,79 +1901,79 @@
        "funds": 21,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": 1.2
+       "ret": null
+      },
+      {
+       "ticker": "GOOGL",
+       "name": "Alphabet Inc",
+       "funds": 191,
+       "weight": 4.3,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "HESM",
        "name": "Hess Midstream LP",
        "funds": 11,
-       "weight": 4.3,
-       "weight10": 0,
-       "ret": -3.1
-      },
-      {
-       "ticker": "GOOGL",
-       "name": "Alphabet Inc",
-       "funds": 190,
        "weight": 4.1,
        "weight10": 0,
-       "ret": 24.2
-      },
-      {
-       "ticker": "AVGO",
-       "name": "BROADCOM INC.",
-       "funds": 173,
-       "weight": 3.9,
-       "weight10": 0,
-       "ret": 40.4
+       "ret": null
       },
       {
        "ticker": "GOOG",
        "name": "Alphabet Inc",
-       "funds": 124,
+       "funds": 121,
+       "weight": 3.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "AVGO",
+       "name": "BROADCOM INC.",
+       "funds": 178,
        "weight": 3.7,
        "weight10": 0,
-       "ret": 23.0
+       "ret": null
       },
       {
        "ticker": "META",
        "name": "META PLATFORMS, INC.",
-       "funds": 214,
+       "funds": 217,
        "weight": 3.4,
        "weight10": 0,
-       "ret": -3.1
-      },
-      {
-       "ticker": "BN",
-       "name": "BROOKFIELD CORP",
-       "funds": 9,
-       "weight": 3.2,
-       "weight10": 0,
-       "ret": 3.9
+       "ret": null
       },
       {
        "ticker": "GEL",
        "name": "Genesis Energy, L.P.",
        "funds": 7,
+       "weight": 3.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "TSM",
+       "name": "Taiwan Semiconductor ADS",
+       "funds": 67,
        "weight": 3.0,
        "weight10": 0,
-       "ret": -16.3
+       "ret": null
+      },
+      {
+       "ticker": "TEVA",
+       "name": "Teva Pharmaceutical Industries",
+       "funds": 9,
+       "weight": 2.8,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "ARCC",
        "name": "ARES CAPITAL CORPORATION",
        "funds": 4,
-       "weight": 2.8,
-       "weight10": 0,
-       "ret": 2.8
-      },
-      {
-       "ticker": "TSM",
-       "name": "Taiwan Semiconductor ADS",
-       "funds": 64,
        "weight": 2.6,
        "weight10": 0,
-       "ret": 13.7
+       "ret": null
       },
       {
        "ticker": "BRK/A",
@@ -1580,87 +1981,87 @@
        "funds": 3,
        "weight": 2.4,
        "weight10": 0,
-       "ret": -1.3
+       "ret": null
+      },
+      {
+       "ticker": "BN",
+       "name": "BROOKFIELD CORP",
+       "funds": 9,
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "WELL",
+       "name": "WELLTOWER OP LLC",
+       "funds": 63,
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "TSLA",
        "name": "TESLA, INC.",
-       "funds": 113,
-       "weight": 2.2,
+       "funds": 111,
+       "weight": 1.7,
        "weight10": 0,
-       "ret": 8.1
+       "ret": null
       },
       {
        "ticker": "USAC",
        "name": "USA Compression Partners, L.P.",
        "funds": 6,
-       "weight": 1.9,
-       "weight10": 0,
-       "ret": 1.1
-      },
-      {
-       "ticker": "VOD",
-       "name": "VODAFONE GRP PLC",
-       "funds": 6,
-       "weight": 1.7,
-       "weight10": 0,
-       "ret": -1.4
-      },
-      {
-       "ticker": "WELL",
-       "name": "WELLTOWER OP LLC",
-       "funds": 64,
        "weight": 1.5,
        "weight10": 0,
-       "ret": -2.0
-      },
-      {
-       "ticker": "SONY",
-       "name": "SONY GROUP CORP   SP ADR",
-       "funds": 3,
-       "weight": 1.3,
-       "weight10": 0,
-       "ret": -4.9
-      },
-      {
-       "ticker": "JPM",
-       "name": "JPMorgan Chase & Co",
-       "funds": 144,
-       "weight": 1.1,
-       "weight10": 0,
-       "ret": 1.1
-      },
-      {
-       "ticker": "FRFHF",
-       "name": "Fairfax Financial Holdings Lim",
-       "funds": 8,
-       "weight": 0.9,
-       "weight10": 0,
-       "ret": -9.0
+       "ret": null
       },
       {
        "ticker": "PLD",
        "name": "Prologis Inc",
-       "funds": 63,
-       "weight": 0.6,
+       "funds": 65,
+       "weight": 1.3,
        "weight10": 0,
-       "ret": 1.3
+       "ret": null
       },
       {
        "ticker": "LLY",
        "name": "Eli Lilly",
-       "funds": 137,
-       "weight": 0.4,
+       "funds": 139,
+       "weight": 1.1,
        "weight10": 0,
-       "ret": 8.7
+       "ret": null
       },
       {
-       "ticker": "NTDOY",
-       "name": "Nintendo Co Ltd",
-       "funds": 3,
+       "ticker": "PAGP",
+       "name": "Plains GP Holdings LP",
+       "funds": 9,
+       "weight": 0.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "JPM",
+       "name": "JPMorgan Chase & Co",
+       "funds": 146,
+       "weight": 0.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "EQIX",
+       "name": "Equinix Inc",
+       "funds": 60,
+       "weight": 0.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "GIL",
+       "name": "Gildan Activewear Inc",
+       "funds": 7,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -19.2
+       "ret": null
       }
      ]
     },
@@ -1725,250 +2126,250 @@
       65.8,
       88.7
      ],
-     "since_rebal": 30.97,
-     "vs_spy": 20.46,
-     "since_rebal10": 44.45,
-     "vs_spy10": 33.93,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
       {
        "ticker": "GOOGL",
        "name": "Alphabet Inc",
-       "funds": 190,
+       "funds": 191,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": 24.2
-      },
-      {
-       "ticker": "AMD",
-       "name": "ADVANCED MICRO DEVICES, INC.",
-       "funds": 91,
-       "weight": 6.2,
-       "weight10": 16.4,
-       "ret": 159.8
-      },
-      {
-       "ticker": "JNJ",
-       "name": "Johnson & Johnson",
-       "funds": 131,
-       "weight": 6.0,
-       "weight10": 14.5,
-       "ret": -8.8
-      },
-      {
-       "ticker": "UL",
-       "name": "Unilever PLC",
-       "funds": 10,
-       "weight": 5.8,
-       "weight10": 12.7,
-       "ret": -20.3
-      },
-      {
-       "ticker": "ANET",
-       "name": "Arista Networks Inc",
-       "funds": 90,
-       "weight": 5.6,
-       "weight10": 10.9,
-       "ret": 23.3
-      },
-      {
-       "ticker": "MU",
-       "name": "MICRON TECHNOLOGY, INC.",
-       "funds": 87,
-       "weight": 5.4,
-       "weight10": 9.1,
-       "ret": 135.4
+       "ret": null
       },
       {
        "ticker": "LRCX",
        "name": "LAM RESEARCH CORP",
-       "funds": 106,
-       "weight": 5.2,
-       "weight10": 7.3,
-       "ret": 37.9
+       "funds": 113,
+       "weight": 6.2,
+       "weight10": 16.4,
+       "ret": null
       },
       {
-       "ticker": "COF",
-       "name": "CAPITAL ONE FINANCIAL CORP",
-       "funds": 73,
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": -2.9
+       "ticker": "AMD",
+       "name": "ADVANCED MICRO DEVICES, INC.",
+       "funds": 96,
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": null
       },
       {
-       "ticker": "PLTR",
-       "name": "Palantir Technologies Inc",
-       "funds": 95,
-       "weight": 4.7,
-       "weight10": 3.6,
-       "ret": 7.8
+       "ticker": "WMT",
+       "name": "Walmart Inc",
+       "funds": 107,
+       "weight": 5.8,
+       "weight10": 12.7,
+       "ret": null
       },
       {
-       "ticker": "JPM",
-       "name": "JPMorgan Chase & Co",
-       "funds": 144,
-       "weight": 4.5,
-       "weight10": 1.8,
-       "ret": 1.1
+       "ticker": "CRM",
+       "name": "Salesforce Inc",
+       "funds": 115,
+       "weight": 5.6,
+       "weight10": 10.9,
+       "ret": null
       },
       {
-       "ticker": "UNIT",
-       "name": "Uniti Group Inc",
-       "funds": 15,
-       "weight": 4.3,
-       "weight10": 0,
-       "ret": 43.3
-      },
-      {
-       "ticker": "SSB",
-       "name": "SOUTHSTATE BANK Corp.",
-       "funds": 38,
-       "weight": 4.1,
-       "weight10": 0,
-       "ret": -4.4
-      },
-      {
-       "ticker": "MRK",
-       "name": "Merck & Co Inc",
-       "funds": 109,
-       "weight": 3.9,
-       "weight10": 0,
-       "ret": -1.5
-      },
-      {
-       "ticker": "META",
-       "name": "META PLATFORMS, INC.",
-       "funds": 214,
-       "weight": 3.7,
-       "weight10": 0,
-       "ret": -3.1
+       "ticker": "KO",
+       "name": "COCA COLA CO",
+       "funds": 92,
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": null
       },
       {
        "ticker": "INTC",
        "name": "Intel",
        "funds": 57,
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": null
+      },
+      {
+       "ticker": "JPM",
+       "name": "JPMorgan Chase & Co",
+       "funds": 146,
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": null
+      },
+      {
+       "ticker": "META",
+       "name": "META PLATFORMS, INC.",
+       "funds": 217,
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": null
+      },
+      {
+       "ticker": "ANET",
+       "name": "Arista Networks Inc",
+       "funds": 89,
+       "weight": 4.5,
+       "weight10": 1.8,
+       "ret": null
+      },
+      {
+       "ticker": "MRK",
+       "name": "Merck & Co Inc",
+       "funds": 117,
+       "weight": 4.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MU",
+       "name": "MICRON TECHNOLOGY, INC.",
+       "funds": 98,
+       "weight": 4.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "COF",
+       "name": "CAPITAL ONE FINANCIAL CORP",
+       "funds": 71,
+       "weight": 3.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "IBKR",
+       "name": "INTERACTIVE BROKERS GROUP INC",
+       "funds": 47,
+       "weight": 3.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "PLTR",
+       "name": "Palantir Technologies Inc",
+       "funds": 97,
        "weight": 3.4,
        "weight10": 0,
-       "ret": 152.0
+       "ret": null
       },
       {
-       "ticker": "GH",
-       "name": "Guardant Health Inc",
-       "funds": 62,
+       "ticker": "NFLX",
+       "name": "NETFLIX, INC.",
+       "funds": 126,
        "weight": 3.2,
        "weight10": 0,
-       "ret": 40.6
+       "ret": null
       },
       {
-       "ticker": "EXPE",
-       "name": "EXPEDIA GROUP INC",
-       "funds": 62,
+       "ticker": "APH",
+       "name": "AMPHENOL CORPORATION",
+       "funds": 97,
        "weight": 3.0,
        "weight10": 0,
-       "ret": 6.3
+       "ret": null
       },
       {
-       "ticker": "CRM",
-       "name": "Salesforce Inc",
-       "funds": 124,
+       "ticker": "NOW",
+       "name": "SERVICENOW INC",
+       "funds": 97,
        "weight": 2.8,
        "weight10": 0,
-       "ret": -0.7
+       "ret": null
+      },
+      {
+       "ticker": "HON",
+       "name": "Honeywell International",
+       "funds": 82,
+       "weight": 2.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "JNJ",
+       "name": "Johnson & Johnson",
+       "funds": 132,
+       "weight": 2.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "PG",
+       "name": "Procter & Gamble",
+       "funds": 116,
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "UNH",
+       "name": "UNITEDHEALTH GROUP INC",
+       "funds": 127,
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "SATS",
+       "name": "ECHOSTAR CORP",
+       "funds": 35,
+       "weight": 1.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "C",
+       "name": "CITIGROUP INC.",
+       "funds": 98,
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "AAPL",
        "name": "APPLE INC.",
-       "funds": 167,
-       "weight": 2.6,
-       "weight10": 0,
-       "ret": 18.0
-      },
-      {
-       "ticker": "CAT",
-       "name": "CATERPILLAR INC",
-       "funds": 72,
-       "weight": 2.4,
-       "weight10": 0,
-       "ret": 16.6
-      },
-      {
-       "ticker": "AVGO",
-       "name": "BROADCOM INC.",
-       "funds": 173,
-       "weight": 2.2,
-       "weight10": 0,
-       "ret": 40.4
-      },
-      {
-       "ticker": "DASH",
-       "name": "DOORDASH INC - A",
-       "funds": 66,
-       "weight": 1.9,
-       "weight10": 0,
-       "ret": -9.7
-      },
-      {
-       "ticker": "TJX",
-       "name": "THE TJX COMPANIES, INC.",
-       "funds": 100,
-       "weight": 1.7,
-       "weight10": 0,
-       "ret": -2.9
-      },
-      {
-       "ticker": "IDXX",
-       "name": "IDEXX Laboratories Inc",
-       "funds": 64,
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": -11.5
-      },
-      {
-       "ticker": "DLR",
-       "name": "DIGITAL REALTY TRUST, INC.",
-       "funds": 47,
+       "funds": 168,
        "weight": 1.3,
        "weight10": 0,
-       "ret": 7.1
+       "ret": null
       },
       {
-       "ticker": "TER",
-       "name": "TERADYNE INC",
-       "funds": 49,
+       "ticker": "EXR",
+       "name": "EXTRA SPACE STORAGE INC.",
+       "funds": 31,
        "weight": 1.1,
        "weight10": 0,
-       "ret": 14.9
+       "ret": null
       },
       {
-       "ticker": "ORCL",
-       "name": "Oracle Corp",
-       "funds": 120,
+       "ticker": "UL",
+       "name": "Unilever PLC",
+       "funds": 16,
        "weight": 0.9,
        "weight10": 0,
-       "ret": 51.8
+       "ret": null
       },
       {
-       "ticker": "AME",
-       "name": "AMETEK INC",
-       "funds": 69,
+       "ticker": "AMZN",
+       "name": "Amazon.com Inc",
+       "funds": 202,
        "weight": 0.6,
        "weight10": 0,
-       "ret": -6.3
+       "ret": null
       },
       {
-       "ticker": "MRCY",
-       "name": "MERCURY SYSTEMS, INC.",
-       "funds": 43,
+       "ticker": "MEOH",
+       "name": "METHANEX CORP",
+       "funds": 8,
        "weight": 0.4,
        "weight10": 0,
-       "ret": 22.7
+       "ret": null
       },
       {
-       "ticker": "COHR",
-       "name": "Coherent Corp",
-       "funds": 51,
+       "ticker": "UNP",
+       "name": "UNION PACIFIC CORPORATION",
+       "funds": 71,
        "weight": 0.2,
        "weight10": 0,
-       "ret": 20.9
+       "ret": null
       }
      ]
     },
@@ -2033,90 +2434,90 @@
       48.5,
       56.9
      ],
-     "since_rebal": 10.96,
-     "vs_spy": 0.45,
-     "since_rebal10": 18.96,
-     "vs_spy10": 8.45,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
       {
        "ticker": "NVDA",
        "name": "NVIDIA CORP",
-       "funds": 183,
+       "funds": 185,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": 15.7
+       "ret": null
       },
       {
        "ticker": "MSFT",
        "name": "Microsoft",
-       "funds": 218,
+       "funds": 220,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": 13.2
+       "ret": null
       },
       {
        "ticker": "AAPL",
        "name": "APPLE INC.",
-       "funds": 167,
+       "funds": 168,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": 18.0
+       "ret": null
       },
       {
        "ticker": "AMZN",
        "name": "Amazon.com Inc",
-       "funds": 199,
+       "funds": 202,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": 29.9
+       "ret": null
       },
       {
        "ticker": "GOOGL",
        "name": "Alphabet Inc",
-       "funds": 190,
+       "funds": 191,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": 24.2
-      },
-      {
-       "ticker": "AVGO",
-       "name": "BROADCOM INC.",
-       "funds": 173,
-       "weight": 5.4,
-       "weight10": 9.1,
-       "ret": 40.4
+       "ret": null
       },
       {
        "ticker": "META",
        "name": "META PLATFORMS, INC.",
-       "funds": 214,
+       "funds": 217,
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": null
+      },
+      {
+       "ticker": "AVGO",
+       "name": "BROADCOM INC.",
+       "funds": 178,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": -3.1
+       "ret": null
       },
       {
        "ticker": "GOOG",
        "name": "Alphabet Inc",
-       "funds": 124,
+       "funds": 121,
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": 23.0
+       "ret": null
       },
       {
        "ticker": "JPM",
        "name": "JPMorgan Chase & Co",
-       "funds": 144,
+       "funds": 146,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": 1.1
+       "ret": null
       },
       {
-       "ticker": "TSLA",
-       "name": "TESLA, INC.",
-       "funds": 113,
+       "ticker": "LLY",
+       "name": "Eli Lilly",
+       "funds": 139,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": 8.1
+       "ret": null
       },
       {
        "ticker": "V",
@@ -2124,159 +2525,159 @@
        "funds": 149,
        "weight": 4.3,
        "weight10": 0,
-       "ret": 2.0
+       "ret": null
       },
       {
-       "ticker": "LLY",
-       "name": "Eli Lilly",
-       "funds": 137,
+       "ticker": "TSLA",
+       "name": "TESLA, INC.",
+       "funds": 111,
        "weight": 4.1,
        "weight10": 0,
-       "ret": 8.7
+       "ret": null
       },
       {
        "ticker": "MA",
        "name": "MASTERCARD INCORPORATED.",
-       "funds": 131,
+       "funds": 134,
        "weight": 3.9,
        "weight10": 0,
-       "ret": -5.0
+       "ret": null
       },
       {
        "ticker": "JNJ",
        "name": "Johnson & Johnson",
-       "funds": 131,
+       "funds": 132,
        "weight": 3.7,
        "weight10": 0,
-       "ret": -8.8
-      },
-      {
-       "ticker": "NFLX",
-       "name": "NETFLIX, INC.",
-       "funds": 132,
-       "weight": 3.4,
-       "weight10": 0,
-       "ret": -11.4
+       "ret": null
       },
       {
        "ticker": "XOM",
        "name": "Exxon Mobil Corp",
        "funds": 108,
-       "weight": 3.2,
+       "weight": 3.4,
        "weight10": 0,
-       "ret": -5.2
-      },
-      {
-       "ticker": "BAC",
-       "name": "Bank of America Corp",
-       "funds": 110,
-       "weight": 3.0,
-       "weight10": 0,
-       "ret": 4.2
+       "ret": null
       },
       {
        "ticker": "TSM",
        "name": "Taiwan Semiconductor ADS",
-       "funds": 64,
-       "weight": 2.8,
+       "funds": 67,
+       "weight": 3.2,
        "weight10": 0,
-       "ret": 13.7
+       "ret": null
       },
       {
-       "ticker": "BRK/B",
-       "name": "Berkshire Hathaway Inc",
-       "funds": 81,
-       "weight": 2.6,
+       "ticker": "NFLX",
+       "name": "NETFLIX, INC.",
+       "funds": 126,
+       "weight": 3.0,
        "weight10": 0,
-       "ret": -1.2
+       "ret": null
+      },
+      {
+       "ticker": "BAC",
+       "name": "Bank of America Corp",
+       "funds": 114,
+       "weight": 2.8,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "WELL",
        "name": "WELLTOWER OP LLC",
-       "funds": 64,
+       "funds": 63,
+       "weight": 2.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "BRK/B",
+       "name": "Berkshire Hathaway Inc",
+       "funds": 84,
        "weight": 2.4,
        "weight10": 0,
-       "ret": -2.0
+       "ret": null
       },
       {
        "ticker": "ABBV",
        "name": "AbbVie",
-       "funds": 122,
+       "funds": 119,
        "weight": 2.2,
        "weight10": 0,
-       "ret": -6.3
-      },
-      {
-       "ticker": "WFC",
-       "name": "WELLS FARGO & CO",
-       "funds": 87,
-       "weight": 1.9,
-       "weight10": 0,
-       "ret": -5.6
+       "ret": null
       },
       {
        "ticker": "PLD",
        "name": "Prologis Inc",
-       "funds": 63,
-       "weight": 1.7,
+       "funds": 65,
+       "weight": 1.9,
        "weight10": 0,
-       "ret": 1.3
-      },
-      {
-       "ticker": "CSCO",
-       "name": "Cisco Systems",
-       "funds": 110,
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": 52.4
-      },
-      {
-       "ticker": "ORCL",
-       "name": "Oracle Corp",
-       "funds": 120,
-       "weight": 1.3,
-       "weight10": 0,
-       "ret": 51.8
-      },
-      {
-       "ticker": "C",
-       "name": "CITIGROUP INC.",
-       "funds": 100,
-       "weight": 1.1,
-       "weight10": 0,
-       "ret": 13.5
-      },
-      {
-       "ticker": "UNH",
-       "name": "UNITEDHEALTH GROUP INC",
-       "funds": 128,
-       "weight": 0.9,
-       "weight10": 0,
-       "ret": 30.0
-      },
-      {
-       "ticker": "CRM",
-       "name": "Salesforce Inc",
-       "funds": 124,
-       "weight": 0.6,
-       "weight10": 0,
-       "ret": -0.7
+       "ret": null
       },
       {
        "ticker": "WMT",
        "name": "Walmart Inc",
+       "funds": 107,
+       "weight": 1.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "CSCO",
+       "name": "Cisco Systems",
+       "funds": 114,
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "VZ",
+       "name": "Verizon Communications Inc",
+       "funds": 86,
+       "weight": 1.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "WFC",
+       "name": "WELLS FARGO & CO",
+       "funds": 90,
+       "weight": 1.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "C",
+       "name": "CITIGROUP INC.",
+       "funds": 98,
+       "weight": 0.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "LRCX",
+       "name": "LAM RESEARCH CORP",
+       "funds": 113,
+       "weight": 0.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "COST",
+       "name": "COSTCO WHOLESALE CORPORATION",
        "funds": 104,
        "weight": 0.4,
        "weight10": 0,
-       "ret": -8.6
+       "ret": null
       },
       {
-       "ticker": "TMO",
-       "name": "Thermo Fisher Scientific Inc",
-       "funds": 90,
+       "ticker": "EQIX",
+       "name": "Equinix Inc",
+       "funds": 60,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -3.1
+       "ret": null
       }
      ]
     },
@@ -2341,250 +2742,250 @@
       36.1,
       43.0
      ],
-     "since_rebal": 21.66,
-     "vs_spy": 11.15,
-     "since_rebal10": 19.8,
-     "vs_spy10": 9.29,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
       {
-       "ticker": "GOOGL",
-       "name": "Alphabet Inc",
-       "funds": 190,
+       "ticker": "META",
+       "name": "META PLATFORMS, INC.",
+       "funds": 217,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": 24.2
-      },
-      {
-       "ticker": "AVGO",
-       "name": "BROADCOM INC.",
-       "funds": 173,
-       "weight": 6.2,
-       "weight10": 16.4,
-       "ret": 40.4
+       "ret": null
       },
       {
        "ticker": "MSFT",
        "name": "Microsoft",
-       "funds": 218,
-       "weight": 6.0,
-       "weight10": 14.5,
-       "ret": 13.2
-      },
-      {
-       "ticker": "AAPL",
-       "name": "APPLE INC.",
-       "funds": 167,
-       "weight": 5.8,
-       "weight10": 12.7,
-       "ret": 18.0
-      },
-      {
-       "ticker": "GOOG",
-       "name": "Alphabet Inc",
-       "funds": 124,
-       "weight": 5.6,
-       "weight10": 10.9,
-       "ret": 23.0
-      },
-      {
-       "ticker": "LLY",
-       "name": "Eli Lilly",
-       "funds": 137,
-       "weight": 5.4,
-       "weight10": 9.1,
-       "ret": 8.7
-      },
-      {
-       "ticker": "AMZN",
-       "name": "Amazon.com Inc",
-       "funds": 199,
-       "weight": 5.2,
-       "weight10": 7.3,
-       "ret": 29.9
-      },
-      {
-       "ticker": "INTU",
-       "name": "INTUIT INC.",
-       "funds": 108,
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": -20.6
-      },
-      {
-       "ticker": "TSLA",
-       "name": "TESLA, INC.",
-       "funds": 113,
-       "weight": 4.7,
-       "weight10": 3.6,
-       "ret": 8.1
-      },
-      {
-       "ticker": "TMO",
-       "name": "Thermo Fisher Scientific Inc",
-       "funds": 90,
-       "weight": 4.5,
-       "weight10": 1.8,
-       "ret": -3.1
-      },
-      {
-       "ticker": "AMD",
-       "name": "ADVANCED MICRO DEVICES, INC.",
-       "funds": 91,
-       "weight": 4.3,
-       "weight10": 0,
-       "ret": 159.8
-      },
-      {
-       "ticker": "PLTR",
-       "name": "Palantir Technologies Inc",
-       "funds": 95,
-       "weight": 4.1,
-       "weight10": 0,
-       "ret": 7.8
-      },
-      {
-       "ticker": "QCOM",
-       "name": "QUALCOMM INCORPORATED",
-       "funds": 107,
-       "weight": 3.9,
-       "weight10": 0,
-       "ret": 79.1
-      },
-      {
-       "ticker": "CRM",
-       "name": "Salesforce Inc",
-       "funds": 124,
-       "weight": 3.7,
-       "weight10": 0,
-       "ret": -0.7
-      },
-      {
-       "ticker": "UNH",
-       "name": "UNITEDHEALTH GROUP INC",
-       "funds": 128,
-       "weight": 3.4,
-       "weight10": 0,
-       "ret": 30.0
+       "funds": 220,
+       "weight": 6.2,
+       "weight10": 16.4,
+       "ret": null
       },
       {
        "ticker": "SHOP",
        "name": "SHOPIFY INC.",
        "funds": 52,
-       "weight": 3.2,
-       "weight10": 0,
-       "ret": -0.6
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": null
       },
       {
-       "ticker": "GH",
-       "name": "Guardant Health Inc",
-       "funds": 62,
-       "weight": 3.0,
-       "weight10": 0,
-       "ret": 40.6
-      },
-      {
-       "ticker": "ISRG",
-       "name": "Intuitive Surgical Inc",
-       "funds": 91,
-       "weight": 2.8,
-       "weight10": 0,
-       "ret": -14.4
-      },
-      {
-       "ticker": "UL",
-       "name": "Unilever PLC",
-       "funds": 10,
-       "weight": 2.6,
-       "weight10": 0,
-       "ret": -20.3
-      },
-      {
-       "ticker": "JPM",
-       "name": "JPMorgan Chase & Co",
-       "funds": 144,
-       "weight": 2.4,
-       "weight10": 0,
-       "ret": 1.1
-      },
-      {
-       "ticker": "NOW",
-       "name": "SERVICENOW INC",
+       "ticker": "INTU",
+       "name": "INTUIT INC.",
        "funds": 103,
-       "weight": 2.2,
-       "weight10": 0,
-       "ret": 13.7
-      },
-      {
-       "ticker": "BAC",
-       "name": "Bank of America Corp",
-       "funds": 110,
-       "weight": 1.9,
-       "weight10": 0,
-       "ret": 4.2
-      },
-      {
-       "ticker": "APP",
-       "name": "AppLovin Corp",
-       "funds": 89,
-       "weight": 1.7,
-       "weight10": 0,
-       "ret": 41.6
-      },
-      {
-       "ticker": "IBM",
-       "name": "INTERNATIONAL BUSINESS MACHINE",
-       "funds": 75,
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": 25.3
-      },
-      {
-       "ticker": "DHR",
-       "name": "DANAHER CORPORATION",
-       "funds": 72,
-       "weight": 1.3,
-       "weight10": 0,
-       "ret": -11.1
+       "weight": 5.8,
+       "weight10": 12.7,
+       "ret": null
       },
       {
        "ticker": "SNOW",
        "name": "Snowflake Inc",
-       "funds": 61,
+       "funds": 60,
+       "weight": 5.6,
+       "weight10": 10.9,
+       "ret": null
+      },
+      {
+       "ticker": "MELI",
+       "name": "Mercado Libre, Inc.",
+       "funds": 40,
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": null
+      },
+      {
+       "ticker": "APP",
+       "name": "AppLovin Corp",
+       "funds": 78,
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": null
+      },
+      {
+       "ticker": "CRM",
+       "name": "Salesforce Inc",
+       "funds": 115,
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": null
+      },
+      {
+       "ticker": "BABA",
+       "name": "ALIBABA GROUP HOLDING LIMITED",
+       "funds": 11,
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": null
+      },
+      {
+       "ticker": "DASH",
+       "name": "DOORDASH INC - A",
+       "funds": 66,
+       "weight": 4.5,
+       "weight10": 1.8,
+       "ret": null
+      },
+      {
+       "ticker": "ZS",
+       "name": "Zscaler Inc",
+       "funds": 48,
+       "weight": 4.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "HUBS",
+       "name": "HubSpot Inc",
+       "funds": 50,
+       "weight": 4.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "PLTR",
+       "name": "Palantir Technologies Inc",
+       "funds": 97,
+       "weight": 3.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MSI",
+       "name": "MOTOROLA SOLUTIONS INC",
+       "funds": 70,
+       "weight": 3.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "ANET",
+       "name": "Arista Networks Inc",
+       "funds": 89,
+       "weight": 3.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MA",
+       "name": "MASTERCARD INCORPORATED.",
+       "funds": 134,
+       "weight": 3.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "V",
+       "name": "VISA INC.",
+       "funds": 149,
+       "weight": 3.0,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "DT",
+       "name": "Dynatrace Inc",
+       "funds": 38,
+       "weight": 2.8,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "IOT",
+       "name": "Samsara, Inc.",
+       "funds": 40,
+       "weight": 2.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "NFLX",
+       "name": "NETFLIX, INC.",
+       "funds": 126,
+       "weight": 2.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "AMZN",
+       "name": "Amazon.com Inc",
+       "funds": 202,
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "NET",
+       "name": "CLOUDFLARE, INC.",
+       "funds": 47,
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "ORCL",
+       "name": "Oracle Corp",
+       "funds": 109,
+       "weight": 1.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "CDNS",
+       "name": "CADENCE DESIGN SYSTEMS, INC.",
+       "funds": 67,
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "LLY",
+       "name": "Eli Lilly",
+       "funds": 139,
+       "weight": 1.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MRK",
+       "name": "Merck & Co Inc",
+       "funds": 117,
        "weight": 1.1,
        "weight10": 0,
-       "ret": 50.0
+       "ret": null
       },
       {
-       "ticker": "RKT",
-       "name": "ROCKET COMPANIES, INC.",
-       "funds": 25,
+       "ticker": "JNJ",
+       "name": "Johnson & Johnson",
+       "funds": 132,
        "weight": 0.9,
        "weight10": 0,
-       "ret": -13.6
+       "ret": null
       },
       {
-       "ticker": "WELL",
-       "name": "WELLTOWER OP LLC",
-       "funds": 64,
+       "ticker": "DHR",
+       "name": "DANAHER CORPORATION",
+       "funds": 74,
        "weight": 0.6,
        "weight10": 0,
-       "ret": -2.0
+       "ret": null
       },
       {
-       "ticker": "SSB",
-       "name": "SOUTHSTATE BANK Corp.",
-       "funds": 38,
+       "ticker": "BRK/B",
+       "name": "Berkshire Hathaway Inc",
+       "funds": 84,
        "weight": 0.4,
        "weight10": 0,
-       "ret": -4.4
+       "ret": null
       },
       {
-       "ticker": "INSM",
-       "name": "INSMED INC",
-       "funds": 80,
+       "ticker": "TMO",
+       "name": "Thermo Fisher Scientific Inc",
+       "funds": 90,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -26.9
+       "ret": null
       }
      ]
     },
@@ -2649,250 +3050,250 @@
       93.8,
       137.2
      ],
-     "since_rebal": 49.09,
-     "vs_spy": 38.58,
-     "since_rebal10": 61.43,
-     "vs_spy10": 50.92,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
-      {
-       "ticker": "SOLS",
-       "name": "SOLSTICE ADVANCED MATERIALS IN",
-       "funds": 33,
-       "weight": 6.5,
-       "weight10": 18.2,
-       "ret": 6.9
-      },
-      {
-       "ticker": "AMD",
-       "name": "ADVANCED MICRO DEVICES, INC.",
-       "funds": 91,
-       "weight": 6.2,
-       "weight10": 16.4,
-       "ret": 159.8
-      },
       {
        "ticker": "Q",
        "name": "QNITY ELECTRONICS INC",
-       "funds": 19,
-       "weight": 6.0,
-       "weight10": 14.5,
-       "ret": 25.8
+       "funds": 31,
+       "weight": 6.5,
+       "weight10": 18.2,
+       "ret": null
       },
       {
-       "ticker": "GH",
-       "name": "Guardant Health Inc",
-       "funds": 62,
-       "weight": 5.8,
-       "weight10": 12.7,
-       "ret": 40.6
-      },
-      {
-       "ticker": "LXP",
-       "name": "LXP Industrial Trust",
-       "funds": 17,
-       "weight": 5.6,
-       "weight10": 10.9,
-       "ret": 6.8
-      },
-      {
-       "ticker": "BE",
-       "name": "BLOOM ENERGY CORP- A",
-       "funds": 50,
-       "weight": 5.4,
-       "weight10": 9.1,
-       "ret": 71.7
+       "ticker": "VSNT",
+       "name": "VERSANT MEDIA GROUP INC",
+       "funds": 22,
+       "weight": 6.2,
+       "weight10": 16.4,
+       "ret": null
       },
       {
        "ticker": "SNDK",
        "name": "SANDISK CORP",
-       "funds": 34,
-       "weight": 5.2,
-       "weight10": 7.3,
-       "ret": 173.8
-      },
-      {
-       "ticker": "FG",
-       "name": "F&G Annuities & Life Inc",
-       "funds": 22,
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": 25.1
+       "funds": 48,
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": null
       },
       {
        "ticker": "LRCX",
        "name": "LAM RESEARCH CORP",
-       "funds": 106,
-       "weight": 4.7,
-       "weight10": 3.6,
-       "ret": 37.9
-      },
-      {
-       "ticker": "MU",
-       "name": "MICRON TECHNOLOGY, INC.",
-       "funds": 87,
-       "weight": 4.5,
-       "weight10": 1.8,
-       "ret": 135.4
-      },
-      {
-       "ticker": "FIX",
-       "name": "Comfort Systems USA Inc",
-       "funds": 74,
-       "weight": 4.3,
-       "weight10": 0,
-       "ret": 27.2
+       "funds": 113,
+       "weight": 5.8,
+       "weight10": 12.7,
+       "ret": null
       },
       {
        "ticker": "WDC",
        "name": "WESTERN DIGITAL CORP",
-       "funds": 65,
-       "weight": 4.1,
-       "weight10": 0,
-       "ret": 96.8
+       "funds": 77,
+       "weight": 5.6,
+       "weight10": 10.9,
+       "ret": null
       },
       {
-       "ticker": "COGT",
-       "name": "Cogent Biosciences Inc",
-       "funds": 26,
-       "weight": 3.9,
-       "weight10": 0,
-       "ret": -10.1
-      },
-      {
-       "ticker": "SSB",
-       "name": "SOUTHSTATE BANK Corp.",
-       "funds": 38,
-       "weight": 3.7,
-       "weight10": 0,
-       "ret": -4.4
-      },
-      {
-       "ticker": "INTC",
-       "name": "Intel",
-       "funds": 57,
-       "weight": 3.4,
-       "weight10": 0,
-       "ret": 152.0
-      },
-      {
-       "ticker": "PRAX",
-       "name": "Praxis Precision Medicines Inc",
-       "funds": 26,
-       "weight": 3.2,
-       "weight10": 0,
-       "ret": 5.9
+       "ticker": "INDV",
+       "name": "Indivior Pharmaceuticals Inc",
+       "funds": 17,
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": null
       },
       {
        "ticker": "VRT",
        "name": "Vertiv Holdings Co.",
-       "funds": 59,
+       "funds": 68,
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": null
+      },
+      {
+       "ticker": "AMD",
+       "name": "ADVANCED MICRO DEVICES, INC.",
+       "funds": 96,
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": null
+      },
+      {
+       "ticker": "MU",
+       "name": "MICRON TECHNOLOGY, INC.",
+       "funds": 98,
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": null
+      },
+      {
+       "ticker": "SATS",
+       "name": "ECHOSTAR CORP",
+       "funds": 35,
+       "weight": 4.5,
+       "weight10": 1.8,
+       "ret": null
+      },
+      {
+       "ticker": "TXN",
+       "name": "Texas Instruments",
+       "funds": 93,
+       "weight": 4.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "GH",
+       "name": "Guardant Health Inc",
+       "funds": 67,
+       "weight": 4.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MKSI",
+       "name": "MKS Instruments Inc",
+       "funds": 47,
+       "weight": 3.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MIRM",
+       "name": "Mirum Pharmaceuticals Inc",
+       "funds": 33,
+       "weight": 3.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "ROST",
+       "name": "ROSS STORES INC",
+       "funds": 71,
+       "weight": 3.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "CIEN",
+       "name": "CIENA CORP",
+       "funds": 41,
+       "weight": 3.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "DOCN",
+       "name": "DigitalOcean Holdings, Inc.",
+       "funds": 29,
        "weight": 3.0,
        "weight10": 0,
-       "ret": 22.5
-      },
-      {
-       "ticker": "KLAC",
-       "name": "KLA CORPORATION",
-       "funds": 78,
-       "weight": 2.8,
-       "weight10": 0,
-       "ret": 25.4
-      },
-      {
-       "ticker": "MIR",
-       "name": "Mirion Technologies Inc",
-       "funds": 43,
-       "weight": 2.6,
-       "weight10": 0,
-       "ret": -18.0
-      },
-      {
-       "ticker": "PLTR",
-       "name": "Palantir Technologies Inc",
-       "funds": 95,
-       "weight": 2.4,
-       "weight10": 0,
-       "ret": 7.8
-      },
-      {
-       "ticker": "IOT",
-       "name": "Samsara, Inc.",
-       "funds": 41,
-       "weight": 2.2,
-       "weight10": 0,
-       "ret": 20.2
-      },
-      {
-       "ticker": "RVMD",
-       "name": "REVOLUTION Medicines Inc",
-       "funds": 47,
-       "weight": 1.9,
-       "weight10": 0,
-       "ret": 55.0
-      },
-      {
-       "ticker": "LLYVK",
-       "name": "Liberty Live Holdings Inc",
-       "funds": 11,
-       "weight": 1.7,
-       "weight10": 0,
-       "ret": -0.7
-      },
-      {
-       "ticker": "SWKS",
-       "name": "SKYWORKS SOLUTIONS INC",
-       "funds": 55,
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": 33.3
-      },
-      {
-       "ticker": "UL",
-       "name": "Unilever PLC",
-       "funds": 10,
-       "weight": 1.3,
-       "weight10": 0,
-       "ret": -20.3
-      },
-      {
-       "ticker": "JNJ",
-       "name": "Johnson & Johnson",
-       "funds": 131,
-       "weight": 1.1,
-       "weight10": 0,
-       "ret": -8.8
-      },
-      {
-       "ticker": "REGN",
-       "name": "Regeneron Pharmaceuticals Inc",
-       "funds": 87,
-       "weight": 0.9,
-       "weight10": 0,
-       "ret": -22.1
-      },
-      {
-       "ticker": "COF",
-       "name": "CAPITAL ONE FINANCIAL CORP",
-       "funds": 73,
-       "weight": 0.6,
-       "weight10": 0,
-       "ret": -2.9
+       "ret": null
       },
       {
        "ticker": "KTOS",
        "name": "KRATOS DEFENSE and SECURITY SO",
-       "funds": 47,
-       "weight": 0.4,
+       "funds": 50,
+       "weight": 2.8,
        "weight10": 0,
-       "ret": -29.3
+       "ret": null
       },
       {
-       "ticker": "LITE",
-       "name": "LUMENTUM HOLDINGS INC.",
-       "funds": 40,
+       "ticker": "LXP",
+       "name": "LXP Industrial Trust",
+       "funds": 19,
+       "weight": 2.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "PIPR",
+       "name": "Piper Sandler Cos",
+       "funds": 11,
+       "weight": 2.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "SYY",
+       "name": "SYSCO CORPORATION",
+       "funds": 61,
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "PLTR",
+       "name": "Palantir Technologies Inc",
+       "funds": 97,
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "APH",
+       "name": "AMPHENOL CORPORATION",
+       "funds": 97,
+       "weight": 1.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "KLAC",
+       "name": "KLA CORPORATION",
+       "funds": 85,
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MDLN",
+       "name": "MEDLINE INC",
+       "funds": 15,
+       "weight": 1.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "COHR",
+       "name": "Coherent Corp",
+       "funds": 55,
+       "weight": 1.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "AMP",
+       "name": "AMERIPRISE FINANCIAL, INC.",
+       "funds": 62,
+       "weight": 0.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "UL",
+       "name": "Unilever PLC",
+       "funds": 16,
+       "weight": 0.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "AXP",
+       "name": "AMERICAN EXPRESS CO",
+       "funds": 80,
+       "weight": 0.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "KO",
+       "name": "COCA COLA CO",
+       "funds": 92,
        "weight": 0.2,
        "weight10": 0,
-       "ret": 9.2
+       "ret": null
       }
      ]
     }
@@ -2963,10 +3364,10 @@
       13.6,
       20.4
      ],
-     "since_rebal": 14.97,
-     "vs_spy": 4.45,
-     "since_rebal10": 18.06,
-     "vs_spy10": 7.55,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
       {
        "ticker": "CNA",
@@ -2974,7 +3375,7 @@
        "funds": 3,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -14.2
+       "ret": null
       },
       {
        "ticker": "IRDM",
@@ -2982,231 +3383,231 @@
        "funds": 5,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": 110.3
+       "ret": null
+      },
+      {
+       "ticker": "NAVN",
+       "name": "NAVAN, INC.",
+       "funds": 3,
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": null
       },
       {
        "ticker": "CMTG",
        "name": "Claros Mortgage Trust Inc",
        "funds": 3,
-       "weight": 6.0,
-       "weight10": 14.5,
-       "ret": 5.2
-      },
-      {
-       "ticker": "ORBS",
-       "name": "Eightco Holdings Inc",
-       "funds": 4,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -14.3
+       "ret": null
       },
       {
-       "ticker": "USAR",
-       "name": "USA RARE EARTH INC",
+       "ticker": "VEON",
+       "name": "VEON",
        "funds": 3,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": 34.2
-      },
-      {
-       "ticker": "FMX",
-       "name": "Fomento Economico Mexicano SAB",
-       "funds": 15,
-       "weight": 5.4,
-       "weight10": 9.1,
-       "ret": 7.6
-      },
-      {
-       "ticker": "EH",
-       "name": "EH",
-       "funds": 4,
-       "weight": 5.2,
-       "weight10": 7.3,
-       "ret": -16.9
-      },
-      {
-       "ticker": "EBI",
-       "name": "EBI",
-       "funds": 5,
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": 6.9
+       "ret": null
       },
       {
        "ticker": "PSBD",
        "name": "PSBD",
-       "funds": 4,
-       "weight": 4.7,
-       "weight10": 3.6,
-       "ret": 3.1
+       "funds": 6,
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": null
+      },
+      {
+       "ticker": "FG",
+       "name": "F&G Annuities & Life Inc",
+       "funds": 6,
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": null
+      },
+      {
+       "ticker": "FMX",
+       "name": "Fomento Economico Mexicano SAB",
+       "funds": 16,
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": null
       },
       {
        "ticker": "BANF",
        "name": "BancFirst Corp.",
        "funds": 3,
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": null
+      },
+      {
+       "ticker": "ORBS",
+       "name": "Eightco Holdings Inc",
+       "funds": 6,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": -2.0
+       "ret": null
+      },
+      {
+       "ticker": "EBI",
+       "name": "EBI",
+       "funds": 5,
+       "weight": 4.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MNR",
+       "name": "MACH NATURAL RESOURCES LP",
+       "funds": 5,
+       "weight": 4.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "GORO",
+       "name": "Gold Resource Corp",
+       "funds": 3,
+       "weight": 3.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "SVV",
+       "name": "Savers Value Village Inc.",
+       "funds": 5,
+       "weight": 3.7,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "BW",
        "name": "Babcock & Wilcox Enterprises I",
-       "funds": 6,
-       "weight": 4.3,
+       "funds": 7,
+       "weight": 3.4,
        "weight10": 0,
-       "ret": 105.0
+       "ret": null
+      },
+      {
+       "ticker": "PEO",
+       "name": "Adams Natural Resour",
+       "funds": 3,
+       "weight": 3.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "WCPB",
+       "name": "WCPB",
+       "funds": 3,
+       "weight": 3.0,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "QQH",
        "name": "QQH",
        "funds": 3,
-       "weight": 4.1,
+       "weight": 2.8,
        "weight10": 0,
-       "ret": 17.5
+       "ret": null
       },
       {
-       "ticker": "SVV",
-       "name": "Savers Value Village Inc.",
-       "funds": 6,
-       "weight": 3.9,
+       "ticker": "KOF",
+       "name": "Coca-Cola FEMSA SAB de CV",
+       "funds": 10,
+       "weight": 2.6,
        "weight10": 0,
-       "ret": 0.4
+       "ret": null
       },
       {
        "ticker": "MFDX",
        "name": "MFDX",
        "funds": 4,
-       "weight": 3.7,
+       "weight": 2.4,
        "weight10": 0,
-       "ret": 0.3
+       "ret": null
       },
       {
        "ticker": "SKYY",
        "name": "SKYY",
        "funds": 11,
-       "weight": 3.4,
+       "weight": 2.2,
        "weight10": 0,
-       "ret": 30.9
+       "ret": null
       },
       {
-       "ticker": "MNR",
-       "name": "MACH NATURAL RESOURCES LP",
-       "funds": 6,
-       "weight": 3.2,
+       "ticker": "OTF",
+       "name": "OTF",
+       "funds": 11,
+       "weight": 1.9,
        "weight10": 0,
-       "ret": 7.2
+       "ret": null
       },
       {
-       "ticker": "RNG",
-       "name": "RINGCENTRAL, INC.",
-       "funds": 7,
-       "weight": 3.0,
+       "ticker": "NEXT",
+       "name": "NextDecade Corp.",
+       "funds": 15,
+       "weight": 1.7,
        "weight10": 0,
-       "ret": 20.1
-      },
-      {
-       "ticker": "BOKF",
-       "name": "BOK Financial Corp",
-       "funds": 5,
-       "weight": 2.8,
-       "weight10": 0,
-       "ret": 0.1
-      },
-      {
-       "ticker": "SKOR",
-       "name": "SKOR",
-       "funds": 4,
-       "weight": 2.6,
-       "weight10": 0,
-       "ret": -0.3
+       "ret": null
       },
       {
        "ticker": "DFAC",
        "name": "DFAC",
-       "funds": 321,
-       "weight": 2.4,
+       "funds": 329,
+       "weight": 1.5,
        "weight10": 0,
-       "ret": 7.9
-      },
-      {
-       "ticker": "KOF",
-       "name": "Coca-Cola FEMSA SAB de CV",
-       "funds": 12,
-       "weight": 2.2,
-       "weight10": 0,
-       "ret": -1.1
+       "ret": null
       },
       {
        "ticker": "MSMR",
        "name": "MSMR",
        "funds": 3,
-       "weight": 1.9,
-       "weight10": 0,
-       "ret": 3.6
-      },
-      {
-       "ticker": "EAGL",
-       "name": "EAGL",
-       "funds": 3,
-       "weight": 1.7,
-       "weight10": 0,
-       "ret": 4.3
-      },
-      {
-       "ticker": "VEON",
-       "name": "VEON",
-       "funds": 5,
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": 0.2
-      },
-      {
-       "ticker": "LVS",
-       "name": "LAS VEGAS SANDS CORP.",
-       "funds": 19,
        "weight": 1.3,
        "weight10": 0,
-       "ret": -9.8
-      },
-      {
-       "ticker": "AAT",
-       "name": "AMERICAN ASSETS TRUST, INC.",
-       "funds": 5,
-       "weight": 1.1,
-       "weight10": 0,
-       "ret": 20.6
-      },
-      {
-       "ticker": "LGH",
-       "name": "LGH",
-       "funds": 3,
-       "weight": 0.9,
-       "weight10": 0,
-       "ret": 5.8
-      },
-      {
-       "ticker": "AFIF",
-       "name": "AFIF",
-       "funds": 4,
-       "weight": 0.6,
-       "weight10": 0,
-       "ret": 0.7
-      },
-      {
-       "ticker": "SLVM",
-       "name": "SYLVAMO CORPORATION",
-       "funds": 4,
-       "weight": 0.4,
-       "weight10": 0,
-       "ret": -14.2
+       "ret": null
       },
       {
        "ticker": "PBI",
        "name": "Pitney Bowes Inc",
        "funds": 11,
+       "weight": 1.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "RNG",
+       "name": "RINGCENTRAL, INC.",
+       "funds": 8,
+       "weight": 0.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "LVS",
+       "name": "LAS VEGAS SANDS CORP.",
+       "funds": 18,
+       "weight": 0.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "BOKF",
+       "name": "BOK Financial Corp",
+       "funds": 5,
+       "weight": 0.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "AAT",
+       "name": "AMERICAN ASSETS TRUST, INC.",
+       "funds": 5,
        "weight": 0.2,
        "weight10": 0,
-       "ret": 50.4
+       "ret": null
       }
      ]
     },
@@ -3271,250 +3672,250 @@
       42.4,
       49.8
      ],
-     "since_rebal": 16.58,
-     "vs_spy": 6.07,
-     "since_rebal10": 14.58,
-     "vs_spy10": 4.07,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
-      {
-       "ticker": "AAPL",
-       "name": "APPLE INC.",
-       "funds": 1787,
-       "weight": 6.5,
-       "weight10": 18.2,
-       "ret": 18.0
-      },
       {
        "ticker": "NVDA",
        "name": "NVIDIA CORP",
-       "funds": 1592,
-       "weight": 6.2,
-       "weight10": 16.4,
-       "ret": 15.7
-      },
-      {
-       "ticker": "AMZN",
-       "name": "Amazon.com Inc",
-       "funds": 1793,
-       "weight": 6.0,
-       "weight10": 14.5,
-       "ret": 29.9
+       "funds": 1668,
+       "weight": 6.5,
+       "weight10": 18.2,
+       "ret": null
       },
       {
        "ticker": "MSFT",
        "name": "Microsoft",
-       "funds": 1885,
+       "funds": 1893,
+       "weight": 6.2,
+       "weight10": 16.4,
+       "ret": null
+      },
+      {
+       "ticker": "AAPL",
+       "name": "APPLE INC.",
+       "funds": 1837,
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": null
+      },
+      {
+       "ticker": "AMZN",
+       "name": "Amazon.com Inc",
+       "funds": 1837,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": 13.2
+       "ret": null
       },
       {
        "ticker": "GOOGL",
        "name": "Alphabet Inc",
-       "funds": 1502,
+       "funds": 1536,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": 24.2
-      },
-      {
-       "ticker": "V",
-       "name": "VISA INC.",
-       "funds": 943,
-       "weight": 5.4,
-       "weight10": 9.1,
-       "ret": 2.0
+       "ret": null
       },
       {
        "ticker": "DFAC",
        "name": "DFAC",
-       "funds": 321,
-       "weight": 5.2,
-       "weight10": 7.3,
-       "ret": 7.9
-      },
-      {
-       "ticker": "SCHW",
-       "name": "THE CHARLES SCHWAB CORPORATION",
-       "funds": 186,
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": -8.2
-      },
-      {
-       "ticker": "MA",
-       "name": "MASTERCARD INCORPORATED.",
-       "funds": 608,
-       "weight": 4.7,
-       "weight10": 3.6,
-       "ret": -5.0
+       "funds": 329,
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": null
       },
       {
        "ticker": "META",
        "name": "META PLATFORMS, INC.",
-       "funds": 1227,
-       "weight": 4.5,
-       "weight10": 1.8,
-       "ret": -3.1
+       "funds": 1225,
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": null
       },
       {
        "ticker": "GOOG",
        "name": "Alphabet Inc",
-       "funds": 1212,
-       "weight": 4.3,
-       "weight10": 0,
-       "ret": 23.0
+       "funds": 1239,
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": null
+      },
+      {
+       "ticker": "V",
+       "name": "VISA INC.",
+       "funds": 935,
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": null
       },
       {
        "ticker": "TSM",
        "name": "Taiwan Semiconductor ADS",
-       "funds": 544,
-       "weight": 4.1,
-       "weight10": 0,
-       "ret": 13.7
-      },
-      {
-       "ticker": "BRK/B",
-       "name": "Berkshire Hathaway Inc",
-       "funds": 1150,
-       "weight": 3.9,
-       "weight10": 0,
-       "ret": -1.2
-      },
-      {
-       "ticker": "TSLA",
-       "name": "TESLA, INC.",
-       "funds": 869,
-       "weight": 3.7,
-       "weight10": 0,
-       "ret": 8.1
-      },
-      {
-       "ticker": "AVGO",
-       "name": "BROADCOM INC.",
-       "funds": 870,
-       "weight": 3.4,
-       "weight10": 0,
-       "ret": 40.4
+       "funds": 596,
+       "weight": 4.5,
+       "weight10": 1.8,
+       "ret": null
       },
       {
        "ticker": "MU",
        "name": "MICRON TECHNOLOGY, INC.",
-       "funds": 259,
-       "weight": 3.2,
+       "funds": 340,
+       "weight": 4.3,
        "weight10": 0,
-       "ret": 135.4
+       "ret": null
       },
       {
-       "ticker": "MCO",
-       "name": "MOODY'S CORPORATION",
-       "funds": 122,
-       "weight": 3.0,
+       "ticker": "BRK/B",
+       "name": "Berkshire Hathaway Inc",
+       "funds": 1186,
+       "weight": 4.1,
        "weight10": 0,
-       "ret": -2.5
+       "ret": null
       },
       {
-       "ticker": "LLY",
-       "name": "Eli Lilly",
-       "funds": 791,
-       "weight": 2.8,
+       "ticker": "AVGO",
+       "name": "BROADCOM INC.",
+       "funds": 886,
+       "weight": 3.9,
        "weight10": 0,
-       "ret": 8.7
+       "ret": null
       },
       {
-       "ticker": "NFLX",
-       "name": "NETFLIX, INC.",
-       "funds": 544,
-       "weight": 2.6,
+       "ticker": "TSLA",
+       "name": "TESLA, INC.",
+       "funds": 860,
+       "weight": 3.7,
        "weight10": 0,
-       "ret": -11.4
+       "ret": null
       },
       {
        "ticker": "JPM",
        "name": "JPMorgan Chase & Co",
-       "funds": 1109,
-       "weight": 2.4,
+       "funds": 1131,
+       "weight": 3.4,
        "weight10": 0,
-       "ret": 1.1
+       "ret": null
       },
       {
        "ticker": "AMD",
        "name": "ADVANCED MICRO DEVICES, INC.",
-       "funds": 377,
-       "weight": 2.2,
+       "funds": 407,
+       "weight": 3.2,
        "weight10": 0,
-       "ret": 159.8
+       "ret": null
+      },
+      {
+       "ticker": "NFLX",
+       "name": "NETFLIX, INC.",
+       "funds": 583,
+       "weight": 3.0,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "LLY",
+       "name": "Eli Lilly",
+       "funds": 790,
+       "weight": 2.8,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "PDD",
        "name": "Pinduoduo Inc",
-       "funds": 90,
-       "weight": 1.9,
+       "funds": 89,
+       "weight": 2.6,
        "weight10": 0,
-       "ret": -17.9
-      },
-      {
-       "ticker": "CNI",
-       "name": "Canadian National Railway",
-       "funds": 74,
-       "weight": 1.7,
-       "weight10": 0,
-       "ret": 5.6
-      },
-      {
-       "ticker": "DFAT",
-       "name": "DFAT",
-       "funds": 222,
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": 3.1
-      },
-      {
-       "ticker": "DFCF",
-       "name": "DFCF",
-       "funds": 141,
-       "weight": 1.3,
-       "weight10": 0,
-       "ret": -0.7
+       "ret": null
       },
       {
        "ticker": "BSV",
        "name": "BSV",
-       "funds": 193,
+       "funds": 203,
+       "weight": 2.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "CRM",
+       "name": "Salesforce Inc",
+       "funds": 302,
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MA",
+       "name": "MASTERCARD INCORPORATED.",
+       "funds": 607,
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "VCIT",
+       "name": "VCIT",
+       "funds": 173,
+       "weight": 1.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "XOM",
+       "name": "Exxon Mobil Corp",
+       "funds": 993,
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "ADBE",
+       "name": "ADOBE INC",
+       "funds": 244,
+       "weight": 1.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "SSO",
+       "name": "SSO",
+       "funds": 28,
        "weight": 1.1,
        "weight10": 0,
-       "ret": -0.3
+       "ret": null
       },
       {
-       "ticker": "DFAX",
-       "name": "DFAX",
-       "funds": 198,
+       "ticker": "CVX",
+       "name": "CHEVRON CORP",
+       "funds": 681,
        "weight": 0.9,
        "weight10": 0,
-       "ret": 3.7
+       "ret": null
       },
       {
-       "ticker": "USFR",
-       "name": "USFR",
-       "funds": 87,
+       "ticker": "UNH",
+       "name": "UNITEDHEALTH GROUP INC",
+       "funds": 447,
        "weight": 0.6,
        "weight10": 0,
-       "ret": 0.9
+       "ret": null
       },
       {
-       "ticker": "SCHG",
-       "name": "SCHG",
-       "funds": 255,
+       "ticker": "BABA",
+       "name": "ALIBABA GROUP HOLDING LIMITED",
+       "funds": 176,
        "weight": 0.4,
        "weight10": 0,
-       "ret": 14.1
+       "ret": null
       },
       {
-       "ticker": "DFUV",
-       "name": "DFUV",
-       "funds": 180,
+       "ticker": "INTC",
+       "name": "Intel",
+       "funds": 244,
        "weight": 0.2,
        "weight10": 0,
-       "ret": 6.6
+       "ret": null
       }
      ]
     },
@@ -3579,250 +3980,250 @@
       38.9,
       47.2
      ],
-     "since_rebal": 10.54,
-     "vs_spy": 0.03,
-     "since_rebal10": 16.41,
-     "vs_spy10": 5.9,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
       {
        "ticker": "NVDA",
        "name": "NVIDIA CORP",
-       "funds": 1592,
+       "funds": 1668,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": 15.7
+       "ret": null
       },
       {
        "ticker": "AAPL",
        "name": "APPLE INC.",
-       "funds": 1787,
+       "funds": 1837,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": 18.0
-      },
-      {
-       "ticker": "MSFT",
-       "name": "Microsoft",
-       "funds": 1885,
-       "weight": 6.0,
-       "weight10": 14.5,
-       "ret": 13.2
+       "ret": null
       },
       {
        "ticker": "AMZN",
        "name": "Amazon.com Inc",
-       "funds": 1793,
-       "weight": 5.8,
-       "weight10": 12.7,
-       "ret": 29.9
+       "funds": 1837,
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": null
       },
       {
-       "ticker": "GOOGL",
-       "name": "Alphabet Inc",
-       "funds": 1502,
-       "weight": 5.6,
-       "weight10": 10.9,
-       "ret": 24.2
+       "ticker": "MSFT",
+       "name": "Microsoft",
+       "funds": 1893,
+       "weight": 5.8,
+       "weight10": 12.7,
+       "ret": null
       },
       {
        "ticker": "DFAC",
        "name": "DFAC",
-       "funds": 321,
-       "weight": 5.4,
-       "weight10": 9.1,
-       "ret": 7.9
+       "funds": 329,
+       "weight": 5.6,
+       "weight10": 10.9,
+       "ret": null
       },
       {
-       "ticker": "GOOG",
+       "ticker": "GOOGL",
        "name": "Alphabet Inc",
-       "funds": 1212,
-       "weight": 5.2,
-       "weight10": 7.3,
-       "ret": 23.0
+       "funds": 1536,
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": null
       },
       {
        "ticker": "BRK/B",
        "name": "Berkshire Hathaway Inc",
-       "funds": 1150,
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": -1.2
+       "funds": 1186,
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": null
       },
       {
        "ticker": "META",
        "name": "META PLATFORMS, INC.",
-       "funds": 1227,
-       "weight": 4.7,
-       "weight10": 3.6,
-       "ret": -3.1
+       "funds": 1225,
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": null
       },
       {
        "ticker": "V",
        "name": "VISA INC.",
-       "funds": 943,
+       "funds": 935,
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": null
+      },
+      {
+       "ticker": "GOOG",
+       "name": "Alphabet Inc",
+       "funds": 1239,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": 2.0
+       "ret": null
       },
       {
        "ticker": "TSM",
        "name": "Taiwan Semiconductor ADS",
-       "funds": 544,
+       "funds": 596,
        "weight": 4.3,
        "weight10": 0,
-       "ret": 13.7
+       "ret": null
       },
       {
        "ticker": "MA",
        "name": "MASTERCARD INCORPORATED.",
-       "funds": 608,
+       "funds": 607,
        "weight": 4.1,
        "weight10": 0,
-       "ret": -5.0
+       "ret": null
       },
       {
        "ticker": "AVGO",
        "name": "BROADCOM INC.",
-       "funds": 870,
+       "funds": 886,
        "weight": 3.9,
        "weight10": 0,
-       "ret": 40.4
+       "ret": null
       },
       {
        "ticker": "TSLA",
        "name": "TESLA, INC.",
-       "funds": 869,
+       "funds": 860,
        "weight": 3.7,
        "weight10": 0,
-       "ret": 8.1
+       "ret": null
       },
       {
        "ticker": "JPM",
        "name": "JPMorgan Chase & Co",
-       "funds": 1109,
+       "funds": 1131,
        "weight": 3.4,
        "weight10": 0,
-       "ret": 1.1
-      },
-      {
-       "ticker": "SCHX",
-       "name": "SCHX",
-       "funds": 247,
-       "weight": 3.2,
-       "weight10": 0,
-       "ret": 10.2
-      },
-      {
-       "ticker": "LLY",
-       "name": "Eli Lilly",
-       "funds": 791,
-       "weight": 3.0,
-       "weight10": 0,
-       "ret": 8.7
-      },
-      {
-       "ticker": "SCHW",
-       "name": "THE CHARLES SCHWAB CORPORATION",
-       "funds": 186,
-       "weight": 2.8,
-       "weight10": 0,
-       "ret": -8.2
-      },
-      {
-       "ticker": "DFUS",
-       "name": "DFUS",
-       "funds": 203,
-       "weight": 2.6,
-       "weight10": 0,
-       "ret": 10.4
+       "ret": null
       },
       {
        "ticker": "DFIC",
        "name": "DFIC",
-       "funds": 179,
+       "funds": 188,
+       "weight": 3.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "SCHW",
+       "name": "THE CHARLES SCHWAB CORPORATION",
+       "funds": 195,
+       "weight": 3.0,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "DFUS",
+       "name": "DFUS",
+       "funds": 209,
+       "weight": 2.8,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "SCHX",
+       "name": "SCHX",
+       "funds": 255,
+       "weight": 2.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "LLY",
+       "name": "Eli Lilly",
+       "funds": 790,
        "weight": 2.4,
        "weight10": 0,
-       "ret": 1.1
-      },
-      {
-       "ticker": "SCHG",
-       "name": "SCHG",
-       "funds": 255,
-       "weight": 2.2,
-       "weight10": 0,
-       "ret": 14.1
-      },
-      {
-       "ticker": "DFAX",
-       "name": "DFAX",
-       "funds": 198,
-       "weight": 1.9,
-       "weight10": 0,
-       "ret": 3.7
-      },
-      {
-       "ticker": "WMT",
-       "name": "Walmart Inc",
-       "funds": 717,
-       "weight": 1.7,
-       "weight10": 0,
-       "ret": -8.6
-      },
-      {
-       "ticker": "DFAT",
-       "name": "DFAT",
-       "funds": 222,
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": 3.1
-      },
-      {
-       "ticker": "PDD",
-       "name": "Pinduoduo Inc",
-       "funds": 90,
-       "weight": 1.3,
-       "weight10": 0,
-       "ret": -17.9
+       "ret": null
       },
       {
        "ticker": "COST",
        "name": "COSTCO WHOLESALE CORPORATION",
-       "funds": 722,
+       "funds": 778,
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "WMT",
+       "name": "Walmart Inc",
+       "funds": 777,
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "DFAX",
+       "name": "DFAX",
+       "funds": 205,
+       "weight": 1.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "DFAT",
+       "name": "DFAT",
+       "funds": 231,
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "SCHG",
+       "name": "SCHG",
+       "funds": 260,
+       "weight": 1.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "XOM",
+       "name": "Exxon Mobil Corp",
+       "funds": 993,
        "weight": 1.1,
        "weight10": 0,
-       "ret": -4.5
+       "ret": null
       },
       {
        "ticker": "DFAU",
        "name": "DFAU",
-       "funds": 182,
+       "funds": 184,
        "weight": 0.9,
        "weight10": 0,
-       "ret": 9.5
+       "ret": null
+      },
+      {
+       "ticker": "PDD",
+       "name": "Pinduoduo Inc",
+       "funds": 89,
+       "weight": 0.6,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "ITOT",
        "name": "ITOT",
-       "funds": 247,
-       "weight": 0.6,
+       "funds": 252,
+       "weight": 0.4,
        "weight10": 0,
-       "ret": 10.4
+       "ret": null
       },
       {
        "ticker": "NFLX",
        "name": "NETFLIX, INC.",
-       "funds": 544,
-       "weight": 0.4,
-       "weight10": 0,
-       "ret": -11.4
-      },
-      {
-       "ticker": "DFCF",
-       "name": "DFCF",
-       "funds": 141,
+       "funds": 583,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -0.7
+       "ret": null
       }
      ]
     },
@@ -3887,250 +4288,250 @@
       -20.9,
       -19.1
      ],
-     "since_rebal": 6.39,
-     "vs_spy": -4.13,
-     "since_rebal10": 3.7,
-     "vs_spy10": -6.81,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
-      {
-       "ticker": "YUMC",
-       "name": "Yum China Holdings Inc",
-       "funds": 30,
-       "weight": 6.5,
-       "weight10": 18.2,
-       "ret": -19.7
-      },
       {
        "ticker": "NFLX",
        "name": "NETFLIX, INC.",
-       "funds": 544,
+       "funds": 583,
+       "weight": 6.5,
+       "weight10": 18.2,
+       "ret": null
+      },
+      {
+       "ticker": "BRK/B",
+       "name": "Berkshire Hathaway Inc",
+       "funds": 1186,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": -11.4
+       "ret": null
       },
       {
        "ticker": "GWRE",
        "name": "GUIDEWIRE SOFTWARE, INC.",
-       "funds": 25,
+       "funds": 27,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": 2.5
+       "ret": null
+      },
+      {
+       "ticker": "BSX",
+       "name": "Boston Scientific Corp",
+       "funds": 112,
+       "weight": 5.8,
+       "weight10": 12.7,
+       "ret": null
+      },
+      {
+       "ticker": "ISRG",
+       "name": "Intuitive Surgical Inc",
+       "funds": 220,
+       "weight": 5.6,
+       "weight10": 10.9,
+       "ret": null
       },
       {
        "ticker": "FIVN",
        "name": "Five9 Inc",
-       "funds": 17,
-       "weight": 5.8,
-       "weight10": 12.7,
-       "ret": 39.4
-      },
-      {
-       "ticker": "CHRD",
-       "name": "Chord Energy Corp",
-       "funds": 25,
-       "weight": 5.6,
-       "weight10": 10.9,
-       "ret": 18.6
-      },
-      {
-       "ticker": "CIVI",
-       "name": "CIVITAS RESOURCES, INC.",
-       "funds": 12,
+       "funds": 16,
        "weight": 5.4,
        "weight10": 9.1,
        "ret": null
       },
       {
-       "ticker": "TMO",
-       "name": "Thermo Fisher Scientific Inc",
-       "funds": 308,
+       "ticker": "CHRD",
+       "name": "Chord Energy Corp",
+       "funds": 20,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": -3.1
+       "ret": null
+      },
+      {
+       "ticker": "CIVI",
+       "name": "CIVITAS RESOURCES, INC.",
+       "funds": 4,
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": null
       },
       {
        "ticker": "NOW",
        "name": "SERVICENOW INC",
-       "funds": 242,
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": 13.7
+       "funds": 247,
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": null
       },
       {
        "ticker": "PDD",
        "name": "Pinduoduo Inc",
-       "funds": 90,
-       "weight": 4.7,
-       "weight10": 3.6,
-       "ret": -17.9
+       "funds": 89,
+       "weight": 4.5,
+       "weight10": 1.8,
+       "ret": null
       },
       {
        "ticker": "SG",
        "name": "Sweetgreen, Inc.",
-       "funds": 11,
-       "weight": 4.5,
-       "weight10": 1.8,
-       "ret": 84.8
-      },
-      {
-       "ticker": "CEG",
-       "name": "CONSTELLATION ENERGY",
-       "funds": 139,
+       "funds": 7,
        "weight": 4.3,
        "weight10": 0,
-       "ret": -11.8
+       "ret": null
       },
       {
        "ticker": "YMM",
        "name": "YMM",
-       "funds": 33,
+       "funds": 30,
        "weight": 4.1,
        "weight10": 0,
-       "ret": -4.4
+       "ret": null
       },
       {
-       "ticker": "BRK/B",
-       "name": "Berkshire Hathaway Inc",
-       "funds": 1150,
+       "ticker": "AAPL",
+       "name": "APPLE INC.",
+       "funds": 1837,
        "weight": 3.9,
        "weight10": 0,
-       "ret": -1.2
+       "ret": null
       },
       {
-       "ticker": "UGP",
-       "name": "Ultrapar Participacoes S.A.",
-       "funds": 4,
+       "ticker": "TSLA",
+       "name": "TESLA, INC.",
+       "funds": 860,
        "weight": 3.7,
        "weight10": 0,
-       "ret": 4.2
+       "ret": null
+      },
+      {
+       "ticker": "MSFT",
+       "name": "Microsoft",
+       "funds": 1893,
+       "weight": 3.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "PLTR",
+       "name": "Palantir Technologies Inc",
+       "funds": 347,
+       "weight": 3.2,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "FBIN",
        "name": "FORTUNE BRANDS HOME & SECURI",
-       "funds": 13,
-       "weight": 3.4,
+       "funds": 14,
+       "weight": 3.0,
        "weight10": 0,
-       "ret": -25.1
+       "ret": null
       },
       {
        "ticker": "SLB",
        "name": "Schlumberger NV",
-       "funds": 97,
-       "weight": 3.2,
+       "funds": 110,
+       "weight": 2.8,
        "weight10": 0,
-       "ret": 6.4
+       "ret": null
       },
       {
        "ticker": "SE",
        "name": "Sea Ltd",
-       "funds": 100,
-       "weight": 3.0,
+       "funds": 84,
+       "weight": 2.6,
        "weight10": 0,
-       "ret": -14.0
+       "ret": null
       },
       {
        "ticker": "EGO",
        "name": "Eldorado Gold Corp",
-       "funds": 12,
-       "weight": 2.8,
+       "funds": 13,
+       "weight": 2.4,
        "weight10": 0,
-       "ret": -27.0
+       "ret": null
+      },
+      {
+       "ticker": "HDB",
+       "name": "HDFC BANK LIMITED",
+       "funds": 51,
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "WFC",
+       "name": "WELLS FARGO & CO",
+       "funds": 276,
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "CSGP",
+       "name": "COSTAR GROUP, INC.",
+       "funds": 55,
+       "weight": 1.7,
+       "weight10": 0,
+       "ret": null
       },
       {
        "ticker": "CLMT",
        "name": "Calumet Inc",
-       "funds": 7,
-       "weight": 2.6,
+       "funds": 8,
+       "weight": 1.5,
        "weight10": 0,
-       "ret": 29.4
+       "ret": null
       },
       {
        "ticker": "DQ",
        "name": "Daqo New Energy Corp",
-       "funds": 9,
-       "weight": 2.4,
+       "funds": 4,
+       "weight": 1.3,
        "weight10": 0,
-       "ret": -30.1
+       "ret": null
       },
       {
-       "ticker": "NXT",
-       "name": "NEXTracker Inc",
-       "funds": 37,
-       "weight": 2.2,
+       "ticker": "HYS",
+       "name": "HYS",
+       "funds": 13,
+       "weight": 1.1,
        "weight10": 0,
-       "ret": 50.8
+       "ret": null
       },
       {
        "ticker": "CORZ",
        "name": "CORE SCIENTIFIC, INC.",
-       "funds": 56,
-       "weight": 1.9,
+       "funds": 59,
+       "weight": 0.9,
        "weight10": 0,
-       "ret": 62.8
+       "ret": null
       },
       {
        "ticker": "FIVE",
        "name": "Five Below Inc",
        "funds": 25,
-       "weight": 1.7,
-       "weight10": 0,
-       "ret": 1.7
-      },
-      {
-       "ticker": "SEDG",
-       "name": "SolarEdge Technologies Inc",
-       "funds": 11,
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": 88.1
-      },
-      {
-       "ticker": "V",
-       "name": "VISA INC.",
-       "funds": 943,
-       "weight": 1.3,
-       "weight10": 0,
-       "ret": 2.0
-      },
-      {
-       "ticker": "RBLX",
-       "name": "ROBLOX CORPORATION",
-       "funds": 61,
-       "weight": 1.1,
-       "weight10": 0,
-       "ret": -30.1
-      },
-      {
-       "ticker": "MMM",
-       "name": "3M",
-       "funds": 157,
-       "weight": 0.9,
-       "weight10": 0,
-       "ret": -4.7
-      },
-      {
-       "ticker": "CVNA",
-       "name": "CARVANA CO",
-       "funds": 76,
        "weight": 0.6,
        "weight10": 0,
-       "ret": 13.0
+       "ret": null
       },
       {
-       "ticker": "NEE",
-       "name": "NEXTERA ENERGY INC",
-       "funds": 293,
+       "ticker": "RTX",
+       "name": "Raytheon Technologies Corp",
+       "funds": 383,
        "weight": 0.4,
        "weight10": 0,
-       "ret": -6.1
+       "ret": null
       },
       {
-       "ticker": "TS",
-       "name": "Tenaris SA",
-       "funds": 10,
+       "ticker": "TUA",
+       "name": "TUA",
+       "funds": 12,
        "weight": 0.2,
        "weight10": 0,
-       "ret": 13.8
+       "ret": null
       }
      ]
     }
@@ -4202,546 +4603,546 @@
       81.0,
       123.5
      ],
-     "since_rebal": 51.16,
-     "vs_spy": 51.16,
-     "since_rebal10": 64.37,
-     "vs_spy10": 64.37,
+     "since_rebal": 0.0,
+     "vs_spy": 0.0,
+     "since_rebal10": 0.0,
+     "vs_spy10": 0.0,
      "holds": [
-      {
-       "ticker": "SOLS",
-       "name": "SOLSTICE ADVANCED MATERIALS IN",
-       "funds": 33,
-       "side": "L",
-       "weight": 6.5,
-       "weight10": 18.2,
-       "ret": 6.9
-      },
-      {
-       "ticker": "AMD",
-       "name": "ADVANCED MICRO DEVICES, INC.",
-       "funds": 91,
-       "side": "L",
-       "weight": 6.2,
-       "weight10": 16.4,
-       "ret": 159.8
-      },
       {
        "ticker": "Q",
        "name": "QNITY ELECTRONICS INC",
-       "funds": 19,
+       "funds": 31,
        "side": "L",
-       "weight": 6.0,
-       "weight10": 14.5,
-       "ret": 25.8
+       "weight": 6.5,
+       "weight10": 18.2,
+       "ret": null
       },
       {
-       "ticker": "GH",
-       "name": "Guardant Health Inc",
-       "funds": 62,
+       "ticker": "VSNT",
+       "name": "VERSANT MEDIA GROUP INC",
+       "funds": 22,
        "side": "L",
-       "weight": 5.8,
-       "weight10": 12.7,
-       "ret": 40.6
-      },
-      {
-       "ticker": "LXP",
-       "name": "LXP Industrial Trust",
-       "funds": 17,
-       "side": "L",
-       "weight": 5.6,
-       "weight10": 10.9,
-       "ret": 6.8
-      },
-      {
-       "ticker": "BE",
-       "name": "BLOOM ENERGY CORP- A",
-       "funds": 50,
-       "side": "L",
-       "weight": 5.4,
-       "weight10": 9.1,
-       "ret": 71.7
+       "weight": 6.2,
+       "weight10": 16.4,
+       "ret": null
       },
       {
        "ticker": "SNDK",
        "name": "SANDISK CORP",
-       "funds": 34,
+       "funds": 48,
        "side": "L",
-       "weight": 5.2,
-       "weight10": 7.3,
-       "ret": 173.8
-      },
-      {
-       "ticker": "FG",
-       "name": "F&G Annuities & Life Inc",
-       "funds": 22,
-       "side": "L",
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": 25.1
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": null
       },
       {
        "ticker": "LRCX",
        "name": "LAM RESEARCH CORP",
-       "funds": 106,
+       "funds": 113,
        "side": "L",
-       "weight": 4.7,
-       "weight10": 3.6,
-       "ret": 37.9
-      },
-      {
-       "ticker": "MU",
-       "name": "MICRON TECHNOLOGY, INC.",
-       "funds": 87,
-       "side": "L",
-       "weight": 4.5,
-       "weight10": 1.8,
-       "ret": 135.4
-      },
-      {
-       "ticker": "FIX",
-       "name": "Comfort Systems USA Inc",
-       "funds": 74,
-       "side": "L",
-       "weight": 4.3,
-       "weight10": 0,
-       "ret": 27.2
+       "weight": 5.8,
+       "weight10": 12.7,
+       "ret": null
       },
       {
        "ticker": "WDC",
        "name": "WESTERN DIGITAL CORP",
-       "funds": 65,
+       "funds": 77,
        "side": "L",
-       "weight": 4.1,
-       "weight10": 0,
-       "ret": 96.8
+       "weight": 5.6,
+       "weight10": 10.9,
+       "ret": null
       },
       {
-       "ticker": "COGT",
-       "name": "Cogent Biosciences Inc",
-       "funds": 26,
+       "ticker": "INDV",
+       "name": "Indivior Pharmaceuticals Inc",
+       "funds": 17,
        "side": "L",
-       "weight": 3.9,
-       "weight10": 0,
-       "ret": -10.1
-      },
-      {
-       "ticker": "SSB",
-       "name": "SOUTHSTATE BANK Corp.",
-       "funds": 38,
-       "side": "L",
-       "weight": 3.7,
-       "weight10": 0,
-       "ret": -4.4
-      },
-      {
-       "ticker": "INTC",
-       "name": "Intel",
-       "funds": 57,
-       "side": "L",
-       "weight": 3.4,
-       "weight10": 0,
-       "ret": 152.0
-      },
-      {
-       "ticker": "PRAX",
-       "name": "Praxis Precision Medicines Inc",
-       "funds": 26,
-       "side": "L",
-       "weight": 3.2,
-       "weight10": 0,
-       "ret": 5.9
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": null
       },
       {
        "ticker": "VRT",
        "name": "Vertiv Holdings Co.",
-       "funds": 59,
+       "funds": 68,
+       "side": "L",
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": null
+      },
+      {
+       "ticker": "AMD",
+       "name": "ADVANCED MICRO DEVICES, INC.",
+       "funds": 96,
+       "side": "L",
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": null
+      },
+      {
+       "ticker": "MU",
+       "name": "MICRON TECHNOLOGY, INC.",
+       "funds": 98,
+       "side": "L",
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": null
+      },
+      {
+       "ticker": "SATS",
+       "name": "ECHOSTAR CORP",
+       "funds": 35,
+       "side": "L",
+       "weight": 4.5,
+       "weight10": 1.8,
+       "ret": null
+      },
+      {
+       "ticker": "TXN",
+       "name": "Texas Instruments",
+       "funds": 93,
+       "side": "L",
+       "weight": 4.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "GH",
+       "name": "Guardant Health Inc",
+       "funds": 67,
+       "side": "L",
+       "weight": 4.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MKSI",
+       "name": "MKS Instruments Inc",
+       "funds": 47,
+       "side": "L",
+       "weight": 3.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MIRM",
+       "name": "Mirum Pharmaceuticals Inc",
+       "funds": 33,
+       "side": "L",
+       "weight": 3.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "ROST",
+       "name": "ROSS STORES INC",
+       "funds": 71,
+       "side": "L",
+       "weight": 3.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "CIEN",
+       "name": "CIENA CORP",
+       "funds": 41,
+       "side": "L",
+       "weight": 3.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "DOCN",
+       "name": "DigitalOcean Holdings, Inc.",
+       "funds": 29,
        "side": "L",
        "weight": 3.0,
        "weight10": 0,
-       "ret": 22.5
-      },
-      {
-       "ticker": "KLAC",
-       "name": "KLA CORPORATION",
-       "funds": 78,
-       "side": "L",
-       "weight": 2.8,
-       "weight10": 0,
-       "ret": 25.4
-      },
-      {
-       "ticker": "MIR",
-       "name": "Mirion Technologies Inc",
-       "funds": 43,
-       "side": "L",
-       "weight": 2.6,
-       "weight10": 0,
-       "ret": -18.0
-      },
-      {
-       "ticker": "PLTR",
-       "name": "Palantir Technologies Inc",
-       "funds": 95,
-       "side": "L",
-       "weight": 2.4,
-       "weight10": 0,
-       "ret": 7.8
-      },
-      {
-       "ticker": "IOT",
-       "name": "Samsara, Inc.",
-       "funds": 41,
-       "side": "L",
-       "weight": 2.2,
-       "weight10": 0,
-       "ret": 20.2
-      },
-      {
-       "ticker": "RVMD",
-       "name": "REVOLUTION Medicines Inc",
-       "funds": 47,
-       "side": "L",
-       "weight": 1.9,
-       "weight10": 0,
-       "ret": 55.0
-      },
-      {
-       "ticker": "LLYVK",
-       "name": "Liberty Live Holdings Inc",
-       "funds": 11,
-       "side": "L",
-       "weight": 1.7,
-       "weight10": 0,
-       "ret": -0.7
-      },
-      {
-       "ticker": "SWKS",
-       "name": "SKYWORKS SOLUTIONS INC",
-       "funds": 55,
-       "side": "L",
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": 33.3
-      },
-      {
-       "ticker": "UL",
-       "name": "Unilever PLC",
-       "funds": 10,
-       "side": "L",
-       "weight": 1.3,
-       "weight10": 0,
-       "ret": -20.3
-      },
-      {
-       "ticker": "JNJ",
-       "name": "Johnson & Johnson",
-       "funds": 131,
-       "side": "L",
-       "weight": 1.1,
-       "weight10": 0,
-       "ret": -8.8
-      },
-      {
-       "ticker": "REGN",
-       "name": "Regeneron Pharmaceuticals Inc",
-       "funds": 87,
-       "side": "L",
-       "weight": 0.9,
-       "weight10": 0,
-       "ret": -22.1
-      },
-      {
-       "ticker": "COF",
-       "name": "CAPITAL ONE FINANCIAL CORP",
-       "funds": 73,
-       "side": "L",
-       "weight": 0.6,
-       "weight10": 0,
-       "ret": -2.9
+       "ret": null
       },
       {
        "ticker": "KTOS",
        "name": "KRATOS DEFENSE and SECURITY SO",
-       "funds": 47,
+       "funds": 50,
+       "side": "L",
+       "weight": 2.8,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "LXP",
+       "name": "LXP Industrial Trust",
+       "funds": 19,
+       "side": "L",
+       "weight": 2.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "PIPR",
+       "name": "Piper Sandler Cos",
+       "funds": 11,
+       "side": "L",
+       "weight": 2.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "SYY",
+       "name": "SYSCO CORPORATION",
+       "funds": 61,
+       "side": "L",
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "PLTR",
+       "name": "Palantir Technologies Inc",
+       "funds": 97,
+       "side": "L",
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "APH",
+       "name": "AMPHENOL CORPORATION",
+       "funds": 97,
+       "side": "L",
+       "weight": 1.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "KLAC",
+       "name": "KLA CORPORATION",
+       "funds": 85,
+       "side": "L",
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MDLN",
+       "name": "MEDLINE INC",
+       "funds": 15,
+       "side": "L",
+       "weight": 1.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "COHR",
+       "name": "Coherent Corp",
+       "funds": 55,
+       "side": "L",
+       "weight": 1.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "AMP",
+       "name": "AMERIPRISE FINANCIAL, INC.",
+       "funds": 62,
+       "side": "L",
+       "weight": 0.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "UL",
+       "name": "Unilever PLC",
+       "funds": 16,
+       "side": "L",
+       "weight": 0.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "AXP",
+       "name": "AMERICAN EXPRESS CO",
+       "funds": 80,
        "side": "L",
        "weight": 0.4,
        "weight10": 0,
-       "ret": -29.3
+       "ret": null
       },
       {
-       "ticker": "LITE",
-       "name": "LUMENTUM HOLDINGS INC.",
-       "funds": 40,
+       "ticker": "KO",
+       "name": "COCA COLA CO",
+       "funds": 92,
        "side": "L",
        "weight": 0.2,
        "weight10": 0,
-       "ret": 9.2
+       "ret": null
       },
       {
-       "ticker": "FISV",
-       "name": "FISERV INC",
-       "funds": 50,
+       "ticker": "CADE",
+       "name": "Cadence Bank",
+       "funds": 12,
        "side": "S",
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -8.6
+       "ret": null
       },
       {
-       "ticker": "LRN",
-       "name": "Stride Inc",
-       "funds": 20,
+       "ticker": "CIVI",
+       "name": "CIVITAS RESOURCES, INC.",
+       "funds": 6,
        "side": "S",
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": 7.4
-      },
-      {
-       "ticker": "KMX",
-       "name": "CarMax, Inc.",
-       "funds": 15,
-       "side": "S",
-       "weight": 6.0,
-       "weight10": 14.5,
-       "ret": 6.7
-      },
-      {
-       "ticker": "FOUR",
-       "name": "Shift4 Payments Inc",
-       "funds": 19,
-       "side": "S",
-       "weight": 5.8,
-       "weight10": 12.7,
-       "ret": -5.1
-      },
-      {
-       "ticker": "DHR",
-       "name": "DANAHER CORPORATION",
-       "funds": 72,
-       "side": "S",
-       "weight": 5.6,
-       "weight10": 10.9,
-       "ret": -11.1
-      },
-      {
-       "ticker": "RARE",
-       "name": "Ultragenyx Pharmaceutical Inc",
-       "funds": 27,
-       "side": "S",
-       "weight": 5.4,
-       "weight10": 9.1,
-       "ret": 4.0
-      },
-      {
-       "ticker": "KVUE",
-       "name": "Kenvue Inc",
-       "funds": 51,
-       "side": "S",
-       "weight": 5.2,
-       "weight10": 7.3,
-       "ret": -7.4
-      },
-      {
-       "ticker": "CHTR",
-       "name": "CHARTER COMMUNICATIONS, INC.",
-       "funds": 32,
-       "side": "S",
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": -38.1
-      },
-      {
-       "ticker": "BAH",
-       "name": "BOOZ ALLEN HAMILTON HOLDING CO",
-       "funds": 26,
-       "side": "S",
-       "weight": 4.7,
-       "weight10": 3.6,
-       "ret": 1.8
-      },
-      {
-       "ticker": "HRB",
-       "name": "H&R Block Inc",
-       "funds": 27,
-       "side": "S",
-       "weight": 4.5,
-       "weight10": 1.8,
-       "ret": 26.1
-      },
-      {
-       "ticker": "DUOL",
-       "name": "Duolingo, Inc.",
-       "funds": 30,
-       "side": "S",
-       "weight": 4.3,
-       "weight10": 0,
-       "ret": 10.5
-      },
-      {
-       "ticker": "FICO",
-       "name": "FAIR ISAAC CORPORATION",
-       "funds": 56,
-       "side": "S",
-       "weight": 4.1,
-       "weight10": 0,
-       "ret": -11.2
-      },
-      {
-       "ticker": "CWAN",
-       "name": "Clearwater Analytics Holdings ",
-       "funds": 24,
-       "side": "S",
-       "weight": 3.9,
-       "weight10": 0,
-       "ret": 3.4
-      },
-      {
-       "ticker": "CMCSA",
-       "name": "COMCAST CORPORATION",
-       "funds": 86,
-       "side": "S",
-       "weight": 3.7,
-       "weight10": 0,
-       "ret": -18.4
-      },
-      {
-       "ticker": "TGT",
-       "name": "TARGET CORPORATION",
-       "funds": 42,
-       "side": "S",
-       "weight": 3.4,
-       "weight10": 0,
-       "ret": 13.3
-      },
-      {
-       "ticker": "ACIW",
-       "name": "ACI Worldwide Inc",
-       "funds": 29,
-       "side": "S",
-       "weight": 3.2,
-       "weight10": 0,
-       "ret": 8.2
-      },
-      {
-       "ticker": "IT",
-       "name": "GARTNER, INC.",
-       "funds": 36,
-       "side": "S",
-       "weight": 3.0,
-       "weight10": 0,
-       "ret": 1.8
-      },
-      {
-       "ticker": "LKQ",
-       "name": "LKQ Corp",
-       "funds": 33,
-       "side": "S",
-       "weight": 2.8,
-       "weight10": 0,
-       "ret": -15.5
-      },
-      {
-       "ticker": "SFM",
-       "name": "Sprouts Farmers Market Inc",
-       "funds": 31,
-       "side": "S",
-       "weight": 2.6,
-       "weight10": 0,
-       "ret": 11.7
-      },
-      {
-       "ticker": "HUBS",
-       "name": "HubSpot Inc",
-       "funds": 55,
-       "side": "S",
-       "weight": 2.4,
-       "weight10": 0,
-       "ret": -16.3
-      },
-      {
-       "ticker": "CRS",
-       "name": "Carpenter Technology Corp",
-       "funds": 46,
-       "side": "S",
-       "weight": 2.2,
-       "weight10": 0,
-       "ret": 14.9
-      },
-      {
-       "ticker": "ALGN",
-       "name": "ALIGN TECHNOLOGY INC",
-       "funds": 39,
-       "side": "S",
-       "weight": 1.9,
-       "weight10": 0,
-       "ret": -7.4
-      },
-      {
-       "ticker": "KMPR",
-       "name": "Kemper Corp",
-       "funds": 15,
-       "side": "S",
-       "weight": 1.7,
-       "weight10": 0,
-       "ret": -23.2
-      },
-      {
-       "ticker": "NSC",
-       "name": "NORFOLK SOUTHERN CORP",
-       "funds": 42,
-       "side": "S",
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": -3.5
-      },
-      {
-       "ticker": "ITRI",
-       "name": "Itron Inc",
-       "funds": 29,
-       "side": "S",
-       "weight": 1.3,
-       "weight10": 0,
-       "ret": -13.3
-      },
-      {
-       "ticker": "GTLS",
-       "name": "CHART INDUSTRIES INC",
-       "funds": 19,
-       "side": "S",
-       "weight": 1.1,
-       "weight10": 0,
-       "ret": 0.4
-      },
-      {
-       "ticker": "PCTY",
-       "name": "PAYLOCITY HOLDING CORPORATION",
-       "funds": 24,
-       "side": "S",
-       "weight": 0.9,
-       "weight10": 0,
-       "ret": 6.6
-      },
-      {
-       "ticker": "EAT",
-       "name": "Brinker International, Inc.",
-       "funds": 18,
-       "side": "S",
-       "weight": 0.6,
-       "weight10": 0,
-       "ret": -0.0
-      },
-      {
-       "ticker": "WAB",
-       "name": "Westinghouse Air Brake Technol",
-       "funds": 49,
-       "side": "S",
-       "weight": 0.4,
-       "weight10": 0,
-       "ret": -0.8
+       "ret": null
       },
       {
        "ticker": "CMA",
        "name": "COMERICA INC",
+       "funds": 10,
+       "side": "S",
+       "weight": 6.0,
+       "weight10": 14.5,
+       "ret": null
+      },
+      {
+       "ticker": "CRM",
+       "name": "Salesforce Inc",
+       "funds": 115,
+       "side": "S",
+       "weight": 5.8,
+       "weight10": 12.7,
+       "ret": null
+      },
+      {
+       "ticker": "APP",
+       "name": "AppLovin Corp",
+       "funds": 78,
+       "side": "S",
+       "weight": 5.6,
+       "weight10": 10.9,
+       "ret": null
+      },
+      {
+       "ticker": "CSGP",
+       "name": "COSTAR GROUP, INC.",
+       "funds": 46,
+       "side": "S",
+       "weight": 5.4,
+       "weight10": 9.1,
+       "ret": null
+      },
+      {
+       "ticker": "LAD",
+       "name": "Lithia Motors Inc",
+       "funds": 27,
+       "side": "S",
+       "weight": 5.2,
+       "weight10": 7.3,
+       "ret": null
+      },
+      {
+       "ticker": "VRNS",
+       "name": "Varonis Systems Inc",
+       "funds": 21,
+       "side": "S",
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": null
+      },
+      {
+       "ticker": "SBAC",
+       "name": "SBA COMMUNICATIONS CORP",
+       "funds": 32,
+       "side": "S",
+       "weight": 4.7,
+       "weight10": 3.6,
+       "ret": null
+      },
+      {
+       "ticker": "TTAN",
+       "name": "ServiceTitan Inc",
+       "funds": 17,
+       "side": "S",
+       "weight": 4.5,
+       "weight10": 1.8,
+       "ret": null
+      },
+      {
+       "ticker": "UBER",
+       "name": "UBER TECHNOLOGIES, INC.",
+       "funds": 81,
+       "side": "S",
+       "weight": 4.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "DDOG",
+       "name": "DATADOG, INC.",
+       "funds": 66,
+       "side": "S",
+       "weight": 4.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "ADBE",
+       "name": "ADOBE INC",
+       "funds": 79,
+       "side": "S",
+       "weight": 3.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "FRPT",
+       "name": "FRESHPET INC",
        "funds": 20,
+       "side": "S",
+       "weight": 3.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "PRCT",
+       "name": "PROCEPT BIOROBOTICS CORP",
+       "funds": 14,
+       "side": "S",
+       "weight": 3.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "PI",
+       "name": "Impinj Inc",
+       "funds": 26,
+       "side": "S",
+       "weight": 3.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "ADT",
+       "name": "ADT INC.",
+       "funds": 28,
+       "side": "S",
+       "weight": 3.0,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "EA",
+       "name": "ELECTRONIC ARTS INC",
+       "funds": 44,
+       "side": "S",
+       "weight": 2.8,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "MOH",
+       "name": "MOLINA HEALTHCARE INC",
+       "funds": 36,
+       "side": "S",
+       "weight": 2.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "BRBR",
+       "name": "BELLRING BRANDS INC",
+       "funds": 25,
+       "side": "S",
+       "weight": 2.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "ZEUS",
+       "name": "Olympic Steel Inc",
+       "funds": 6,
+       "side": "S",
+       "weight": 2.2,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "CDW",
+       "name": "CDW CORPORATION",
+       "funds": 42,
+       "side": "S",
+       "weight": 1.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "CMI",
+       "name": "CUMMINS INC.",
+       "funds": 53,
+       "side": "S",
+       "weight": 1.7,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "PRMB",
+       "name": "Primo Brands Corp",
+       "funds": 21,
+       "side": "S",
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "LOW",
+       "name": "LOWE'S COS INC",
+       "funds": 74,
+       "side": "S",
+       "weight": 1.3,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "GPK",
+       "name": "GRAPHIC PACKAGING HOLDING COMP",
+       "funds": 24,
+       "side": "S",
+       "weight": 1.1,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "CPRT",
+       "name": "Copart Inc",
+       "funds": 44,
+       "side": "S",
+       "weight": 0.9,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "AXON",
+       "name": "Axon Enterprise Inc",
+       "funds": 52,
+       "side": "S",
+       "weight": 0.6,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "IESC",
+       "name": "IES Holdings Inc.",
+       "funds": 14,
+       "side": "S",
+       "weight": 0.4,
+       "weight10": 0,
+       "ret": null
+      },
+      {
+       "ticker": "CVLT",
+       "name": "CommVault Systems Inc",
+       "funds": 29,
        "side": "S",
        "weight": 0.2,
        "weight10": 0,

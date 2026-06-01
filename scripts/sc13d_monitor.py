@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT/"scripts"))
 import falib as fa, sc13d_collect as sc, fetch_prices_300 as fp
 uf = sc.uf
-LOOKBACK_AMEND = 120   # 수정공시: 최근 120일
+LOOKBACK_AMEND = 270   # 수정공시: 최근 270일 (캠페인 스레드에 후속 13D/A를 충분히 묶기 위함)
 LOOKBACK_INIT = 365    # 신규 13D(캠페인 개시)는 드물어 더 길게
 FORMS_INIT = {"SC 13D", "SCHEDULE 13D"}
 FORMS_AMEND = {"SC 13D/A", "SCHEDULE 13D/A"}
@@ -80,23 +80,43 @@ def main():
         sp0 = spy.loc[spon[0]]; sp1 = spy.iloc[-1]
         if p0 > 0 and sp0 > 0 and not pd.isna(p1) and not pd.isna(sp1):
             e["ret"] = round(((p1/p0-1) - (sp1/sp0-1))*100, 1)   # 시장조정 초과수익
-    # 신규(initial)는 모두 유지(필터용) + 수정은 최근분 채워 ~36건
+    # ── 캠페인 스레드: (액티비스트·종목)별로 신규 13D + 후속 13D/A 묶기 ──
     withtk = [e for e in evs if e["ticker"]]
-    inits = sorted([e for e in withtk if e["new"]], key=lambda e: e["date"], reverse=True)
+    inits = [e for e in withtk if e["new"]]
     amends = sorted([e for e in withtk if not e["new"]], key=lambda e: e["date"], reverse=True)
-    shown = sorted(inits + amends[:max(18, 36 - len(inits))], key=lambda e: e["date"], reverse=True)
-    for e in shown:                              # 표시분만 목적·레터·링크 보강
+    keep = inits + amends[:max(20, 44 - len(inits))]   # 표시·목적/레터 보강 대상
+    for e in keep:
         e["url"], e["purpose"], e["letter"] = enrich(e["filerCIK"], e["acc"])
-        e.pop("filerCIK", None); e.pop("acc", None)
+    groups = {}
+    for e in keep:
+        groups.setdefault((e["activist"], e["ticker"]), []).append(e)
+    def rep_purpose(fl):                               # 캠페인 대표 목적: 최신·구체 우선
+        for e in fl:
+            if e.get("purpose") and e["purpose"] != "일반(13D)": return e["purpose"]
+        return next((e["purpose"] for e in fl if e.get("purpose")), None)
+    campaigns = []
+    for (act, tk), fl in groups.items():
+        fl = sorted(fl, key=lambda e: e["date"], reverse=True)   # 최신순
+        head = fl[0]
+        campaigns.append(dict(
+            activist=act, ticker=tk, name=next((e["name"] for e in fl if e["name"]), None),
+            purpose=rep_purpose(fl), latest=head["date"], latest_ret=head["ret"],
+            n=len(fl), has_initial=any(e["new"] for e in fl),
+            letter=any(e.get("letter") for e in fl),
+            filings=[dict(date=e["date"], form=e["form"], new=e["new"], ret=e["ret"],
+                          purpose=e.get("purpose"), letter=e.get("letter"), url=e["url"]) for e in fl]))
+    campaigns.sort(key=lambda c: c["latest"], reverse=True)
+    n_init_camp = sum(c["has_initial"] for c in campaigns)
     out = dict(generated=dt.date.today().strftime("%Y-%m-%d"), lookback_amend=LOOKBACK_AMEND, lookback_init=LOOKBACK_INIT,
                announce_note="발표 [0,+1] 평균 +5.5% (t4.34) · +1일 진입·21일 보유 +5.8% (t3.76) — sc13d.md",
-               n_total=len(withtk), n_new=len(inits), n_shown=len(shown),
-               events=shown)
+               n_total=len(withtk), n_new=len(inits),
+               n_campaigns=len(campaigns), n_initial_campaigns=n_init_camp,
+               campaigns=campaigns)
     json.dump(out, open(ROOT/"dashboard"/"sc13d.json", "w"), ensure_ascii=False, indent=1)
-    print(f"sc13d.json: 총 {out['n_total']}건(신규 {out['n_new']}) / 표시 {len(shown)}")
-    for e in shown[:8]:
-        print(f"  {e['date']} {e['activist']:12} {'신규' if e['new'] else '수정'} {str(e['ticker']):6} "
-              f"이후 {e['ret']}% | 목적 {e.get('purpose')} | 레터 {e.get('letter')}")
+    print(f"sc13d.json: 필링 {out['n_total']}건(신규 {out['n_new']}) → 캠페인 {len(campaigns)}개(개시포착 {n_init_camp})")
+    for c in campaigns[:8]:
+        print(f"  {c['latest']} {c['activist']:12} {str(c['ticker']):6} {'개시' if c['has_initial'] else '후속'} "
+              f"{c['n']}건 이후{c['latest_ret']}% | 목적 {c.get('purpose')} | 레터 {c['letter']}")
 
 if __name__ == "__main__":
     main()

@@ -47,9 +47,6 @@ html,body{margin:0;background:var(--bg);color:var(--fg);overflow-x:hidden;
   padding:7px 15px;border-radius:999px;cursor:pointer;transition:all .18s;font-family:inherit}
 .toggle button.on{background:var(--accent);color:#fff}
 .toggle .sub{font-weight:500;opacity:.8;font-size:10.5px}
-.alert{background:#e8f9ef;border:1px solid #aee5c4;border-radius:14px;padding:12px 16px;
-  color:#0a7d3e;font-size:13px;margin:14px 0 0;display:none}
-.alert .add{color:var(--up);font-weight:600} .alert .drop{color:var(--down);font-weight:600}
 
 .section{margin-top:38px}
 .section-head{margin:0 4px 16px}
@@ -71,28 +68,43 @@ html,body{margin:0;background:var(--bg);color:var(--fg);overflow-x:hidden;
 .feed .lab{display:block;font-size:11px;font-weight:700;letter-spacing:1.3px;text-transform:uppercase;color:var(--accent)}
 .feed .fnote{color:var(--mut);font-size:12px;margin:8px 0 8px;line-height:1.6;overflow-wrap:anywhere}
 .fhead{display:flex;align-items:center;gap:12px;padding:4px 10px;color:var(--mut2);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--line)}
-.frow{display:flex;align-items:center;gap:12px;padding:9px 10px;font-size:12.5px;border-bottom:1px solid var(--line2);position:relative;text-decoration:none;color:inherit;transition:background .15s}
-a.frow:hover{background:var(--soft)}
-.frow.new{background:linear-gradient(90deg,rgba(0,113,227,.07),transparent 62%)}
-.frow.new::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:3px;border-radius:0 2px 2px 0;background:var(--accent)}
-.fret{flex:0 0 66px;font-weight:750;font-size:13px;font-variant-numeric:tabular-nums}
+.frow{display:flex;align-items:center;gap:12px;padding:9px 10px;font-size:12.5px;position:relative;text-decoration:none;color:inherit;transition:background .15s}
+.camp{border-bottom:1px solid var(--line2);position:relative}
+.camphead{cursor:pointer}
+.camphead:hover{background:var(--soft)}
+.camp.new{background:linear-gradient(90deg,rgba(0,113,227,.06),transparent 62%)}
+.camp.new::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:3px;border-radius:0 2px 2px 0;background:var(--accent)}
+.chev{flex:0 0 11px;color:var(--mut2);font-size:11px;text-align:center;transition:transform .18s}
+.camp.open .chev{transform:rotate(90deg)}
+.camp.n1 .chev{opacity:.25}
+.campsub{overflow:hidden;max-height:0;transition:max-height .28s ease;background:var(--soft)}
+.camp.open .campsub{max-height:680px}
+.subrow{display:flex;align-items:center;gap:12px;padding:7px 10px 7px 33px;font-size:12px;text-decoration:none;color:inherit;border-top:1px solid var(--line2)}
+a.subrow:hover{background:var(--card)}
+.fret{flex:0 0 60px;font-weight:750;font-size:13px;font-variant-numeric:tabular-nums}
 .fret.up{color:var(--up)} .fret.down{color:var(--down)}
 .fmain{flex:1 1 0;min-width:0;display:flex;align-items:center;gap:8px;overflow:hidden}
 .ftk{flex:0 0 auto;font-weight:700}
 .fcomp{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--mut)}
 .pt{flex:0 0 auto;font-size:10px;font-weight:600;color:var(--accent);background:#eef5ff;padding:1px 7px;border-radius:999px;white-space:nowrap}
+.pt.sm{font-size:9px;padding:1px 6px}
 .lt{flex:0 0 auto;font-size:10.5px;color:var(--mut)}
 .nbnew{flex:0 0 auto;font-size:9px;font-weight:800;color:#fff;background:var(--accent);padding:2px 6px;border-radius:5px;letter-spacing:.3px}
 .nbamd{flex:0 0 auto;font-size:9px;font-weight:700;color:var(--mut);background:var(--soft);padding:2px 6px;border-radius:5px}
+.nbnew.sm,.nbamd.sm{font-size:8.5px;padding:1px 5px}
+.cnt{flex:0 0 auto;font-size:9.5px;font-weight:700;color:var(--mut);background:var(--card);border:1px solid var(--line);padding:1px 6px;border-radius:999px}
 .fact{flex:0 0 auto;font-size:11px;font-weight:600;color:#5a4ec2;background:#efeefb;padding:2px 9px;border-radius:999px;white-space:nowrap}
 .fdt{flex:0 0 78px;text-align:right;color:var(--mut2);font-size:11px;font-variant-numeric:tabular-nums}
 .farr{flex:0 0 10px;color:var(--mut2);font-size:11px;text-align:right}
-.fh-main{flex:1 1 0} .fh-act{flex:0 0 auto} .fh-dt{flex:0 0 78px;text-align:right}
-.ftoggle{display:inline-flex;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;margin:2px 0 12px}
+.fh-chev{flex:0 0 11px} .fh-main{flex:1 1 0} .fh-act{flex:0 0 auto} .fh-dt{flex:0 0 78px;text-align:right}
+.ffilters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:2px 0 12px}
+.fsearch{flex:1 1 150px;min-width:110px;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:12px;font-family:inherit;background:var(--card);color:inherit}
+.fsel{border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:12px;font-family:inherit;background:var(--card);color:inherit;cursor:pointer;max-width:46vw}
+.ftoggle{display:inline-flex;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px}
 .ftoggle button{border:0;background:transparent;color:var(--mut);font-size:11.5px;font-weight:600;padding:6px 14px;border-radius:999px;cursor:pointer;font-family:inherit;transition:all .15s}
 .ftoggle button.on{background:var(--accent);color:#fff}
 .fempty{padding:26px;text-align:center;color:var(--mut2);font-size:12.5px}
-@media(max-width:520px){.frow,.fhead{gap:9px;padding:9px 8px}.fact,.fdt,.farr,.fh-act,.fh-dt{display:none}}
+@media(max-width:520px){.frow,.fhead,.subrow{gap:9px;padding-left:8px;padding-right:8px}.subrow{padding-left:28px}.fact,.fdt,.farr,.fh-act,.fh-dt{display:none}}
 
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);min-width:0;
   padding:18px 18px 14px;box-shadow:0 1px 3px rgba(0,0,0,.05);
@@ -154,7 +166,6 @@ details.holds>summary::-webkit-details-marker{display:none}
     <button data-n="30" class="on">Top 30 <span class="sub">분산</span></button>
     <button data-n="10">Top 10 <span class="sub">집중</span></button>
   </div>
-  <div class="alert" id="alert"></div>
   <div id="sections"></div>
   <div id="sc13d"></div>
 
@@ -271,43 +282,84 @@ function renderSections(){
       <div class="grid${cn}">${sec.cards.map(c=>cardHTML(c,DATA)).join("")}</div>
     </section>`;}).join("");
 }
-let FEEDNEW=false;
-function feedRows(s){
-  const evs=FEEDNEW?s.events.filter(e=>e.new):s.events;
-  if(!evs.length) return `<div class="fempty">해당 공시 없음</div>`;
-  return evs.map(e=>{
-    const typ=e.new?'<span class="nbnew">신규</span>':'<span class="nbamd">수정</span>';
-    const pt=e.purpose?`<span class="pt">${e.purpose}</span>`:'';
-    const lt=e.letter?'<span class="lt" title="데먼드 레터 첨부">✉</span>':'';
-    const inner=`<span class="fret ${cls(e.ret)}">${fmt(e.ret)}%</span>
-      <span class="fmain">${typ}<b class="ftk">${e.ticker}</b><span class="fcomp">${e.name||''}</span>${pt}${lt}</span>
-      <span class="fact">${e.activist}</span>
-      <span class="fdt">${e.date}</span>
-      <span class="farr">↗</span>`;
-    return e.url?`<a class="frow${e.new?' new':''}" href="${e.url}" target="_blank" rel="noopener">${inner}</a>`
-                :`<div class="frow${e.new?' new':''}">${inner}</div>`;
+let FF={q:'',act:'',purp:'',newonly:false};
+function campMatch(c){
+  if(FF.newonly && !c.has_initial) return false;
+  if(FF.act && c.activist!==FF.act) return false;
+  if(FF.purp && (c.purpose||'')!==FF.purp) return false;
+  if(FF.q){const q=FF.q.toLowerCase();
+    if(!((c.ticker||'').toLowerCase().includes(q)||(c.name||'').toLowerCase().includes(q))) return false;}
+  return true;
+}
+function campRow(c){
+  const head=c.has_initial?'<span class="nbnew">신규</span>':'<span class="nbamd">후속</span>';
+  const cnt=c.n>1?`<span class="cnt">${c.n}건</span>`:'';
+  const pt=c.purpose?`<span class="pt">${c.purpose}</span>`:'';
+  const lt=c.letter?'<span class="lt" title="데먼드 레터 첨부">✉</span>':'';
+  const sub=c.filings.map(f=>{
+    const ft=f.new?'<span class="nbnew sm">신규</span>':'<span class="nbamd sm">수정</span>';
+    const fpt=f.purpose?`<span class="pt sm">${f.purpose}</span>`:'';
+    const flt=f.letter?'<span class="lt">✉</span>':'';
+    const form=(f.form||'').replace('SCHEDULE ','').replace('SC ','');
+    const inner=`<span class="fret ${cls(f.ret)}">${fmt(f.ret)}%</span>
+      <span class="fmain">${ft}<span class="ftk">${form}</span>${fpt}${flt}</span>
+      <span class="fdt">${f.date}</span><span class="farr">↗</span>`;
+    return f.url?`<a class="subrow" href="${f.url}" target="_blank" rel="noopener">${inner}</a>`
+               :`<div class="subrow">${inner}</div>`;
   }).join("");
+  return `<div class="camp${c.has_initial?' new':''}${c.n<2?' n1':''}">
+    <div class="frow camphead">
+      <span class="fret ${cls(c.latest_ret)}">${fmt(c.latest_ret)}%</span>
+      <span class="chev">▸</span>
+      <span class="fmain">${head}<b class="ftk">${c.ticker}</b><span class="fcomp">${c.name||''}</span>${pt}${lt}${cnt}</span>
+      <span class="fact">${c.activist}</span>
+      <span class="fdt">${c.latest}</span>
+    </div>
+    <div class="campsub">${sub}</div>
+  </div>`;
+}
+function feedList(s){
+  const cs=s.campaigns.filter(campMatch);
+  if(!cs.length) return `<div class="fempty">조건에 맞는 캠페인 없음</div>`;
+  return cs.map(campRow).join("");
 }
 function renderSc13d(D){
   const el=document.getElementById('sc13d'), s=D.sc13d;
-  if(!s||!s.events||!s.events.length){el.innerHTML="";return;}
+  if(!s||!s.campaigns||!s.campaigns.length){el.innerHTML="";return;}
+  const acts=[...new Set(s.campaigns.map(c=>c.activist))].sort();
+  const purps=[...new Set(s.campaigns.map(c=>c.purpose).filter(Boolean))].sort();
+  const opt=(arr,sel,ph)=>`<option value="">${ph}</option>`+arr.map(a=>`<option${a===sel?' selected':''}>${a}</option>`).join("");
   el.innerHTML=`<div class="feed">
-    <span class="lab">실시간 · EDGAR</span><h2>13D 알림 — 최근 액티비스트 공시</h2>
-    <div class="fnote"><b>검증된 액티비스트 18곳</b>의 Schedule 13D. <b style="color:var(--accent)">신규</b>(캠페인 개시)는
-      최근 1년 · <b>수정</b>(업데이트)은 최근 120일. <b>알파는 신규에 있다</b> — 신규 13D 발표효과 [0,+1] 평균
+    <span class="lab">실시간 · EDGAR</span><h2>13D 알림 — 액티비스트 캠페인</h2>
+    <div class="fnote"><b>검증된 액티비스트 18곳</b>의 Schedule 13D를 <b>대상 기업별 캠페인</b>으로 묶음 — <b style="color:var(--accent)">신규</b>(개시 공시)를
+      머리로, 이후 <b>수정</b>(후속 13D/A)을 그 아래로. 행을 펼치면 공시 타임라인이 나옵니다. <b>알파는 개시에 있다</b> — 신규 13D 발표효과 [0,+1] 평균
       <b>+5.5%</b>(t4.34)·발표 +1일 진입·21일 보유 <b>+5.8%</b>(t3.76)인 반면 수정공시는 +0.8%로 약함.
-      목적 태그=Item 4(Purpose), ✉=데먼드 레터, 행 클릭 시 EDGAR 원문 ↗. 이후수익=공시 후 시장조정(−S&P) 초과.</div>
-    <div class="ftoggle" id="ftoggle">
-      <button data-f="all" class="on">전체 ${s.n_shown||s.events.length}</button>
-      <button data-f="new">🎯 신규만 ${s.n_new}</button>
+      목적 태그=Item 4(Purpose), ✉=데먼드 레터, 공시 클릭 시 EDGAR 원문 ↗. 이후수익=공시 후 시장조정(−S&P) 초과.</div>
+    <div class="ffilters">
+      <input id="fq" class="fsearch" placeholder="🔍 종목·회사 검색" value="${FF.q}">
+      <select id="fact" class="fsel">${opt(acts,FF.act,'전체 액티비스트')}</select>
+      <select id="fpurp" class="fsel">${opt(purps,FF.purp,'전체 목적')}</select>
+      <div class="ftoggle" id="ftoggle">
+        <button data-f="all" class="${FF.newonly?'':'on'}">전체 ${s.n_campaigns}</button>
+        <button data-f="new" class="${FF.newonly?'on':''}">🎯 개시 ${s.n_initial_campaigns}</button>
+      </div>
     </div>
-    <div class="fhead"><span class="fret">이후</span><span class="fh-main">유형 · 대상 종목 · 목적</span><span class="fh-act">액티비스트</span><span class="fh-dt">공시일</span></div>
-    <div id="feedrows">${feedRows(s)}</div></div>`;
+    <div class="fhead"><span class="fret">이후</span><span class="fh-chev"></span><span class="fh-main">유형 · 대상 종목 · 목적</span><span class="fh-act">액티비스트</span><span class="fh-dt">최근 공시</span></div>
+    <div id="feedrows">${feedList(s)}</div></div>`;
+  const rows=document.getElementById('feedrows');
+  const rerender=()=>rows.innerHTML=feedList(s);
+  document.getElementById('fq').addEventListener('input',e=>{FF.q=e.target.value;rerender();});
+  document.getElementById('fact').addEventListener('change',e=>{FF.act=e.target.value;rerender();});
+  document.getElementById('fpurp').addEventListener('change',e=>{FF.purp=e.target.value;rerender();});
   document.getElementById('ftoggle').addEventListener('click',ev=>{
     const b=ev.target.closest('button'); if(!b)return;
-    FEEDNEW=b.dataset.f==='new';
-    [...document.querySelectorAll('#ftoggle button')].forEach(x=>x.classList.toggle('on',(x.dataset.f==='new')===FEEDNEW));
-    document.getElementById('feedrows').innerHTML=feedRows(s);
+    FF.newonly=b.dataset.f==='new';
+    [...document.querySelectorAll('#ftoggle button')].forEach(x=>x.classList.toggle('on',(x.dataset.f==='new')===FF.newonly));
+    rerender();
+  });
+  rows.addEventListener('click',ev=>{
+    const head=ev.target.closest('.camphead'); if(!head)return;
+    head.parentElement.classList.toggle('open');
   });
 }
 function render(D){
@@ -320,11 +372,6 @@ function render(D){
      <div class="chip">S&P 500 (형성 이후) <b class="${cls(D.spy_since_rebal)}">${fmt(D.spy_since_rebal)}%</b></div>
      <div class="chip">자동 새로고침 · ${now}</div>`;
   document.getElementById('disc').textContent="ⓘ "+(D.note||"");
-  const al=document.getElementById('alert'),rc=D.rebal_changes;
-  if(rc&&rc.is_new_rebal){let html=`🔔 <b>리밸런싱 ${rc.rebal}</b> (직전 ${rc.prev_rebal}) 종목 교체`;
-    for(const k in rc.per_strategy){const c=rc.per_strategy[k];
-      html+=`<br>&nbsp;<b>${k}</b> `+(c.added.length?`<span class="add">+${c.added.join(" +")}</span> `:"")+(c.dropped.length?`<span class="drop">−${c.dropped.join(" −")}</span>`:"");}
-    al.innerHTML=html; al.style.display="block";} else al.style.display="none";
   renderSections();
   renderSc13d(D);
 }
