@@ -16,3 +16,6 @@ logs/
 data/raw/f13/
 .claude/
 notes/*.log
+
+# Secrets
+.env

@@ -1,3 +1,4 @@
+import os
 #!/usr/bin/env python3
 """13F 대규모 수집: 액티브 매니저(집중도 10-200종목, 패시브 거인 제외) 보유 → f13_panel.parquet.
 캘린더분기 동기·전부 주식. value/total=비중. 2021Q4~2025Q4. 분기 zip 받아 2-pass 필터 후 삭제."""
@@ -5,7 +6,7 @@ import urllib.request, zipfile, io, csv, os
 from pathlib import Path
 import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
-UA = "us_funds_alpha research your-email@example.com"
+UA = os.environ.get("SEC_USER_AGENT", "us_funds_alpha research your-email@example.com")
 B = "https://www.sec.gov/files/structureddata/data/form-13f-data-sets"
 WINDOWS = ["01dec2021-28feb2022","01mar2022-31may2022","01jun2022-31aug2022","01sep2022-30nov2022",
            "01dec2022-28feb2023","01mar2023-31may2023","01jun2023-31aug2023","01sep2023-30nov2023",

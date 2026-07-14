@@ -1,3 +1,4 @@
+import os
 #!/usr/bin/env python3
 """300펀드 보유를 N-PORT 벌크로 수집(개별 스크래핑 대체, 훨씬 빠름).
 연속 분기 zip 다운→300펀드 accession만 스트리밍 추출(EC/EP)→삭제. point-in-time(FILING_DATE).
@@ -6,7 +7,7 @@
 import zipfile, io, csv, json, urllib.request, time, os
 from pathlib import Path
 import pandas as pd, datetime as dt
-ROOT=Path(__file__).resolve().parent.parent; UA="us_funds_alpha research your-email@example.com"
+ROOT=Path(__file__).resolve().parent.parent; UA = os.environ.get("SEC_USER_AGENT", "us_funds_alpha research your-email@example.com")
 EQ={"EC","EP"}
 QUARTERS=[f"{y}q{q}" for (y,q) in
           [(2022,4),(2023,1),(2023,2),(2023,3),(2023,4),(2024,1),(2024,2),(2024,3),(2024,4),

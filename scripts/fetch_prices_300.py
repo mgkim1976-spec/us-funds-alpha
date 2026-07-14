@@ -1,9 +1,10 @@
+import os
 #!/usr/bin/env python3
 """300펀드 보유의 미가격 cusip(소형주 꼬리) 매핑+수집 → prices_full.parquet에 append."""
 import sys, json, time, urllib.request
 from pathlib import Path
 import pandas as pd
-ROOT=Path(__file__).resolve().parent.parent; RAW=ROOT/"data"/"raw"; UA="us_funds_alpha research your-email@example.com"
+ROOT=Path(__file__).resolve().parent.parent; RAW=ROOT/"data"/"raw"; UA = os.environ.get("SEC_USER_AGENT", "us_funds_alpha research your-email@example.com")
 sys.path.insert(0, str(Path(__file__).resolve().parent)); import falib as fa
 
 def openfigi(cusips):

@@ -219,6 +219,10 @@ Money Smarter?*](https://mues.econ.muni.cz/media/3528254/13f_smart_money.pdf),
 거의 없습니다.* 다만 표본이 작고(초기 13D 38건) 장기 드리프트는 레짐 의존적이라는 한계를
 피드 설명에 함께 적었습니다.
 
+대시보드는 **launchd 상주 서버**(`com.mgprj.us_funds_alpha.server`, `KeepAlive`)가
+항상 `http://localhost:8769/` 로 제공합니다 — 부팅 시 자동 기동, 죽으면 자동 재시작.
+수동 기동이 필요할 때만:
+
 ```bash
 cd dashboard && python3 -m http.server 8769   # → http://localhost:8769/
 ```

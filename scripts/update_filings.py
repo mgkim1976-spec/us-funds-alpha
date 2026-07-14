@@ -1,3 +1,4 @@
+import os
 #!/usr/bin/env python3
 """일일 증분 공시 수집 — 두 소스.
   MF : universe_541 펀드의 새 NPORT-P  → data/holdings_panel_541.parquet
@@ -11,7 +12,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
-UA = "us_funds_alpha research your-email@example.com"
+UA = os.environ.get("SEC_USER_AGENT", "us_funds_alpha research your-email@example.com")
 EQ = {"EC", "EP"}
 
 def get(url, retries=3):
