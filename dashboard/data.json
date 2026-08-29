@@ -1,15 +1,15 @@
 {
- "generated": "2026-07-14",
+ "generated": "2026-08-29",
  "rebal": "2026-06-01",
  "sc13d": {
-  "generated": "2026-07-14",
+  "generated": "2026-08-29",
   "lookback_amend": 270,
   "lookback_init": 365,
   "announce_note": "발표 [0,+1] 평균 +5.5% (t4.34) · +1일 진입·21일 보유 +5.8% (t3.76) — sc13d.md",
-  "n_total": 62,
-  "n_new": 5,
-  "n_campaigns": 27,
-  "n_initial_campaigns": 22,
+  "n_total": 54,
+  "n_new": 3,
+  "n_campaigns": 25,
+  "n_initial_campaigns": 20,
   "campaigns": [
    {
     "activist": "Icahn",
@@ -66,14 +66,24 @@
     "ticker": "BILL",
     "name": "BILL Holdings, Inc.",
     "purpose": "이사회·이사",
-    "latest": "2025-09-04",
-    "latest_ret": -42.6,
+    "latest": "2026-08-24",
+    "latest_ret": null,
     "initial_date": "2025-09-04",
     "initial_backfilled": false,
-    "n": 1,
+    "n": 2,
     "has_initial": true,
     "letter": false,
     "filings": [
+     {
+      "date": "2026-08-24",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189526002296/",
+      "backfilled": false
+     },
      {
       "date": "2025-09-04",
       "form": "SCHEDULE 13D",
@@ -87,31 +97,6 @@
     ]
    },
    {
-    "activist": "Elliott",
-    "ticker": "UNIT",
-    "name": "Uniti Group Inc.",
-    "purpose": "이사회·이사",
-    "latest": "2025-08-08",
-    "latest_ret": 60.6,
-    "initial_date": "2025-08-08",
-    "initial_backfilled": false,
-    "n": 1,
-    "has_initial": true,
-    "letter": false,
-    "filings": [
-     {
-      "date": "2025-08-08",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": 60.6,
-      "purpose": "이사회·이사",
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1791786/000090266425003448/",
-      "backfilled": false
-     }
-    ]
-   },
-   {
     "activist": "Starboard",
     "ticker": "ROG",
     "name": "ROGERS CORP",
@@ -119,7 +104,7 @@
     "latest": "2026-01-23",
     "latest_ret": 42.9,
     "initial_date": "2025-08-06",
-    "initial_backfilled": false,
+    "initial_backfilled": true,
     "n": 2,
     "has_initial": true,
     "letter": false,
@@ -138,11 +123,11 @@
       "date": "2025-08-06",
       "form": "SCHEDULE 13D",
       "new": true,
-      "ret": 85.3,
+      "ret": null,
       "purpose": "이사회·이사",
       "letter": false,
       "url": "https://www.sec.gov/Archives/edgar/data/1517137/000092189525002118/",
-      "backfilled": false
+      "backfilled": true
      }
     ]
    },
@@ -341,14 +326,24 @@
     "ticker": "JBLU",
     "name": "JETBLUE AIRWAYS CORP",
     "purpose": null,
-    "latest": "2026-06-09",
+    "latest": "2026-08-20",
     "latest_ret": null,
     "initial_date": "2024-02-12",
     "initial_backfilled": true,
-    "n": 3,
+    "n": 4,
     "has_initial": true,
     "letter": false,
     "filings": [
+     {
+      "date": "2026-08-20",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/921669/000153949726002326/",
+      "backfilled": false
+     },
      {
       "date": "2026-06-09",
       "form": "SCHEDULE 13D/A",
@@ -692,71 +687,6 @@
     ]
    },
    {
-    "activist": "Trian",
-    "ticker": "JHG",
-    "name": "Janus Henderson Group Ltd.",
-    "purpose": "이사회·이사",
-    "latest": "2026-06-30",
-    "latest_ret": null,
-    "initial_date": "2020-10-02",
-    "initial_backfilled": true,
-    "n": 5,
-    "has_initial": true,
-    "letter": true,
-    "filings": [
-     {
-      "date": "2026-06-30",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": null,
-      "purpose": "이사회·이사",
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041326002004/",
-      "backfilled": false
-     },
-     {
-      "date": "2026-06-18",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": null,
-      "purpose": "매각·합병",
-      "letter": true,
-      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041326001914/",
-      "backfilled": false
-     },
-     {
-      "date": "2026-05-14",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -0.7,
-      "purpose": "매각·합병",
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000119312526224634/",
-      "backfilled": false
-     },
-     {
-      "date": "2026-03-24",
-      "form": "SCHEDULE 13D/A",
-      "new": false,
-      "ret": -16.2,
-      "purpose": "매각·합병",
-      "letter": true,
-      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000093041326000860/",
-      "backfilled": false
-     },
-     {
-      "date": "2020-10-02",
-      "form": "SCHEDULE 13D",
-      "new": true,
-      "ret": null,
-      "purpose": null,
-      "letter": false,
-      "url": "https://www.sec.gov/Archives/edgar/data/1345471/000134547120000053/",
-      "backfilled": true
-     }
-    ]
-   },
-   {
     "activist": "PershingSquare",
     "ticker": "QSR",
     "name": "Restaurant Brands International Inc.",
@@ -804,7 +734,7 @@
    {
     "activist": "Legion",
     "ticker": "LFCR",
-    "name": "LIFECORE BIOMEDICAL, INC. \\DE\\",
+    "name": "LIFECORE BIOMEDICAL, INC. DE",
     "purpose": "일반(13D)",
     "latest": "2026-07-02",
     "latest_ret": null,
@@ -840,15 +770,55 @@
     "activist": "Legion",
     "ticker": "NNBR",
     "name": "NN INC",
-    "purpose": null,
-    "latest": "2026-07-07",
+    "purpose": "이사회·이사",
+    "latest": "2026-08-14",
     "latest_ret": null,
     "initial_date": "2019-01-18",
     "initial_backfilled": true,
-    "n": 2,
+    "n": 6,
     "has_initial": true,
-    "letter": false,
+    "letter": true,
     "filings": [
+     {
+      "date": "2026-08-14",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526002197/",
+      "backfilled": false
+     },
+     {
+      "date": "2026-08-10",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": null,
+      "purpose": null,
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526002027/",
+      "backfilled": false
+     },
+     {
+      "date": "2026-07-31",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": null,
+      "purpose": "일반(13D)",
+      "letter": true,
+      "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526001915/",
+      "backfilled": false
+     },
+     {
+      "date": "2026-07-22",
+      "form": "SCHEDULE 13D/A",
+      "new": false,
+      "ret": null,
+      "purpose": "이사회·이사",
+      "letter": false,
+      "url": "https://www.sec.gov/Archives/edgar/data/1560207/000092189526001856/",
+      "backfilled": false
+     },
      {
       "date": "2026-07-07",
       "form": "SCHEDULE 13D/A",
@@ -943,11 +913,11 @@
    },
    {
     "activist": "Icahn",
-    "ticker": "ENZN",
+    "ticker": "VISK",
     "name": "Viskase Holdings, Inc.",
     "purpose": "이사회·이사",
     "latest": "2026-03-27",
-    "latest_ret": -23.2,
+    "latest_ret": -38.2,
     "initial_date": null,
     "initial_backfilled": false,
     "n": 2,
@@ -958,7 +928,7 @@
       "date": "2026-03-27",
       "form": "SCHEDULE 13D/A",
       "new": false,
-      "ret": -23.2,
+      "ret": -38.2,
       "purpose": "이사회·이사",
       "letter": false,
       "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526129970/",
@@ -968,7 +938,7 @@
       "date": "2026-01-30",
       "form": "SCHEDULE 13D/A",
       "new": false,
-      "ret": 7078.2,
+      "ret": 5953.2,
       "purpose": "일반(13D)",
       "letter": false,
       "url": "https://www.sec.gov/Archives/edgar/data/921669/000119312526032170/",
@@ -1075,7 +1045,7 @@
   30.2,
   36.7
  ],
- "spy_since_rebal": -0.98,
+ "spy_since_rebal": 1.69,
  "note": "MF=뮤추얼펀드(N-PORT) · HF=헤지펀드(13F 집중). 검증·곡선은 2024-2026(13F 가용기간). 결합=MF의 mhw·lnp + HF의 best-ideas. point-in-time·공시지연 반영. 투자 조언 아님.",
  "sections": [
   {
@@ -1143,10 +1113,10 @@
       49.1,
       66.3
      ],
-     "since_rebal": -1.1,
-     "vs_spy": -0.12,
-     "since_rebal10": -4.26,
-     "vs_spy10": -3.28,
+     "since_rebal": 2.3,
+     "vs_spy": 0.61,
+     "since_rebal10": 0.37,
+     "vs_spy10": -1.32,
      "holds": [
       {
        "ticker": "NVDA",
@@ -1154,7 +1124,7 @@
        "funds": 186,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -9.2
+       "ret": -2.9
       },
       {
        "ticker": "AAPL",
@@ -1162,7 +1132,7 @@
        "funds": 169,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": 3.6
+       "ret": 4.5
       },
       {
        "ticker": "GOOGL",
@@ -1170,7 +1140,7 @@
        "funds": 190,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": -6.3
+       "ret": -7.9
       },
       {
        "ticker": "AMZN",
@@ -1178,7 +1148,7 @@
        "funds": 202,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -5.3
+       "ret": 2.0
       },
       {
        "ticker": "MSFT",
@@ -1186,7 +1156,7 @@
        "funds": 221,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": -15.1
+       "ret": 11.7
       },
       {
        "ticker": "DFUVX",
@@ -1194,7 +1164,7 @@
        "funds": 2,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": 2.3
+       "ret": 6.7
       },
       {
        "ticker": "META",
@@ -1202,7 +1172,7 @@
        "funds": 215,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": 9.5
+       "ret": -3.6
       },
       {
        "ticker": "GMSWX",
@@ -1210,7 +1180,7 @@
        "funds": 1,
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": -1.2
+       "ret": 1.1
       },
       {
        "ticker": "TSM",
@@ -1218,7 +1188,7 @@
        "funds": 67,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": -3.0
+       "ret": -3.9
       },
       {
        "ticker": "BRK/B",
@@ -1226,7 +1196,7 @@
        "funds": 84,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": 5.6
+       "ret": 7.4
       },
       {
        "ticker": "V",
@@ -1234,7 +1204,7 @@
        "funds": 149,
        "weight": 4.3,
        "weight10": 0,
-       "ret": 10.8
+       "ret": 18.4
       },
       {
        "ticker": "WMT",
@@ -1242,7 +1212,7 @@
        "funds": 107,
        "weight": 4.1,
        "weight10": 0,
-       "ret": 0.2
+       "ret": -9.8
       },
       {
        "ticker": "GOOG",
@@ -1250,7 +1220,7 @@
        "funds": 121,
        "weight": 3.9,
        "weight10": 0,
-       "ret": -5.8
+       "ret": -7.9
       },
       {
        "ticker": "JPM",
@@ -1258,7 +1228,7 @@
        "funds": 146,
        "weight": 3.7,
        "weight10": 0,
-       "ret": 13.3
+       "ret": 21.1
       },
       {
        "ticker": "AVGO",
@@ -1266,7 +1236,7 @@
        "funds": 178,
        "weight": 3.4,
        "weight10": 0,
-       "ret": -16.4
+       "ret": -19.7
       },
       {
        "ticker": "SGLC",
@@ -1274,7 +1244,7 @@
        "funds": 2,
        "weight": 3.2,
        "weight10": 0,
-       "ret": -0.7
+       "ret": 3.6
       },
       {
        "ticker": "LRCX",
@@ -1282,7 +1252,7 @@
        "funds": 114,
        "weight": 3.0,
        "weight10": 0,
-       "ret": 4.1
+       "ret": -4.7
       },
       {
        "ticker": "AMD",
@@ -1290,7 +1260,7 @@
        "funds": 96,
        "weight": 2.8,
        "weight10": 0,
-       "ret": 4.8
+       "ret": -8.7
       },
       {
        "ticker": "MA",
@@ -1298,7 +1268,7 @@
        "funds": 135,
        "weight": 2.6,
        "weight10": 0,
-       "ret": 8.8
+       "ret": 20.4
       },
       {
        "ticker": "CRM",
@@ -1306,7 +1276,7 @@
        "funds": 115,
        "weight": 2.4,
        "weight10": 0,
-       "ret": -18.1
+       "ret": 22.5
       },
       {
        "ticker": "NFLX",
@@ -1314,7 +1284,7 @@
        "funds": 126,
        "weight": 2.2,
        "weight10": 0,
-       "ret": -14.0
+       "ret": -4.8
       },
       {
        "ticker": "MU",
@@ -1322,7 +1292,7 @@
        "funds": 98,
        "weight": 1.9,
        "weight10": 0,
-       "ret": -9.5
+       "ret": -9.9
       },
       {
        "ticker": "JNJ",
@@ -1330,7 +1300,7 @@
        "funds": 130,
        "weight": 1.7,
        "weight10": 0,
-       "ret": 15.3
+       "ret": 20.5
       },
       {
        "ticker": "MPLX",
@@ -1338,7 +1308,7 @@
        "funds": 9,
        "weight": 1.5,
        "weight10": 0,
-       "ret": 4.0
+       "ret": 9.7
       },
       {
        "ticker": "ET",
@@ -1346,7 +1316,7 @@
        "funds": 13,
        "weight": 1.3,
        "weight10": 0,
-       "ret": 4.7
+       "ret": 12.4
       },
       {
        "ticker": "KO",
@@ -1354,7 +1324,7 @@
        "funds": 92,
        "weight": 1.1,
        "weight10": 0,
-       "ret": 7.8
+       "ret": 14.7
       },
       {
        "ticker": "SCHW",
@@ -1362,7 +1332,7 @@
        "funds": 91,
        "weight": 0.9,
        "weight10": 0,
-       "ret": 15.4
+       "ret": 24.5
       },
       {
        "ticker": "LLY",
@@ -1370,7 +1340,7 @@
        "funds": 139,
        "weight": 0.6,
        "weight10": 0,
-       "ret": 9.2
+       "ret": 8.7
       },
       {
        "ticker": "INTC",
@@ -1378,7 +1348,7 @@
        "funds": 57,
        "weight": 0.4,
        "weight10": 0,
-       "ret": -5.7
+       "ret": -18.2
       },
       {
        "ticker": "PLTR",
@@ -1386,7 +1356,7 @@
        "funds": 97,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -19.1
+       "ret": 16.0
       }
      ]
     },
@@ -1451,10 +1421,10 @@
       61.6,
       73.7
      ],
-     "since_rebal": -0.5,
-     "vs_spy": 0.48,
-     "since_rebal10": -3.84,
-     "vs_spy10": -2.86,
+     "since_rebal": 1.31,
+     "vs_spy": -0.37,
+     "since_rebal10": -0.6,
+     "vs_spy10": -2.29,
      "holds": [
       {
        "ticker": "NVDA",
@@ -1462,7 +1432,7 @@
        "funds": 186,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -9.2
+       "ret": -2.9
       },
       {
        "ticker": "GOOGL",
@@ -1470,7 +1440,7 @@
        "funds": 190,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": -6.3
+       "ret": -7.9
       },
       {
        "ticker": "AAPL",
@@ -1478,7 +1448,7 @@
        "funds": 169,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": 3.6
+       "ret": 4.5
       },
       {
        "ticker": "MSFT",
@@ -1486,7 +1456,7 @@
        "funds": 221,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -15.1
+       "ret": 11.7
       },
       {
        "ticker": "AMZN",
@@ -1494,7 +1464,7 @@
        "funds": 202,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": -5.3
+       "ret": 2.0
       },
       {
        "ticker": "META",
@@ -1502,7 +1472,7 @@
        "funds": 215,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": 9.5
+       "ret": -3.6
       },
       {
        "ticker": "LRCX",
@@ -1510,7 +1480,7 @@
        "funds": 114,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": 4.1
+       "ret": -4.7
       },
       {
        "ticker": "AVGO",
@@ -1518,7 +1488,7 @@
        "funds": 178,
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": -16.4
+       "ret": -19.7
       },
       {
        "ticker": "JPM",
@@ -1526,7 +1496,7 @@
        "funds": 146,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": 13.3
+       "ret": 21.1
       },
       {
        "ticker": "AMD",
@@ -1534,7 +1504,7 @@
        "funds": 96,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": 4.8
+       "ret": -8.7
       },
       {
        "ticker": "WMT",
@@ -1542,7 +1512,7 @@
        "funds": 107,
        "weight": 4.3,
        "weight10": 0,
-       "ret": 0.2
+       "ret": -9.8
       },
       {
        "ticker": "KO",
@@ -1550,7 +1520,7 @@
        "funds": 92,
        "weight": 4.1,
        "weight10": 0,
-       "ret": 7.8
+       "ret": 14.7
       },
       {
        "ticker": "MU",
@@ -1558,7 +1528,7 @@
        "funds": 98,
        "weight": 3.9,
        "weight10": 0,
-       "ret": -9.5
+       "ret": -9.9
       },
       {
        "ticker": "MPLX",
@@ -1566,7 +1536,7 @@
        "funds": 9,
        "weight": 3.7,
        "weight10": 0,
-       "ret": 4.0
+       "ret": 9.7
       },
       {
        "ticker": "JNJ",
@@ -1574,7 +1544,7 @@
        "funds": 130,
        "weight": 3.4,
        "weight10": 0,
-       "ret": 15.3
+       "ret": 20.5
       },
       {
        "ticker": "MRK",
@@ -1582,7 +1552,7 @@
        "funds": 117,
        "weight": 3.2,
        "weight10": 0,
-       "ret": 8.5
+       "ret": 29.7
       },
       {
        "ticker": "APH",
@@ -1590,7 +1560,7 @@
        "funds": 98,
        "weight": 3.0,
        "weight10": 0,
-       "ret": 6.8
+       "ret": 8.0
       },
       {
        "ticker": "LLY",
@@ -1598,7 +1568,7 @@
        "funds": 139,
        "weight": 2.8,
        "weight10": 0,
-       "ret": 9.2
+       "ret": 8.7
       },
       {
        "ticker": "VRT",
@@ -1606,7 +1576,7 @@
        "funds": 68,
        "weight": 2.6,
        "weight10": 0,
-       "ret": -5.4
+       "ret": -20.5
       },
       {
        "ticker": "PLTR",
@@ -1614,7 +1584,7 @@
        "funds": 97,
        "weight": 2.4,
        "weight10": 0,
-       "ret": -19.1
+       "ret": 16.0
       },
       {
        "ticker": "ET",
@@ -1622,7 +1592,7 @@
        "funds": 13,
        "weight": 2.2,
        "weight10": 0,
-       "ret": 4.7
+       "ret": 12.4
       },
       {
        "ticker": "TSM",
@@ -1630,7 +1600,7 @@
        "funds": 67,
        "weight": 1.9,
        "weight10": 0,
-       "ret": -3.0
+       "ret": -3.9
       },
       {
        "ticker": "HON",
@@ -1638,7 +1608,7 @@
        "funds": 82,
        "weight": 1.7,
        "weight10": 0,
-       "ret": -10.4
+       "ret": -12.1
       },
       {
        "ticker": "INTC",
@@ -1646,7 +1616,7 @@
        "funds": 57,
        "weight": 1.5,
        "weight10": 0,
-       "ret": -5.7
+       "ret": -18.2
       },
       {
        "ticker": "TXN",
@@ -1654,7 +1624,7 @@
        "funds": 93,
        "weight": 1.3,
        "weight10": 0,
-       "ret": 1.8
+       "ret": -11.3
       },
       {
        "ticker": "WDC",
@@ -1662,7 +1632,7 @@
        "funds": 79,
        "weight": 1.1,
        "weight10": 0,
-       "ret": 1.7
+       "ret": -15.9
       },
       {
        "ticker": "ANET",
@@ -1670,7 +1640,7 @@
        "funds": 89,
        "weight": 0.9,
        "weight10": 0,
-       "ret": 6.1
+       "ret": 14.5
       },
       {
        "ticker": "SATS",
@@ -1686,7 +1656,7 @@
        "funds": 135,
        "weight": 0.4,
        "weight10": 0,
-       "ret": 8.8
+       "ret": 20.4
       },
       {
        "ticker": "CSCO",
@@ -1694,7 +1664,7 @@
        "funds": 114,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -1.3
+       "ret": -9.1
       }
      ]
     },
@@ -1759,50 +1729,50 @@
       43.8,
       52.1
      ],
-     "since_rebal": -1.06,
-     "vs_spy": -0.08,
-     "since_rebal10": -3.73,
-     "vs_spy10": -2.75,
+     "since_rebal": 1.28,
+     "vs_spy": -0.41,
+     "since_rebal10": 1.7,
+     "vs_spy10": 0.02,
      "holds": [
       {
        "ticker": "NVDA",
        "name": "NVIDIA CORP",
-       "funds": 1668,
+       "funds": 1667,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -9.2
+       "ret": -2.9
       },
       {
        "ticker": "AAPL",
        "name": "APPLE INC.",
-       "funds": 1837,
+       "funds": 1834,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": 3.6
+       "ret": 4.5
       },
       {
        "ticker": "MSFT",
        "name": "Microsoft",
-       "funds": 1893,
+       "funds": 1890,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": -15.1
+       "ret": 11.7
       },
       {
        "ticker": "AMZN",
        "name": "Amazon.com Inc",
-       "funds": 1836,
+       "funds": 1834,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -5.3
+       "ret": 2.0
       },
       {
        "ticker": "GOOGL",
        "name": "Alphabet Inc",
-       "funds": 1537,
+       "funds": 1536,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": -6.3
+       "ret": -7.9
       },
       {
        "ticker": "DFAC",
@@ -1810,7 +1780,7 @@
        "funds": 329,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": 0.5
+       "ret": 3.3
       },
       {
        "ticker": "META",
@@ -1818,31 +1788,31 @@
        "funds": 1225,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": 9.5
+       "ret": -3.6
       },
       {
        "ticker": "GOOG",
        "name": "Alphabet Inc",
-       "funds": 1239,
+       "funds": 1237,
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": -5.8
+       "ret": -7.9
       },
       {
        "ticker": "V",
        "name": "VISA INC.",
-       "funds": 935,
+       "funds": 934,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": 10.8
+       "ret": 18.4
       },
       {
        "ticker": "BRK/B",
        "name": "Berkshire Hathaway Inc",
-       "funds": 1186,
+       "funds": 1183,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": 5.6
+       "ret": 7.4
       },
       {
        "ticker": "TSM",
@@ -1850,7 +1820,7 @@
        "funds": 594,
        "weight": 4.3,
        "weight10": 0,
-       "ret": -3.0
+       "ret": -3.9
       },
       {
        "ticker": "AVGO",
@@ -1858,15 +1828,15 @@
        "funds": 887,
        "weight": 4.1,
        "weight10": 0,
-       "ret": -16.4
+       "ret": -19.7
       },
       {
        "ticker": "TSLA",
        "name": "TESLA, INC.",
-       "funds": 860,
+       "funds": 856,
        "weight": 3.9,
        "weight10": 0,
-       "ret": -5.1
+       "ret": -16.1
       },
       {
        "ticker": "JPM",
@@ -1874,15 +1844,15 @@
        "funds": 1131,
        "weight": 3.7,
        "weight10": 0,
-       "ret": 13.3
+       "ret": 21.1
       },
       {
        "ticker": "MA",
        "name": "MASTERCARD INCORPORATED.",
-       "funds": 607,
+       "funds": 606,
        "weight": 3.4,
        "weight10": 0,
-       "ret": 8.8
+       "ret": 20.4
       },
       {
        "ticker": "IRDM",
@@ -1890,15 +1860,15 @@
        "funds": 5,
        "weight": 3.2,
        "weight10": 0,
-       "ret": 2.0
+       "ret": -2.2
       },
       {
        "ticker": "MU",
        "name": "MICRON TECHNOLOGY, INC.",
-       "funds": 340,
+       "funds": 339,
        "weight": 3.0,
        "weight10": 0,
-       "ret": -9.5
+       "ret": -9.9
       },
       {
        "ticker": "PDD",
@@ -1906,7 +1876,7 @@
        "funds": 88,
        "weight": 2.8,
        "weight10": 0,
-       "ret": -3.1
+       "ret": -1.8
       },
       {
        "ticker": "DFIC",
@@ -1914,15 +1884,15 @@
        "funds": 188,
        "weight": 2.6,
        "weight10": 0,
-       "ret": -0.6
+       "ret": 4.6
       },
       {
        "ticker": "LLY",
        "name": "Eli Lilly",
-       "funds": 790,
+       "funds": 789,
        "weight": 2.4,
        "weight10": 0,
-       "ret": 9.2
+       "ret": 8.7
       },
       {
        "ticker": "AMD",
@@ -1930,15 +1900,15 @@
        "funds": 408,
        "weight": 2.2,
        "weight10": 0,
-       "ret": 4.8
+       "ret": -8.7
       },
       {
        "ticker": "NFLX",
        "name": "NETFLIX, INC.",
-       "funds": 583,
+       "funds": 582,
        "weight": 1.9,
        "weight10": 0,
-       "ret": -14.0
+       "ret": -4.8
       },
       {
        "ticker": "CNA",
@@ -1946,7 +1916,7 @@
        "funds": 3,
        "weight": 1.7,
        "weight10": 0,
-       "ret": 23.9
+       "ret": 18.8
       },
       {
        "ticker": "DFUS",
@@ -1954,31 +1924,31 @@
        "funds": 209,
        "weight": 1.5,
        "weight10": 0,
-       "ret": -0.6
+       "ret": 1.8
       },
       {
        "ticker": "SCHX",
        "name": "SCHX",
-       "funds": 255,
+       "funds": 256,
        "weight": 1.3,
        "weight10": 0,
-       "ret": -0.8
-      },
-      {
-       "ticker": "XOM",
-       "name": "Exxon Mobil Corp",
-       "funds": 993,
-       "weight": 1.1,
-       "weight10": 0,
-       "ret": -3.3
+       "ret": 1.9
       },
       {
        "ticker": "DFAT",
        "name": "DFAT",
        "funds": 231,
+       "weight": 1.1,
+       "weight10": 0,
+       "ret": 6.4
+      },
+      {
+       "ticker": "XOM",
+       "name": "Exxon Mobil Corp",
+       "funds": 991,
        "weight": 0.9,
        "weight10": 0,
-       "ret": 4.2
+       "ret": 5.6
       },
       {
        "ticker": "DFAX",
@@ -1986,23 +1956,23 @@
        "funds": 205,
        "weight": 0.6,
        "weight10": 0,
-       "ret": -3.2
+       "ret": 2.3
       },
       {
        "ticker": "BSV",
        "name": "BSV",
-       "funds": 203,
+       "funds": 204,
        "weight": 0.4,
        "weight10": 0,
-       "ret": -0.1
+       "ret": 0.3
       },
       {
-       "ticker": "WMT",
-       "name": "Walmart Inc",
-       "funds": 777,
+       "ticker": "COST",
+       "name": "COSTCO WHOLESALE CORPORATION",
+       "funds": 775,
        "weight": 0.2,
        "weight10": 0,
-       "ret": 0.2
+       "ret": 0.1
       }
      ]
     }
@@ -2073,10 +2043,10 @@
       43.0,
       47.0
      ],
-     "since_rebal": -0.41,
-     "vs_spy": 0.57,
-     "since_rebal10": 0.33,
-     "vs_spy10": 1.31,
+     "since_rebal": 4.43,
+     "vs_spy": 2.74,
+     "since_rebal10": 8.52,
+     "vs_spy10": 6.83,
      "holds": [
       {
        "ticker": "MPLX",
@@ -2084,7 +2054,7 @@
        "funds": 9,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": 4.0
+       "ret": 9.7
       },
       {
        "ticker": "NVDA",
@@ -2092,7 +2062,7 @@
        "funds": 186,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": -9.2
+       "ret": -2.9
       },
       {
        "ticker": "PAA",
@@ -2100,7 +2070,7 @@
        "funds": 7,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": 2.7
+       "ret": 13.0
       },
       {
        "ticker": "ET",
@@ -2108,7 +2078,7 @@
        "funds": 13,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": 4.7
+       "ret": 12.4
       },
       {
        "ticker": "WES",
@@ -2116,7 +2086,7 @@
        "funds": 10,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": 5.8
+       "ret": 13.9
       },
       {
        "ticker": "AAPL",
@@ -2124,7 +2094,7 @@
        "funds": 169,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": 3.6
+       "ret": 4.5
       },
       {
        "ticker": "MSFT",
@@ -2132,7 +2102,7 @@
        "funds": 221,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": -15.1
+       "ret": 11.7
       },
       {
        "ticker": "SUN",
@@ -2140,7 +2110,7 @@
        "funds": 9,
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": 7.1
+       "ret": 14.5
       },
       {
        "ticker": "AMZN",
@@ -2148,7 +2118,7 @@
        "funds": 202,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": -5.3
+       "ret": 2.0
       },
       {
        "ticker": "EPD",
@@ -2156,7 +2126,7 @@
        "funds": 21,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": 3.0
+       "ret": 6.4
       },
       {
        "ticker": "GOOGL",
@@ -2164,7 +2134,7 @@
        "funds": 190,
        "weight": 4.3,
        "weight10": 0,
-       "ret": -6.3
+       "ret": -7.9
       },
       {
        "ticker": "HESM",
@@ -2172,7 +2142,7 @@
        "funds": 11,
        "weight": 4.1,
        "weight10": 0,
-       "ret": 3.4
+       "ret": 6.4
       },
       {
        "ticker": "GOOG",
@@ -2180,7 +2150,7 @@
        "funds": 121,
        "weight": 3.9,
        "weight10": 0,
-       "ret": -5.8
+       "ret": -7.9
       },
       {
        "ticker": "AVGO",
@@ -2188,7 +2158,7 @@
        "funds": 178,
        "weight": 3.7,
        "weight10": 0,
-       "ret": -16.4
+       "ret": -19.7
       },
       {
        "ticker": "META",
@@ -2196,7 +2166,7 @@
        "funds": 215,
        "weight": 3.4,
        "weight10": 0,
-       "ret": 9.5
+       "ret": -3.6
       },
       {
        "ticker": "GEL",
@@ -2204,7 +2174,7 @@
        "funds": 7,
        "weight": 3.2,
        "weight10": 0,
-       "ret": -3.4
+       "ret": 7.3
       },
       {
        "ticker": "TSM",
@@ -2212,7 +2182,7 @@
        "funds": 67,
        "weight": 3.0,
        "weight10": 0,
-       "ret": -3.0
+       "ret": -3.9
       },
       {
        "ticker": "TEVA",
@@ -2220,7 +2190,7 @@
        "funds": 9,
        "weight": 2.8,
        "weight10": 0,
-       "ret": -7.1
+       "ret": 5.2
       },
       {
        "ticker": "ARCC",
@@ -2228,7 +2198,7 @@
        "funds": 4,
        "weight": 2.6,
        "weight10": 0,
-       "ret": 0.2
+       "ret": 7.3
       },
       {
        "ticker": "BN",
@@ -2236,7 +2206,7 @@
        "funds": 9,
        "weight": 2.4,
        "weight10": 0,
-       "ret": -4.2
+       "ret": -8.7
       },
       {
        "ticker": "BRK/A",
@@ -2244,7 +2214,7 @@
        "funds": 3,
        "weight": 2.2,
        "weight10": 0,
-       "ret": 5.6
+       "ret": 7.5
       },
       {
        "ticker": "WELL",
@@ -2252,7 +2222,7 @@
        "funds": 62,
        "weight": 1.9,
        "weight10": 0,
-       "ret": 18.8
+       "ret": 21.1
       },
       {
        "ticker": "TSLA",
@@ -2260,7 +2230,7 @@
        "funds": 111,
        "weight": 1.7,
        "weight10": 0,
-       "ret": -5.1
+       "ret": -16.1
       },
       {
        "ticker": "USAC",
@@ -2268,7 +2238,7 @@
        "funds": 6,
        "weight": 1.5,
        "weight10": 0,
-       "ret": -3.4
+       "ret": -1.3
       },
       {
        "ticker": "LLY",
@@ -2276,7 +2246,7 @@
        "funds": 139,
        "weight": 1.3,
        "weight10": 0,
-       "ret": 9.2
+       "ret": 8.7
       },
       {
        "ticker": "PAGP",
@@ -2284,7 +2254,7 @@
        "funds": 9,
        "weight": 1.1,
        "weight10": 0,
-       "ret": 1.9
+       "ret": 14.7
       },
       {
        "ticker": "PLD",
@@ -2292,7 +2262,7 @@
        "funds": 65,
        "weight": 0.9,
        "weight10": 0,
-       "ret": 3.0
+       "ret": 1.9
       },
       {
        "ticker": "JPM",
@@ -2300,7 +2270,7 @@
        "funds": 146,
        "weight": 0.6,
        "weight10": 0,
-       "ret": 13.3
+       "ret": 21.1
       },
       {
        "ticker": "VOD",
@@ -2308,7 +2278,7 @@
        "funds": 6,
        "weight": 0.4,
        "weight10": 0,
-       "ret": 5.3
+       "ret": 9.1
       },
       {
        "ticker": "EQIX",
@@ -2316,7 +2286,7 @@
        "funds": 60,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -1.1
+       "ret": -0.1
       }
      ]
     },
@@ -2381,10 +2351,10 @@
       65.8,
       88.7
      ],
-     "since_rebal": 0.12,
-     "vs_spy": 1.1,
-     "since_rebal10": -0.25,
-     "vs_spy10": 0.73,
+     "since_rebal": 3.77,
+     "vs_spy": 2.08,
+     "since_rebal10": -0.97,
+     "vs_spy10": -2.66,
      "holds": [
       {
        "ticker": "GOOGL",
@@ -2392,7 +2362,7 @@
        "funds": 190,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -6.3
+       "ret": -7.9
       },
       {
        "ticker": "LRCX",
@@ -2400,7 +2370,7 @@
        "funds": 114,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": 4.1
+       "ret": -4.7
       },
       {
        "ticker": "AMD",
@@ -2408,7 +2378,7 @@
        "funds": 96,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": 4.8
+       "ret": -8.7
       },
       {
        "ticker": "WMT",
@@ -2416,7 +2386,7 @@
        "funds": 107,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": 0.2
+       "ret": -9.8
       },
       {
        "ticker": "CRM",
@@ -2424,7 +2394,7 @@
        "funds": 115,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": -18.1
+       "ret": 22.5
       },
       {
        "ticker": "KO",
@@ -2432,7 +2402,7 @@
        "funds": 92,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": 7.8
+       "ret": 14.7
       },
       {
        "ticker": "INTC",
@@ -2440,7 +2410,7 @@
        "funds": 57,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": -5.7
+       "ret": -18.2
       },
       {
        "ticker": "JPM",
@@ -2448,7 +2418,7 @@
        "funds": 146,
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": 13.3
+       "ret": 21.1
       },
       {
        "ticker": "META",
@@ -2456,7 +2426,7 @@
        "funds": 215,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": 9.5
+       "ret": -3.6
       },
       {
        "ticker": "ANET",
@@ -2464,7 +2434,7 @@
        "funds": 89,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": 6.1
+       "ret": 14.5
       },
       {
        "ticker": "MRK",
@@ -2472,7 +2442,7 @@
        "funds": 117,
        "weight": 4.3,
        "weight10": 0,
-       "ret": 8.5
+       "ret": 29.7
       },
       {
        "ticker": "APH",
@@ -2480,7 +2450,7 @@
        "funds": 98,
        "weight": 4.1,
        "weight10": 0,
-       "ret": 6.8
+       "ret": 8.0
       },
       {
        "ticker": "MU",
@@ -2488,7 +2458,7 @@
        "funds": 98,
        "weight": 3.9,
        "weight10": 0,
-       "ret": -9.5
+       "ret": -9.9
       },
       {
        "ticker": "IBKR",
@@ -2496,7 +2466,7 @@
        "funds": 47,
        "weight": 3.7,
        "weight10": 0,
-       "ret": 5.5
+       "ret": 8.1
       },
       {
        "ticker": "PLTR",
@@ -2504,7 +2474,7 @@
        "funds": 97,
        "weight": 3.4,
        "weight10": 0,
-       "ret": -19.1
+       "ret": 16.0
       },
       {
        "ticker": "NFLX",
@@ -2512,7 +2482,7 @@
        "funds": 126,
        "weight": 3.2,
        "weight10": 0,
-       "ret": -14.0
+       "ret": -4.8
       },
       {
        "ticker": "NOW",
@@ -2520,7 +2490,7 @@
        "funds": 96,
        "weight": 3.0,
        "weight10": 0,
-       "ret": -18.1
+       "ret": 6.5
       },
       {
        "ticker": "AAPL",
@@ -2528,7 +2498,7 @@
        "funds": 169,
        "weight": 2.8,
        "weight10": 0,
-       "ret": 3.6
+       "ret": 4.5
       },
       {
        "ticker": "COF",
@@ -2536,7 +2506,7 @@
        "funds": 72,
        "weight": 2.6,
        "weight10": 0,
-       "ret": 10.0
+       "ret": 17.3
       },
       {
        "ticker": "PG",
@@ -2544,7 +2514,7 @@
        "funds": 116,
        "weight": 2.4,
        "weight10": 0,
-       "ret": 5.8
+       "ret": 3.3
       },
       {
        "ticker": "HON",
@@ -2552,7 +2522,7 @@
        "funds": 82,
        "weight": 2.2,
        "weight10": 0,
-       "ret": -10.4
+       "ret": -12.1
       },
       {
        "ticker": "JNJ",
@@ -2560,7 +2530,7 @@
        "funds": 130,
        "weight": 1.9,
        "weight10": 0,
-       "ret": 15.3
+       "ret": 20.5
       },
       {
        "ticker": "UNH",
@@ -2568,7 +2538,7 @@
        "funds": 125,
        "weight": 1.7,
        "weight10": 0,
-       "ret": 13.6
+       "ret": 4.0
       },
       {
        "ticker": "SATS",
@@ -2584,7 +2554,7 @@
        "funds": 30,
        "weight": 1.3,
        "weight10": 0,
-       "ret": 4.7
+       "ret": 3.0
       },
       {
        "ticker": "AMZN",
@@ -2592,7 +2562,7 @@
        "funds": 202,
        "weight": 1.1,
        "weight10": 0,
-       "ret": -5.3
+       "ret": 2.0
       },
       {
        "ticker": "MEOH",
@@ -2600,7 +2570,7 @@
        "funds": 8,
        "weight": 0.9,
        "weight10": 0,
-       "ret": -16.5
+       "ret": -5.4
       },
       {
        "ticker": "UNP",
@@ -2608,7 +2578,7 @@
        "funds": 69,
        "weight": 0.6,
        "weight10": 0,
-       "ret": 9.7
+       "ret": 16.7
       },
       {
        "ticker": "AVGO",
@@ -2616,7 +2586,7 @@
        "funds": 178,
        "weight": 0.4,
        "weight10": 0,
-       "ret": -16.4
+       "ret": -19.7
       },
       {
        "ticker": "CSCO",
@@ -2624,7 +2594,7 @@
        "funds": 114,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -1.3
+       "ret": -9.1
       }
      ]
     },
@@ -2689,10 +2659,10 @@
       48.5,
       56.9
      ],
-     "since_rebal": 0.54,
-     "vs_spy": 1.52,
-     "since_rebal10": -4.98,
-     "vs_spy10": -4.0,
+     "since_rebal": 3.54,
+     "vs_spy": 1.85,
+     "since_rebal10": 0.16,
+     "vs_spy10": -1.53,
      "holds": [
       {
        "ticker": "NVDA",
@@ -2700,7 +2670,7 @@
        "funds": 186,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -9.2
+       "ret": -2.9
       },
       {
        "ticker": "MSFT",
@@ -2708,7 +2678,7 @@
        "funds": 221,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": -15.1
+       "ret": 11.7
       },
       {
        "ticker": "AAPL",
@@ -2716,7 +2686,7 @@
        "funds": 169,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": 3.6
+       "ret": 4.5
       },
       {
        "ticker": "AMZN",
@@ -2724,7 +2694,7 @@
        "funds": 202,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -5.3
+       "ret": 2.0
       },
       {
        "ticker": "GOOGL",
@@ -2732,7 +2702,7 @@
        "funds": 190,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": -6.3
+       "ret": -7.9
       },
       {
        "ticker": "META",
@@ -2740,7 +2710,7 @@
        "funds": 215,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": 9.5
+       "ret": -3.6
       },
       {
        "ticker": "AVGO",
@@ -2748,7 +2718,7 @@
        "funds": 178,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": -16.4
+       "ret": -19.7
       },
       {
        "ticker": "GOOG",
@@ -2756,7 +2726,7 @@
        "funds": 121,
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": -5.8
+       "ret": -7.9
       },
       {
        "ticker": "JPM",
@@ -2764,7 +2734,7 @@
        "funds": 146,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": 13.3
+       "ret": 21.1
       },
       {
        "ticker": "LLY",
@@ -2772,7 +2742,7 @@
        "funds": 139,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": 9.2
+       "ret": 8.7
       },
       {
        "ticker": "V",
@@ -2780,7 +2750,7 @@
        "funds": 149,
        "weight": 4.3,
        "weight10": 0,
-       "ret": 10.8
+       "ret": 18.4
       },
       {
        "ticker": "TSLA",
@@ -2788,7 +2758,7 @@
        "funds": 111,
        "weight": 4.1,
        "weight10": 0,
-       "ret": -5.1
+       "ret": -16.1
       },
       {
        "ticker": "MA",
@@ -2796,7 +2766,7 @@
        "funds": 135,
        "weight": 3.9,
        "weight10": 0,
-       "ret": 8.8
+       "ret": 20.4
       },
       {
        "ticker": "JNJ",
@@ -2804,7 +2774,7 @@
        "funds": 130,
        "weight": 3.7,
        "weight10": 0,
-       "ret": 15.3
+       "ret": 20.5
       },
       {
        "ticker": "XOM",
@@ -2812,7 +2782,7 @@
        "funds": 108,
        "weight": 3.4,
        "weight10": 0,
-       "ret": -3.3
+       "ret": 5.6
       },
       {
        "ticker": "TSM",
@@ -2820,7 +2790,7 @@
        "funds": 67,
        "weight": 3.2,
        "weight10": 0,
-       "ret": -3.0
+       "ret": -3.9
       },
       {
        "ticker": "NFLX",
@@ -2828,7 +2798,7 @@
        "funds": 126,
        "weight": 3.0,
        "weight10": 0,
-       "ret": -14.0
+       "ret": -4.8
       },
       {
        "ticker": "BAC",
@@ -2836,7 +2806,7 @@
        "funds": 114,
        "weight": 2.8,
        "weight10": 0,
-       "ret": 16.1
+       "ret": 21.6
       },
       {
        "ticker": "BRK/B",
@@ -2844,7 +2814,7 @@
        "funds": 84,
        "weight": 2.6,
        "weight10": 0,
-       "ret": 5.6
+       "ret": 7.4
       },
       {
        "ticker": "WELL",
@@ -2852,7 +2822,7 @@
        "funds": 62,
        "weight": 2.4,
        "weight10": 0,
-       "ret": 18.8
+       "ret": 21.1
       },
       {
        "ticker": "ABBV",
@@ -2860,7 +2830,7 @@
        "funds": 119,
        "weight": 2.2,
        "weight10": 0,
-       "ret": 16.5
+       "ret": 20.8
       },
       {
        "ticker": "WMT",
@@ -2868,7 +2838,7 @@
        "funds": 107,
        "weight": 1.9,
        "weight10": 0,
-       "ret": 0.2
+       "ret": -9.8
       },
       {
        "ticker": "PLD",
@@ -2876,7 +2846,7 @@
        "funds": 65,
        "weight": 1.7,
        "weight10": 0,
-       "ret": 3.0
+       "ret": 1.9
       },
       {
        "ticker": "CSCO",
@@ -2884,7 +2854,7 @@
        "funds": 114,
        "weight": 1.5,
        "weight10": 0,
-       "ret": -1.3
+       "ret": -9.1
       },
       {
        "ticker": "VZ",
@@ -2892,7 +2862,7 @@
        "funds": 86,
        "weight": 1.3,
        "weight10": 0,
-       "ret": -9.1
+       "ret": 6.8
       },
       {
        "ticker": "WFC",
@@ -2900,7 +2870,7 @@
        "funds": 90,
        "weight": 1.1,
        "weight10": 0,
-       "ret": 13.6
+       "ret": 13.0
       },
       {
        "ticker": "C",
@@ -2908,7 +2878,7 @@
        "funds": 97,
        "weight": 0.9,
        "weight10": 0,
-       "ret": 9.0
+       "ret": 3.5
       },
       {
        "ticker": "LRCX",
@@ -2916,7 +2886,7 @@
        "funds": 114,
        "weight": 0.6,
        "weight10": 0,
-       "ret": 4.1
+       "ret": -4.7
       },
       {
        "ticker": "COST",
@@ -2924,7 +2894,7 @@
        "funds": 104,
        "weight": 0.4,
        "weight10": 0,
-       "ret": -2.1
+       "ret": 0.1
       },
       {
        "ticker": "NEE",
@@ -2932,7 +2902,7 @@
        "funds": 78,
        "weight": 0.2,
        "weight10": 0,
-       "ret": 6.4
+       "ret": -1.5
       }
      ]
     },
@@ -2997,10 +2967,10 @@
       36.1,
       43.0
      ],
-     "since_rebal": -5.2,
-     "vs_spy": -4.22,
-     "since_rebal10": -5.75,
-     "vs_spy10": -4.77,
+     "since_rebal": 8.63,
+     "vs_spy": 6.94,
+     "since_rebal10": 6.29,
+     "vs_spy10": 4.61,
      "holds": [
       {
        "ticker": "META",
@@ -3008,7 +2978,7 @@
        "funds": 215,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": 9.5
+       "ret": -3.6
       },
       {
        "ticker": "MSFT",
@@ -3016,7 +2986,7 @@
        "funds": 221,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": -15.1
+       "ret": 11.7
       },
       {
        "ticker": "SHOP",
@@ -3024,7 +2994,7 @@
        "funds": 52,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": 0.5
+       "ret": 23.2
       },
       {
        "ticker": "INTU",
@@ -3032,7 +3002,7 @@
        "funds": 103,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -17.7
+       "ret": 1.7
       },
       {
        "ticker": "SNOW",
@@ -3040,7 +3010,7 @@
        "funds": 60,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": -4.1
+       "ret": 17.1
       },
       {
        "ticker": "MELI",
@@ -3048,7 +3018,7 @@
        "funds": 39,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": 7.9
+       "ret": 13.6
       },
       {
        "ticker": "APP",
@@ -3056,7 +3026,7 @@
        "funds": 78,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": -27.8
+       "ret": -48.2
       },
       {
        "ticker": "CRM",
@@ -3064,7 +3034,7 @@
        "funds": 115,
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": -18.1
+       "ret": 22.5
       },
       {
        "ticker": "BABA",
@@ -3072,7 +3042,7 @@
        "funds": 11,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": -9.6
+       "ret": -4.3
       },
       {
        "ticker": "DASH",
@@ -3080,7 +3050,7 @@
        "funds": 66,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": 15.0
+       "ret": 43.7
       },
       {
        "ticker": "ZS",
@@ -3088,7 +3058,7 @@
        "funds": 48,
        "weight": 4.3,
        "weight10": 0,
-       "ret": -8.9
+       "ret": 18.3
       },
       {
        "ticker": "HUBS",
@@ -3096,7 +3066,7 @@
        "funds": 51,
        "weight": 4.1,
        "weight10": 0,
-       "ret": -17.0
+       "ret": -0.6
       },
       {
        "ticker": "PLTR",
@@ -3104,7 +3074,7 @@
        "funds": 97,
        "weight": 3.9,
        "weight10": 0,
-       "ret": -19.1
+       "ret": 16.0
       },
       {
        "ticker": "MSI",
@@ -3112,7 +3082,7 @@
        "funds": 70,
        "weight": 3.7,
        "weight10": 0,
-       "ret": 1.9
+       "ret": 18.4
       },
       {
        "ticker": "ANET",
@@ -3120,7 +3090,7 @@
        "funds": 89,
        "weight": 3.4,
        "weight10": 0,
-       "ret": 6.1
+       "ret": 14.5
       },
       {
        "ticker": "MA",
@@ -3128,7 +3098,7 @@
        "funds": 135,
        "weight": 3.2,
        "weight10": 0,
-       "ret": 8.8
+       "ret": 20.4
       },
       {
        "ticker": "V",
@@ -3136,7 +3106,7 @@
        "funds": 149,
        "weight": 3.0,
        "weight10": 0,
-       "ret": 10.8
+       "ret": 18.4
       },
       {
        "ticker": "DT",
@@ -3144,7 +3114,7 @@
        "funds": 38,
        "weight": 2.8,
        "weight10": 0,
-       "ret": 0.3
+       "ret": 20.7
       },
       {
        "ticker": "IOT",
@@ -3152,7 +3122,7 @@
        "funds": 40,
        "weight": 2.6,
        "weight10": 0,
-       "ret": -4.5
+       "ret": 6.8
       },
       {
        "ticker": "NFLX",
@@ -3160,7 +3130,7 @@
        "funds": 126,
        "weight": 2.4,
        "weight10": 0,
-       "ret": -14.0
+       "ret": -4.8
       },
       {
        "ticker": "AMZN",
@@ -3168,7 +3138,7 @@
        "funds": 202,
        "weight": 2.2,
        "weight10": 0,
-       "ret": -5.3
+       "ret": 2.0
       },
       {
        "ticker": "NET",
@@ -3176,7 +3146,7 @@
        "funds": 47,
        "weight": 1.9,
        "weight10": 0,
-       "ret": -0.5
+       "ret": 10.7
       },
       {
        "ticker": "ORCL",
@@ -3184,7 +3154,7 @@
        "funds": 109,
        "weight": 1.7,
        "weight10": 0,
-       "ret": -46.8
+       "ret": -39.0
       },
       {
        "ticker": "CDNS",
@@ -3192,7 +3162,7 @@
        "funds": 67,
        "weight": 1.5,
        "weight10": 0,
-       "ret": -8.8
+       "ret": -17.8
       },
       {
        "ticker": "LLY",
@@ -3200,7 +3170,7 @@
        "funds": 139,
        "weight": 1.3,
        "weight10": 0,
-       "ret": 9.2
+       "ret": 8.7
       },
       {
        "ticker": "JNJ",
@@ -3208,7 +3178,7 @@
        "funds": 130,
        "weight": 1.1,
        "weight10": 0,
-       "ret": 15.3
+       "ret": 20.5
       },
       {
        "ticker": "MRK",
@@ -3216,7 +3186,7 @@
        "funds": 117,
        "weight": 0.9,
        "weight10": 0,
-       "ret": 8.5
+       "ret": 29.7
       },
       {
        "ticker": "DHR",
@@ -3224,7 +3194,7 @@
        "funds": 74,
        "weight": 0.6,
        "weight10": 0,
-       "ret": 11.5
+       "ret": 20.4
       },
       {
        "ticker": "TMO",
@@ -3232,7 +3202,7 @@
        "funds": 90,
        "weight": 0.4,
        "weight10": 0,
-       "ret": 7.1
+       "ret": 26.1
       },
       {
        "ticker": "BRK/B",
@@ -3240,7 +3210,7 @@
        "funds": 84,
        "weight": 0.2,
        "weight10": 0,
-       "ret": 5.6
+       "ret": 7.4
       }
      ]
     },
@@ -3305,10 +3275,10 @@
       93.8,
       137.2
      ],
-     "since_rebal": -1.13,
-     "vs_spy": -0.15,
-     "since_rebal10": -2.98,
-     "vs_spy10": -2.0,
+     "since_rebal": -7.88,
+     "vs_spy": -9.57,
+     "since_rebal10": -11.07,
+     "vs_spy10": -12.75,
      "holds": [
       {
        "ticker": "VSNT",
@@ -3316,7 +3286,7 @@
        "funds": 25,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -15.4
+       "ret": -2.7
       },
       {
        "ticker": "SNDK",
@@ -3324,7 +3294,7 @@
        "funds": 49,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": -5.0
+       "ret": -15.7
       },
       {
        "ticker": "WDC",
@@ -3332,7 +3302,7 @@
        "funds": 79,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": 1.7
+       "ret": -15.9
       },
       {
        "ticker": "Q",
@@ -3340,7 +3310,7 @@
        "funds": 31,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -7.2
+       "ret": -20.8
       },
       {
        "ticker": "LRCX",
@@ -3348,7 +3318,7 @@
        "funds": 114,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": 4.1
+       "ret": -4.7
       },
       {
        "ticker": "INDV",
@@ -3356,7 +3326,7 @@
        "funds": 18,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": 15.3
+       "ret": -0.0
       },
       {
        "ticker": "VRT",
@@ -3364,7 +3334,7 @@
        "funds": 68,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": -5.4
+       "ret": -20.5
       },
       {
        "ticker": "AMD",
@@ -3372,7 +3342,7 @@
        "funds": 96,
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": 4.8
+       "ret": -8.7
       },
       {
        "ticker": "MU",
@@ -3380,7 +3350,7 @@
        "funds": 98,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": -9.5
+       "ret": -9.9
       },
       {
        "ticker": "SATS",
@@ -3396,7 +3366,7 @@
        "funds": 93,
        "weight": 4.3,
        "weight10": 0,
-       "ret": 1.8
+       "ret": -11.3
       },
       {
        "ticker": "ROST",
@@ -3404,7 +3374,7 @@
        "funds": 71,
        "weight": 4.1,
        "weight10": 0,
-       "ret": -1.9
+       "ret": 2.2
       },
       {
        "ticker": "PIPR",
@@ -3412,7 +3382,7 @@
        "funds": 12,
        "weight": 3.9,
        "weight10": 0,
-       "ret": -6.8
+       "ret": -2.1
       },
       {
        "ticker": "APH",
@@ -3420,7 +3390,7 @@
        "funds": 98,
        "weight": 3.7,
        "weight10": 0,
-       "ret": 6.8
+       "ret": 8.0
       },
       {
        "ticker": "MDLN",
@@ -3428,7 +3398,7 @@
        "funds": 16,
        "weight": 3.4,
        "weight10": 0,
-       "ret": 13.5
+       "ret": -1.3
       },
       {
        "ticker": "DOCN",
@@ -3436,7 +3406,7 @@
        "funds": 29,
        "weight": 3.2,
        "weight10": 0,
-       "ret": -28.9
+       "ret": -35.9
       },
       {
        "ticker": "GH",
@@ -3444,7 +3414,7 @@
        "funds": 66,
        "weight": 3.0,
        "weight10": 0,
-       "ret": 22.7
+       "ret": 25.1
       },
       {
        "ticker": "COHR",
@@ -3452,7 +3422,7 @@
        "funds": 56,
        "weight": 2.8,
        "weight10": 0,
-       "ret": -15.3
+       "ret": -23.1
       },
       {
        "ticker": "KTOS",
@@ -3460,7 +3430,7 @@
        "funds": 50,
        "weight": 2.6,
        "weight10": 0,
-       "ret": -26.0
+       "ret": -18.1
       },
       {
        "ticker": "MKSI",
@@ -3468,7 +3438,7 @@
        "funds": 46,
        "weight": 2.4,
        "weight10": 0,
-       "ret": 10.9
+       "ret": -19.3
       },
       {
        "ticker": "MIRM",
@@ -3476,7 +3446,7 @@
        "funds": 33,
        "weight": 2.2,
        "weight10": 0,
-       "ret": 23.6
+       "ret": 1.2
       },
       {
        "ticker": "PNFP",
@@ -3484,7 +3454,7 @@
        "funds": 11,
        "weight": 1.9,
        "weight10": 0,
-       "ret": 4.7
+       "ret": 6.2
       },
       {
        "ticker": "SYY",
@@ -3492,7 +3462,7 @@
        "funds": 61,
        "weight": 1.7,
        "weight10": 0,
-       "ret": 14.0
+       "ret": 11.9
       },
       {
        "ticker": "CIEN",
@@ -3500,7 +3470,7 @@
        "funds": 41,
        "weight": 1.5,
        "weight10": 0,
-       "ret": -21.8
+       "ret": -33.6
       },
       {
        "ticker": "PLTR",
@@ -3508,7 +3478,7 @@
        "funds": 97,
        "weight": 1.3,
        "weight10": 0,
-       "ret": -19.1
+       "ret": 16.0
       },
       {
        "ticker": "AXP",
@@ -3516,7 +3486,7 @@
        "funds": 81,
        "weight": 1.1,
        "weight10": 0,
-       "ret": 13.4
+       "ret": 6.6
       },
       {
        "ticker": "KLAC",
@@ -3524,7 +3494,7 @@
        "funds": 85,
        "weight": 0.9,
        "weight10": 0,
-       "ret": 14.6
+       "ret": -9.4
       },
       {
        "ticker": "WGO",
@@ -3532,7 +3502,7 @@
        "funds": 25,
        "weight": 0.6,
        "weight10": 0,
-       "ret": 3.0
+       "ret": 6.7
       },
       {
        "ticker": "MCK",
@@ -3540,7 +3510,7 @@
        "funds": 79,
        "weight": 0.4,
        "weight10": 0,
-       "ret": 10.5
+       "ret": 21.6
       },
       {
        "ticker": "LXP",
@@ -3548,7 +3518,7 @@
        "funds": 19,
        "weight": 0.2,
        "weight10": 0,
-       "ret": 10.3
+       "ret": 22.4
       }
      ]
     }
@@ -3619,10 +3589,10 @@
       13.6,
       20.4
      ],
-     "since_rebal": -0.23,
-     "vs_spy": 0.75,
-     "since_rebal10": 6.32,
-     "vs_spy10": 7.3,
+     "since_rebal": -0.92,
+     "vs_spy": -2.6,
+     "since_rebal10": 2.77,
+     "vs_spy10": 1.08,
      "holds": [
       {
        "ticker": "CNA",
@@ -3630,7 +3600,7 @@
        "funds": 3,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": 23.9
+       "ret": 18.8
       },
       {
        "ticker": "IRDM",
@@ -3638,7 +3608,7 @@
        "funds": 5,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": 2.0
+       "ret": -2.2
       },
       {
        "ticker": "NAVN",
@@ -3646,7 +3616,7 @@
        "funds": 3,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": 14.7
+       "ret": 25.1
       },
       {
        "ticker": "CMTG",
@@ -3654,7 +3624,7 @@
        "funds": 3,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -5.9
+       "ret": -31.9
       },
       {
        "ticker": "VEON",
@@ -3662,7 +3632,7 @@
        "funds": 3,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": -5.5
+       "ret": 10.4
       },
       {
        "ticker": "PSBD",
@@ -3670,7 +3640,7 @@
        "funds": 6,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": -3.1
+       "ret": -1.1
       },
       {
        "ticker": "FG",
@@ -3678,23 +3648,23 @@
        "funds": 6,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": 14.3
-      },
-      {
-       "ticker": "FMX",
-       "name": "Fomento Economico Mexicano SAB",
-       "funds": 16,
-       "weight": 4.9,
-       "weight10": 5.5,
-       "ret": 9.6
+       "ret": -11.1
       },
       {
        "ticker": "BANF",
        "name": "BancFirst Corp.",
        "funds": 3,
+       "weight": 4.9,
+       "weight10": 5.5,
+       "ret": 2.4
+      },
+      {
+       "ticker": "FMX",
+       "name": "Fomento Economico Mexicano SAB",
+       "funds": 17,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": 6.4
+       "ret": 3.4
       },
       {
        "ticker": "ORBS",
@@ -3702,7 +3672,7 @@
        "funds": 6,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": -35.7
+       "ret": -19.6
       },
       {
        "ticker": "EBI",
@@ -3710,7 +3680,7 @@
        "funds": 5,
        "weight": 4.3,
        "weight10": 0,
-       "ret": 1.3
+       "ret": 4.7
       },
       {
        "ticker": "MNR",
@@ -3718,7 +3688,7 @@
        "funds": 5,
        "weight": 4.1,
        "weight10": 0,
-       "ret": -2.8
+       "ret": -3.7
       },
       {
        "ticker": "GORO",
@@ -3726,7 +3696,7 @@
        "funds": 3,
        "weight": 3.9,
        "weight10": 0,
-       "ret": -2.3
+       "ret": -12.3
       },
       {
        "ticker": "SVV",
@@ -3734,7 +3704,7 @@
        "funds": 5,
        "weight": 3.7,
        "weight10": 0,
-       "ret": 7.3
+       "ret": 17.2
       },
       {
        "ticker": "BW",
@@ -3742,7 +3712,7 @@
        "funds": 7,
        "weight": 3.4,
        "weight10": 0,
-       "ret": -35.7
+       "ret": -57.9
       },
       {
        "ticker": "PEO",
@@ -3750,7 +3720,7 @@
        "funds": 3,
        "weight": 3.2,
        "weight10": 0,
-       "ret": 1.1
+       "ret": 12.4
       },
       {
        "ticker": "WCPB",
@@ -3766,7 +3736,7 @@
        "funds": 3,
        "weight": 2.8,
        "weight10": 0,
-       "ret": -6.2
+       "ret": -5.3
       },
       {
        "ticker": "KOF",
@@ -3774,7 +3744,7 @@
        "funds": 10,
        "weight": 2.6,
        "weight10": 0,
-       "ret": -3.0
+       "ret": 6.7
       },
       {
        "ticker": "MFDX",
@@ -3782,7 +3752,7 @@
        "funds": 4,
        "weight": 2.4,
        "weight10": 0,
-       "ret": -0.9
+       "ret": 2.7
       },
       {
        "ticker": "SKYY",
@@ -3790,7 +3760,7 @@
        "funds": 11,
        "weight": 2.2,
        "weight10": 0,
-       "ret": -9.8
+       "ret": 6.4
       },
       {
        "ticker": "OTF",
@@ -3798,7 +3768,7 @@
        "funds": 11,
        "weight": 1.9,
        "weight10": 0,
-       "ret": -7.4
+       "ret": 3.9
       },
       {
        "ticker": "NEXT",
@@ -3806,7 +3776,7 @@
        "funds": 15,
        "weight": 1.7,
        "weight10": 0,
-       "ret": -1.4
+       "ret": -11.2
       },
       {
        "ticker": "DFAC",
@@ -3814,7 +3784,7 @@
        "funds": 329,
        "weight": 1.5,
        "weight10": 0,
-       "ret": 0.5
+       "ret": 3.3
       },
       {
        "ticker": "MSMR",
@@ -3822,7 +3792,7 @@
        "funds": 3,
        "weight": 1.3,
        "weight10": 0,
-       "ret": -5.7
+       "ret": -6.9
       },
       {
        "ticker": "PBI",
@@ -3830,7 +3800,7 @@
        "funds": 11,
        "weight": 1.1,
        "weight10": 0,
-       "ret": 7.2
+       "ret": 2.3
       },
       {
        "ticker": "RNG",
@@ -3838,7 +3808,7 @@
        "funds": 8,
        "weight": 0.9,
        "weight10": 0,
-       "ret": -14.2
+       "ret": 41.8
       },
       {
        "ticker": "LVS",
@@ -3846,7 +3816,7 @@
        "funds": 18,
        "weight": 0.6,
        "weight10": 0,
-       "ret": -13.8
+       "ret": -14.9
       },
       {
        "ticker": "BOKF",
@@ -3862,7 +3832,7 @@
        "funds": 5,
        "weight": 0.2,
        "weight10": 0,
-       "ret": 8.9
+       "ret": -2.8
       }
      ]
     },
@@ -3927,50 +3897,50 @@
       42.4,
       49.8
      ],
-     "since_rebal": -2.51,
-     "vs_spy": -1.53,
-     "since_rebal10": -4.23,
-     "vs_spy10": -3.25,
+     "since_rebal": 0.94,
+     "vs_spy": -0.74,
+     "since_rebal10": 1.63,
+     "vs_spy10": -0.06,
      "holds": [
       {
        "ticker": "NVDA",
        "name": "NVIDIA CORP",
-       "funds": 1668,
+       "funds": 1667,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -9.2
+       "ret": -2.9
       },
       {
        "ticker": "MSFT",
        "name": "Microsoft",
-       "funds": 1893,
+       "funds": 1890,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": -15.1
+       "ret": 11.7
       },
       {
        "ticker": "AAPL",
        "name": "APPLE INC.",
-       "funds": 1837,
+       "funds": 1834,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": 3.6
+       "ret": 4.5
       },
       {
        "ticker": "AMZN",
        "name": "Amazon.com Inc",
-       "funds": 1836,
+       "funds": 1834,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -5.3
+       "ret": 2.0
       },
       {
        "ticker": "GOOGL",
        "name": "Alphabet Inc",
-       "funds": 1537,
+       "funds": 1536,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": -6.3
+       "ret": -7.9
       },
       {
        "ticker": "DFAC",
@@ -3978,7 +3948,7 @@
        "funds": 329,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": 0.5
+       "ret": 3.3
       },
       {
        "ticker": "META",
@@ -3986,23 +3956,23 @@
        "funds": 1225,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": 9.5
+       "ret": -3.6
       },
       {
        "ticker": "GOOG",
        "name": "Alphabet Inc",
-       "funds": 1239,
+       "funds": 1237,
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": -5.8
+       "ret": -7.9
       },
       {
        "ticker": "V",
        "name": "VISA INC.",
-       "funds": 935,
+       "funds": 934,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": 10.8
+       "ret": 18.4
       },
       {
        "ticker": "TSM",
@@ -4010,23 +3980,23 @@
        "funds": 594,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": -3.0
+       "ret": -3.9
       },
       {
        "ticker": "MU",
        "name": "MICRON TECHNOLOGY, INC.",
-       "funds": 340,
+       "funds": 339,
        "weight": 4.3,
        "weight10": 0,
-       "ret": -9.5
+       "ret": -9.9
       },
       {
        "ticker": "BRK/B",
        "name": "Berkshire Hathaway Inc",
-       "funds": 1186,
+       "funds": 1183,
        "weight": 4.1,
        "weight10": 0,
-       "ret": 5.6
+       "ret": 7.4
       },
       {
        "ticker": "AVGO",
@@ -4034,15 +4004,15 @@
        "funds": 887,
        "weight": 3.9,
        "weight10": 0,
-       "ret": -16.4
+       "ret": -19.7
       },
       {
        "ticker": "TSLA",
        "name": "TESLA, INC.",
-       "funds": 860,
+       "funds": 856,
        "weight": 3.7,
        "weight10": 0,
-       "ret": -5.1
+       "ret": -16.1
       },
       {
        "ticker": "JPM",
@@ -4050,7 +4020,7 @@
        "funds": 1131,
        "weight": 3.4,
        "weight10": 0,
-       "ret": 13.3
+       "ret": 21.1
       },
       {
        "ticker": "AMD",
@@ -4058,23 +4028,23 @@
        "funds": 408,
        "weight": 3.2,
        "weight10": 0,
-       "ret": 4.8
+       "ret": -8.7
       },
       {
        "ticker": "NFLX",
        "name": "NETFLIX, INC.",
-       "funds": 583,
+       "funds": 582,
        "weight": 3.0,
        "weight10": 0,
-       "ret": -14.0
+       "ret": -4.8
       },
       {
        "ticker": "LLY",
        "name": "Eli Lilly",
-       "funds": 790,
+       "funds": 789,
        "weight": 2.8,
        "weight10": 0,
-       "ret": 9.2
+       "ret": 8.7
       },
       {
        "ticker": "PDD",
@@ -4082,31 +4052,31 @@
        "funds": 88,
        "weight": 2.6,
        "weight10": 0,
-       "ret": -3.1
+       "ret": -1.8
       },
       {
        "ticker": "BSV",
        "name": "BSV",
-       "funds": 203,
+       "funds": 204,
        "weight": 2.4,
        "weight10": 0,
-       "ret": -0.1
+       "ret": 0.3
       },
       {
        "ticker": "CRM",
        "name": "Salesforce Inc",
-       "funds": 302,
+       "funds": 303,
        "weight": 2.2,
        "weight10": 0,
-       "ret": -18.1
+       "ret": 22.5
       },
       {
        "ticker": "MA",
        "name": "MASTERCARD INCORPORATED.",
-       "funds": 607,
+       "funds": 606,
        "weight": 1.9,
        "weight10": 0,
-       "ret": 8.8
+       "ret": 20.4
       },
       {
        "ticker": "VCIT",
@@ -4117,20 +4087,20 @@
        "ret": -0.8
       },
       {
-       "ticker": "XOM",
-       "name": "Exxon Mobil Corp",
-       "funds": 993,
-       "weight": 1.5,
-       "weight10": 0,
-       "ret": -3.3
-      },
-      {
        "ticker": "ADBE",
        "name": "ADOBE INC",
        "funds": 244,
+       "weight": 1.5,
+       "weight10": 0,
+       "ret": 6.4
+      },
+      {
+       "ticker": "XOM",
+       "name": "Exxon Mobil Corp",
+       "funds": 991,
        "weight": 1.3,
        "weight10": 0,
-       "ret": -15.8
+       "ret": 5.6
       },
       {
        "ticker": "SSO",
@@ -4138,23 +4108,23 @@
        "funds": 28,
        "weight": 1.1,
        "weight10": 0,
-       "ret": -2.8
-      },
-      {
-       "ticker": "CVX",
-       "name": "CHEVRON CORP",
-       "funds": 681,
-       "weight": 0.9,
-       "weight10": 0,
-       "ret": -2.0
+       "ret": 1.6
       },
       {
        "ticker": "UNH",
        "name": "UNITEDHEALTH GROUP INC",
-       "funds": 447,
+       "funds": 446,
+       "weight": 0.9,
+       "weight10": 0,
+       "ret": 4.0
+      },
+      {
+       "ticker": "CVX",
+       "name": "CHEVRON CORP",
+       "funds": 680,
        "weight": 0.6,
        "weight10": 0,
-       "ret": 13.6
+       "ret": 9.6
       },
       {
        "ticker": "BABA",
@@ -4162,15 +4132,15 @@
        "funds": 176,
        "weight": 0.4,
        "weight10": 0,
-       "ret": -9.6
+       "ret": -4.3
       },
       {
-       "ticker": "INTC",
-       "name": "Intel",
-       "funds": 244,
+       "ticker": "WBD",
+       "name": "Warner Bros Discovery Inc",
+       "funds": 87,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -5.7
+       "ret": 5.6
       }
      ]
     },
@@ -4235,42 +4205,42 @@
       38.9,
       47.2
      ],
-     "since_rebal": -0.54,
-     "vs_spy": 0.44,
-     "since_rebal10": -3.08,
-     "vs_spy10": -2.1,
+     "since_rebal": 2.63,
+     "vs_spy": 0.94,
+     "since_rebal10": 2.49,
+     "vs_spy10": 0.8,
      "holds": [
       {
        "ticker": "NVDA",
        "name": "NVIDIA CORP",
-       "funds": 1668,
+       "funds": 1667,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -9.2
+       "ret": -2.9
       },
       {
        "ticker": "AAPL",
        "name": "APPLE INC.",
-       "funds": 1837,
+       "funds": 1834,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": 3.6
+       "ret": 4.5
       },
       {
        "ticker": "AMZN",
        "name": "Amazon.com Inc",
-       "funds": 1836,
+       "funds": 1834,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": -5.3
+       "ret": 2.0
       },
       {
        "ticker": "MSFT",
        "name": "Microsoft",
-       "funds": 1893,
+       "funds": 1890,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -15.1
+       "ret": 11.7
       },
       {
        "ticker": "DFAC",
@@ -4278,23 +4248,23 @@
        "funds": 329,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": 0.5
+       "ret": 3.3
       },
       {
        "ticker": "GOOGL",
        "name": "Alphabet Inc",
-       "funds": 1537,
+       "funds": 1536,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": -6.3
+       "ret": -7.9
       },
       {
        "ticker": "BRK/B",
        "name": "Berkshire Hathaway Inc",
-       "funds": 1186,
+       "funds": 1183,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": 5.6
+       "ret": 7.4
       },
       {
        "ticker": "META",
@@ -4302,23 +4272,23 @@
        "funds": 1225,
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": 9.5
+       "ret": -3.6
       },
       {
        "ticker": "V",
        "name": "VISA INC.",
-       "funds": 935,
+       "funds": 934,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": 10.8
+       "ret": 18.4
       },
       {
        "ticker": "GOOG",
        "name": "Alphabet Inc",
-       "funds": 1239,
+       "funds": 1237,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": -5.8
+       "ret": -7.9
       },
       {
        "ticker": "TSM",
@@ -4326,15 +4296,15 @@
        "funds": 594,
        "weight": 4.3,
        "weight10": 0,
-       "ret": -3.0
+       "ret": -3.9
       },
       {
        "ticker": "MA",
        "name": "MASTERCARD INCORPORATED.",
-       "funds": 607,
+       "funds": 606,
        "weight": 4.1,
        "weight10": 0,
-       "ret": 8.8
+       "ret": 20.4
       },
       {
        "ticker": "AVGO",
@@ -4342,15 +4312,15 @@
        "funds": 887,
        "weight": 3.9,
        "weight10": 0,
-       "ret": -16.4
+       "ret": -19.7
       },
       {
        "ticker": "TSLA",
        "name": "TESLA, INC.",
-       "funds": 860,
+       "funds": 856,
        "weight": 3.7,
        "weight10": 0,
-       "ret": -5.1
+       "ret": -16.1
       },
       {
        "ticker": "JPM",
@@ -4358,7 +4328,7 @@
        "funds": 1131,
        "weight": 3.4,
        "weight10": 0,
-       "ret": 13.3
+       "ret": 21.1
       },
       {
        "ticker": "DFIC",
@@ -4366,7 +4336,7 @@
        "funds": 188,
        "weight": 3.2,
        "weight10": 0,
-       "ret": -0.6
+       "ret": 4.6
       },
       {
        "ticker": "SCHW",
@@ -4374,7 +4344,7 @@
        "funds": 195,
        "weight": 3.0,
        "weight10": 0,
-       "ret": 15.4
+       "ret": 24.5
       },
       {
        "ticker": "DFUS",
@@ -4382,39 +4352,39 @@
        "funds": 209,
        "weight": 2.8,
        "weight10": 0,
-       "ret": -0.6
+       "ret": 1.8
       },
       {
        "ticker": "SCHX",
        "name": "SCHX",
-       "funds": 255,
+       "funds": 256,
        "weight": 2.6,
        "weight10": 0,
-       "ret": -0.8
+       "ret": 1.9
       },
       {
        "ticker": "LLY",
        "name": "Eli Lilly",
-       "funds": 790,
+       "funds": 789,
        "weight": 2.4,
        "weight10": 0,
-       "ret": 9.2
+       "ret": 8.7
       },
       {
        "ticker": "COST",
        "name": "COSTCO WHOLESALE CORPORATION",
-       "funds": 778,
+       "funds": 775,
        "weight": 2.2,
        "weight10": 0,
-       "ret": -2.1
+       "ret": 0.1
       },
       {
        "ticker": "WMT",
        "name": "Walmart Inc",
-       "funds": 777,
+       "funds": 776,
        "weight": 1.9,
        "weight10": 0,
-       "ret": 0.2
+       "ret": -9.8
       },
       {
        "ticker": "DFAX",
@@ -4422,7 +4392,7 @@
        "funds": 205,
        "weight": 1.7,
        "weight10": 0,
-       "ret": -3.2
+       "ret": 2.3
       },
       {
        "ticker": "DFAT",
@@ -4430,7 +4400,7 @@
        "funds": 231,
        "weight": 1.5,
        "weight10": 0,
-       "ret": 4.2
+       "ret": 6.4
       },
       {
        "ticker": "SCHG",
@@ -4438,15 +4408,15 @@
        "funds": 260,
        "weight": 1.3,
        "weight10": 0,
-       "ret": -2.5
+       "ret": 1.5
       },
       {
        "ticker": "XOM",
        "name": "Exxon Mobil Corp",
-       "funds": 993,
+       "funds": 991,
        "weight": 1.1,
        "weight10": 0,
-       "ret": -3.3
+       "ret": 5.6
       },
       {
        "ticker": "DFAU",
@@ -4454,7 +4424,7 @@
        "funds": 184,
        "weight": 0.9,
        "weight10": 0,
-       "ret": -0.4
+       "ret": 2.2
       },
       {
        "ticker": "PDD",
@@ -4462,23 +4432,23 @@
        "funds": 88,
        "weight": 0.6,
        "weight10": 0,
-       "ret": -3.1
+       "ret": -1.8
       },
       {
        "ticker": "ITOT",
        "name": "ITOT",
-       "funds": 252,
+       "funds": 251,
        "weight": 0.4,
        "weight10": 0,
-       "ret": -0.7
+       "ret": 1.8
       },
       {
        "ticker": "NFLX",
        "name": "NETFLIX, INC.",
-       "funds": 583,
+       "funds": 582,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -14.0
+       "ret": -4.8
       }
      ]
     },
@@ -4543,26 +4513,26 @@
       -20.9,
       -19.1
      ],
-     "since_rebal": -5.55,
-     "vs_spy": -4.57,
-     "since_rebal10": -7.38,
-     "vs_spy10": -6.4,
+     "since_rebal": 4.73,
+     "vs_spy": 3.05,
+     "since_rebal10": 5.6,
+     "vs_spy10": 3.91,
      "holds": [
       {
        "ticker": "NFLX",
        "name": "NETFLIX, INC.",
-       "funds": 583,
+       "funds": 582,
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -14.0
+       "ret": -4.8
       },
       {
        "ticker": "BRK/B",
        "name": "Berkshire Hathaway Inc",
-       "funds": 1186,
+       "funds": 1183,
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": 5.6
+       "ret": 7.4
       },
       {
        "ticker": "GWRE",
@@ -4570,7 +4540,7 @@
        "funds": 27,
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": -18.1
+       "ret": 20.1
       },
       {
        "ticker": "BSX",
@@ -4578,7 +4548,7 @@
        "funds": 112,
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -6.9
+       "ret": -2.4
       },
       {
        "ticker": "ISRG",
@@ -4586,7 +4556,7 @@
        "funds": 220,
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": -1.2
+       "ret": -9.6
       },
       {
        "ticker": "FIVN",
@@ -4594,7 +4564,7 @@
        "funds": 16,
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": -1.7
+       "ret": 29.7
       },
       {
        "ticker": "CHRD",
@@ -4602,12 +4572,12 @@
        "funds": 20,
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": -11.3
+       "ret": 6.7
       },
       {
        "ticker": "CIVI",
        "name": "CIVITAS RESOURCES, INC.",
-       "funds": 4,
+       "funds": 5,
        "weight": 4.9,
        "weight10": 5.5,
        "ret": null
@@ -4618,7 +4588,7 @@
        "funds": 247,
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": -18.1
+       "ret": 6.5
       },
       {
        "ticker": "PDD",
@@ -4626,7 +4596,7 @@
        "funds": 88,
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": -3.1
+       "ret": -1.8
       },
       {
        "ticker": "SG",
@@ -4634,7 +4604,7 @@
        "funds": 7,
        "weight": 4.3,
        "weight10": 0,
-       "ret": -13.6
+       "ret": -27.2
       },
       {
        "ticker": "YMM",
@@ -4642,31 +4612,31 @@
        "funds": 30,
        "weight": 4.1,
        "weight10": 0,
-       "ret": -4.1
+       "ret": -1.4
       },
       {
        "ticker": "AAPL",
        "name": "APPLE INC.",
-       "funds": 1837,
+       "funds": 1834,
        "weight": 3.9,
        "weight10": 0,
-       "ret": 3.6
+       "ret": 4.5
       },
       {
        "ticker": "TSLA",
        "name": "TESLA, INC.",
-       "funds": 860,
+       "funds": 856,
        "weight": 3.7,
        "weight10": 0,
-       "ret": -5.1
+       "ret": -16.1
       },
       {
        "ticker": "MSFT",
        "name": "Microsoft",
-       "funds": 1893,
+       "funds": 1890,
        "weight": 3.4,
        "weight10": 0,
-       "ret": -15.1
+       "ret": 11.7
       },
       {
        "ticker": "PLTR",
@@ -4674,7 +4644,7 @@
        "funds": 347,
        "weight": 3.2,
        "weight10": 0,
-       "ret": -19.1
+       "ret": 16.0
       },
       {
        "ticker": "FBIN",
@@ -4682,7 +4652,7 @@
        "funds": 14,
        "weight": 3.0,
        "weight10": 0,
-       "ret": 28.7
+       "ret": 17.1
       },
       {
        "ticker": "SLB",
@@ -4690,7 +4660,7 @@
        "funds": 110,
        "weight": 2.8,
        "weight10": 0,
-       "ret": -13.0
+       "ret": 5.3
       },
       {
        "ticker": "SE",
@@ -4698,7 +4668,7 @@
        "funds": 85,
        "weight": 2.6,
        "weight10": 0,
-       "ret": 16.2
+       "ret": 25.3
       },
       {
        "ticker": "EGO",
@@ -4706,7 +4676,7 @@
        "funds": 13,
        "weight": 2.4,
        "weight10": 0,
-       "ret": -12.6
+       "ret": 36.5
       },
       {
        "ticker": "HDB",
@@ -4714,7 +4684,7 @@
        "funds": 51,
        "weight": 2.2,
        "weight10": 0,
-       "ret": 11.9
+       "ret": -2.2
       },
       {
        "ticker": "WFC",
@@ -4722,7 +4692,7 @@
        "funds": 276,
        "weight": 1.9,
        "weight10": 0,
-       "ret": 13.6
+       "ret": 13.0
       },
       {
        "ticker": "CSGP",
@@ -4730,7 +4700,7 @@
        "funds": 55,
        "weight": 1.7,
        "weight10": 0,
-       "ret": -15.0
+       "ret": -4.8
       },
       {
        "ticker": "CLMT",
@@ -4738,7 +4708,7 @@
        "funds": 8,
        "weight": 1.5,
        "weight10": 0,
-       "ret": 10.5
+       "ret": 33.3
       },
       {
        "ticker": "DQ",
@@ -4746,7 +4716,7 @@
        "funds": 4,
        "weight": 1.3,
        "weight10": 0,
-       "ret": -29.0
+       "ret": -16.5
       },
       {
        "ticker": "HYS",
@@ -4754,7 +4724,7 @@
        "funds": 13,
        "weight": 1.1,
        "weight10": 0,
-       "ret": 0.1
+       "ret": 0.8
       },
       {
        "ticker": "CORZ",
@@ -4762,7 +4732,7 @@
        "funds": 59,
        "weight": 0.9,
        "weight10": 0,
-       "ret": -20.5
+       "ret": -42.2
       },
       {
        "ticker": "FIVE",
@@ -4770,7 +4740,7 @@
        "funds": 25,
        "weight": 0.6,
        "weight10": 0,
-       "ret": -15.3
+       "ret": 6.9
       },
       {
        "ticker": "RTX",
@@ -4778,7 +4748,7 @@
        "funds": 382,
        "weight": 0.4,
        "weight10": 0,
-       "ret": 12.6
+       "ret": 21.8
       },
       {
        "ticker": "TUA",
@@ -4786,7 +4756,7 @@
        "funds": 12,
        "weight": 0.2,
        "weight10": 0,
-       "ret": -1.7
+       "ret": -1.8
       }
      ]
     }
@@ -4858,10 +4828,10 @@
       81.0,
       123.5
      ],
-     "since_rebal": -2.2,
-     "vs_spy": -2.2,
-     "since_rebal10": 6.77,
-     "vs_spy10": 6.77,
+     "since_rebal": -12.75,
+     "vs_spy": -12.75,
+     "since_rebal10": -14.25,
+     "vs_spy10": -14.25,
      "holds": [
       {
        "ticker": "VSNT",
@@ -4870,7 +4840,7 @@
        "side": "L",
        "weight": 6.5,
        "weight10": 18.2,
-       "ret": -15.4
+       "ret": -2.7
       },
       {
        "ticker": "SNDK",
@@ -4879,7 +4849,7 @@
        "side": "L",
        "weight": 6.2,
        "weight10": 16.4,
-       "ret": -5.0
+       "ret": -15.7
       },
       {
        "ticker": "WDC",
@@ -4888,7 +4858,7 @@
        "side": "L",
        "weight": 6.0,
        "weight10": 14.5,
-       "ret": 1.7
+       "ret": -15.9
       },
       {
        "ticker": "Q",
@@ -4897,7 +4867,7 @@
        "side": "L",
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -7.2
+       "ret": -20.8
       },
       {
        "ticker": "LRCX",
@@ -4906,7 +4876,7 @@
        "side": "L",
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": 4.1
+       "ret": -4.7
       },
       {
        "ticker": "INDV",
@@ -4915,7 +4885,7 @@
        "side": "L",
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": 15.3
+       "ret": -0.0
       },
       {
        "ticker": "VRT",
@@ -4924,7 +4894,7 @@
        "side": "L",
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": -5.4
+       "ret": -20.5
       },
       {
        "ticker": "AMD",
@@ -4933,7 +4903,7 @@
        "side": "L",
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": 4.8
+       "ret": -8.7
       },
       {
        "ticker": "MU",
@@ -4942,7 +4912,7 @@
        "side": "L",
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": -9.5
+       "ret": -9.9
       },
       {
        "ticker": "SATS",
@@ -4960,7 +4930,7 @@
        "side": "L",
        "weight": 4.3,
        "weight10": 0,
-       "ret": 1.8
+       "ret": -11.3
       },
       {
        "ticker": "ROST",
@@ -4969,7 +4939,7 @@
        "side": "L",
        "weight": 4.1,
        "weight10": 0,
-       "ret": -1.9
+       "ret": 2.2
       },
       {
        "ticker": "PIPR",
@@ -4978,7 +4948,7 @@
        "side": "L",
        "weight": 3.9,
        "weight10": 0,
-       "ret": -6.8
+       "ret": -2.1
       },
       {
        "ticker": "APH",
@@ -4987,7 +4957,7 @@
        "side": "L",
        "weight": 3.7,
        "weight10": 0,
-       "ret": 6.8
+       "ret": 8.0
       },
       {
        "ticker": "MDLN",
@@ -4996,7 +4966,7 @@
        "side": "L",
        "weight": 3.4,
        "weight10": 0,
-       "ret": 13.5
+       "ret": -1.3
       },
       {
        "ticker": "DOCN",
@@ -5005,7 +4975,7 @@
        "side": "L",
        "weight": 3.2,
        "weight10": 0,
-       "ret": -28.9
+       "ret": -35.9
       },
       {
        "ticker": "GH",
@@ -5014,7 +4984,7 @@
        "side": "L",
        "weight": 3.0,
        "weight10": 0,
-       "ret": 22.7
+       "ret": 25.1
       },
       {
        "ticker": "COHR",
@@ -5023,7 +4993,7 @@
        "side": "L",
        "weight": 2.8,
        "weight10": 0,
-       "ret": -15.3
+       "ret": -23.1
       },
       {
        "ticker": "KTOS",
@@ -5032,7 +5002,7 @@
        "side": "L",
        "weight": 2.6,
        "weight10": 0,
-       "ret": -26.0
+       "ret": -18.1
       },
       {
        "ticker": "MKSI",
@@ -5041,7 +5011,7 @@
        "side": "L",
        "weight": 2.4,
        "weight10": 0,
-       "ret": 10.9
+       "ret": -19.3
       },
       {
        "ticker": "MIRM",
@@ -5050,7 +5020,7 @@
        "side": "L",
        "weight": 2.2,
        "weight10": 0,
-       "ret": 23.6
+       "ret": 1.2
       },
       {
        "ticker": "PNFP",
@@ -5059,7 +5029,7 @@
        "side": "L",
        "weight": 1.9,
        "weight10": 0,
-       "ret": 4.7
+       "ret": 6.2
       },
       {
        "ticker": "SYY",
@@ -5068,7 +5038,7 @@
        "side": "L",
        "weight": 1.7,
        "weight10": 0,
-       "ret": 14.0
+       "ret": 11.9
       },
       {
        "ticker": "CIEN",
@@ -5077,7 +5047,7 @@
        "side": "L",
        "weight": 1.5,
        "weight10": 0,
-       "ret": -21.8
+       "ret": -33.6
       },
       {
        "ticker": "PLTR",
@@ -5086,7 +5056,7 @@
        "side": "L",
        "weight": 1.3,
        "weight10": 0,
-       "ret": -19.1
+       "ret": 16.0
       },
       {
        "ticker": "AXP",
@@ -5095,7 +5065,7 @@
        "side": "L",
        "weight": 1.1,
        "weight10": 0,
-       "ret": 13.4
+       "ret": 6.6
       },
       {
        "ticker": "KLAC",
@@ -5104,7 +5074,7 @@
        "side": "L",
        "weight": 0.9,
        "weight10": 0,
-       "ret": 14.6
+       "ret": -9.4
       },
       {
        "ticker": "WGO",
@@ -5113,7 +5083,7 @@
        "side": "L",
        "weight": 0.6,
        "weight10": 0,
-       "ret": 3.0
+       "ret": 6.7
       },
       {
        "ticker": "MCK",
@@ -5122,7 +5092,7 @@
        "side": "L",
        "weight": 0.4,
        "weight10": 0,
-       "ret": 10.5
+       "ret": 21.6
       },
       {
        "ticker": "LXP",
@@ -5131,7 +5101,7 @@
        "side": "L",
        "weight": 0.2,
        "weight10": 0,
-       "ret": 10.3
+       "ret": 22.4
       },
       {
        "ticker": "CADE",
@@ -5167,7 +5137,7 @@
        "side": "S",
        "weight": 5.8,
        "weight10": 12.7,
-       "ret": -15.0
+       "ret": -4.8
       },
       {
        "ticker": "LAD",
@@ -5176,7 +5146,7 @@
        "side": "S",
        "weight": 5.6,
        "weight10": 10.9,
-       "ret": 8.3
+       "ret": 26.4
       },
       {
        "ticker": "CRM",
@@ -5185,7 +5155,7 @@
        "side": "S",
        "weight": 5.4,
        "weight10": 9.1,
-       "ret": -18.1
+       "ret": 22.5
       },
       {
        "ticker": "APP",
@@ -5194,7 +5164,7 @@
        "side": "S",
        "weight": 5.2,
        "weight10": 7.3,
-       "ret": -27.8
+       "ret": -48.2
       },
       {
        "ticker": "SBAC",
@@ -5203,7 +5173,7 @@
        "side": "S",
        "weight": 4.9,
        "weight10": 5.5,
-       "ret": -8.3
+       "ret": -5.8
       },
       {
        "ticker": "TTAN",
@@ -5212,7 +5182,7 @@
        "side": "S",
        "weight": 4.7,
        "weight10": 3.6,
-       "ret": 3.4
+       "ret": 28.6
       },
       {
        "ticker": "CDW",
@@ -5221,7 +5191,7 @@
        "side": "S",
        "weight": 4.5,
        "weight10": 1.8,
-       "ret": 2.4
+       "ret": 5.3
       },
       {
        "ticker": "UBER",
@@ -5230,7 +5200,7 @@
        "side": "S",
        "weight": 4.3,
        "weight10": 0,
-       "ret": 0.7
+       "ret": 6.8
       },
       {
        "ticker": "DDOG",
@@ -5239,7 +5209,7 @@
        "side": "S",
        "weight": 4.1,
        "weight10": 0,
-       "ret": -6.2
+       "ret": -14.6
       },
       {
        "ticker": "FRPT",
@@ -5248,7 +5218,7 @@
        "side": "S",
        "weight": 3.9,
        "weight10": 0,
-       "ret": 13.2
+       "ret": 43.3
       },
       {
        "ticker": "MOH",
@@ -5257,7 +5227,7 @@
        "side": "S",
        "weight": 3.7,
        "weight10": 0,
-       "ret": 32.5
+       "ret": 9.1
       },
       {
        "ticker": "RARE",
@@ -5266,7 +5236,7 @@
        "side": "S",
        "weight": 3.4,
        "weight10": 0,
-       "ret": 45.4
+       "ret": 12.1
       },
       {
        "ticker": "BRBR",
@@ -5275,7 +5245,7 @@
        "side": "S",
        "weight": 3.2,
        "weight10": 0,
-       "ret": 40.7
+       "ret": 18.0
       },
       {
        "ticker": "ZEUS",
@@ -5293,7 +5263,7 @@
        "side": "S",
        "weight": 2.8,
        "weight10": 0,
-       "ret": 7.4
+       "ret": 14.7
       },
       {
        "ticker": "PRMB",
@@ -5302,7 +5272,7 @@
        "side": "S",
        "weight": 2.6,
        "weight10": 0,
-       "ret": -2.4
+       "ret": -5.1
       },
       {
        "ticker": "LOW",
@@ -5311,7 +5281,7 @@
        "side": "S",
        "weight": 2.4,
        "weight10": 0,
-       "ret": 0.0
+       "ret": 0.8
       },
       {
        "ticker": "GPK",
@@ -5320,7 +5290,7 @@
        "side": "S",
        "weight": 2.2,
        "weight10": 0,
-       "ret": -6.4
+       "ret": 4.2
       },
       {
        "ticker": "CPRT",
@@ -5329,7 +5299,7 @@
        "side": "S",
        "weight": 1.9,
        "weight10": 0,
-       "ret": -15.1
+       "ret": 2.1
       },
       {
        "ticker": "AXON",
@@ -5338,7 +5308,7 @@
        "side": "S",
        "weight": 1.7,
        "weight10": 0,
-       "ret": 14.7
+       "ret": 26.0
       },
       {
        "ticker": "IESC",
@@ -5347,7 +5317,7 @@
        "side": "S",
        "weight": 1.5,
        "weight10": 0,
-       "ret": -11.0
+       "ret": -54.3
       },
       {
        "ticker": "PRCT",
@@ -5356,7 +5326,7 @@
        "side": "S",
        "weight": 1.3,
        "weight10": 0,
-       "ret": -23.8
+       "ret": -25.2
       },
       {
        "ticker": "WS",
@@ -5365,7 +5335,7 @@
        "side": "S",
        "weight": 1.1,
        "weight10": 0,
-       "ret": -22.8
+       "ret": -19.9
       },
       {
        "ticker": "PI",
@@ -5374,7 +5344,7 @@
        "side": "S",
        "weight": 0.9,
        "weight10": 0,
-       "ret": 2.3
+       "ret": 19.2
       },
       {
        "ticker": "VRNS",
@@ -5383,7 +5353,7 @@
        "side": "S",
        "weight": 0.6,
        "weight10": 0,
-       "ret": 25.7
+       "ret": 21.6
       },
       {
        "ticker": "ADT",
@@ -5392,7 +5362,7 @@
        "side": "S",
        "weight": 0.4,
        "weight10": 0,
-       "ret": 1.4
+       "ret": 12.8
       },
       {
        "ticker": "EA",
@@ -5401,7 +5371,7 @@
        "side": "S",
        "weight": 0.2,
        "weight10": 0,
-       "ret": 2.2
+       "ret": 0.4
       }
      ]
     }
